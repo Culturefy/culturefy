@@ -1,0 +1,54 @@
+.create-new-campaigns{
+    width: 100%;
+    margin-bottom:5rem;
+}
+.create-new-campaigns button{
+    padding: 20px 100px;
+    border-radius: 30px;
+    background-color:#2394ae ;
+    border: 1px solid #2394ae;
+    color: white;
+    font-size: 1.25rem;
+    font-family: inherit;
+    font-weight: 600;
+}
+.nav-campaign-tabs{
+    width: 100%;
+    height: 3rem ;
+    background-color: rgb(246,246,246);
+    border: 1px solid rgb(246,246,246);
+    border-radius: 30px;
+    padding: 5px;
+    
+}
+.nav-campaign-tabs ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+.nav-campaign-tabs li {
+    width: 25%;
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;  
+    padding: 3px;
+    border-radius: 30px;   
+}
+.nav-campaign-tabs li :focus{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color:#2394ae;
+    padding: 5px;
+    border-radius: 30px;  
+}
+.nav-campaign-tabs a{
+    text-decoration: none;
+    color: black;
+}
