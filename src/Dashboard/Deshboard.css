@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Grpahik Medium";
+}
+.sidebar{
+    display: flex;
+}
+.aside-left{
+    background-color: #000000;
+    color: #ffffff;
+    width: 5%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.logo{
+    height: 10.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.aside-left-nav{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 100px;
+}
+.aside-left-nav li{
+    list-style: none;
+    padding:20px 0;
+}
+.list{
+    height:3.43rem;
+    width:3.43rem;
+    border: 2px solid white;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#icon{
+    font-size: 20px;
+}
+.asidebottom{
+    padding-top:3.75rem ;
+}
+.aside-right{
+    width: 17%;
+    height: 100vh;
+    box-sizing: border-box;
+    box-shadow:5px 3px 12px #56545438;
+}
+.top-buttons{
+    height: 25%;
+    width: 100%;
+    border-bottom:2px solid lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.right-nav{
+    height: 35%;
+    width: 100%;
+    border-bottom:2px solid lightgray; 
+}
+.right-nav li a{
+    text-decoration: none;
+}
+
+.compnay-name{
+font-size: 1.25rem;
+border: none;
+margin-top: 1rem;
+margin-bottom: 1rem;
+font-weight: 700;
+}
+.createnew{
+    margin-top:0.625rem;
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+    border: none;
+    background-color: #bf161f;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: white;
+}
+.upload{
+    margin-top:0.625rem;
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+    border: none;
+    background-color: #2394ae;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: white;
+}
+.campaign{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 12px;
+}
+.campaign p{
+    font-size: 1.25rem;
+    color: #938e8e;
+    font-weight: 700;
+}
