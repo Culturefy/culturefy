@@ -1,3 +1,4 @@
+
 .content{
     height: 100%;
     /* background-color: aqua; */
@@ -75,4 +76,189 @@
 .list-user li{
     list-style: none;
     padding: 10px;
+}
+
+.filter-date{
+    padding: 12px 18px;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+    max-width: 380px;
+    width: 100%;
+    position: relative;
+}
+/* .campaign-wraper{
+    border-radius: 160px;
+    box-shadow: 0 0 4px rgb(0 0 0 / 16%);
+    padding-bottom: 10px
+} */
+
+.wraper-filter {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+}
+.campaign-table {
+    padding-top: 10px;
+}
+.table {
+    --bs-table-bg: transparent;
+    --bs-table-accent-bg: transparent;
+    --bs-table-striped-color: #212529;
+    --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
+    --bs-table-active-color: #212529;
+    --bs-table-active-bg: rgba(0, 0, 0, 0.1);
+    --bs-table-hover-color: #212529;
+    --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+    vertical-align: top;
+    border-color: #dee2e6;
+        caption-side: bottom;
+        border-collapse: collapse;
+    
+}
+.campaign-table table thead th {
+    font-size: 20px;
+    color: #000;
+    line-height: 30px;
+    font-family: "Grpahik Semibold";
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #f1f1f1;
+    vertical-align: middle;
+    border: none;
+    padding: 20px;
+    
+}
+.campaign-top .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.campaign-top .search-wraper {
+    max-width: 360px;
+    background: #f6f6f6;
+    width: 100%;
+    height: 55px;
+    border-radius: 100px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.25s ease-in;
+}
+.campaign-top .search-wraper input {
+    width: 100%;
+    height: 100%;
+    padding-left: 32px;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 16px;
+    font-family: "Grpahik Regular";
+}
+.campaign-top .search-wraper .btn-search {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    background: #2394ae;
+    top: 3px;
+    right: 3px;
+    border-radius: 50%;
+}
+.campaign-top .search-wraper .btn-search, .campaign-top .search-wraper .btn-del {
+    position: absolute;
+    border: none;
+    outline: none;
+}
+.campaign-wraper .campaign-top {
+    padding: 40px 40px 0px;
+}
+.campaign-wraper {
+    border-radius: 16px;
+    box-shadow: 0 0 4px rgb(0 0 0 / 16%);
+    padding-bottom: 10px;
+}
+.tab-content>.active {
+    display: block;
+}
+.campaign-table {
+    padding-top: 10px;
+}
+.table>tbody {
+    vertical-align: inherit;
+}
+tbody, td, tfoot, th, thead, tr {
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0;
+}
+.campaign-table table tbody tr {
+    border-bottom: 1px solid #dbdbdb;
+}
+.campaign-table table tbody td:first-child {
+    padding-left: 40px;
+    max-width: 270px;
+}
+.campaign-table table tbody td {
+    vertical-align: middle;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.table>:not(caption)>*>* {
+    padding: 0.5rem 0.5rem;
+    background-color: var(--bs-table-bg);
+    border-bottom-width: 1px;
+    box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
+}
+tbody, td, tfoot, th, thead, tr {
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0;
+}
+
+
+
+.campaign-table table tbody td:first-child p {
+    font-family: "Grpahik Light";
+}
+.campaign-table table tbody td p {
+    font-size: 12px;
+    font-family: "Grpahik Regular";
+    color: #929292;
+}
+p {
+    margin: 0;
+    padding: 0;
+}
+.campaign-table table tbody td:nth-child(3) {
+    width: 360px;
+    padding-right: 40px;
+}
+.campaign-table table tbody td h4.status.pending {
+    color: #f5a41d;
+}
+.campaign-table table tbody td h4.status {
+    text-decoration: underline;
+}
+.campaign-table table tbody td h4.status.active {
+    color: #2394ae;
+}
+
+.campaign-table table tbody td h4.status {
+    text-decoration: underline;
+}
+.campaign-table table tbody td h4.status.completed {
+    color: #649084;
+}
+
+.campaign-table table tbody td h4.status {
+    text-decoration: underline;
+}
+.campaign-table table .progress {
+    height: 20px;
+    border-radius: 16px;
+}
+.campaign-table table .progress.active .progress-bar {
+    background-color: #b17aa3;
+    width:40%
 }
