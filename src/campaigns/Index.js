@@ -129,7 +129,7 @@ const Index = () => {
   let nextContentFrom = 0;
   const handlePageChange = (currentPage) => {
     nextContentFrom = currentPage.selected * perPageUser;
-    const nextContentTo = currentPage.selected * perPageUser + 10;
+    const nextContentTo = currentPage.selected * perPageUser + 9;
     setData(data.slice(nextContentFrom, nextContentTo))
     setIndex(currentPage.selected * perPageUser + 1);
   };
@@ -174,7 +174,6 @@ const Index = () => {
           <li><button onClick={()=>handleStatus('Pending')}>Pending</button></li>
           <li><button onClick={()=>handleStatus('Active')}>Active</button></li>
           <li><button onClick={()=>handleStatus('Completed')}>Complete</button></li>    
-          {/* <li><button onClick={()=>handleStatus('All')}>Complete</button></li> */}
         </ul>
       </div>
    
@@ -209,15 +208,7 @@ const Index = () => {
         displayFormat="DD/MM/YYYY"
       /> */}
 
-<DateRangePicker
-type="date"
-  placeholder="Select a start and end date"
->
-  <select>
-    <option>Start Date</option>
-    <option>End Date</option>
-  </select>
-</DateRangePicker>
+
               <input
                 type="search"
                 placeholder="Select a start and end dates"
@@ -272,8 +263,8 @@ type="date"
                 </thead>
                 <tbody>
                   {statusSearch &&
-                    statusSearch.filter((item) => item.heading.toLowerCase().includes(search))
-                      .map((result) => {
+                    // statusSearch.filter((item) => item.heading.toLowerCase().includes(search))
+                    statusSearch .map((result) => {
                         console.log(result)
                         return (
 
