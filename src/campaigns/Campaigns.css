@@ -39,8 +39,29 @@
     font-size: 2rem;  
     padding: 3px;
     border-radius: 30px;   
+    border-radius: 30px;
+
 }
-.nav-campaign-tabs li :focus{
+.nav-campaign-tabs li button{
+    border: none;
+    width: 25%;
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;  
+    padding: 3px;
+    border-radius: 30px;   
+    border-radius: 30px;
+
+}
+
+
+/* .nav-campaign-tabs  li:first-child{
+    background-color :#2394ae; 
+} */
+.nav-campaign-tabs li  :focus{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -53,3 +74,57 @@
     text-decoration: none;
     color: black;
 }
+ul.campaign-tabs li button.active {
+    background-color: #2394ae;
+    color: #fff;
+}
+/* 
+  .campaign-wraper {
+    flex: 1;
+    background: #aaa;
+    overflow-y: scroll;
+  } */
+
+ .paginationActive {
+    border: 1px solid #2394ae;
+    background: #fff;
+    color: #2394ae;
+    box-shadow: 0 0 1px #2394ae;
+    border-radius: 6px;
+    padding: 5px 12px;
+}
+.pagine li:last-child .page-link {
+    color: #000;
+}
+
+.campaign-table table tbody td h4.Pending {
+    color: #f5a41d;
+    text-decoration: underline;
+}
+.campaign-table table tbody td h4.Active {
+    color: #2394ae;
+    text-decoration: underline;
+}
+
+.campaign-table table tbody td h4.Completed {
+    color: #649084;
+    text-decoration: underline;
+}
+.campaign-table table .progress {
+    height: 20px;
+    border-radius: 16px;
+}
+.campaign-table table .progress .Active {
+    background-color: #b17aa3;
+    width:40%
+}
+.campaign-table table .progress .Completed
+{
+    background-color: #649084;
+    width:100%
+}
+
+ .wrapper {
+    padding-top: var(--maintop-nav-height) !important;
+    --maintop-nav-height:300px;
+} 

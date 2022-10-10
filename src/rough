@@ -1,0 +1,18 @@
+import * as React from 'react';
+import { DateRangePickerComponent } from '@syncfusion/ej2-react-calendars';
+import { SampleBase } from '../common/sample-base';
+import './dayspan-style.css';
+export class DaySpan extends SampleBase {
+    minDays = 5;
+    maxDays = 10;
+    render() {
+        return (<div className='control-pane'>
+                <div className='control-section'>
+                    <div className='daterangepicker-control-section'>
+                        <DateRangePickerComponent minDays={this.minDays} maxDays={this.maxDays}></DateRangePickerComponent>
+                    </div>
+                </div>
+
+            </div>);
+    }
+}

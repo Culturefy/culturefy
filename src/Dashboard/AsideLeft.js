@@ -14,7 +14,7 @@ const AsideLeft = () => {
     </div>
     <div className="aside-left-nav">
       <ul>
-        <li>
+        <li>``
           <div className="list">
             <img src={Home} alt="homeicon" />
           </div>

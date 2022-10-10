@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import campaignIcon from "../assets/compaignIcon.png";
 import Down from "../assets/downIcon.svg";
+import EducationIcon from "../assets/educationIcon.svg"
+import Culture_Check from "../assets/cultureCheck_icon.png"
 
 const AsideRight = () => {
   return (
@@ -21,6 +23,44 @@ const AsideRight = () => {
           <li>
             <Link to="/campaigns">
               <div className="campaign">
+              <div className="campaigns">
+                <img src={Culture_Check} alt="" />
+                <p>Culture Check</p>
+                <img src={Down} alt="" />
+              </div>
+              </div>
+            </Link>
+          </li>
+          <li>
+            <Link to="/campaigns">
+              <div className="campaigns">
+                <img src={EducationIcon} alt="" />
+                <p>Learning</p>
+                <img src={Down} alt="" />
+              </div>
+            </Link>
+          </li>
+          <li>
+            <Link to="/campaigns">
+              <div className="campaigns">
+                <img src={campaignIcon} alt="" />
+                <p>Rewards</p>
+                <img src={Down} alt="" />
+              </div>
+            </Link>
+          </li>
+          <li>
+            <Link to="/campaigns">
+              <div className="campaigns">
+                <img src={campaignIcon} alt="" />
+                <p>Community</p>
+                <img src={Down} alt="" />
+              </div>
+            </Link>
+          </li>
+          <li>
+            <Link to="/campaigns">
+              <div className="campaigns">
                 <img src={campaignIcon} alt="" />
                 <p>Campaign</p>
                 <img src={Down} alt="" />
@@ -31,6 +71,14 @@ const AsideRight = () => {
       </div>
       <div className="task-inbox-tabs"></div>
     </div>
+    
+
+             
+                
+
+
+
+
   );
 };
 
