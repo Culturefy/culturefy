@@ -1,12 +1,13 @@
 
-import { Route, Routes } from 'react-router-dom';
-import Deshboard from './Dashboard/Index.js'
+
+import Deshboard from './Dashboard/Data.js'
+import Routing from "./Routing"
 import './App.css';
 
 function App() {
   return (
    <>
-   <Deshboard/>
+   <Routing/>
    </>
   );
 }

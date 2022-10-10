@@ -1,22 +1,49 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Content.css";
 import Campaigns from "../campaigns/Index.js";
 import "../App.css";
+import AsideLeft from "../Dashboard/AsideLeft";
+import AsideRight from "../Dashboard/AsideRight";
+import ReactPaginate from 'react-paginate';
+import AdminImg from "../assets/admin-img.png"
+
+
 
 const Content = () => {
+ 
+  
   return (
     <div className="content">
       <div className="main-top-nav">
+        {/* <AsideLeft/>
+      <AsideRight/> */}
+
         <div className="list-user">
           <ul>
             <li>
               <div className="calander"></div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="26.979" height="26.982" viewBox="0 0 26.979 26.982">
+                            <g id="Calendar" transform="translate(0 0)">
+                                <path id="Path_2239" data-name="Path 2239" d="M874.529,873.624a14.684,14.684,0,0,1,.525-1.783c.073-.17.444-.279.686-.294a.9.9,0,0,1,.988.7,8.587,8.587,0,0,1,.124,1.333H887.14c0-.33-.008-.641,0-.952a1.07,1.07,0,0,1,1.042-1.1,1.056,1.056,0,0,1,1.059,1.076c.011.313,0,.627,0,.949a19.274,19.274,0,0,1,2.117.187,5.139,5.139,0,0,1,4.1,5q.011,7.3,0,14.6a5.192,5.192,0,0,1-5.117,5.158q-8.376.023-16.751,0a5.2,5.2,0,0,1-5.1-5.125q-.014-7.324,0-14.648a5.174,5.174,0,0,1,5-5.1C873.872,873.615,874.255,873.624,874.529,873.624Zm-3.935,8.338v.633q0,5.241,0,10.482a3.122,3.122,0,0,0,3.326,3.325q8.11,0,16.219,0a3.114,3.114,0,0,0,3.217-3.22q0-5.32,0-10.64v-.578Zm.034-2.166H893.32c.378-2.842-1.545-4.452-4.074-4.005,0,.6,0,1.21,0,1.82,0,.747-.386,1.188-1.031,1.2-.663.009-1.069-.446-1.074-1.212,0-.609,0-1.217,0-1.83h-10.33v.982c0,.316.006.632,0,.948a1.054,1.054,0,1,1-2.1-.031c0-.628,0-1.256,0-1.873C872.179,875.333,870.24,876.984,870.628,879.8Z" transform="translate(-868.484 -871.533)"></path>
+                                <path id="Path_2240" data-name="Path 2240" d="M978.7,1058.566c.333,0,.665-.008,1,0a1.051,1.051,0,1,1-.009,2.1c-.682.014-1.366.016-2.048,0a1.05,1.05,0,1,1,.008-2.1C978,1058.556,978.347,1058.565,978.7,1058.566Z" transform="translate(-965.196 -1038.86)"></path>
+                                <path id="Path_2241" data-name="Path 2241" d="M1037.782,1058.574c.35,0,.7-.011,1.049,0a1.047,1.047,0,0,1,.029,2.094c-.716.024-1.435.024-2.151,0a1.047,1.047,0,0,1,.023-2.094C1037.082,1058.563,1037.432,1058.574,1037.782,1058.574Z" transform="translate(-1018.073 -1038.867)"></path>
+                                <path id="Path_2242" data-name="Path 2242" d="M919.753,999.542c.332,0,.665-.011,1,0a1.082,1.082,0,0,1,1.048,1.035,1.068,1.068,0,0,1-1.02,1.061c-.716.022-1.435.024-2.151,0a1.048,1.048,0,0,1,.025-2.1C919.017,999.53,919.385,999.542,919.753,999.542Z" transform="translate(-912.43 -986.053)"></path>
+                                <path id="Path_2243" data-name="Path 2243" d="M978.7,1001.621c-.332,0-.665.008-1,0a1.05,1.05,0,1,1-.022-2.1q1.023-.022,2.046,0a1.049,1.049,0,1,1,.022,2.1C979.4,1001.633,979.049,1001.621,978.7,1001.621Z" transform="translate(-965.218 -986.028)"></path>
+                                <path id="Path_2244" data-name="Path 2244" d="M1037.792,999.528c.35,0,.7-.016,1.05,0a1.078,1.078,0,0,1,1.016,1.068,1.059,1.059,0,0,1-1,1.026c-.734.024-1.471.024-2.205,0a1.048,1.048,0,0,1,.038-2.094c.367-.017.735,0,1.1,0Z" transform="translate(-1018.05 -986.038)"></path>
+                                <path id="Path_2245" data-name="Path 2245" d="M919.714,1060.643c-.35,0-.7.013-1.049,0a1.049,1.049,0,1,1,0-2.1c.7-.015,1.4-.017,2.1,0a1.066,1.066,0,0,1,1.037,1.042,1.083,1.083,0,0,1-1.033,1.052C920.414,1060.657,920.064,1060.642,919.714,1060.643Z" transform="translate(-912.429 -1038.832)"></path>
+                            </g>
+                        </svg>
             </li>
             <li>
               <div className="notification"></div>
+              <svg id="Notifications" xmlns="http://www.w3.org/2000/svg" width="21.858" height="26.982" viewBox="0 0 21.858 26.982">
+                            <path id="Path_2246" data-name="Path 2246" d="M1191.758,892.712c-.335.373-.7.728-1.046,1.072-.221.218-.45.443-.668.669a.983.983,0,0,0-.277,1.1,1.036,1.036,0,0,0,.969.7,2.036,2.036,0,0,0,.275.008h1.57l10.381,0h2.454q2.334,0,4.668,0h.015c.712,0,1.142-.108,1.371-.663s-.011-.925-.5-1.393l-.172-.166c-.44-.424-.9-.862-1.307-1.332a1.55,1.55,0,0,1-.385-.933c-.013-1.014-.011-2.045-.009-3.043,0-1.094,0-2.226-.013-3.337a8.42,8.42,0,0,0-3.58-6.969,8.74,8.74,0,0,0-3.665-1.484l-.175-.032v-.178c0-.135,0-.267,0-.4,0-.284.007-.553-.006-.822a1.019,1.019,0,0,0-1.036-1.1h0a1.025,1.025,0,0,0-1.033,1.106c-.011.256-.008.517-.005.793,0,.133,0,.271,0,.414v.169l-.164.039-.328.077c-.211.049-.411.1-.6.148a8.417,8.417,0,0,0-6.325,8.185c-.017,1.115-.016,2.249-.014,3.346,0,1.013,0,2.061-.01,3.092A1.542,1.542,0,0,1,1191.758,892.712Zm1.842,1.038a1.735,1.735,0,0,0,.644-1.693v-.032c0-.8,0-1.62.006-2.41.008-1.358.017-2.762-.021-4.14a6.472,6.472,0,0,1,6.127-6.571,6.269,6.269,0,0,1,4.588,1.694,6.027,6.027,0,0,1,2.047,4.23c.049,1.9.038,3.827.027,5.692q0,.754-.008,1.507a1.807,1.807,0,0,0,.638,1.725l.517.386h-15.1Z" transform="translate(-1189.699 -874.409)"></path>
+                            <path id="Path_2247" data-name="Path 2247" d="M1274.069,1103.931a2.421,2.421,0,1,1-4.841,0Z" transform="translate(-1260.718 -1079.375)"></path>
+                        </svg>
             </li>
             <li>
               <div className="user"></div>
+              <img src={AdminImg}/>
             </li>
           </ul>
         </div>
@@ -30,385 +57,11 @@ const Content = () => {
           </div>
         </div>
       </div>
+      <div className="scrolling">
       <Campaigns />
-      <div className="campaign-wraper">
-        <div className="campaign-top">
-          <div className="header">
-            <h1>Campaigns</h1>
-            <div className="search">
-              <input
-                type="search"
-                placeholder="Search a brand / company name"
-              />
-              <div className="search-button">
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </div>
-            </div>
-          </div>
-          <div className="wraper-filter">
-            <h4>Filter by</h4>{" "}
-            <input
-              placeholder="Select a start and end dates"
-              className="filter-date"
-            />
-            <div>
-            <i class="bi bi-calendar"></i>
-            </div>
-          </div>
-        </div>
-        <div className="tab-content campaign">
-          <div className="tab-pane fade show active" id="All" role="tabpanel">
-            <div className="campaign-table">
-              <table className="table">
-                <thead>
-                  <tr>
-                    <th scope="col">
-                      Campaign
-                      <span>
-                        <svg
-                          id="Component_398_2"
-                          data-name="Component 398 – 2"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="20"
-                          height="20"
-                          viewBox="0 0 20 20"
-                        >
-                          <path
-                            id="Path_6058"
-                            data-name="Path 6058"
-                            d="M3,4H13.111M3,7h7M3,10h7m3.889-3v9m0,0-3.111-3m3.111,3L17,13"
-                            transform="translate(0)"
-                            fill="none"
-                            stroke="#2394ae"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="1"
-                          ></path>
-                        </svg>
-                      </span>
-                    </th>
-                    <th scope="col">Status</th>
-                    <th scope="col">Progress</th>
-                    <th scope="col">Impression</th>
-                    <th scope="col">Reach</th>
-                    <th scope="col">Click</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <h4>Open a Coke, Open Happi...</h4>
-                      <p>2022 Jul 22 - 2022 Aug 21</p>
-                    </td>
-                    <td>
-                      <h4 class="status pending">Pending</h4>
-                    </td>
-                    <td>
-                      <div class="progress-text">
-                        <p>$ 0 out of $ 1,000 Goal</p>
-                        <p>-- days left</p>
-                      </div>
-                      <div class="progress">
-                        <div
-                          class="progress-bar"
-                          role="progressbar"
-                          style={{ width: "0%" }}
-                          aria-valuenow="75"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
-                        ></div>
-                      </div>
-                    </td>
-                    <td>
-                      <h4>-- imp </h4>
-                    </td>
-                    <td>
-                      <h4>-- users</h4>
-                    </td>
-                    <td>
-                      <h4>-- clicks</h4>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <h4>Beat the heat with Coca-Cola</h4>
-                      <p>2022 Jul 22 - 2022 Aug 21</p>
-                    </td>
-                    <td>
-                      <h4 class="status pending">Pending</h4>
-                    </td>
-                    <td>
-                      <div class="progress-text">
-                        <p>$ 0 out of $ 1,000 Goal</p>
-                        <p>-- days left</p>
-                      </div>
-                      <div class="progress">
-                        <div
-                          class="progress-bar"
-                          role="progressbar"
-                          aria-valuenow="75"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
-                        ></div>
-                      </div>
-                    </td>
-                    <td>
-                      <h4>-- imp </h4>
-                    </td>
-                    <td>
-                      <h4>-- users</h4>
-                    </td>
-                    <td>
-                      <h4>-- clicks</h4>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <h4>Can't Beat The Real Thing...</h4>
-                      <p>2022 Jul 22 - 2022 Aug 21</p>
-                    </td>
-                    <td>
-                      <h4 class="status active">Active</h4>
-                    </td>
-                    <td>
-                      <div class="progress-text">
-                        <p>$ 400 out of $ 1,000 Goal</p>
-                        <p>18 days left</p>
-                      </div>
-                      <div class="progress active">
-                        <div
-                          class="progress-bar"
-                          role="progressbar"
-                          style={{ width: "40%" }}
-                          aria-valuenow="75"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
-                        ></div>
-                      </div>
-                    </td>
-                    <td>
-                      <h4>4,004 imp </h4>
-                    </td>
-                    <td>
-                      <h4>5,890 users</h4>
-                    </td>
-                    <td>
-                      <h4>6,238 clicks</h4>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <h4>They don't make 'em like th...</h4>
-                      <p>2022 Jul 22 - 2022 Aug 21</p>
-                    </td>
-                    <td>
-                      <h4 class="status active">Active</h4>
-                    </td>
-                    <td>
-                      <div class="progress-text">
-                        <p>$ 400 out of $ 1,000 Goal</p>
-                        <p>18 days left</p>
-                      </div>
-                      <div class="progress active">
-                        <div
-                          class="progress-bar"
-                          role="progressbar"
-                          style={{ width: "40%" }}
-                          aria-valuenow="75"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
-                        ></div>
-                      </div>
-                    </td>
-                    <td>
-                      <h4>4,004 imp </h4>
-                    </td>
-                    <td>
-                      <h4>5,890 users</h4>
-                    </td>
-                    <td>
-                      <h4>6,238 clicks</h4>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <h4>Taste the Feeling. Coca-Cola</h4>
-                      <p>2022 Jul 22 - 2022 Aug 21</p>
-                    </td>
-                    <td>
-                      <h4 class="status active">Active</h4>
-                    </td>
-                    <td>
-                      <div class="progress-text">
-                        <p>$ 400 out of $ 1,000 Goal</p>
-                        <p>18 days left</p>
-                      </div>
-                      <div class="progress active">
-                        <div
-                          class="progress-bar"
-                          role="progressbar"
-                          style={{ width: "40%" }}
-                          aria-valuenow="75"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
-                        ></div>
-                      </div>
-                    </td>
-                    <td>
-                      <h4>4,004 imp </h4>
-                    </td>
-                    <td>
-                      <h4>5,890 users</h4>
-                    </td>
-                    <td>
-                      <h4>6,238 clicks</h4>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <h4>This is how we celebrate wi...</h4>
-                      <p>2022 Jul 22 - 2022 Aug 21</p>
-                    </td>
-                    <td>
-                      <h4 class="status active">Active</h4>
-                    </td>
-                    <td>
-                      <div class="progress-text">
-                        <p>$ 400 out of $ 1,000 Goal</p>
-                        <p>18 days left</p>
-                      </div>
-                      <div class="progress active">
-                        <div
-                          class="progress-bar"
-                          role="progressbar"
-                          style={{ width: "40%" }}
-                          aria-valuenow="75"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
-                        ></div>
-                      </div>
-                    </td>
-                    <td>
-                      <h4>4,004 imp </h4>
-                    </td>
-                    <td>
-                      <h4>5,890 users</h4>
-                    </td>
-                    <td>
-                      <h4>6,238 clicks</h4>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <h4>#ChooseHappiness #Coca-...</h4>
-                      <p>2022 Jul 22 - 2022 Aug 21</p>
-                    </td>
-                    <td>
-                      <h4 class="status completed">Completed</h4>
-                    </td>
-                    <td>
-                      <div class="progress-text">
-                        <p>$ 1,000 out of $ 1,000 Goal</p>
-                        <p>Goal!</p>
-                      </div>
-                      <div class="progress completed">
-                        <div
-                          class="progress-bar"
-                          role="progressbar"
-                          style={{ width: "40%" }}
-                          aria-valuenow="75"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
-                        ></div>
-                      </div>
-                    </td>
-                    <td>
-                      <h4>4,004 imp </h4>
-                    </td>
-                    <td>
-                      <h4>5,890 users</h4>
-                    </td>
-                    <td>
-                      <h4>6,238 clicks</h4>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <h4>Things go better with Coca...</h4>
-                      <p>2022 Jul 22 - 2022 Aug 21</p>
-                    </td>
-                    <td>
-                      <h4 class="status completed">Completed</h4>
-                    </td>
-                    <td>
-                      <div class="progress-text">
-                        <p>$ 1,000 out of $ 1,000 Goal</p>
-                        <p>Goal!</p>
-                      </div>
-                      <div class="progress completed">
-                        <div
-                          class="progress-bar"
-                          role="progressbar"
-                          style={{ width: "0%" }}
-                          aria-valuenow="75"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
-                        ></div>
-                      </div>
-                    </td>
-                    <td>
-                      <h4>4,004 imp </h4>
-                    </td>
-                    <td>
-                      <h4>5,890 users</h4>
-                    </td>
-                    <td>
-                      <h4>6,238 clicks</h4>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <h4>#EnjoyCoca-Cola</h4>
-                      <p>2022 Jul 22 - 2022 Aug 21</p>
-                    </td>
-                    <td>
-                      <h4 class="status completed">Completed</h4>
-                    </td>
-                    <td>
-                      <div class="progress-text">
-                        <p>$ 1,000 out of $ 1,000 Goal</p>
-                        <p>Goal!</p>
-                      </div>
-                      <div class="progress completed">
-                        <div
-                          class="progress-bar"
-                          role="progressbar"
-                          style={{ width: "100%" }}
-                          aria-valuenow="75"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
-                        ></div>
-                      </div>
-                    </td>
-                    <td>
-                      <h4>4,004 imp </h4>
-                    </td>
-                    <td>
-                      <h4>5,890 users</h4>
-                    </td>
-                    <td>
-                      <h4>6,238 clicks</h4>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-
-        {/* </div> */}
-      </div>
     </div>
+   
+    </div >
   );
 };
 
