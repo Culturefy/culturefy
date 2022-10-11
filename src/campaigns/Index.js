@@ -8,7 +8,9 @@ import 'react-dates/initialize';
 // import { DateRangePicker } from 'react-dates';
 import 'react-dates/lib/css/_datepicker.css';
 import { DateRangePicker } from 'rsuite';
-
+import Create from "../campaigns/Create"
+import Data from "../Dashboard/Data"
+import  Content from "../component/Content"
 
 const Index = () => {
  const minDays = 5;
@@ -140,7 +142,6 @@ const Index = () => {
 
   }
 
-
   const [statusSearch,setStatussearch] = useState(data)
   const [search, setSearch] = useState(data)
 
@@ -160,13 +161,10 @@ const Index = () => {
 
 
 
-
-
   return (
-   
     <div className='wrapper'>
       <div className="create-new-campaigns">
-        <button>+ <span> Create New Campaigns</span></button>
+       <Link to="/create-campaigns"><button >+ <span> Create New Campaigns</span></button></Link> 
       </div>
       <div className="nav-campaign-tabs">
         <ul>

@@ -6,6 +6,7 @@ import AsideRight from "../Dashboard/AsideRight";
 import AdminImg from "../assets/admin-img.png"
 import Calender from "../assets/Calender.svg"
 import Notification from "../assets/Notifiction.svg"
+import Create from "../campaigns/Create"
 
 const Content = () => {
   return (
@@ -33,7 +34,8 @@ const Content = () => {
             </div>
         </div>
       </div>
-      <Campaigns />
+      {/* <Campaigns /> */}
+      <Create/>
     </div>
    
    
