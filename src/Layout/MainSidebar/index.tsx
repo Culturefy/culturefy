@@ -1,13 +1,13 @@
 import React, { FC } from "react";
 // import Styles from "./styles.module.scss";
 
-const AsideMenu = () => {
+const MainSidebar = () => {
 
   return (
     <div>
-      <h2>Side Menu</h2>
+      <h2>MainSidebar</h2>
     </div>
   );
 };
 
-export default AsideMenu;
+export default MainSidebar;

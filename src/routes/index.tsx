@@ -8,13 +8,23 @@ import { createBrowserRouter, Router } from "react-router-dom";
 import AuthLayout from '../Layout/AuthLayout'
 import GeneralLayout from '../Layout/UserLayout'
 
-export const router = createBrowserRouter([
+const Login = lazy(() => import('../pages/Login'))
+const Signup = lazy(() => import('../pages/Signup'))
+
+export const    router = createBrowserRouter([
   {
-    path: "/",
+    path: "/auth",
     element: <AuthLayout />,
+    children: [
+      {
+        path: 'login',
+        element: <Login />
+      },
+      {
+        path: 'signup',
+        element: <Signup />
+      }
+    ]
   },
-  {
-    path: "/dashboard",
-    element: <GeneralLayout />,
-  },
+  
 ]);
