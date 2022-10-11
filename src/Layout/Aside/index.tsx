@@ -9,6 +9,8 @@ import rewardIcon from "../../assets/images/rewardIcon.svg";
 import communityIcon from "../../assets/images/communityIcon.svg";
 import campaignIcon from "../../assets/images/compaignIcon.png";
 
+import {navigation} from "../../config/navigation";
+
 // import Button from "../../../../components/common/button";
 
 import { Link } from "react-router-dom";
@@ -17,100 +19,7 @@ import Button from "../Button";
 const AsideMenu = () => {
   const [seletedItem, setSelectedItem] = useState("");
 
-  const side_menu = [
-    {
-      id: "culturecheck",
-      title: "Culture Check",
-      icon: culIcon2,
-      subMenu: [
-        {
-          id: "brandCultureStrategy",
-          title: "Brand Culture Strategy",
-        },
-        {
-          id: "Surveys",
-          title: "Surveys",
-        },
-      ],
-    },
-    {
-      id: "Learning",
-      title: "Learning",
-      icon: educationIcon,
-      subMenu: [
-        {
-          id: "Courses",
-          title: "Courses",
-        },
-        {
-          id: "Videos",
-          title: "Videos",
-        },
-        {
-          id: "Archived",
-          title: "Archived",
-        },
-        {
-          id: "Certification",
-          title: "Certification",
-        },
-      ],
-    },
-    {
-      id: "Rewards",
-      title: "Rewards",
-      icon: rewardIcon,
-      subMenu: [
-        {
-          id: "Redeem",
-          title: "Redeem",
-        },
-      ],
-    },
-    {
-      id: "Community",
-      title: "Community",
-      icon: communityIcon,
-      subMenu: [
-        {
-          id: "ResourceGroups",
-          title: "Resource Groups",
-        },
-        {
-          id: "Events",
-          title: "Events",
-        },
-        {
-          id: "Mentorship",
-          title: "Mentorship",
-        },
-        {
-          id: "socialFeed",
-          title: "social Feed",
-        },
-      ],
-    },
-
-    {
-      id: "Campaign",
-      title: "Campaign",
-      icon: campaignIcon,
-      subMenu: [
-        {
-          id: "Workspaces",
-          title: "Workspaces",
-        },
-        {
-          id: "Tasks",
-          title: "Tasks",
-        },
-        {
-          id: "Recruting",
-          title: "Recruting",
-        },
-      ],
-    },
-  ];
+  
   return (
     <aside className={Styles.asideRight}>
       <div>
@@ -138,7 +47,7 @@ const AsideMenu = () => {
         <div className={Styles.rightNav}>
           <nav>
             <ul>
-              {side_menu.map((menu) => (
+              {navigation.map((menu) => (
                 <li
                   className={`${Styles.navLinkQa} ${Styles.navLinkQaMain} ${
                     menu.id == seletedItem ? Styles.active : Styles.hide
@@ -163,9 +72,9 @@ const AsideMenu = () => {
                     </span>
                   </div>
 
-                  {menu?.subMenu ? (
+                  {menu?.children ? (
                     <ul className={Styles.subMenu}>
-                      {menu.subMenu.map((submenu) => {
+                      {menu.children.map((children) => {
                         return (
                           <li
                             className={Styles.navLinkQa}
@@ -173,8 +82,8 @@ const AsideMenu = () => {
                               e.stopPropagation();
                             }}
                           >
-                            <Link to="/" key={submenu.id}>
-                              {submenu.title}
+                            <Link to="/" >
+                              {children.title}
                             </Link>
                           </li>
                         );
