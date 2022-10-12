@@ -3,26 +3,22 @@ import { useState } from "react";
 // import reactLogo from './assets/react.svg'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
-import Services from "./Services/example.service";
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <h1>Test...</h1>,
-  },
-  {
-    path: "/about",
-    element: <h1>About</h1>,
-  },
-]);
+import { AuthContext } from "./context/AuthContext";
+import AuthLayout from "./Layout/AuthLayout";
+// import { router } from 'src/routes/index'
+import { router } from "./routes/index";
 
 function App() {
-  const [count, setCount] = useState(0);
+  // </div>
 
   return (
-    <div className="App">
-      <RouterProvider router={router} fallbackElement={<h1>Loading...</h1>} />
-    </div>
+    // <div className="App">
+    //   <RouterProvider
+    //     router={router}
+    //     fallbackElement={<h1>Loading...</h1>}
+    //   />
+
+    <RouterProvider router={router} fallbackElement={<h1>Loading...</h1>} />
   );
 }
 
