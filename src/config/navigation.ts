@@ -1,8 +1,8 @@
-import culIcon2 from "../../assets/images/cultureIcon2.png";
-import educationIcon from "../../assets/images/educationIcon.svg";
-import rewardIcon from "../../assets/images/rewardIcon.svg";
-import communityIcon from "../../assets/images/communityIcon.svg";
-import campaignIcon from "../../assets/images/compaignIcon.png";
+import culIcon2 from "../assets/images/cultureIcon2.png";
+import educationIcon from "../assets/images/educationIcon.svg";
+import rewardIcon from "../assets/images/rewardIcon.svg";
+import communityIcon from "../assets/images/communityIcon.svg";
+import campaignIcon from "../assets/images/compaignIcon.png";
 
 interface Navigate {
     title: string,

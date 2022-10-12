@@ -5,10 +5,10 @@ import { Dispatch } from 'redux'
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import toast from 'react-hot-toast'
 
-import Service from 'src/Services/example.service'
+import Service from '../../../Services/example.service'
 
 // ** Types Imports
-import { IExample } from 'src/types/example'
+import { IExample } from '../../../types/example'
 
 interface InitialState {
     examples: IExample[] | [];
