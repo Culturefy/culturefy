@@ -9,7 +9,7 @@
 .aside-left{
     background-color: #000000;
     color: #ffffff;
-    width: 5%;
+    /* width: 5%; */
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -50,7 +50,7 @@
     padding-top:3.75rem ;
 }
 .aside-right{
-    width: 17%;
+    /* width: 17%; */
     height: 100vh;
     box-sizing: border-box;
     box-shadow:5px 3px 12px #56545438;
@@ -65,11 +65,22 @@
     justify-content: center;
     
 }
-.right-nav{
+/* .right-nav{
     height: 35%;
     width: 100%;
     border-bottom:2px solid lightgray; 
 
+} */
+
+.right-nav {
+    display: block;
+    width: 100%;
+    border-top: 2px solid #dcdfe4;
+    min-height: var(--rightNav-height);
+    border-bottom: 2px solid #dcdfe4;
+    height: var(--rightNav-height);
+    padding: 20px;
+    --rightNav-height: 35vh;
 }
 .right-nav li a{
     text-decoration: none;
@@ -102,8 +113,9 @@ font-weight: 700;
     color: white;
 }
 .campaign{
-    /* display: flex; */
+    display: flex;
     justify-content: space-between;
+
     /* justify-content: space-between; */
     padding: 12px 12px;
     gap: 12px;

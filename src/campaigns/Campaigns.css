@@ -1,4 +1,4 @@
-.create-new-campaigns{
+    .create-new-campaigns{
     width: 100%;
     margin-bottom:5rem;
 }
@@ -127,4 +127,9 @@ ul.campaign-tabs li button.active {
  .wrapper {
     padding-top: var(--maintop-nav-height) !important;
     --maintop-nav-height:300px;
+    padding-left: 20%;
 } 
+.d-flex {
+    display: flex!important;
+    position: fixed;
+}

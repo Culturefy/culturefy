@@ -23,17 +23,17 @@ const AsideRight = () => {
           <li>
             <Link to="/campaigns">
               <div className="campaign">
-              <div className="campaigns">
+              {/* <div className="campaigns"> */}
                 <img src={Culture_Check} alt="" />
                 <p>Culture Check</p>
                 <img src={Down} alt="" />
-              </div>
+              {/* </div> */}
               </div>
             </Link>
           </li>
           <li>
             <Link to="/campaigns">
-              <div className="campaigns">
+              <div className="campaign">
                 <img src={EducationIcon} alt="" />
                 <p>Learning</p>
                 <img src={Down} alt="" />
@@ -42,7 +42,7 @@ const AsideRight = () => {
           </li>
           <li>
             <Link to="/campaigns">
-              <div className="campaigns">
+              <div className="campaign">
                 <img src={campaignIcon} alt="" />
                 <p>Rewards</p>
                 <img src={Down} alt="" />
@@ -51,7 +51,7 @@ const AsideRight = () => {
           </li>
           <li>
             <Link to="/campaigns">
-              <div className="campaigns">
+              <div className="campaign">
                 <img src={campaignIcon} alt="" />
                 <p>Community</p>
                 <img src={Down} alt="" />
@@ -60,7 +60,7 @@ const AsideRight = () => {
           </li>
           <li>
             <Link to="/campaigns">
-              <div className="campaigns">
+              <div className="campaign">
                 <img src={campaignIcon} alt="" />
                 <p>Campaign</p>
                 <img src={Down} alt="" />

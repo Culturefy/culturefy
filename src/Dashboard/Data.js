@@ -10,12 +10,16 @@ import Create from "../campaigns/Create"
 
 const Data = () => {
   return (
-   <div className="sidebar">
-   <AsideLeft/>
-   <AsideRight/>
-   {/* <Create/> */}
-   <Content/>
-   </div>
+   
+   <><div className="sidebar">
+      {/* <div className="page"> */}
+        {/* <AsideLeft />
+        <AsideRight /> */}
+        {/* <Create/> */}
+      {/* </div> */}
+      <Content />
+    </div></>
+    
   );
 };
 
