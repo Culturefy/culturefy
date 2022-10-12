@@ -1,4 +1,5 @@
-import requests from 'src/Services/http.service';
+// import requests from 'src/Services/http.service';
+import requests from './http.service';
 import { AxiosResponse } from 'axios'
 
 const Services = {

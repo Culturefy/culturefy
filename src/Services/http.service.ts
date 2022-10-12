@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 // ** Config
-import authConfig from 'src/config/auth'
+// import authConfig from 'src/config/auth'
+import authConfig from '../config/auth'
 
 const instance = axios.create({
   baseURL: "https://google.com/api/v1",

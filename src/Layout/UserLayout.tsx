@@ -1,14 +1,13 @@
-import React from 'react'
+import React from "react";
 
 const UserLayout = ({ children }) => {
   return (
     <div>
-        <Header />.
-        <Sidebar />.
-        <Header />.
-        {children}
+      <Header />.
+      <Sidebar />.
+      <Header />.{children}
     </div>
-  )
-}
+  );
+};
 
-export default UserLayout
+export default UserLayout;
