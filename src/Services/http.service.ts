@@ -2,10 +2,9 @@ import axios from 'axios';
 
 // ** Config
 // import authConfig from 'src/config/auth'
-import authConfig from '../config/auth'
 
 const instance = axios.create({
-  baseURL: "https://google.com/api/v1",
+  baseURL: "https://6be0-110-93-244-255.in.ngrok.io/api",
   timeout: 500000,
   headers: {
     Accept: 'application/json',
@@ -16,7 +15,8 @@ const instance = axios.create({
 // Add a request interceptor
 instance.interceptors.request.use(function (config) {
 
-  const storedToken = window.localStorage.getItem(authConfig.storageTokenKeyName)!
+  const storedToken = window.localStorage.getItem('key')!
+  // console.log(storedToken)
 
   return {
     ...config,

@@ -5,14 +5,14 @@ import { Dispatch } from 'redux'
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import toast from 'react-hot-toast'
 
-import Service from '../../../Services/example.service'
+import Service from '../../../Services/survey.service'
 
 // ** Types Imports
-import { IExample } from '../../../types/example'
+import { ISurvey } from '../../../types/survey'
 
 interface InitialState {
-    examples: IExample[] | [];
-    example: IExample | {};
+    surveys: ISurvey[] | [];
+    survey: ISurvey | {};
     total: number;
     params: {};
     status: 'pending' | 'error' | 'success' | 'idle';
@@ -32,7 +32,7 @@ interface Redux {
 
 // ** Fetch Client
 export const fetchAction = createAsyncThunk(
-    'example/fetch',
+    'survey/fetch',
     async (id: string) => {
         return { id }
     }
@@ -40,16 +40,18 @@ export const fetchAction = createAsyncThunk(
 
 // ** Fetch Clients
 export const fetchAllAction = createAsyncThunk(
-    'example/fetchAll',
+    'survey/fetchAll',
     async (params: DataParams) => {
         const response = await Service.getAll();
+        // console.log(response.data);
+        
         return response.data
     }
 )
 
 // ** Add Client
 export const addAction = createAsyncThunk(
-    'example/add',
+    'survey/add',
     async (data: { [key: string]: number | string }, { getState, dispatch }: Redux) => {
         dispatch(slice.actions.handleStatus('pending'))
         try {
@@ -68,8 +70,8 @@ export const addAction = createAsyncThunk(
 
 // ** Add Client
 export const updateAction = createAsyncThunk(
-    'example/update',
-    async ({ id, data }: { id: string, data: IExample }, { getState, dispatch }: Redux) => {
+    'survey/update',
+    async ({ id, data }: { id: string, data: ISurvey }, { getState, dispatch }: Redux) => {
         dispatch(slice.actions.handleStatus('pending'))
         try {
             const response = await Service.update(id, data);
@@ -87,7 +89,7 @@ export const updateAction = createAsyncThunk(
 
 // ** Delete Client
 export const deleteAction = createAsyncThunk(
-    'example/delete',
+    'survey/delete',
     async (id: string, { getState, dispatch }: Redux) => {
         dispatch(slice.actions.handleStatus('pending'))
         try {
@@ -106,10 +108,10 @@ export const deleteAction = createAsyncThunk(
 
 // @ts-ignore
 export const slice = createSlice({
-    name: 'example',
+    name: 'survey',
     initialState: {
-        examples: [],
-        example: {},
+        surveys: [],
+        survey: {},
         total: 0,
         params: {},
     } as InitialState,
@@ -120,14 +122,15 @@ export const slice = createSlice({
     },
     extraReducers: builder => {
         builder.addCase(fetchAllAction.fulfilled, (state, action) => {
-            const { data } = action.payload;
-
-            state.examples = data.examples || []
-            state.total = data.examples.length || 0
+            const data = action.payload;
+            // console.log(data);
+            
+            state.surveys = data || []
+            state.total = data.length || 0
         })
         builder.addCase(fetchAction.fulfilled, (state, action) => {
             const { id } = action.payload;
-            state.example = state.examples.find((example: any) => example.id === id) || {};
+            state.survey = state.surveys.find((survey: any) => survey.id === id) || {};
         })
     }
 })

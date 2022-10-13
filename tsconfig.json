@@ -1,6 +1,9 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "./",
+    "paths": {
+      "@services/*": ["src/Services/*"],
+    },
     "rootDir": "src",
     "target": "ESNext",
     "useDefineForClassFields": true,
@@ -16,12 +19,11 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react"
+    "jsx": "react",
   },
   "references": [{ "path": "./tsconfig.node.json" }],
   "include": [
-    "src",
-    "declaration.d.ts"
+    "src"
   ],
   "exclude": [
     "node_modules"

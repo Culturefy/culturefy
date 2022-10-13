@@ -1,5 +1,10 @@
 export type ErrCallbackType = (err: { [key: string]: string }) => void
 
+export interface IAuth {
+  [key: any]: any
+}
+
+
 export type LoginParams = {
   email: string
   password: string
