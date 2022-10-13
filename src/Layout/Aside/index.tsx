@@ -3,18 +3,13 @@ import Styles from "./styles.module.scss";
 
 import downIcon from "../../assets/images/downIcon.svg";
 
-import culIcon2 from "../../assets/images/cultureIcon2.png";
-import educationIcon from "../../assets/images/educationIcon.svg";
-import rewardIcon from "../../assets/images/rewardIcon.svg";
-import communityIcon from "../../assets/images/communityIcon.svg";
-import campaignIcon from "../../assets/images/compaignIcon.png";
 
 import {navigation} from "../../config/navigation";
 
 // import Button from "../../../../components/common/button";
 
 import { Link } from "react-router-dom";
-import Button from "../Button";
+import Button from "../../components/common/Button";
 
 const AsideMenu = () => {
   const [seletedItem, setSelectedItem] = useState("");

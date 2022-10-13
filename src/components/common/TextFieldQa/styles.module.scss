@@ -1,0 +1,25 @@
+.TextFieldQa{
+    margin: 20px 0;
+    label{
+        display: block;
+        font-size: 18px;
+        color: #191919;
+    }
+    input::placeholder{
+        color: #929292;
+        font-size: 14px;
+    }
+    input{
+        display: block;
+        width: 100%;
+        max-width: 500px;
+        border: none;
+        background: transparent;
+        border-bottom: 2px solid #000;
+        font-size: 16px;
+        padding: 5px 0;
+        font-family: 'Graphik Regular';
+        color: #000;
+        outline: none;
+    }
+}
