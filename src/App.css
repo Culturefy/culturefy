@@ -9,6 +9,9 @@
 #root {
   max-width: 100%;
 }
+body{
+  font-family: 'Grpahik Medium';
+}
 *{
   margin: 0;
   padding: 0;

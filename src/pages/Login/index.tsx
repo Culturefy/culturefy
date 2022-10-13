@@ -1,8 +1,8 @@
 import React from 'react';
 import Heading from '../../components/common/Heading';
 import IconButton from '../../components/common/IconButton';
-// import Styles from './styles.module.scss'
-import Styles from '../signup/styles.module.scss'
+
+import Styles from '../Signup/styles.module.scss'
 
 
 import { Link } from "react-router-dom";
@@ -44,17 +44,19 @@ const Login = () => {
                      <span>
                         Remember me next time
                      </span>
-                     <div className="custom-checkbox">
-                        <input type="checkbox" id="remember-me" name="remember-me" />
-                        <label htmlFor="remember-me" className="remember-custom"></label>
+                     <div className={Styles.customCheckbox}>
+                        <input type="checkbox" id="rememberMeLogin" name="remember-me" className={Styles.rememberMe} />
+                        <label htmlFor="remember-me" className={Styles.rememberCustom}></label>
                      </div>
                   </p>
-                  <Button
-                     variant='filled'
-                     color='secondary'
-                     label='SIGN IN'
-                     size='large'
-                  />
+                  <div className={Styles.signUpBtnLg}>
+                     <Button
+                        variant='filled'
+                        color='secondary'
+                        label='SIGN IN'
+                        size='large'
+                     />
+                  </div>
                   <p className={Styles.rememText}>Forget password</p>
                   <p className={Styles.rememText}>
                      Don't have account?

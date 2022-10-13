@@ -3,6 +3,8 @@ import Button from '../common/Button';
 import Heading from '../common/Heading';
 import TextFieldQa from '../common/TextFieldQa';
 
+import globalStyles from '../../global.module.scss'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import IconButton from '../common/IconButton';
@@ -10,8 +12,10 @@ import IconButton from '../common/IconButton';
 const BusinessInfo1 = (props:any) => {
 
    return (
-      <div className='signInpForms'>
-         <IconButton icon={ <FontAwesomeIcon icon={faArrowLeft} onClick={props.Prev} /> } />
+      <div>
+         <div className={globalStyles.prevIconform}>
+            <IconButton icon={ <FontAwesomeIcon icon={faArrowLeft} onClick={props.Prev} /> } />
+         </div>
          <Heading label='Business Information:' variant='heading1' />
          <TextFieldQa label='Describe a brief history of your business:' placeholder='Description Here..' />
          <TextFieldQa label='What level of involvement will your HR team have in this engagement? Who is your HR point person?' placeholder='Description Here..' />

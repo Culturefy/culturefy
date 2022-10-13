@@ -6,7 +6,7 @@ import TextFieldQa from '../common/TextFieldQa';
 const BusinessInfo1 = (props:any) => {
 
    return (
-      <div className='signInpForms'>
+      <div>
          <Heading label='Business Information:' variant='heading1' />
          <TextFieldQa label='Business Name:' placeholder='Description Here..' />
          <TextFieldQa label='Briefly describe what your business does:' placeholder='Description Here..' />

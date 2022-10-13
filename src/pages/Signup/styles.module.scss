@@ -79,18 +79,27 @@
     }
 }
 
-.custom-checkbox {
+.customCheckbox {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     margin-left: 0.521vw;
-}
-input#remember-me {
-    display: none;
-}
-label.remember-custom {
-    height: 0.99vw;
     width: 2.5vw;
+    position: relative;
+}
+.rememberMe {
+    opacity: 0;
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    cursor: pointer;
+}
+label.rememberCustom {
+    height: 0.99vw;
+    width: 100%;
     background: #bf161f;
     border: 1px solid #bf161f;
     position: relative;
@@ -98,7 +107,7 @@ label.remember-custom {
     transition: 0.3s ease-in-out;
     cursor: pointer;
 }
-label.remember-custom:after {
+label.rememberCustom:after {
     content: '';
     position: absolute;
     width: 0.365vw;
@@ -110,7 +119,12 @@ label.remember-custom:after {
     border-radius: 12px;
     transition: 0.3s ease-in-out;
 }
-input#remember-me:checked~label.remember-custom:after {
+.rememberMe:checked~label.rememberCustom:after {
     background: white;
     left: 1.563vw;
+}
+.signUpBtnLg{
+    button{
+        padding: 15px 30px;
+    }
 }

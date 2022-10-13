@@ -1,24 +1,21 @@
 import React from 'react';
 import Heading from '../../components/common/Heading';
 import IconButton from '../../components/common/IconButton';
+
 import Styles from './styles.module.scss'
 
-import { Link, useNavigate , useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faTwitter } from '@fortawesome/free-brands-svg-icons'
 
-import { faEnvelope, faUser, faLock } from '@fortawesome/fontawesome-free'
+import { faEnvelope, faUser, faLock } from '@fortawesome/free-solid-svg-icons'
 
 import goggleImg from '../../assets/authImages/images/image-sliders/Google.png'
 import TextFieldQa from '../../components/common/TextFieldQa';
 import Button from '../../components/common/Button';
 
 const Signup = () => {
-   const navigate = useNavigate()
-   const location = useLocation()
-
-   console.log(location.pathname)
    return (
       <>
          <div className={`${Styles.signUpMain} ${Styles.dFlexRow} `}>
@@ -50,27 +47,28 @@ const Signup = () => {
                      <span>
                         Remember me next time
                      </span>
-                     <div class="custom-checkbox">
-                        <input type="checkbox" id="remember-me" name="remember-me" />
-                        <label htmlFor="remember-me" class="remember-custom"></label>
+                     <div className={Styles.customCheckbox}>
+                        <input type="checkbox" id="rememberMeSignUp" name="remember-me" className={Styles.rememberMe} />
+                        <label htmlFor="remember-me" className={Styles.rememberCustom}></label>
                      </div>
                   </p>
-                  <Button
-                     variant='filled'
-                     color='secondary'
-                     label='SIGN UP'
-                     size='large'
-                  />
+                  <div className={Styles.signUpBtnLg}>
+                     <Button
+                        variant='filled'
+                        color='secondary'
+                        label='SIGN UP'
+                        size='large'
+                     />
+                  </div>
                   <p className={Styles.rememText}>Forget password</p>
                   <p className={Styles.rememText}>
                      Already have an account?
-                     <span onClick={()=>navigate('/auth/login')}>
+                     <span>
+                        <Link to={'/auth/login'} className={Styles.cSecondary}>
                            Sign in
-                        {/* <Link to={'/auth/login'} className={Styles.cSecondary}>
-                        </Link> */}
+                        </Link>
                      </span>
                   </p>
-
                </div>
             </div>
          </div>

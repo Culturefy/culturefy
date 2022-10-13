@@ -40,7 +40,9 @@ const BusinessInfoMain = () => {
    return (
       <>
          <div className={Styles.businessInfoMain}>
-            <Comp />
+            <div className={Styles.formsBusiness}>
+               <Comp />
+            </div>
          </div>
       </>
    );
