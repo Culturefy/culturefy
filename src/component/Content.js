@@ -22,7 +22,6 @@ const Content = () => {
               <img src={Calender} />
             </li>
             <li>
-
               <img src={Notification} />
             </li>
             <li>
@@ -38,11 +37,9 @@ const Content = () => {
             </div>
           </div>
         </div>
-        <Campaigns />
+        {/* <Campaigns /> */}
         {/* <Create /> */}
       </div></>
-   
-   
   );
 };
 
