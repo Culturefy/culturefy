@@ -15,7 +15,8 @@ const Content = () => {
     <><div className='d-flex'>
       <AsideLeft />
       <AsideRight />
-    </div><div className="content">
+    </div>
+    {/* <div className="content">
         <div className="main-top-nav">
           <ul class="bts-profile d-flex align-items-center justify-content-end">
             <li>
@@ -37,9 +38,8 @@ const Content = () => {
             </div>
           </div>
         </div>
-        {/* <Campaigns /> */}
-        {/* <Create /> */}
-      </div></>
+      </div> */}
+      </>
   );
 };
 

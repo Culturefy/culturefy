@@ -382,6 +382,9 @@ button.btn-generate {
 .heading-box .sub-title {
     font-family: "Grpahik Regular";
 }
+.heading-box.text {
+    font-family: "Grpahik Regular";
+}
 /* @media (min-width: 992px) */
 .col-lg-6 {
     flex: 0 0 auto;
@@ -471,7 +474,7 @@ button.btn-generate {
     border: none;
     color: #929292;
 }
-.arrows-camp button.right-arrow {
+.arrows-camp .right-arrow {
     margin-right: -40px;
 }
 .arrows-camp button {
@@ -710,4 +713,13 @@ ul.dropdown-menu.show {
     appearance: none;
     border-radius: 0.25rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+button:not(:disabled) {
+    cursor: pointer;
+}
+.arrows-camp i{
+cursor: pointer;
+}
+.tab-content key-content{
+    padding-left: 75px;
 }

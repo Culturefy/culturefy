@@ -11,6 +11,7 @@ import { DateRangePicker } from 'rsuite';
 import Create from "../campaigns/Create"
 import Data from "../Dashboard/Data"
 import  Content from "../component/Content"
+import Datas from "../assets/data.svg"
 
 const Index = () => {
  const minDays = 5;
@@ -153,8 +154,6 @@ const Index = () => {
   }
   console.log(data)
 
-
-
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
   const [focusedInput, setFocusedInput] = useState(null);
@@ -162,8 +161,9 @@ const Index = () => {
 
 
   return (
+    <div>
+      <Content/>
     <div className='wrapper'>
-   <Content/>
       <div className="create-new-campaigns">
        <Link to="/create-campaigns"><button >+ <span> Create New Campaigns</span></button></Link> 
       </div>
@@ -173,6 +173,7 @@ const Index = () => {
           <li><button onClick={()=>handleStatus('Pending')}>Pending</button></li>
           <li><button onClick={()=>handleStatus('Active')}>Active</button></li>
           <li><button onClick={()=>handleStatus('Completed')}>Complete</button></li>    
+          {/* <li><button onClick={()=>{handleSearches('Recived')}}>Recived</button></li> */}
         </ul>
       </div>
    
@@ -213,7 +214,8 @@ const Index = () => {
                 placeholder="Select a start and end dates"
               />
               <div className="search-buttons">
-              <span><svg xmlns="http://www.w3.org/2000/svg" width="15.5" height="15.5" viewBox="0 0 15.5 15.5">
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="15.5" height="15.5" viewBox="0 0 15.5 15.5">
               <path id="Path_9118" data-name="Path 9118" d="M6.889,6.111V3m6.222,3.111V3m-7,6.222h7.778M4.556,17H15.444A1.556,1.556,0,0,0,17,15.444V6.111a1.556,1.556,0,0,0-1.556-1.556H4.556A1.556,1.556,0,0,0,3,6.111v9.333A1.556,1.556,0,0,0,4.556,17Z" transform="translate(-2.25 -2.25)" fill="none" stroke="#f5a41d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
             </svg>
             </span>
@@ -328,6 +330,7 @@ const Index = () => {
           </div>
         )
       }
+    </div>
     </div>
     
   )
