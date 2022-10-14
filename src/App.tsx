@@ -14,7 +14,9 @@ function App() {
   return (
     <div className="App">
       <Suspense fallback={<Loader />}>
-        <RouterProvider router={router} />
+        <Provider store={store}>
+          <RouterProvider router={router} />
+        </Provider>
       </Suspense>
     </div>
   );
