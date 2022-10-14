@@ -4,7 +4,7 @@ import axios from 'axios';
 // import authConfig from 'src/config/auth'
 
 const instance = axios.create({
-  baseURL: "https://6be0-110-93-244-255.in.ngrok.io/api",
+  baseURL: "https://5caa-110-93-244-255.ap.ngrok.io/api",
   timeout: 500000,
   headers: {
     Accept: 'application/json',
@@ -15,7 +15,7 @@ const instance = axios.create({
 // Add a request interceptor
 instance.interceptors.request.use(function (config) {
 
-  const storedToken = window.localStorage.getItem('key')!
+  const storedToken = window.localStorage.getItem('token')
   // console.log(storedToken)
 
   return {

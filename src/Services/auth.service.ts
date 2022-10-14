@@ -6,7 +6,7 @@ const AuthServices = {
     return requests.post(`/login`, body);
   },
   signup(body:any): Promise<AxiosResponse<any, any>> {
-    return requests.get(`/auth/signup`, body);
+    return requests.post(`/register`, body);
   },
   logout(): Promise<AxiosResponse<any, any>> {
     return requests.get(`/auth/logout`);

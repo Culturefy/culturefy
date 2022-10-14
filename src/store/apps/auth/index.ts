@@ -3,7 +3,9 @@
 // ** Redux Imports
 import { Dispatch } from 'redux'
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
-import toast from 'react-hot-toast'
+// import toast from 'react-hot-toast'
+import { toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 import AuthServices from '../../../Services/auth.service'
 
@@ -54,8 +56,12 @@ export const loginAction = createAsyncThunk(
         dispatch(slice.actions.handleStatus('pending'))
         try {
             const response = await AuthServices.login(data);
+            // console.log(response.data);
+            if (response.data.success){
+                toast.success(response.data.message)
+            }
             // dispatch(fetchAllAction(getState().user.params))
-            toast.success("Assignment Added successfully!")
+            // toast.success("Assignment Added successfully!")
             dispatch(slice.actions.handleStatus('success'))
             return response.data;
         } catch (error: any) {
@@ -72,8 +78,12 @@ export const registerAction = createAsyncThunk(
         dispatch(slice.actions.handleStatus('pending'))
         try {
             const response = await AuthServices.signup(data);
+            // console.log(response.data);
+            
             // dispatch(fetchAllAction(getState().user.params))
-            toast.success("Assignment Added successfully!")
+            if (response.data.success){
+                toast.success(response.data.message||"Success")
+            }
             dispatch(slice.actions.handleStatus('success'))
             return response.data;
         } catch (error: any) {
@@ -95,6 +105,8 @@ export const slice = createSlice({
     } as InitialState,
     reducers: {
         handleStatus: (state, action) => {
+            // console.log(action.payload);
+            
             state.status = action.payload;
         },
     },

@@ -6,6 +6,8 @@ const TextFieldQa = ({
   placeholder = "Description Here..",
   ...props
 }) => {
+  console.log(Styles.TextFieldQa);
+
   return (
     <div className={Styles.TextFieldQa}>
       {props.label ? <label htmlFor="inp"> {props.label} </label> : ""}

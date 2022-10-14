@@ -25,7 +25,9 @@ import { auth } from '../../schema'
 import { register } from '../../schema'
 
 const defaultValues = {
-    name: '',
+    email: '',
+    password:''
+
 }
 
 export const useAuth = (data: string | null) => {
@@ -33,7 +35,7 @@ export const useAuth = (data: string | null) => {
     // ** Hook
     const dispatch = useDispatch<AppDispatch>()
     //   const { handleDrawer, handleModal } = useToggleDrawer();
-    const store = useSelector((state: RootState) => state.example)
+    const store = useSelector((state: RootState) => state.auth)
     const loginForm = useForm({
         defaultValues,
         mode: 'onChange',
@@ -50,18 +52,21 @@ export const useAuth = (data: string | null) => {
     }, [data])
 
     useMemo(() => {
-        if (store.example && data) {
-            loginForm.setValue('name' , store.example.name )
+        if (store.auth && data) {
+            loginForm.setValue('email' , store.auth.email )
         }
         else {
-            loginForm.setValue('name', '')
+            loginForm.setValue('email', '')
         }
-    }, [store.example, data])
+    }, [store.auth, data])
 
     const userLogin = async (data: any) => {
         dispatch(loginAction({ ...data }))
             .then(({ payload }: any) => {
-                if (payload.statusCode === "10000") {
+                // console.log(payload);
+                
+                if (payload.success) {
+                    window.localStorage.setItem('token',payload?.data[0]?.token)
                     loginForm.reset()
                     //   handleDrawer(null)
                 } else {
@@ -75,7 +80,7 @@ export const useAuth = (data: string | null) => {
     const userRegister = async (data: any) => {
         dispatch(registerAction({ ...data }))
             .then(({ payload }: any) => {
-                if (payload.statusCode === "10000") {
+                if (payload.success===true) {
                     registerForm.reset()
                     //   handleDrawer(null)
                 } else {

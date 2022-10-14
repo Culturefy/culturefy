@@ -3,7 +3,6 @@ import Styles from "./styles.module.scss";
 
 import downIcon from "../../assets/images/downIcon.svg";
 
-
 import { navigation } from "../../config/navigation";
 import { useSurvey } from "../../hooks/form/useSurvey";
 import { useAuth } from "../../hooks/form/useAuth";
@@ -20,14 +19,6 @@ import { useForm } from "react-hook-form";
 import Button from "../../components/common/Button";
 
 const AsideMenu = () => {
-  const {
-    register,
-    handleSubmit,
-    formState,
-    reset,
-    formState: { errors, touchedFields },
-  } = useForm();
-
   const [seletedItem, setSelectedItem] = useState("");
 
   const { getSurvey, store } = useSurvey(null);
