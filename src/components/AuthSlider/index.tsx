@@ -10,38 +10,38 @@ import "./styles.css";
 
 
 
-import sliderLogo from  '../../../assets/authImages/images/logo.png';
-import sliderImage from '../../../assets/authImages/images/image-sliders/slider-image.png';
-import trianleGreenImage from  '../../../assets/authImages/images/image-sliders/triangle-green.png';
-import percentileImage from '../../../assets/authImages/images/image-sliders/percentile.png';
-import scorecardImage from '../../../assets/authImages/images/image-sliders/scorecard.png';
-import cardsmImage from '../../../assets/authImages/images/image-sliders/cards-multiple.png';
-import ArrowlImage from '../../../assets/authImages/images/image-sliders/arrows-left-right.png';
-import logoBlackImage from '../../../assets/authImages/images/logo-black.png';
-import sliderImage2Image from '../../../assets/authImages/images/image-sliders/slider-image-2.png';
-import videoImage from '../../../assets/authImages/images/image-sliders/video-image.png';
-import eLearningImage from '../../../assets/authImages/images/image-sliders/e-learning.png';
-import barsProgressImage from '../../../assets/authImages/images/image-sliders/bars-progress.png';
+import sliderLogo from  '../../assets/authImages/images/logo.png';
+import sliderImage from '../../assets/authImages/images/image-sliders/slider-image.png';
+import trianleGreenImage from  '../../assets/authImages/images/image-sliders/triangle-green.png';
+import percentileImage from '../../assets/authImages/images/image-sliders/percentile.png';
+import scorecardImage from '../../assets/authImages/images/image-sliders/scorecard.png';
+import cardsmImage from '../../assets/authImages/images/image-sliders/cards-multiple.png';
+import ArrowlImage from '../../assets/authImages/images/image-sliders/arrows-left-right.png';
+import logoBlackImage from '../../assets/authImages/images/logo-black.png';
+import sliderImage2Image from '../../assets/authImages/images/image-sliders/slider-image-2.png';
+import videoImage from '../../assets/authImages/images/image-sliders/video-image.png';
+import eLearningImage from '../../assets/authImages/images/image-sliders/e-learning.png';
+import barsProgressImage from '../../assets/authImages/images/image-sliders/bars-progress.png';
 
-import checkRedImage from '../../../assets/authImages/images/image-sliders/check-red.png';
-import smallTriangleImage from '../../../assets/authImages/images/image-sliders/small-triangle.png';
-import graduateImage from '../../../assets/authImages/images/image-sliders/graduate.png';
-import sliderImage3 from '../../../assets/authImages/images/image-sliders/slider-image-3.png';
-import redeemImage from '../../../assets/authImages/images/image-sliders/redeem.png';
-import trophyImage from '../../../assets/authImages/images/image-sliders/trophy.png';
-import handmoneyImage from '../../../assets/authImages/images/image-sliders/hand-money.png';
-import bullseyeImage from '../../../assets/authImages/images/image-sliders/bullseye.png';
-import arrowBottomImage from '../../../assets/authImages/images/image-sliders/arrow-bottom.png';
-import sliderImage4 from '../../../assets/authImages/images/image-sliders/slider-image-4.png';
-import componentImage from '../../../assets/authImages/images/image-sliders/component.png';
-import profileImage from '../../../assets/authImages/images/image-sliders/profile-image.png';
-import heartTickImage from '../../../assets/authImages/images/image-sliders/heart-tick.png';
-import bookOpenReaderImage from '../../../assets/authImages/images/image-sliders/book-open-reader.png';
-import sliderImage5 from '../../../assets/authImages/images/image-sliders/slider-image-5.png';
-import slide5Image from '../../../assets/authImages/images/image-sliders/slide5.png';
-import aiImage from '../../../assets/authImages/images/image-sliders/application-artificial-intelligence-ai.png';
-import pathImage from '../../../assets/authImages/images/image-sliders/Path.png';
-import speakersImage from '../../../assets/authImages/images/image-sliders/speakers.png';
+import checkRedImage from '../../assets/authImages/images/image-sliders/check-red.png';
+import smallTriangleImage from '../../assets/authImages/images/image-sliders/small-triangle.png';
+import graduateImage from '../../assets/authImages/images/image-sliders/graduate.png';
+import sliderImage3 from '../../assets/authImages/images/image-sliders/slider-image-3.png';
+import redeemImage from '../../assets/authImages/images/image-sliders/redeem.png';
+import trophyImage from '../../assets/authImages/images/image-sliders/trophy.png';
+import handmoneyImage from '../../assets/authImages/images/image-sliders/hand-money.png';
+import bullseyeImage from '../../assets/authImages/images/image-sliders/bullseye.png';
+import arrowBottomImage from '../../assets/authImages/images/image-sliders/arrow-bottom.png';
+import sliderImage4 from '../../assets/authImages/images/image-sliders/slider-image-4.png';
+import componentImage from '../../assets/authImages/images/image-sliders/component.png';
+import profileImage from '../../assets/authImages/images/image-sliders/profile-image.png';
+import heartTickImage from '../../assets/authImages/images/image-sliders/heart-tick.png';
+import bookOpenReaderImage from '../../assets/authImages/images/image-sliders/book-open-reader.png';
+import sliderImage5 from '../../assets/authImages/images/image-sliders/slider-image-5.png';
+import slide5Image from '../../assets/authImages/images/image-sliders/slide5.png';
+import aiImage from '../../assets/authImages/images/image-sliders/application-artificial-intelligence-ai.png';
+import pathImage from '../../assets/authImages/images/image-sliders/Path.png';
+import speakersImage from '../../assets/authImages/images/image-sliders/speakers.png';
 
 
 const AuthSlider = () => {

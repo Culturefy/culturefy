@@ -1,29 +1,20 @@
-import React, { useEffect } from "react";
-import { useState } from "react";
+import React, { useState, Suspense } from "react";
 // import reactLogo from './assets/react.svg'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Provider } from "react-redux";
 import "./App.css";
-import { Suspense } from "react";
 // import reactLogo from './assets/react.svg'
 import "./App.css";
 // import { router } from 'src/routes/index'
-import { router } from "./routes/index";
 import { store } from "./store";
+import { router } from "./routes/index";
+import Loader from "./components/Loader";
 
 function App() {
   return (
     <div className="App">
-      <Suspense fallback={<h1>Loading...</h1>}>
-        <Provider store={store}>
-          <RouterProvider
-            router={router}
-            fallbackElement={<h1>Loading...</h1>}
-          />
-          {/* <RouterProvider
-        router={router}
-      /> */}
-        </Provider>
+      <Suspense fallback={<Loader />}>
+        <RouterProvider router={router} />
       </Suspense>
     </div>
   );

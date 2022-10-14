@@ -8,7 +8,7 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookF, faTwitter } from "@fortawesome/free-brands-svg-icons";
 
-import { faEnvelope, faUser, faLock } from "@fortawesome/fontawesome-free";
+import { faEnvelope, faUser, faLock } from "@fortawesome/free-solid-svg-icons";
 
 import goggleImg from "../../assets/authImages/images/image-sliders/Google.png";
 import TextFieldQa from "../../components/common/TextFieldQa";
@@ -32,7 +32,7 @@ const Signup = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const onSubmit = (body) => {
+  const onSubmit = (body: object) => {
     let apiData = {
       ...body,
       role_id: "3",
@@ -88,9 +88,17 @@ const Signup = () => {
 
               <p className={`${Styles.rememText} ${Styles.dFlexRow}`}>
                 <span>Remember me next time</span>
-                <div class="custom-checkbox">
-                  <input type="checkbox" id="remember-me" name="remember-me" />
-                  <label htmlFor="remember-me" class="remember-custom"></label>
+                <div className={Styles.customCheckbox}>
+                  <input
+                    type="checkbox"
+                    id="rememberMeSignUp"
+                    name="remember-me"
+                    className={Styles.rememberMe}
+                  />
+                  <label
+                    htmlFor="remember-me"
+                    className={Styles.rememberCustom}
+                  ></label>
                 </div>
               </p>
               {store.status === "pending" ? (

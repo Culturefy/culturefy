@@ -764,6 +764,10 @@
     right: 40px;
   }
   
+  .slider-items p,
+  .slider-items h6{
+    font-family: 'Grpahik Regular';
+  }
   
   
   
