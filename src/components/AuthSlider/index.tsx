@@ -2,6 +2,7 @@ import React, { FC } from "react";
 import { Link } from "react-router-dom";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination} from "swiper";
 // Import Swiper styles
 import 'swiper/swiper-bundle.min.css';
 // import 'swiper/components/navigation/navigation.scss';
@@ -54,7 +55,9 @@ const AuthSlider = () => {
                   spaceBetween={0}
                   centeredSlides={true}
                   navigation
+                  pagination={{ clickable: true }}
                   autoplay={false}
+                  modules={[Pagination,Navigation]}
                >
                   <SwiperSlide>
                      <div className="slider-items bg-red">

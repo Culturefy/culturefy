@@ -92,11 +92,11 @@ const Signup = () => {
                   <input
                     type="checkbox"
                     id="rememberMeSignUp"
-                    name="remember-me"
+                    name="rememberMeSignUp"
                     className={Styles.rememberMe}
                   />
                   <label
-                    htmlFor="remember-me"
+                    htmlFor="rememberMeSignUp"
                     className={Styles.rememberCustom}
                   ></label>
                 </div>
@@ -122,8 +122,6 @@ const Signup = () => {
                 Already have an account?
                 <span onClick={() => navigate("/auth/login")}>
                   Sign in
-                  {/* <Link to={'/auth/login'} className={Styles.cSecondary}>
-                        </Link> */}
                 </span>
               </p>
             </div>

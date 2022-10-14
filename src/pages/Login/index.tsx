@@ -71,11 +71,16 @@ const Login = () => {
               />
               <p className={`${Styles.rememText} ${Styles.dFlexRow}`}>
                 <span>Remember me next time</span>
-                <div className="custom-checkbox">
-                  <input type="checkbox" id="remember-me" name="remember-me" />
+                <div className={Styles.customCheckbox}>
+                  <input
+                    type="checkbox"
+                    id="rememberMeLogin"
+                    name="rememberMeLogin"
+                    className={Styles.rememberMe}
+                  />
                   <label
-                    htmlFor="remember-me"
-                    className="remember-custom"
+                    htmlFor="rememberMeLogin"
+                    className={Styles.rememberCustom}
                   ></label>
                 </div>
               </p>

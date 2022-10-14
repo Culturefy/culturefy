@@ -1,0 +1,42 @@
+.strategyBox {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px 0;
+  
+  .headingBox {
+    padding: 10px 30px;
+    background: #efefef;
+    filter: drop-shadow(0 3px 6px #efefef);
+  }
+  .questionBox {
+    margin: 40px 0;
+    p{
+        padding: 10px 30px;
+        font-size: 16px;
+        font-family: "Grpahik Regular";
+        color: #191919;
+        white-space: pre-line;
+    }
+  }
+  .ansBox {
+    padding: 30px 50px 30px 30px;
+    min-height: 150px;
+    background-color: #efefef;
+    filter: drop-shadow(0 3px 6px #efefef);
+    position: relative;
+    p {
+      font-size: 16px;
+      font-family: "Grpahik Medium";
+    }
+    .editIcon{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        button{
+            font-size: 20px;
+        }
+    }
+  }
+}

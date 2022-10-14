@@ -3,17 +3,17 @@ import Button from '../common/Button';
 import Heading from '../common/Heading';
 import TextFieldQa from '../common/TextFieldQa';
 
-import globalStyles from '../../global.module.scss'
+import global from '../../global.module.scss'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import IconButton from '../common/IconButton';
 
-const BusinessInfo1 = (props:any) => {
+const Businessinfo2 = (props:any) => {
 
    return (
       <div>
-         <div className={globalStyles.prevIconform}>
+         <div className={global.prevIconform}>
             <IconButton icon={ <FontAwesomeIcon icon={faArrowLeft} onClick={props.Prev} /> } />
          </div>
          <Heading label='Business Information:' variant='heading1' />
@@ -40,4 +40,4 @@ const BusinessInfo1 = (props:any) => {
    )
 }
 
-export default BusinessInfo1
+export default Businessinfo2

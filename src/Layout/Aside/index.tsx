@@ -112,9 +112,6 @@ const AsideMenu = () => {
           </div>
         </div>
       </aside>
-      <button type="submit" onClick={onSubmit}>
-        Submit
-      </button>
     </>
   );
 };

@@ -3,7 +3,7 @@ import Button from "../common/Button";
 import Heading from "../common/Heading";
 import TextFieldQa from "../common/TextFieldQa";
 
-const BusinessInfo1 = (props: any) => {
+const Businessinfo1 = (props: any) => {
   return (
     <div>
       <Heading label="Business Information:" variant="heading1" />
@@ -39,4 +39,4 @@ const BusinessInfo1 = (props: any) => {
   );
 };
 
-export default BusinessInfo1;
+export default Businessinfo1;

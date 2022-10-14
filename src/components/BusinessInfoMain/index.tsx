@@ -1,31 +1,33 @@
 import { useState } from "react";
-import BusinessInfo1 from "../BusinessInfo1";
-import BusinessInfo2 from "../BusinessInfo2";
-import BusinessInfo3 from "../BusinessInfo3";
+import Businessinfo1 from "../Businessinfo1";
+import Businessinfo2 from "../Businessinfo2";
+import Businessinfo3 from "../Businessinfo3";
 
 import Styles from "./styles.module.scss";
 
 const Comp = () => {
   const [step, setStep] = useState(1);
-  const nextStepHandler = (prevState) => {
+  const nextStepHandler = (prevState:number) => {
     setStep(prevState + 1);
   };
-  const prevStepHandler = (prevState) => {
+  const prevStepHandler = (prevState:number) => {
     setStep(prevState - 1);
   };
   switch (step) {
     case 1:
-      return <BusinessInfo1 Next={() => nextStepHandler(step)} />;
+      return (
+        <Businessinfo1 Next={() => nextStepHandler(step)} />
+      );
     case 2:
       return (
-        <BusinessInfo2
+        <Businessinfo2
           Next={() => nextStepHandler(step)}
           Prev={() => prevStepHandler(step)}
         />
       );
     case 3:
       return (
-        <BusinessInfo3
+        <Businessinfo3
           Next={() => nextStepHandler(step)}
           Prev={() => prevStepHandler(step)}
         />

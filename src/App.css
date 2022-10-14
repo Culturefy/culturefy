@@ -6,8 +6,14 @@
   font-family: 'Grpahik Regular';
   src: url('./assets/fonts/Graphik/GraphikRegular.otf');
 }
+ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 #root {
   max-width: 100%;
+  width: 100%;
 }
 body{
   font-family: 'Grpahik Medium';
