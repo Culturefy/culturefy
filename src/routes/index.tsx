@@ -102,6 +102,7 @@ export const    router = createBrowserRouter([
         path: 'business-info',
         element: <BusinessInfoMain />
       }
+      
     ]
   },
   
