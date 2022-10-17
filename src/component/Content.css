@@ -4,9 +4,92 @@
     color: black;
     padding: 0 3rem;
     width:78%;
-    
-   
 }
+.date_comp{
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+.datpick{
+    width: 23rem;
+}
+.date_input_fields{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border: 1px solid grey;
+    border-radius: 5px;
+    
+}
+.dasshed__{
+    font-size: 25px;
+}
+.cal_icon{
+    color: #f5a41d;
+    text-align: center;
+    align-items: center;
+    margin: 5px !important;
+}
+.date_input{
+    /* width: 22.5rem; */
+    width: 170px;
+    border: none !important;
+    border-radius: 5px;
+    height: 50px;
+    padding: 5px;
+    outline: none;
+
+    text-align: center;
+}
+
+.rsd__select-container-month > label{
+    display: none;
+}
+.rsd__select-container-day > label{
+    display: none;
+}
+.rsd__select-container-year > label{
+    display: none;
+}
+.start_end_date{
+    font-weight: 900;
+    margin: 10px 0;
+    padding: 5px;
+}
+.rsd__select-month{
+    font-size: 15px !important;
+}
+.rsd__select-day{
+    font-size: 15px !important;
+}
+.rsd__select-year{
+    font-size: 15px !important;
+}
+.rsd__select-month{
+    border: none !important;
+    border-bottom: 1px solid grey !important;
+    margin: 0 10px;
+    font-size: 18px;
+    color: grey;
+    outline: none !important;
+}
+.rsd__select-day{
+    border: none !important;
+    border-bottom: 1px solid grey !important;
+    margin: 0 10px;
+    font-size: 18px;
+    color: grey;
+}
+
+.rsd__select-year{
+    border: none !important;
+    border-bottom: 1px solid grey !important;
+    margin: 0 10px;
+    font-size: 18px;
+    color: grey; 
+}
+
 /* .content {
     display: block;
     width: calc(100% - var(--aside-width));
@@ -139,8 +222,8 @@
     display: flex;
     align-items: center;
     margin-top: 40px;
-    display: flex;
-    position: relative;
+    /* display: flex;
+    position: relative; */
 
 
 }
@@ -368,3 +451,59 @@ p {
         --maintop-nav-height: 200px;
     --aside-width: 380px;
     }
+
+    /* Ujj */
+    .campaign-top .wraper-filter h4 {
+        font-size: 20px;
+        color: #929292;
+        margin-right: 20px;
+        font-family: "Grpahik Light";
+        margin-bottom: 0;
+    }
+
+    .campaign-top .filter-date {
+        padding: 12px 18px;
+        border: 1px solid #dbdbdb;
+        border-radius: 8px;
+        max-width: 380px;
+        width: 100%;
+        position: relative;
+    }
+    .campaign-top .filter-date button {
+        border: none;
+        outline: none;
+        background: none;
+        font-size: 20px;
+        font-family: "Grpahik Light";
+        color: #929292;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .campaign-table table thead th:first-child {
+        padding-left: 40px;
+        position: relative;
+    }
+    .main-top-nav > ul li {
+        margin-left: 30px;
+        position: relative;
+    }
+    .notification-icon {
+        position: relative;
+    }
+    .notification-count {
+        position: absolute;
+        top: 5px;
+        left: 15px;
+        background-color: #bf161f;
+        width: 25px;
+        height: 25px;
+        text-align: center;
+        color: #fff;
+        line-height: 25px;
+        border-radius: 30px;
+        font-size: var(--f-12);
+    }
+   

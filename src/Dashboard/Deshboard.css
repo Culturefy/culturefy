@@ -83,7 +83,12 @@
     --rightNav-height: 35vh;
 }
 .right-nav li a{
+    
     text-decoration: none;
+    color: #929292;
+    font-family: "Grpahik Medium";
+    font-size: var(--f-20);
+    transition: all 0.5s ease-in-out
 }
 .compnay-name{
 font-size: 1.25rem;
@@ -112,8 +117,15 @@ font-weight: 700;
     font-weight: 700;
     color: white;
 }
-.campaign{
+.campaigns {
     display: flex;
+    justify-content: space-between;
+    /* justify-content: space-between; */
+    padding: 12px 12px;
+    gap: 12px;
+}
+.campaign{
+    /* display: flex; */
     justify-content: space-between;
 
     /* justify-content: space-between; */
