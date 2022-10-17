@@ -55,7 +55,7 @@ export const addAction = createAsyncThunk(
         try {
             const response = await Service.add(data);
             dispatch(fetchAllAction(getState().user.params))
-            toast.success("Assignment Added succesfully!")
+            toast.success("Assignment Added successfully!")
             dispatch(slice.actions.handleStatus('success'))
             return response.data;
         } catch (error: any) {

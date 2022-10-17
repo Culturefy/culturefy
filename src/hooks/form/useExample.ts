@@ -47,7 +47,7 @@ export const useExample = (serviceId: string | null) => {
 
     useMemo(() => {
         if (store.example && serviceId) {
-            form.setValue('name', store.example.name)
+            form.setValue('name' , store.example.name )
         }
         else {
             form.setValue('name', '')

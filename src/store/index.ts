@@ -9,14 +9,18 @@ import { configureStore } from '@reduxjs/toolkit'
 // import calendar from 'src/store/apps/calendar'
 // import permissions from 'src/store/apps/permissions'
 import example from './apps/example'
+import survey from "./apps/surveyexample"
+import auth from './apps/auth'
 
 export const store = configureStore({
   reducer: {
-    example
+    example,
+    survey,
+    auth
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
-      serializableCheck: false
+      serializableCheck:false
     })
 })
 

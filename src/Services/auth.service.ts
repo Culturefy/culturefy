@@ -1,12 +1,12 @@
 import { AxiosResponse } from 'axios'
-import requests from 'src/Services/http.service';
+import requests from '../Services/http.service';
 
 const AuthServices = {
   login(body: any): Promise<AxiosResponse<any, any>> {
-    return requests.post(`/auth/signin`, body);
+    return requests.post(`/login`, body);
   },
-  signup(): Promise<AxiosResponse<any, any>> {
-    return requests.get(`/auth/signup`);
+  signup(body:any): Promise<AxiosResponse<any, any>> {
+    return requests.post(`/register`, body);
   },
   logout(): Promise<AxiosResponse<any, any>> {
     return requests.get(`/auth/logout`);

@@ -3,7 +3,7 @@ import { AxiosResponse } from 'axios'
 
 const Services = {
   getAll(): Promise<AxiosResponse> {
-    return requests.get('/example');
+    return requests.get('/posts');
   },
   getById(id: string): Promise<AxiosResponse> {
     return requests.get(`/example/${id}`);
