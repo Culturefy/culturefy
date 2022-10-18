@@ -29,8 +29,6 @@
 }
 .cardsAudit{
     padding: 20px 18px 50px 30px;
-    background-color: #efefef;
-    filter: drop-shadow(0 3px 6px #efefef);
     display: flex;
     justify-content: space-between;
     overflow-x: scroll;
@@ -54,4 +52,17 @@
 }
 .cardsAudit::-webkit-scrollbar-thumb:hover{
     background-color: #2394ae;
+}
+
+
+.planMain{
+    width: 100%;
+    padding: 30px 0;
+}
+.brandingBox{
+    padding-left: 75px;
+}
+.filterBtnsGroup{
+    display: flex;
+    gap: 20px;
 }

@@ -7,8 +7,6 @@
   
   .headingBox {
     padding: 10px 30px;
-    background: #efefef;
-    filter: drop-shadow(0 3px 6px #efefef);
   }
   .questionBox {
     margin: 40px 0;
@@ -23,8 +21,6 @@
   .ansBox {
     padding: 30px 50px 30px 30px;
     min-height: 150px;
-    background-color: #efefef;
-    filter: drop-shadow(0 3px 6px #efefef);
     position: relative;
     p {
       font-size: 16px;
@@ -38,5 +34,15 @@
             font-size: 20px;
         }
     }
+  }
+
+  .strategyImg {
+    width: 55px;
+    > div {
+      margin: 0 auto;
+    }
+  }
+  .strategyText{
+    width: calc(100% - 55px);
   }
 }

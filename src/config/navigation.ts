@@ -21,16 +21,16 @@ export const navigation: INavigations[] = [
     {
         id: "culture-check",
         title: "Culture Check",
-        link: "/culture-check",
+        link: "/user/brand-culture-startegy",
         icon: culIcon2,
         children: [
           {
             title: "Brand Culture Strategy",
-            link: "/culture-check/brand-culture-ctrategy",
+            link: "/user/brand-culture-startegy",
           },
           {
             title: "Surveys",
-            link: "/culture-check/surveys",
+            link: "/user/surveys",
           },
         ],
       },
@@ -73,7 +73,7 @@ export const navigation: INavigations[] = [
       {
         id: "community",
         title: "Community",
-        link: "/community",
+        link: "/user/community",
         icon: communityIcon,
         children: [
           {
@@ -90,7 +90,7 @@ export const navigation: INavigations[] = [
           },
           {
             title: "social Feed",
-            link: "/community/social-feed",
+            link: "/user/community",
           },
         ],
       },
