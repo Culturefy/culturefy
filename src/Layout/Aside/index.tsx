@@ -73,7 +73,7 @@ const AsideMenu = () => {
                     <div key={menu.id}>
                       <div className="d-flex align-items-center gap-3">
                         <img src={menu.icon} className={Styles.iconImg} />
-                        <Link to="/" className={Styles.titleLink}>
+                        <Link to={menu.link} className={Styles.titleLink}>
                           {menu.title}
                         </Link>
                       </div>
@@ -99,7 +99,7 @@ const AsideMenu = () => {
                                 e.stopPropagation();
                               }}
                             >
-                              <Link to="/">{children.title}</Link>
+                              <Link to={children.link}>{children.title}</Link>
                             </li>
                           );
                         })}
