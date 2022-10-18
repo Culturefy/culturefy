@@ -8,6 +8,13 @@ import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
 import Content from "../component/Content"
 import DateFilter from '../component/DateFilter';
+// Search bar Mui
+import Paper from '@mui/material/Paper';
+import InputBase from '@mui/material/InputBase';
+import Divider from '@mui/material/Divider';
+import IconButton from '@mui/material/IconButton';
+import SearchIcon from '@mui/icons-material/Search';
+
 const Index = () => {
   const minDays = 5;
   const maxDays = 10;
@@ -17,7 +24,7 @@ const Index = () => {
       heading: "Open a Coke, Open Happi...",
       Paragraph: "2022 Jul 22 - 2022 Aug 21",
       status: "Pending",
-      progresstext: "$ 0 out of $ 1,000 Goal",
+      progresstext: "$ 0 out of $ 1,000 Budget",
       progresstext1: "-- days left",
       Impression: "-- imp",
       Reach: "-- users",
@@ -28,7 +35,7 @@ const Index = () => {
       heading: "Beat the heat with Coca-Cola",
       Paragraph: "2022 Jul 22 - 2022 Aug 21",
       status: "Pending",
-      progresstext: "$ 0 out of $ 1,000 Goal",
+      progresstext: "$ 0 out of $ 1,000 Budget",
       progresstext1: "-- days left",
       Impression: "-- imp",
       Reach: "-- users",
@@ -39,7 +46,7 @@ const Index = () => {
       heading: "Can't Beat The Real Thing...",
       Paragraph: "2022 Jul 22 - 2022 Aug 21",
       status: "Active",
-      progresstext: "$ 400 out of $ 1,000 Goal",
+      progresstext: "$ 400 out of $ 1,000 Budget",
       progresstext1: "18 days left",
       Impression: "4,004 imp ",
       Reach: "5,890 users",
@@ -50,7 +57,7 @@ const Index = () => {
       heading: "They don't make 'em like th...",
       Paragraph: "2022 Jul 22 - 2022 Aug 21",
       status: "Active",
-      progresstext: "$ 400 out of $ 1,000 Goal",
+      progresstext: "$ 400 out of $ 1,000 Budget",
       progresstext1: "18 days left",
       Impression: "4,004 imp ",
       Reach: "5,890 users",
@@ -61,7 +68,7 @@ const Index = () => {
       heading: "Taste the Feeling. Coca-Cola",
       Paragraph: "2022 Jul 22 - 2022 Aug 21",
       status: "Active",
-      progresstext: "$ 400 out of $ 1,000 Goal",
+      progresstext: "$ 400 out of $ 1,000 Budget",
       progresstext1: "18 days left",
       Impression: "4,004 imp ",
       Reach: "5,890 users",
@@ -72,7 +79,7 @@ const Index = () => {
       heading: "This is how we celebrate wi...",
       Paragraph: "2022 Jul 22 - 2022 Aug 21",
       status: "Active",
-      progresstext: "$ 400 out of $ 1,000 Goal",
+      progresstext: "$ 400 out of $ 1,000 Budget",
       progresstext1: "18 days left",
       Impression: "4,004 imp ",
       Reach: "5,890 users",
@@ -83,7 +90,7 @@ const Index = () => {
       heading: "#ChooseHappiness #Coca-...",
       Paragraph: "2022 Jul 22 - 2022 Aug 21",
       status: "Completed",
-      progresstext: "$ 400 out of $ 1,000 Goal",
+      progresstext: "$ 400 out of $ 1,000 Budget",
       progresstext1: "18 days left",
       Impression: "4,004 imp ",
       Reach: "5,890 users",
@@ -93,7 +100,7 @@ const Index = () => {
       heading: "Things go better with Coca...",
       Paragraph: "2022 Jul 22 - 2022 Aug 21",
       status: "Completed",
-      progresstext: "$ 400 out of $ 1,000 Goal",
+      progresstext: "$ 400 out of $ 1,000 Budget",
       progresstext1: "18 days left",
       Impression: "4,004 imp ",
       Reach: "5,890 users",
@@ -103,7 +110,7 @@ const Index = () => {
       heading: "#EnjoyCoca-Cola",
       Paragraph: "2022 Jul 22 - 2022 Aug 21",
       status: "Completed",
-      progresstext: "$ 400 out of $ 1,000 Goal",
+      progresstext: "$ 400 out of $ 1,000 Budget",
       progresstext1: "18 days left",
       Impression: "4,004 imp ",
       Reach: "5,890 users",
@@ -111,6 +118,8 @@ const Index = () => {
     }
     // }
   ]
+    // }
+  
   )
   const perPageUser = 4;
   const totalPages = data.length / perPageUser;
@@ -150,17 +159,48 @@ const Index = () => {
   return (
     <div>
       <Content />
+      <div className='upper_container'>
+
+      </div>
+<div className='Sub_container'>
       <div className='wrapper'>
+        <div className='heading_search_container'>
+          <h1 className='heading_main_container'>Compaigns</h1>
+          <Paper
+            component="form"
+            sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 400 }}
+          >
+            <InputBase
+              sx={{ ml: 1, flex: 1 }}
+              placeholder="Search Google Maps"
+              inputProps={{ 'aria-label': 'search google maps' }}
+            />
+            <IconButton type="button" sx={{ p: '10px' }} aria-label="search">
+              <SearchIcon />
+            </IconButton>
+            <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />
+     
+          </Paper>
+        </div>
         <div className="create-new-campaigns">
-          <Link to="/create-campaigns"><button >+ <span> Create New Campaigns</span></button></Link>
+          <Link to="/create-campaigns"><button >+<span> Create New Campaigns</span></button></Link>
         </div>
         <div className="nav-campaign-tabs">
           <ul>
-            <li><button onClick={() => setStatussearch(data)}>All</button></li>
-            <li><button onClick={() => handleStatus('Pending')}>Pending</button></li>
-            <li><button onClick={() => handleStatus('Active')}>Active</button></li>
+            <li>
+              <button onClick={() => setStatussearch(data)}>All</button>
+            </li>
+            <li>
+              <button onClick={() => handleStatus('Pending')}>Pending
+              </button>
+              </li>
+            <li>
+              <button onClick={() => handleStatus('Active')}>
+                Active
+              </button>
+            </li>
             <li><button onClick={() => handleStatus('Completed')}>Complete</button></li>
-            {/* <li><button onClick={()=>{handleSearches('Recived')}}>Recived</button></li> */}
+      
           </ul>
         </div>
 
@@ -181,42 +221,7 @@ const Index = () => {
               </div>
             </div>
 
-
-            {/* =============== */}
-            {/* <div className="wraper-filter">
-            <h4>Filter by</h4>
-            <div className="search"> */}
-            {/* <DateRangePicker
-            placeholder="Select a start and end date"
-        startDate={startDate}
-        startDateId="s_id"
-        endDate={endDate}
-        endDateId="e_id"
-        onDatesChange={({ startDate, endDate }) => { setStartDate(startDate); setEndDate(endDate); }}
-        focusedInput={focusedInput}
-        onFocusChange={e => setFocusedInput(e)}
-        displayFormat="DD/MM/YYYY"
-      /> */}
-
-            {/* 
-              <input
-                type="search"
-                placeholder="Select a start and end dates"
-                
-              />
-              <div className="search-buttons">
-              <span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="15.5" height="15.5" viewBox="0 0 15.5 15.5">
-              <path id="Path_9118" data-name="Path 9118" d="M6.889,6.111V3m6.222,3.111V3m-7,6.222h7.778M4.556,17H15.444A1.556,1.556,0,0,0,17,15.444V6.111a1.556,1.556,0,0,0-1.556-1.556H4.556A1.556,1.556,0,0,0,3,6.111v9.333A1.556,1.556,0,0,0,4.556,17Z" transform="translate(-2.25 -2.25)" fill="none" stroke="#f5a41d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
-            </svg>
-            </span>
-              </div>
-             
-            </div>
-          </div> */}
-            {/* ============ */}
-            
-            <DateFilter/>
+            <DateFilter />
           </div>
           <div className="tab-content campaign">
             <div className="tab-pane fade show active" id="All" role="tabpanel">
@@ -296,7 +301,6 @@ const Index = () => {
                         )
                       })}
                   </tbody>
-
                 </table>
               </div>
             </div>
@@ -306,7 +310,6 @@ const Index = () => {
           data.length > 4 &&
           (
             <div className="Pagination">
-
               <ReactPaginate
                 nextClassName={''} //clientList.data.result.length < rowsPerPage && "nextClassName"
                 previousLabel={'< Previous'}
@@ -325,6 +328,10 @@ const Index = () => {
           )
         }
       </div>
+      </div>
+
+
+
     </div>
 
   )

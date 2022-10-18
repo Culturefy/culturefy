@@ -9,7 +9,7 @@ import Campaign from "./campaigns/Index"
 import Workspace from "./campaigns/Workspace"
 import CreateWorkspaces from "./campaigns/CreateWorkspaces"
 import Worksplaceindex from "./campaigns/Workspacesindex"
-
+import WorkspacesData from "./campaigns/WorkspacesData"
 const Routing=()=>{
     return(
 <Routes>
@@ -19,6 +19,7 @@ const Routing=()=>{
     <Route path="/workspace-main" element={<Workspace/>}/>
     <Route path="/createworkspaces" element={<CreateWorkspaces/>}/>
     <Route path="/workspaces" element={<Worksplaceindex/>}/>
+    <Route path="/workspacesdata" element={<WorkspacesData/>}/>
 </Routes>
     )
 }

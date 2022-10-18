@@ -53,3 +53,32 @@
   font-weight: 500;
   line-height: 1.2;
 }
+.lists{
+  padding-left: 5px;
+  font-size: var(--f-16);
+    color: #2394ae;
+    justify-content: end;
+    padding-right: 30px;
+    text-align: right;
+}
+
+.right-nav.campaigns img :focus{
+  background-color: #2394ae;
+}
+
+.users :hover{
+  background-color: #2394ae;
+}
+.users  {
+  filter: invert(10%) sepia(82%) saturate(6586%) hue-rotate(353deg) brightness(92%) contrast(88%);
+}
+
+/* .nav-campaign-tabs li  :focus{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color:#2394ae;
+  padding: 5px;
+  border-radius: 30px;  
+} */

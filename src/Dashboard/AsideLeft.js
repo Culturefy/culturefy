@@ -32,7 +32,7 @@ const AsideLeft = () => {
       </ul>
     </div>
     <div className="asidebottom">
-      <img src={asideBottom} alt="" />
+      <img src={asideBottom}  alt="" />
     </div>
   </div>
   )

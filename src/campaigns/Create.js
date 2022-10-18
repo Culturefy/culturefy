@@ -171,15 +171,19 @@ const Create = () => {
     const [selected, setSelected] = useState(shirts.Slide1)
 
 
-const [arrow,setArrow] =useState(false)
-const handleArrow =()=>{
-    if(Tab==="false"){
-        setArrow(<i class="fa-solid fa-chevron-right"></i>)
+    const [shows, setShows] = useState(false)
+    const [texts, setTexts] = useState(false)
+    const [toggle, setToggle] = useState(false)
+
+    const handleChange =()=>{
+        if(shows){
+            setShows(!shows)
+        }
+        else{
+            setTexts(false)
+            setToggle(false)
+        }
     }
-    else{
-        setArrow(<i class="fa-solid fa-chevron-left"></i>)
-    }
-}
     return (
         <div>
             <Content />
@@ -236,7 +240,7 @@ const handleArrow =()=>{
 
 
                             <div className="key-action-wraper">
-                            <Tabs>
+                            {/* <Tabs>
                                 <TabList className="nav nav-tabs">    
                                      
                                    <Tab class="tab-pane fade in active show" >Plan <i class="fa-solid fa-chevron-right"></i></Tab> 
@@ -256,7 +260,22 @@ const handleArrow =()=>{
                                 <li>Review Campaign</li>
                                 </TabPanel>
                                 </div>
-                            </Tabs>
+                            </Tabs> */}
+                             <ul class="nav nav-tabs" onClick={handleChange}>
+                                    Plan
+                                    <li onClick={() => setShows(!shows)}>{shows ? <i class="fa fa-chevron-down" aria-hidden="true"></i> : <i class="fa-solid fa-chevron-right" ></i>}</li>
+                                    Possess
+                                    <li onClick={() => setTexts(!texts)}>{texts ? <i class="fa fa-chevron-down" aria-hidden="true"></i> : <i class="fa-solid fa-chevron-right" ></i>}</li>
+                                    Position
+                                    <li onClick={() => setToggle(!toggle)}>{toggle ? <i class="fa fa-chevron-down" aria-hidden="true"></i> : <i class="fa-solid fa-chevron-right" ></i>}</li>
+                                    </ul>
+                                    <div className="tab-contents key-content">
+                                    <ul className='para'>
+                                    {shows&& <><li > Campaign Goal</li><li>Audience Targeting</li><li> Schedule</li></>}
+                                    {texts && <p> Design Campaign</p>}
+                                    {toggle && <p>Review Campaign</p>}
+                                    </ul>
+                                    </div>
                             </div>
                         </div>
 

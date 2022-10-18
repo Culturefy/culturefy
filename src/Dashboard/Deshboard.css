@@ -9,8 +9,8 @@
 .aside-left{
     background-color: #000000;
     color: #ffffff;
-    /* width: 5%; */
-    height: 100vh;
+    width: 34%;
+    /* height: 100vh; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,7 +18,7 @@
     position: relative;
 }
 .logo{
-    height: 10.75rem;
+    width: 55%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -35,10 +35,9 @@
     padding:20px 0;
 }
 .list{
-    height:3.43rem;
-    width:3.43rem;
-    border: 2px solid white;
-    border-radius: 18px;
+    border: 3px solid white;
+    padding: 5px;
+    border-radius: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,10 +46,11 @@
     font-size: 20px;
 }
 .asidebottom{
-    padding-top:3.75rem ;
+    position: relative;
+    top: 11%;
 }
 .aside-right{
-    /* width: 17%; */
+    width: 67%;
     height: 100vh;
     box-sizing: border-box;
     box-shadow:5px 3px 12px #56545438;
@@ -90,16 +90,21 @@
     font-size: var(--f-20);
     transition: all 0.5s ease-in-out
 }
-.compnay-name{
+.compnay_name{
 font-size: 1.25rem;
 border: none;
 margin-top: 1rem;
 margin-bottom: 1rem;
 font-weight: 700;
+width: 60%;
+outline: none;
 }
 .createnew{
-    margin-top:0.625rem;
-    padding: 1rem 3rem;
+    /* margin-top:0.625rem; */
+    /* padding: 1rem 3rem; */
+    width: 80%;
+    padding: 1rem 0;
+    /* padding: 10px; */
     border-radius: 2rem;
     border: none;
     background-color: #bf161f;
@@ -108,8 +113,9 @@ font-weight: 700;
     color: white;
 }
 .upload{
-    margin-top:0.625rem;
-    padding: 1rem 3rem;
+    width: 80%;
+    padding: 1rem 0;
+    margin-top: 1rem;
     border-radius: 2rem;
     border: none;
     background-color: #2394ae;
@@ -123,6 +129,15 @@ font-weight: 700;
     /* justify-content: space-between; */
     padding: 12px 12px;
     gap: 12px;
+    font-weight: bold;
+}
+.wid{
+    width: 90%;
+    text-align: left;
+    padding: 12px;
+}
+.dn_arrow{
+    width: 10%;
 }
 .campaign{
     /* display: flex; */
@@ -166,3 +181,80 @@ font-weight: 700;
     text-transform: uppercase;
     transition: all 0.5s ease-in-out;
 }
+/* Media Query */
+@media  (max-width: 1440px) {
+    .createnew{
+        /* margin-top:0.625rem; */
+        /* padding: 1rem 3rem; */
+        width: 65%;
+        padding: 1rem 0;
+        /* padding: 10px; */
+        border-radius: 2rem;
+        border: none;
+        background-color: #bf161f;
+        font-size: 1rem;
+        font-weight: 700;
+        color: white;
+    }
+    .upload{
+        width: 65%;
+        padding: 1rem 0;
+        margin-top: 1rem;
+        border-radius: 2rem;
+        border: none;
+        background-color: #2394ae;
+        font-size: 1rem;
+        font-weight: 700;
+        color: white;
+    }
+    .compnay_name{
+        font-size: 1rem;
+        border: none;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+        width: 70%;
+        outline: none;
+        }
+        .campaigns {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            font-size: 15px;
+        }
+  }
+  @media  (max-width: 1024px){
+    .createnew{
+        /* margin-top:0.625rem; */
+        /* padding: 1rem 3rem; */
+        width: 65%;
+        padding: 1rem 0;
+        /* padding: 10px; */
+        border-radius: 2rem;
+        border: none;
+        background-color: #bf161f;
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: white;
+    }
+    .upload{
+        width: 65%;
+        padding: 1rem 0;
+        margin-top: 1rem;
+        border-radius: 2rem;
+        border: none;
+        background-color: #2394ae;
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: white;
+    }
+    .compnay_name{
+        font-size: 0.7rem;
+        border: none;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+        width: 80%;
+        outline: none;
+        }
+  }

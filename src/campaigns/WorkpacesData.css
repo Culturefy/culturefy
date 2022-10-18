@@ -1,0 +1,10 @@
+.workpacesdata-wepper{
+    margin-left:20% ;
+}
+.WorkpacesData_hadder{
+    display: flex;
+    justify-content: space-between;
+}
+.workspaces_upload{
+  padding: 10px 40px;
+}

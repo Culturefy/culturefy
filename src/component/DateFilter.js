@@ -7,16 +7,25 @@ import MenuItem from '@mui/material/MenuItem';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday'; //Calendar Icon
 import { Margin } from '@mui/icons-material';
 const DateFilter = () => {
-    const [value, setValue] = useState() // Date Picker  
+    const [abc, setabc] = useState() // Date Picker  
+
     const onDateChange = useCallback((date) => {
-        setValue(date);
+        let abc = date;
+        if (!abc) {
+        } else {
+            const abc = date.toLocaleDateString('en-us', { year: 'numeric', month: 'short', day: 'numeric' }) // "Jul 2021 Friday"
+            setabc(abc)
+        }
     }, []);
-    
     const [endDate, setEndDate] = useState() // Date Picker  
     const onEndDateChange = useCallback((date) => {
-        setEndDate(date);
+        let abc = date;
+        if (!abc) {
+        } else {
+            const abc = date.toLocaleDateString('en-us', { year: 'numeric', month: 'short', day: 'numeric' }) // "Jul 2021 Friday"
+            setEndDate(abc)
+        }
     }, []);
-
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
@@ -38,20 +47,21 @@ const DateFilter = () => {
                         onClick={handleClick}
                     >
                         <div className='date_input_fields'>
-                        <input
-                            type="text"
-                            placeholder='Select Start Date'
-                            className='date_input'
-                            value={value}
-                        />
-                       <span className='dasshed__'> - </span>
-                        <input
-                            type="text"
-                            className='date_input'
-                            placeholder='    Select End Date '
-                            value={endDate}
-                        />
-                         <CalendarTodayIcon className='cal_icon'/>
+                            <input
+                                type="text"
+                                placeholder='Select Start Date'
+                                className='date_input'
+                                value={abc}
+                                name="abc"
+                            />
+                            <span className='dasshed__'> - </span>
+                            <input
+                                type="text"
+                                className='date_input'
+                                placeholder='    Select End Date '
+                                value={endDate}
+                            />
+                            <CalendarTodayIcon className='cal_icon' />
                         </div>
                     </Button>
                     <Menu
@@ -69,7 +79,7 @@ const DateFilter = () => {
                                     Start Date
                                 </h3>
                                 <SelectDatepicker
-                                    selectedDate={value}
+                                    // selectedDate={value}
                                     onDateChange={onDateChange}
                                 />
 
@@ -78,7 +88,7 @@ const DateFilter = () => {
                                     End Date
                                 </h3>
                                 <SelectDatepicker
-                                    selectedDate={endDate}
+                                    // selectedDate={endDate}
                                     onDateChange={onEndDateChange}
                                 />
                             </div>

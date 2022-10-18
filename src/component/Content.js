@@ -11,12 +11,12 @@ import AsideRight from "../Dashboard/AsideRight";
 
 const Content = () => {
   return (
-    
-    <><div className='d-flex'>
+    <>
+    <div className='d-flex main_container'>
       <AsideLeft />
       <AsideRight />
     </div>
-    {/* <div className="content">
+    <div className="content">
         <div className="main-top-nav">
           <ul class="bts-profile d-flex align-items-center justify-content-end">
             <li>
@@ -38,8 +38,8 @@ const Content = () => {
             </div>
           </div>
         </div>
-      </div> */}
-      </>
+      </div>
+    </>
   );
 };
 
