@@ -22,6 +22,10 @@ const BrandCultureStartegy = lazy(() => import('../pages/BrandCultureStrategy'))
 const Notification = lazy(() => import('../pages/AccountSetting/Notification'))
 const Users = lazy(() => import('../pages/AccountSetting/users'))
 const Community = lazy(() => import('../pages/Community'))
+const Surveys = lazy(() => import('../pages/Surveys'))
+const CreateSurvey = lazy(() => import('../pages/CreateSurvey'))
+
+
 
 
 
@@ -37,7 +41,14 @@ export const    router = createBrowserRouter([
       {
         path: 'brand-culture-startegy',
         element: <BrandCultureStartegy />
-
+      },
+      {
+        path: 'surveys',
+        element: <Surveys />
+      },
+      {
+        path: 'create-survey',
+        element: <CreateSurvey />
       },
       {
         path: 'community',

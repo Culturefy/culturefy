@@ -7,7 +7,7 @@ function PageHeader() {
   return (
     <div className={Styles.pageHeader}>
       <div className={Styles.pageHeading}>
-        <Heading label="Account" variant="heading1" />
+        <Heading label="Surveys" variant="heading1" />
       </div>
       <div className={Styles.pageSeach} >
         <Search
