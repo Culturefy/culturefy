@@ -25,6 +25,18 @@ const Community = lazy(() => import('../pages/Community'))
 const Surveys = lazy(() => import('../pages/Surveys'))
 const CreateSurvey = lazy(() => import('../pages/CreateSurvey'))
 
+const Rewards = lazy(() => import('../pages/Rewards'))
+
+
+
+const Learning = lazy(() => import('../pages/Learning'))
+const CreateNewModule = lazy(() => import('../pages/createNewModule'))
+const CreateNewCourse = lazy(() => import('../pages/createNewCourse'))
+const CreateModuleLearning = lazy(() => import('../pages/CreateModuleLearning'))
+
+
+
+
 
 
 
@@ -51,10 +63,32 @@ export const    router = createBrowserRouter([
         element: <CreateSurvey />
       },
       {
+        path: 'rewards',
+        element: <Rewards />
+      },
+      {
         path: 'community',
         element: <Community />
-
+      },
+      {
+        path: 'learning',
+        element: <Learning />
+      },
+      {
+        path: 'create-new-module',
+        element: <CreateNewModule />
+      },
+      {
+        path: 'create-new-course',
+        element: <CreateNewCourse />
+      },
+      {
+        path: 'create-module-learning',
+        element: <CreateModuleLearning />
       }
+      
+      
+      
     ]
   },
   {

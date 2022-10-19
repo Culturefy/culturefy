@@ -1,0 +1,98 @@
+.flexDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  button {
+    max-width: 32%;
+    flex: 0 0 32%;
+    padding: 5px 20px;
+  }
+}
+
+.videoTxt {
+  display: flex;
+  margin: 30px 0;
+}
+
+.learningCreate {
+  width: 100%;
+  margin: 40px 0;
+}
+
+.learningCreate {
+  > div {
+    max-width: 100% !important;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+
+.learningCreate .expbox {
+  margin-left: 0;
+}
+
+.expvideo video {
+  border-radius: 0;
+}
+
+.learningCreate > div + div {
+  margin-left: 0;
+  padding-right: 0;
+}
+
+div div div .learningCreate {
+  h4 {
+    font-size: 16px !important;
+    line-height: 20px !important;
+  }
+  h3 {
+    font-size: 22px !important;
+
+    margin-bottom: 0px;
+    line-height: 30px !important;
+    width: 100%;
+    max-width: 100%;
+    font-weight: 600;
+    span {
+      color: #000 !important;
+      margin-top: 0;
+      font-size: 17px;
+      line-height: 30px;
+      display: block;
+      font-weight: 100;
+      text-transform: capitalize;
+      font-family: "Grpahik Regular";
+    }
+  }
+  p {
+    font-size: 12px;
+    color: hsl(0deg 0% 72%);
+    line-height: 16px;
+    font-weight: 400;
+    font-family: "Grpahik Regular";
+  }
+}
+.learningCreatTxt {
+  p {
+    font-size: 14px;
+    font-family: "Grpahik Regular";
+    line-height: 18px;
+    color: #454545;
+  }
+}
+
+.videoTxt {
+  padding: 0;
+  margin: 10px;
+
+  > div {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.green {
+  .heading6 {
+    color: #2394ae;
+  }
+}

@@ -37,7 +37,7 @@ export const navigation: INavigations[] = [
       {
         id: "learning",
         title: "Learning",
-        link: "/learning",
+        link: "/user/learning",
         icon: educationIcon,
         children: [
           {
