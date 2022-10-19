@@ -22,6 +22,7 @@ function StrategyBox(props:any) {
                     <div className={Styles.questionBox}>
                         <p> {props.question} </p>
                     </div> : ''
+                    
                 }
                 {
                     props.answer?
