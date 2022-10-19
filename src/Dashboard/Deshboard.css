@@ -127,10 +127,9 @@ outline: none;
     display: flex;
     justify-content: space-between;
     /* justify-content: space-between; */
-    padding: 12px 12px;
-    gap: 12px;
     font-weight: bold;
 }
+
 .wid{
     width: 90%;
     text-align: left;
@@ -142,7 +141,6 @@ outline: none;
 .campaign{
     /* display: flex; */
     justify-content: space-between;
-
     /* justify-content: space-between; */
     padding: 12px 12px;
     gap: 12px;

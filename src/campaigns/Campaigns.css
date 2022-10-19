@@ -1,4 +1,4 @@
-    .create-new-campaigns{
+.create-new-campaigns{
     width: 100%;
     margin-bottom:5rem;
 }
@@ -20,6 +20,7 @@
 }
 .Sub_container{
     margin-left: 3%;
+    padding-top: 8%;
 }
 .heading_search_container .MuiPaper-elevation{
     border-radius: 25px;
@@ -38,11 +39,19 @@
     background-color: rgb(35,148,174);
 
 }
-.nav-campaign-tabs{
+/* .nav-campaign-tabs{
     width: 100%;
     background-color: #f1f1f1;
     border-radius: 30px;
     margin-bottom: 60px; 
+} */
+
+.nav-campaign-tabs {
+    padding: 8px;
+    background: #f1f1f1;
+    border-radius: 100px;
+    justify-content: space-between;
+    margin-bottom: 60px;
 }
 .heading_main_container{
     font-weight: 900;
@@ -96,6 +105,22 @@
     padding: 5px;
     border-radius: 30px;  
 }
+.nav-campaign-tabs li  :hover{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color:#2394ae;
+    padding: 5px;
+    border-radius: 30px;  
+    color: white;
+}
+body {
+    font-size: var(--f-16);
+    font-family: "Grpahik Medium";
+    color: #000000;
+}
+
 .nav-campaign-tabs a{
     text-decoration: none;
     color: black;

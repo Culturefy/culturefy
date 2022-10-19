@@ -5,7 +5,6 @@ import './Campaigns.css'
 import ReactPaginate from 'react-paginate';
 import '../component/Content.css';
 import 'react-dates/initialize';
-// import { DateRangePicker } from 'react-dates';
 import PlanCircle from "../assets/plan-circle.svg"
 import "./create.css"
 import GoCircle from "../assets/go-circle.svg"
@@ -15,13 +14,12 @@ import AsideRight from '../Dashboard/AsideRight';
 import Slide1 from "../assets/slide-01.png";
 import Slide2 from "../assets/slide-02.png";
 import "../component/Content.css"
-// import "./Content.css";
-// import Campaigns from "../campaigns/Index.js";
 import "../App.css";
 import Content from '../component/Content';
 import Upload2 from "../assets/Icon-Upload2.svg"
 import { Tab, Tabs, TabList, TabPanel} from "react-tabs"
 import Icon from "../assets/Icon-Upload1.svg"
+import { makeStyles } from '@material-ui/core/styles'
 
 
 const Create = () => {
@@ -51,19 +49,16 @@ const Create = () => {
         }
 
     }
-    const [tab, setTab] = useState([
-        {
-            tabs: [
-                { name: "Plan", content: "Campaign | GoalAudience | TargetingSchedule" },
-                { name: "Position", content: "Design Campaign" },
-                { name: "Possess", content: "Review Campaign" }
-            ],
-            currentTab: { name: "Plan", content: "Campaign | GoalAudience | TargetingSchedule" }
+    const [toggles, setToggles] = useState(null);
+    let handleToggle=(id)=>{
+        if(toggle===id){
+            setToggle(null);
+            return false
         }
-    ])
-    const handleTabs = () => {
-        tab.map((text) => <p>{text.content}</p>)
+       setToggle(id)
+       
     }
+    
 
 
     //   const createTabs = () => {
@@ -180,10 +175,16 @@ const Create = () => {
             setShows(!shows)
         }
         else{
-            setTexts(false)
-            setToggle(false)
+            // setTexts(false)
+            // setToggle(false)
         }
     }
+    const [activeTab,setActiveTab] =useState(2)
+
+    const state = {
+        activeTab: activeTab || 1
+      };
+    
     return (
         <div>
             <Content />
@@ -319,7 +320,7 @@ const Create = () => {
                                                 <li><label><input type="checkbox" /> <span>Use custom
                                                     audiences</span></label></li>
                                                 <div class="cst-dropdowns">
-                                                    <div>
+                                                    <div class="sh-date">
                                                         <select>
                                                             <option><li>Gender</li></option>
                                                             <otion><sapn>All Gender</sapn></otion>
@@ -328,7 +329,7 @@ const Create = () => {
                                                         </select>
                                                     </div>
 
-                                                    <div>
+                                                    <div class="sh-date">
                                                         <select>
                                                             <option><li><label><input type="checkbox" /> All
                                                                 Ages</label></li></option>
@@ -396,14 +397,14 @@ const Create = () => {
                                                     <button onClick={showTab5}>Audio</button>
                                                 </li>
                                             </ul> */}
-                                            <Tabs>
-                                                <TabList class="nav ds-form-tabs" role="tablist">
+                                           <Tabs className="myClass">
+                                                <TabList class=" ds-form-tabs" role="tablist" activeTintColor= 'blue'>
                                                    <div className='navbar'> 
-                                                   <Tab class="nav-item">Info</Tab>
-                                                    <Tab  class="nav-item">native</Tab>
-                                                    <Tab  class="nav-item">Display</Tab>
-                                                    <Tab  class="nav-item">Video</Tab>
-                                                    <Tab  class="nav-item">Audio</Tab>
+                                                   <Tab class="nav-item active" >Info</Tab>
+                                                    <Tab  class="nav-item" >native</Tab>
+                                                    <Tab  class="nav-item" >Display</Tab>
+                                                    <Tab  class="nav-item" >Video</Tab>
+                                                    <Tab  class="nav-item" >Audio</Tab>
                                                     </div>
                                                 </TabList>
                                                 <div className='tab-content'>
@@ -432,11 +433,11 @@ const Create = () => {
                                                                     Time</a></li>
                                                                 <li><a class="dropdown-item" href="#">Contract</a></li>
                                                             </ul> */}
-                                                                        {/* <select>
+                                                                        <select>
                                                                 <option>Full Time</option>
                                                                 <option>Part Time</option>
                                                                 <option>Contract</option>
-                                                            </select> */}
+                                                            </select>
                                                                     </div>
                                                                     <div class="form-dropdown">
                                                                         {/* <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
@@ -448,7 +449,7 @@ const Create = () => {
                                                                 <li><a class="dropdown-item" href="#">Mid-Senior
                                                                     Level</a></li>
                                                             </ul> */}
-                                                                        <select>
+                                                                        <select  class="btn dropdown-toggle">
                                                                             <option>Job Level</option>
                                                                             <option>Entery Level</option>
                                                                             <option>Mid-Senior Level</option>
@@ -456,12 +457,25 @@ const Create = () => {
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-lg-6">
-                                                                    {/* <div class="form-group">
-                                                            <select class="js-example-basic-multiple select2-hidden-accessible" name="states[]" multiple="" data-select2-id="select2-data-1-d914" tabindex="-1" aria-hidden="true">
+                                                                    <div class="form-dropdown">
+                                                                        <select class="btn dropdown-toggle">
+                                                                            <option></option>
+                                                                            <option>Marketing</option>
+                                                                            <option>Production</option>
+                                                                        </select>
+                                                            {/* <select class="js-example-basic-multiple select2-hidden-accessible" name="states[]" multiple="" data-select2-id="select2-data-1-d914" tabindex="-1" aria-hidden="true">
                                                                 <option value="MK">Marketing</option>
                                                                 <option value="PR">Production</option>
-                                                            </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-2-vffe" style={{width: "103.469px;"}}><span class="selection"><span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1" aria-disabled="false"><ul class="select2-selection__rendered" id="select2-states-vs-container"></ul><span class="select2-search select2-search--inline"><textarea class="select2-search__field" type="search" tabindex="0" autocorrect="off" autocapitalize="none" spellcheck="false" role="searchbox" aria-autocomplete="list" autocomplete="off" aria-label="Search" aria-describedby="select2-states-vs-container" placeholder="" style={{width:" 0.75em;"}}></textarea></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
-                                                        </div> */}
+                                                            </select> */}
+                                                            {/* <span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-2-vffe" style={{width: "103.469px;"}}><span class="selection"><span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1" aria-disabled="false"><ul class="select2-selection__rendered" id="select2-states-vs-container"></ul><span class="select2-search select2-search--inline"><textarea class="select2-search__field" type="search" tabindex="0" autocorrect="off" autocapitalize="none" spellcheck="false" role="searchbox" aria-autocomplete="list" autocomplete="off" aria-label="Search" aria-describedby="select2-states-vs-container" placeholder="" style={{width:" 0.75em;"}}></textarea></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span> */}
+                                                        </div>
+                                                        <div class="form-dropdown">
+                                                                        <select class="btn dropdown-toggle">
+                                                                            <option></option>
+                                                                            <option>Technology</option>
+                                                                            <option>Other</option>
+                                                                        </select>
+                                                                        </div>
                                                                     {/* <div class="form-group">
                                                             <select class="js-example-basic-multiple select2-hidden-accessible" name="states[]" multiple="" data-select2-id="select2-data-3-gc5b" tabindex="-1" aria-hidden="true">
                                                                 <option value="tech">Technology</option>

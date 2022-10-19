@@ -99,6 +99,12 @@ a, a:hover {
 .key-action-wraper > ul li {
     margin-right: 60px;
 }
+.key-action-wraper > ul li  i {
+    margin-left: 15px;
+    font-size: var(--f-20);
+    color: #2394ae;
+    transition: all 0.4s ease-in-out;
+}
 .main-head {
     position: relative;
     padding-top: 10px;
@@ -125,7 +131,18 @@ a, a:hover {
 *, ::after, ::before {
     box-sizing: border-box;
 }
-
+.ds-form-tabs li button.active {
+    color: #000;
+    border-color: #2394ae;
+}
+.ds-form-tabs .navbar{
+    /* color: #000; */
+    border-color: #2394ae;
+}
+.para :hover{
+    color: #2394ae;
+    cursor: pointer;
+}
 
 .cg-dropdown select {
     width: 100%;
@@ -394,9 +411,10 @@ button.btn-generate {
 .col-lg-6 {
     flex: 0 0 auto;
     width: 50%;
-    padding: 20px;
+    /* padding: 20px; */
     display: flex;
     display: inline;
+    padding-left: 1%;
 }
 .slider-wraper {
     position: relative;
@@ -740,10 +758,20 @@ ul.dropdown-menu.show {
     color: #212529;
     background-color: #fff;
     background-clip: padding-box;
-    border: 1px solid #ced4da;
+    /* border: 1px solid #ced4da; */
     appearance: none;
     border-radius: 0.25rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-size: 16px;
+    color: #929292;
+    font-family: "Grpahik Regular";
+}
+.form-dropdown {
+    margin-top: 26px;
+    position: relative;
 }
 button:not(:disabled) {
     cursor: pointer;
@@ -810,7 +838,7 @@ cursor: pointer;
 }
 .tab-content {
     padding-top: 40px;
-    padding-bottom: 60px;
+    /* padding-bottom: 60px; */
 }
 .key-action-wraper > ul li a {
     font-size: 26px;
@@ -867,3 +895,35 @@ cursor: pointer;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+
+.react-tabs__tab .react-tabs__tab--selected{
+    color:red;
+}
+
+
+.sh-date select {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    /* border: 1px solid #ced4da; */
+    appearance: none;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-size: 16px;
+    color: #929292;
+    font-family: "Grpahik Regular";
+}
+
+ .react-tabs__tab--selected{
+    color: #000;
+    border-color: #2394ae;
+ }

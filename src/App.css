@@ -47,7 +47,7 @@
   text-overflow: ellipsis;
 }
 
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+.h2, .h3, .h4, .h5, .h6, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-weight: 500;
@@ -82,3 +82,19 @@
   padding: 5px;
   border-radius: 30px;  
 } */
+
+:root {
+  --rightNav-height: 35vh;
+  --aside-topBtn-height: 250px;
+  --maintop-nav-height: 200px;
+  --aside-width: 380px;
+  --asideLeftOnly-width: 120px;
+  --f-16: 16px;
+  --f-20: 20px;
+  --f-14: 14px;
+  --f-28: 28px;
+  --f-12: 12px;
+  --f-36: 36px;
+  --f-18: 18px;
+  --f-40: 40px;
+}

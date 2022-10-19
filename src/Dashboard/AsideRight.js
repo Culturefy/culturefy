@@ -72,10 +72,10 @@ const AsideRight = () => {
               <div className="users"><img src={campaignIcon} alt=""/></div>
                 {/* <p>Campaign</p>
                 <img src={Down} alt="" /> */}
-                <p>Campaign</p>
-             <li onClick={() => setCampaign(!campaign)}>{campaign ? <i class="fa fa-chevron-down" aria-hidden="true"></i> : <i class="fa-solid fa-chevron-right" ></i>}</li>
+                <p>Campaigns</p>    
+             <li onClick={() => setCampaign(!campaign)}>{campaign ? <i class="fa fa-chevron-down" aria-hidden="true" id="correct"></i> : <i class="fa-solid fa-chevron-right" ></i>}</li>
              
-             
+             {/* <li onClick={"getElementById('correct').style.color='red'"}>{campaign ? <i class="fa fa-chevron-down" aria-hidden="true" id="correct"></i> : <i class="fa-solid fa-chevron-right" ></i>}</li> */}
               </div>
               <ul className="lists">
               {campaign &&  <> <li>Workspaces</li>
