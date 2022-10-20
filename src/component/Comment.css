@@ -1,0 +1,84 @@
+.comment_wepper{
+    width: 100%;
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+    /* border: 2px solid black; */
+}
+.comment_div{
+    width: 100%;
+}
+.comment_header{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: flex-start;
+}
+.comment_header img{
+    height: 1.875rem;
+    width: 1.875rem;
+    border-radius: 50%;
+    margin-right: 0.625rem;
+}
+.h3tag{
+    margin-right: 0.312rem;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+}
+.ptag{
+   
+    font-size: 0.812rem;
+    display: flex;
+    align-items: center;
+    color: gray;
+
+}
+.comment_text{
+    width: 100%;
+    height: 75%;
+    display: flex;
+    margin-bottom: 0.437rem;
+}
+.comment{
+    margin-right: 0.5rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.06rem;
+    
+}
+.task{
+    font-size: 0.687rem;
+    display: flex;
+    align-items: center;
+    color: #4ca8bd;
+    
+}
+.comment_reply{
+    width: 100%;
+    height: 5%;
+    display: flex;
+    align-items:center;
+    color: gray;
+}
+.comment_hr{
+    padding: 0;
+    margin-bottom: 0.937rem;
+}
+.write{
+    width: 29%;
+    display: flex;
+    border-bottom: 1px solid gray;
+    position: absolute;
+    
+}
+.write input{
+    border: none;
+    width: 100%;
+}
+.send{
+    position: relative;
+    right: 0;
+    color: red;
+    
+}

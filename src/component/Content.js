@@ -24,7 +24,7 @@ const Content = () => {
       <AsideRight />
     </div>
     {/* <div className="content"> */}
-        <div className="main-top-nav">
+        {/* <div className="main-top-nav">
           <ul class="bts-profile align-items-center justify-content-end">
             <li>
               <img src={Calender} />
@@ -43,7 +43,7 @@ const Content = () => {
             <div className="search-button">
               <i class="fa-solid fa-magnifying-glass"></i>
             </div>
-          </div>
+          </div> */}
           {/* <div className='heading_search_container'>
             <h1 className='heading_main_container'>Compaigns</h1>
             <Paper
@@ -62,7 +62,7 @@ const Content = () => {
 
             </Paper>
           </div> */}
-        </div>
+        {/* </div> */}
       {/* </div> */}
     </>
   );

@@ -1,0 +1,93 @@
+.wrapper-workpaces{
+    padding-top: var(--maintop-nav-height) !important;
+    --maintop-nav-height:200px;
+    padding-left: 20%;
+    padding-right: 3.25rem;
+}
+.create-new-Workspace{
+    width: 100%;
+    margin-bottom:3rem;
+}
+
+.create-new-Workspace button{
+    padding: 0.937rem 5rem;
+    border-radius: 1.87rem;
+    background-color:#2394ae ;
+    border: 1px solid #2394ae;
+    color: white;
+    font-size: 1.25rem;
+    font-family: inherit;
+    font-weight: 600;
+}
+.workspaces-tabs{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    font-size: 1.25rem;
+    padding: 0.5rem 0;
+    
+}
+.workspaces-tabs ul{
+    width: 50%;
+    display: flex;
+}
+.workspaces-tabs li{
+    margin-left: 0.625rem;
+    padding: 0 0.625rem;
+}
+.delete{
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    color: #bf161f;
+}
+.hr-tag{
+    margin-bottom: 2.25rem;
+}
+.workpaces-content{
+    width: 100%;
+    display: flex; 
+}
+.workpaces-name{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.workpaces-card{
+    width: 45%;
+    box-shadow: 0px 3px 6px #efefef;
+    margin: 1.25rem;
+    display: flex;
+    border-radius: 0.625rem;
+}
+.workpaces-details{
+    width: 50%;   
+}
+.workpaces-details h1{
+    font-size: 1.56rem;
+    font-weight: bold;
+}
+.workpaces-details p{
+    font-size: 1.125rem;
+    color: grey;
+}
+.workpaces-date{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    color: grey;
+}
+.filter{
+    width: 20%;
+    padding: 0.625rem;
+}
+.filter p{
+    padding: .625rem 0;
+    font-size: 1.25rem;
+}
+.dropdown .MuiFormControl-root{    
+    padding-bottom: 0.625rem;   
+}
+

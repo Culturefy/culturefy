@@ -14,6 +14,7 @@ import InputBase from '@mui/material/InputBase';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
+import { Tab, Tabs, TabList, TabPanel} from "react-tabs"
 
 const Index = () => {
   const minDays = 5;
@@ -121,6 +122,7 @@ const Index = () => {
     // }
 
   )
+  
   const perPageUser = 4;
   const totalPages = data.length / perPageUser;
   console.log(totalPages)
@@ -184,7 +186,7 @@ const Index = () => {
     setAct(!act);
   };
   
-  const [color,setColor]=useState('red');
+      const [color,setColor]=useState('red');
       const [textColor,setTextColor]=useState('white');
 
   return (
@@ -210,18 +212,24 @@ const Index = () => {
                 <SearchIcon />
               </IconButton>
               <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />
-
             </Paper>
           </div> */}
           <div className="create-new-campaigns">
             <Link to="/create-campaigns"><button >+<span> Create New Campaigns</span></button></Link>
           </div>
           <div className="nav-campaign-tabs" >
-            
+            <Tabs>
             <ul className="nav campaign-tabs">
-         
+            <TabList>
+             <Tab onClick={() => setStatussearch(data) }>All</Tab>
+             <Tab onClick={() => handleStatus('Pending')}>Pending</Tab>
+             <Tab onClick={() => handleStatus('Active')}>Active</Tab> 
+             <Tab onClick={() => handleStatus('Completed')}>Complete</Tab>
+             </TabList>
+              </ul>
+            </Tabs>
+            {/* <ul className="nav campaign-tabs">
               <li>
-              
                 <button onClick={() => setStatussearch(data)} style={{color: active? "black" : "white" }}>All</button>
               </li>
               <li>
@@ -235,7 +243,7 @@ const Index = () => {
               </li>
               <li><button onClick={() => handleStatus('Completed')} style={{color: active=='Completed' ? "black" : "white" }} id="btn">Complete</button></li>
 
-            </ul>
+            </ul> */}
           </div>
 
           <div className="campaign-wraper">
@@ -254,7 +262,6 @@ const Index = () => {
                   </div>
                 </div>
               </div>
-
               <DateFilter />
             </div>
             <div className="tab-content campaign">
@@ -301,7 +308,6 @@ const Index = () => {
                         statusSearch.map((result) => {
                           console.log(result)
                           return (
-
                             <tr>
                               <td>
                                 <h4>{result.heading}</h4>

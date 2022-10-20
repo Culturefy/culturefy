@@ -751,7 +751,7 @@ ul.dropdown-menu.show {
 .form-dropdown select {
     display: block;
     width: 100%;
-    padding: 0.375rem 0.75rem;
+    /* padding: 0.375rem 0.75rem; */
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -896,9 +896,9 @@ cursor: pointer;
   scrollbar-width: none;  /* Firefox */
 }
 
-.react-tabs__tab .react-tabs__tab--selected{
+/* .react-tabs__tab .react-tabs__tab--selected{
     color:red;
-}
+} */
 
 
 .sh-date select {
@@ -923,7 +923,26 @@ cursor: pointer;
     font-family: "Grpahik Regular";
 }
 
- .react-tabs__tab--selected{
+ /* .react-tabs__tab--selected{
     color: #000;
     border-color: #2394ae;
+ } */
+
+.react-tabs__tab-list .react-tabs__tab--selected{
+    color: white;
+    /* border-color: #2394ae; */
+    border-bottom: 2px solid #2394ae;
  }
+ .text{
+    font-family: "Grpahik Regular";
+ }
+ .job-desc p {
+    font-size: 20px;
+    color: #000;
+    font-family: "Grpahik Regular";
+}
+.heading-box h4 {
+    font-size: 20px;
+    color: #000;
+    margin-bottom: 10px;
+}

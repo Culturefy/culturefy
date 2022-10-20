@@ -1,0 +1,80 @@
+.Upload_wepper {
+    width: 100%;
+    margin-left: 20%;
+    width: 100%;
+}
+
+.workpace_upload_header button {
+    padding: 8px 30px;
+    border-radius: 30px;
+    background-color: #cf212f;
+    color: white;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.workpace_upload_header h2 {
+    font-weight: bold;
+}
+
+.upload_files_Section {
+    width: 70%;
+    height: 300px;
+    border-style: dashed;
+    border-color: #2394ae;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+.upload_files_Section p{
+    color: gray;
+}
+.filter_component{
+    width: 70%;
+    margin-top: 15px;
+}
+.upload_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.562rem 3.75rem;
+    height: 1.875rem;
+    font-size: 1.25rem;
+    border-radius: 1.875rem;
+    background-color:#2394ae;
+    color: white;
+    border: none;
+}
+.uoload_search{
+    width: 70%;
+    display: flex;
+    position: absolute;
+    border-radius: 30px;
+    /* padding: 5px; */
+    background-color:#f6f6f6;
+    margin-top: 15px;
+}
+.uoload_search input{
+    width:100%;
+    border: none;
+    border-radius: 30px;
+    background-color: #f6f6f6;
+    
+    
+}
+.upload_search_button{
+    height: 28px;
+    width: 28px;
+    background-color: #2394ae;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 50%;
+    position: relative;
+    right: 0;
+    /* padding: 5px; */
+}
