@@ -1,10 +1,11 @@
+import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Row, Col, Table } from "react-bootstrap";
 
 import Styles from "./styles.module.scss";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
-
 import { FiUserPlus, FiKey } from "react-icons/fi";
 import { AiOutlineUsergroupAdd, AiOutlineSync } from "react-icons/ai";
 import { HiDotsHorizontal } from "react-icons/hi";
@@ -15,6 +16,7 @@ import Heading from "../../../components/common/Heading";
 import IconButton from "../../../components/common/IconButton";
 
 const Users = () => {
+  const navigate = useNavigate();
   const users = [
     {
       id: 1,
@@ -87,13 +89,15 @@ const Users = () => {
               variant="transparent"
               color="black"
               size="sizeAuto"
+              onClick={ ()=>{ navigate('/setting/add-user') } }
             />
             <Button
               icon={<AiOutlineUsergroupAdd />}
-              label="Add user"
+              label="Add multiple users"
               variant="transparent"
               color="black"
               size="sizeAuto"
+              onClick={ ()=>{ navigate('/setting/add-multiple-users') } }
             />
             <Button
               icon={"X"}
@@ -101,6 +105,7 @@ const Users = () => {
               variant="transparent"
               color="black"
               size="sizeAuto"
+              onClick={ ()=>{ navigate('/setting/delete-user') } }
             />
             <Button
               icon={<VscLock />}
