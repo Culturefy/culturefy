@@ -4,17 +4,20 @@ import './WorkpacesData.css'
 import fav_img1 from '../assets/fav_img1.jpg'
 import { useState } from 'react'
 import Filter from '../component/Filter'
+import Comment from '../component/Comment'
+import WorkspaceHeader from './WorkspaceHeader'
+import { Link } from 'react-router-dom'
 
 
 
 const WorkspacesData = () => {
 
-const[filterClicked,setfilterclicked] = useState(false)
-  const handleFilterClick =()=>{
-    
-    if(filterClicked == false){
+  const [filterClicked, setfilterclicked] = useState(false)
+  const handleFilterClick = () => {
+
+    if (filterClicked == false) {
       setfilterclicked(true)
-    }else{
+    } else {
       setfilterclicked(false)
     }
   }
@@ -22,6 +25,7 @@ const[filterClicked,setfilterclicked] = useState(false)
     <>
       <div className="workspacesdata">
         <Content />
+        <WorkspaceHeader />
         <div className="workpacesdata-wepper">
           <div className="workpacesdata_Section">
             <div className="workpacesdata_hader">
@@ -43,8 +47,8 @@ const[filterClicked,setfilterclicked] = useState(false)
             </div>
             {filterClicked ?
               <div className="filter_section">
-               <Filter/>
-            </div>:null
+                <Filter />
+              </div> : null
             }
             {/* ==================================== Favorites section ====================================================== */}
             <div className="workpaces_favorits">
@@ -53,7 +57,7 @@ const[filterClicked,setfilterclicked] = useState(false)
                 <h2 style={{ fontWeight: "bold" }}>Favorites</h2>
               </div>
               <div className="card_wapper">
-              <div className="favorits_card">
+                <div className="favorits_card">
                   <div className="favorits_card_img">
                     <img src={fav_img1} alt="" />
                   </div>
@@ -137,7 +141,9 @@ const[filterClicked,setfilterclicked] = useState(false)
                   </div>
                 </div>
                 <div className="uplode_section" >
-                  <i class="fa-solid fa-plus plus"></i>
+                  <Link to="/workspacesupload">
+                    <i class="fa-solid fa-plus plus"></i>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -486,9 +492,9 @@ const[filterClicked,setfilterclicked] = useState(false)
                 </div>
               </div>
             </div>
-                        {/* ==================================== Unsorted section ====================================================== */}
+            {/* ==================================== Unsorted section ====================================================== */}
 
-                        <div className="workpaces_favorits">
+            <div className="workpaces_favorits">
               <div className="favorits_header">
                 <h2 style={{ fontWeight: "bold" }}>Unsorted</h2>
               </div>
@@ -515,7 +521,7 @@ const[filterClicked,setfilterclicked] = useState(false)
             </div>
           </div>
           <div className="workpaces_commentsection">
-
+            <Comment />
           </div>
         </div>
       </div>

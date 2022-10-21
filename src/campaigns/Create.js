@@ -39,7 +39,6 @@ const Create = () => {
     }
 
     const [show, setshow] = useState("hide");
-
     const handleHide = () => {
         if (show == "show") {
             setshow("hide");
@@ -47,7 +46,6 @@ const Create = () => {
         else {
             setshow("show");
         }
-
     }
     const [toggles, setToggles] = useState(null);
     let handleToggle = (id) => {
@@ -56,7 +54,6 @@ const Create = () => {
             return false
         }
         setToggle(id)
-
     }
 
     const [checked, setChecked] = useState('checked1');

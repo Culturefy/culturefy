@@ -1,10 +1,10 @@
 import React from "react"
 import { Router, Route, Routes } from "react-router-dom"
-import Content from "./component/Content"
-import AsideRight from "./Dashboard/AsideRight"
-import Dashboard from "./Dashboard/Data"
+// Campaign
 import Create from "./campaigns/Create"
 import Campaign from "./campaigns/Index"
+import Searchcampaign from "./campaigns/Searchcampaign/Searchcampaign"
+// Workspace
 import Workspace from './WorkSpace/Workspacesindex'
 import CreateWorkspaces from "./WorkSpace/CreateWorkspaces"
 import Worksplaceindex from "./WorkSpace/Workspacesindex"
@@ -25,6 +25,8 @@ const Routing = () => {
             <Route path="/" element={<Campaign />} />
             <Route path="/campaigns" element={<Campaign />} />
             <Route path="/create-campaigns" element={<Create />} />
+            <Route path="/campaign/searchcapaign" element={<Searchcampaign />} />
+
             <Route path="/workspace-main" element={<Workspace />} />
             <Route path="/createworkspaces" element={<CreateWorkspaces />} />
             <Route path="/workspaces" element={<Worksplaceindex />} />

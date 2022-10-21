@@ -1,0 +1,210 @@
+.srch_camp_pr{
+    width:60%;
+    margin-left: 23%;
+}
+.srch_camp_hdr{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.srch_inpt .MuiPaper-root{
+    border-radius: 25px;
+}
+.srch_inpt .MuiButtonBase-root{
+        background-color: #2294ae;
+}
+.srch_inpt .MuiButtonBase-root:hover{
+    background-color: #2294ae;
+}
+/* DropDown Header */
+.srch_drpdn{
+    width: 60%;
+    margin-left: 23%;
+    /* border-bottom: 2px solid #f6f6f6; */
+    box-shadow: 2px 2px 5px #f6f6f6;
+}
+.sech_drpdn_ch{
+    width: 60%;
+    display: flex;
+    margin-top: 1rem;
+    justify-content: space-between;
+}
+.srch_drpdn .MuiInputBase-root{
+    border: none !important;
+}
+.srch_drpdn .MuiNativeSelect-select{
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+._srch_prdct_pr{
+    margin-top:2rem ;
+    margin-left: 23%;
+    width: 60%;
+    /* border: 2px solid blue; */
+    border-bottom: 1px solid black;
+
+}
+._srch_prdct_details{
+    width: 100%;
+    height: 250px;
+    /* border: 2px solid green; */
+    margin: 30px 0;
+    display: flex;
+}
+._srch_add_descrptn{
+    width:50%;
+    display: flex;
+    margin: 30px 0;
+    border-right: 2px solid #f6f6f6;
+}
+._srch_prdct_img_pr{
+    width: 55%;
+    box-sizing: border-box;
+}
+._srch_prdct_img{
+    width: 100%;
+    height: 100%;
+}
+.img_descrptn{
+    width: 45%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.img_descrptn h6,h5{
+    color: #2294ae;
+}
+.dscrptn_para{
+    margin: 0 !important;
+}
+.dscrptn_para span{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.srched_lttr{
+    color: #8fb7c2;
+}
+.srched_ad_type{
+    width: 50%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.srched_ad_type p{
+    margin: 0 !important;
+    color: red;
+    font-size: 14px;
+    font-weight: 500;
+}
+.srched_ad_type span{
+    color: grey;
+    font-size: 12px;
+}
+.add_dscrptn{
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* type of add */
+.typ_of_add{
+    width: 50%;
+    margin: 20px 0;
+    padding: 10px 20px;
+}
+.srch_prdct_social{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.prdct_scal{
+    width:40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.advtsng_head{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-bottom: 2px solid #f6f6f6;
+    padding: 10px 0 ;
+}
+.advtsng_head p{
+    margin: 0 !important;
+    font-size: 15px;
+
+}
+.advtsng_head h6{
+    color: #2294ae;
+    margin: 0 !important;
+    font-size: 15px;
+}
+.ad_lctn_gndr{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 2px 0 ;
+
+}
+.ad_lctn_gndr h6{
+    color: #2294ae;
+    margin: 0 !important; 
+    font-size: 15px;
+
+}
+.ad_lctn_gndr p {
+    margin: 0 !important;
+    font-size: 15px;
+
+}
+.rd_more{
+    display: flex;
+    justify-content: flex-end;
+   
+}
+.rd_more h6{
+    margin: 0 !important;
+    border-bottom: 2px solid #2294ae ;
+    color: #2294ae;
+}
+.rd_more h6:hover{
+    color: #8fb7c2;
+    border-bottom: 2px solid #8fb7c2;
+}
+.srchd_btns{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.srchd_btns .css-1rwt2y5-MuiButtonBase-root-MuiButton-root{
+    border-radius: 25px !important;
+}
+.srched_edt_btn{
+    background-color: #2294ae !important;
+    color: white !important;
+    width: 150px;
+}
+.srched_dlt_btn{
+    border: 1px solid red !important;
+    color: red !important;
+    width: 150px;
+
+}
+.srched_archv_btn{
+    border: 1px solid black !important;
+    color: black !important;
+    width: 150px;
+
+}

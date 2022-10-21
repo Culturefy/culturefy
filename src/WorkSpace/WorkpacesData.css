@@ -1,5 +1,5 @@
 .workpacesdata-wepper{
-    margin-left:20% ;
+    margin-left:23% ;
     width: 100%;
     display: flex;
     
@@ -146,6 +146,7 @@
 }
 
 .workpaces_commentsection{
+  margin-top: 70px;
   width: 50%;
-  border: 0.062rem solid yellow;
+  /* border: 0.062rem solid yellow; */
 }

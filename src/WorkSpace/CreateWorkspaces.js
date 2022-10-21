@@ -4,6 +4,7 @@ import "./CreateWorksplace.css";
 import React from "react";
 import Content from "../component/Content";
 import CreateWorksplaceimg from "../assets/createworksplace.jpg";
+import { Link } from "react-router-dom";
 
 const CreateWorkspaces = () => {
   return (
@@ -50,8 +51,8 @@ const CreateWorkspaces = () => {
             />
 
             <div className="buttons">
-              <button className="Next-btn">Next</button>
-              <button className="Skip-btn">Skip For now</button>
+              <Link to="/workspacesdata"><button className="Next-btn">Next</button></Link>
+              <Link to="/workspacesdata"><button className="Skip-btn">Skip For now</button></Link>
             </div>
           </div>
           <div className="create-workspaces-picture">

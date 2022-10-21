@@ -5,7 +5,7 @@
     /* border: 2px solid black; */
 }
 .comment_div{
-    width: 100%;
+    width: 50%;
 }
 .comment_header{
     width: 100%;
@@ -66,15 +66,19 @@
     margin-bottom: 0.937rem;
 }
 .write{
-    width: 29%;
+    width: 25%;
     display: flex;
-    border-bottom: 1px solid gray;
+    /* border-bottom: 1px solid gray; */
     position: absolute;
     
 }
 .write input{
     border: none;
-    width: 100%;
+    width: 95%;
+}
+.write input:focus{
+    border: none;
+    outline: none;
 }
 .send{
     position: relative;
