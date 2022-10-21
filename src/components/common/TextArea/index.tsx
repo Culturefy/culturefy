@@ -1,26 +1,21 @@
 import React, { FC } from "react";
 import Styles from "./styles.module.scss";
 
-const TextFieldQa = ({
+const TextArea = ({
   type = "text",
   placeholder = "Description Here..",
   variant = "normal",
   ...props
 }) => {
   return (
-    <div className={`${Styles.TextFieldQa} ${Styles.transaction} `}>
+    <div className={`${Styles.TextAreaQa} `}>
       {props.label ? <label htmlFor="inp"> {props.label} </label> : ""}
-      {props.icon ? props.icon : ""}
-      <div className={Styles.inpBox}>
-        <input
-          type={type}
-          placeholder={`${placeholder}`}
-          className={` ${Styles.inpuField}`}
-        />
+      <div className={Styles.textAreaBox}>
+        <textarea name="" id="" placeholder={props.placeholder} ></textarea>
         { props.action ? <span className={Styles.actions} > {props.action} </span> : '' }
       </div>
     </div>
   );
 };
 
-export default TextFieldQa;
+export default TextArea;

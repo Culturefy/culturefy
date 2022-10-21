@@ -11,8 +11,6 @@ import UserLayout from '../Layout/UserLayout';
 import SettingLayout from '../Layout/SettingLayout';
 // import GeneralLayout from '../Layout/UserLayout';
 
-
-
 const Login = lazy(() => import('../pages/Login'))
 const Signup = lazy(() => import('../pages/Signup'))
 const UserRole = lazy(() => import('../components/UserRole'))
@@ -27,22 +25,10 @@ const CreateSurvey = lazy(() => import('../pages/CreateSurvey'))
 
 const Rewards = lazy(() => import('../pages/Rewards'))
 
-
-
 const Learning = lazy(() => import('../pages/Learning'))
 const CreateNewModule = lazy(() => import('../pages/createNewModule'))
 const CreateNewCourse = lazy(() => import('../pages/createNewCourse'))
 const CreateModuleLearning = lazy(() => import('../pages/CreateModuleLearning'))
-
-
-
-
-
-
-
-
-
-
 
 
 export const    router = createBrowserRouter([
@@ -86,7 +72,6 @@ export const    router = createBrowserRouter([
         path: 'create-module-learning',
         element: <CreateModuleLearning />
       }
-      
       
       
     ]
