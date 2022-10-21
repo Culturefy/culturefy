@@ -42,31 +42,31 @@ export const navigation: INavigations[] = [
         children: [
           {
             title: "Courses",
-            link: "/learning/Courses",
+            link: "/user/learning",
           },
           {
             title: "Videos",
-            link: "/learning/videos",
+            link: "/user/learning",
           },
           {
             title: "Archived",
-            link: "/learning/Aachived",
+            link: "/user/learning",
           },
           {
             title: "Certification",
-            link: "/learning/certification",
+            link: "/user/learning",
           },
         ],
       },
       {
         id: "rewards",
         title: "Rewards",
-        link: "/rewards",
+        link: "/user/rewards",
         icon: rewardIcon,
         children: [
           {
             title: "Redeem",
-            link: "/rewards/redeem",
+            link: "/user/rewards",
           },
         ],
       },
@@ -78,7 +78,7 @@ export const navigation: INavigations[] = [
         children: [
           {
             title: "Resource Groups",
-            link: "/community/resource-groups",
+            link: "/user/resource-groups",
           },
           {
             title: "Events",
