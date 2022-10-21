@@ -14,26 +14,35 @@ import { FiVideo } from "react-icons/fi";
 import LabelWithInput from "../../components/common/LabelWithInput";
 import { Link } from "react-router-dom";
 
-function CreateNewCourse() {
+function createAiVideo() {
   return (
     <>
       <Container>
         <h2 className={Styles.pageHeadings}> Create New Module</h2>
 
         <Row>
-          <Col md={12}>
-            <Heading label="1 of 4 Lessons" />
-          </Col>
-        </Row>
-
-        <Row>
           <Col md={8}>
-            <LabelWithInput label="Subtitle1" placeholder=" " type="text" />
-
             <Heading label="Upload Video" />
             <div
               className={`${Styles.uploadfilescontainer}  ${Styles.createcourse} `}
             >
+              <div className={Styles.dragfilearea}>
+                <div className={Styles.btn1}>
+                  <FiVideo className={Styles.videoIcon} />
+                  <UploadButton
+                    type="file"
+                    label=" Upload a video"
+                    icon={<BiUpload />}
+                    size="large"
+                    dragTxt="or drag & drop"
+                  />
+                </div>
+              </div>
+
+              <Heading label="or" variant="centered" />
+
+              <Heading label="Create an AI Video" />
+
               <div className={Styles.dragfilearea}>
                 <div className={Styles.btn1}>
                   <FiVideo className={Styles.videoIcon} />
@@ -106,4 +115,4 @@ function CreateNewCourse() {
   );
 }
 
-export default CreateNewCourse;
+export default createAiVideo;

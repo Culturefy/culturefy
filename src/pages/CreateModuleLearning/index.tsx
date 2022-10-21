@@ -7,6 +7,7 @@ import CourseTitleDesc from "../../components/common/CourseTitleDesc";
 import exp1 from "../../assets/images/exp1.png";
 import VideoBox from "../../components/common/VideoBox";
 import isnt1 from "../../assets/images/inst1.png";
+import { Link } from "react-router-dom";
 
 const CreateModuleLearning = () => {
   return (
@@ -15,9 +16,13 @@ const CreateModuleLearning = () => {
       <Row>
         <Col md={12}>
           <div className={Styles.flexDiv}>
-            <Button label=" Edit module " size="large" />
-            <Button label=" Delete module " size="large" color="secondary" />
-            <Button label=" Archive module " size="large" color="outlined" />
+            <Link to="/user/edit-course-form">
+              <Button label=" Edit module " size="large" />
+            </Link>
+            <Button label=" Delete module " size="large" color="redOutlined" />
+            <Link to="/user/create-module-learning">
+              <Button label=" Archive module " size="large" color="outlined" />
+            </Link>
           </div>
         </Col>
       </Row>
@@ -34,7 +39,7 @@ const CreateModuleLearning = () => {
             />
           </div>
         </Col>
-        <Col md={4}>
+        <Col md={4} className={Styles.recentList}>
           <Heading label="Recent Module" />
           <div className={`${Styles.videoTxt}`}>
             <VideoBox poster={exp1} source={exp1} />
@@ -72,7 +77,7 @@ const CreateModuleLearning = () => {
       </Row>
 
       <Row className={Styles.learningCreatTxt}>
-        <Col md={4}>
+        <Col md={5}>
           <Heading label="Description" />
           <Heading label="Course Details:  " size="small" variant="heading5" />
           <p>
@@ -91,7 +96,7 @@ const CreateModuleLearning = () => {
             />
           </div>
         </Col>
-        <Col md={4} className={Styles.green}>
+        <Col md={3} className={Styles.green}>
           <Heading
             label="Next is Lesson 2 of 4 "
             size="medium"

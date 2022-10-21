@@ -68,9 +68,72 @@ div {
   object-position: top center;
 }
 
-.grayBox{
+.grayBox {
   background-color: #efefef;
   filter: drop-shadow(0 3px 6px #efefef);
   padding: 10px 20px;
 }
 
+// Form CSS
+
+div {
+  div {
+    div {
+      .formFloating {
+        border: 0;
+        outline: none !important;
+      }
+      .formFloating {
+        > input {
+          border: 0;
+          border-bottom: 1px solid #ccc;
+          border-radius: 0;
+          padding: 0;
+          font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+          font-size: 14px;
+          outline: none !important;
+        }
+        > label {
+          color: #2494ae;
+          font-size: 16px;
+          font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+          padding-left: 0;
+        }
+        > .formControl {
+          &:focus {
+            outline: none;
+            box-shadow: none;
+            ~ {
+              label {
+                opacity: 1;
+                font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+              }
+            }
+          }
+          &:not(:placeholder-shown) {
+            outline: none;
+            box-shadow: none;
+            ~ {
+              label {
+                opacity: 1;
+                font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+              }
+            }
+          }
+        }
+        > .formSelect {
+          &:focus {
+            outline: none;
+            box-shadow: none;
+            ~ {
+              label {
+                opacity: 1;
+                font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

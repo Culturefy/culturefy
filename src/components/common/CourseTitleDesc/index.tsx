@@ -2,13 +2,13 @@ import React from "react";
 import Styles from "./styles.module.scss";
 import Group from "../Group";
 
-const CourseTitleDesc = (props:any) => {
+const CourseTitleDesc = (props: any) => {
   return (
     <div
       className={`${Styles.expbox}  ${Styles.borderless}  ${Styles.uploadVideo}`}
     >
       <div className={Styles.contentbox}>
-        <h4 className={`${Styles.CAY}  ${Styles.colorgreenay2} `}>
+        <h4 className={`${Styles.CAY}  ${Styles.colorgreenay2}  `}>
           {props.course}
         </h4>
 

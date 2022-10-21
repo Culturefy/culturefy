@@ -1,6 +1,9 @@
 .videoTxt {
   display: flex;
-  margin: 30px 0;
+  margin: 15px 0;
+}
+.expvideo {
+  box-shadow: none;
 }
 .modules {
   display: flex;
@@ -44,6 +47,14 @@
   }
 }
 
+.buttonDiv {
+  margin: 30px auto;
+  button {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
 .uploadfilescontainer.createcourse {
   padding: 0 !important;
 
@@ -101,12 +112,91 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 30px auto;
 }
 .buttons {
-  div {
+  button {
     width: 48% !important;
     margin-right: 1%;
+  }
+}
+
+.blue {
+  color: #2394ae;
+  font-size: 30px;
+  margin: 10px;
+}
+.mt3 {
+  margin-top: 30px;
+}
+
+.recentList::before {
+  content: "";
+  height: 100%;
+  width: 1px;
+  background: #e3e3e3;
+  position: absolute;
+  left: 35px;
+}
+
+.recentList {
+  position: relative;
+  padding-left: 80px;
+}
+
+// Form CSS
+
+div {
+  div {
+    div {
+      .formFloating {
+        border: 0;
+        outline: none !important;
+      }
+      .formFloating {
+        > input {
+          border: 0;
+          border-bottom: 1px solid #ccc;
+          border-radius: 0;
+          padding: 0;
+          font-family: "Grpahik Regular";
+          font-size: 14px;
+          outline: none !important;
+        }
+        > label {
+          color: #2494ae;
+          font-size: 16px;
+          font-family: "Grpahik Medium";
+          padding-left: 0;
+        }
+        > .formControl {
+          &:focus {
+            outline: none;
+            box-shadow: none;
+            ~ {
+              label {
+                opacity: 1;
+              }
+            }
+          }
+          &:not(:placeholder-shown) {
+            outline: none;
+            box-shadow: none;
+            ~ {
+              label {
+                opacity: 1;
+              }
+            }
+          }
+        }
+        > .formSelect {
+          ~ {
+            label {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -118,15 +208,6 @@
     color: #2394ae;
     stroke: #2394ae;
   }
-}
-
-.recentList::before {
-  content: "";
-  height: 100%;
-  width: 1px;
-  background: #e3e3e3;
-  position: absolute;
-  left: 35px;
 }
 
 .recentList {
