@@ -19,7 +19,7 @@ const Notification = () => {
         <>
             <Container className={Styles.notificationMain}>
                 <Row>
-                    <Col sm={10}>
+                    <Col sm={12}>
                         <div className={global.pBt20}>
                             <Heading label='Activity' variant='heading3' />
                         </div>

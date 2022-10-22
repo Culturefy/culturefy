@@ -32,6 +32,10 @@ const CreateNewCourse = lazy(() => import('../pages/createNewCourse'))
 const CreateModuleLearning = lazy(() => import('../pages/CreateModuleLearning'))
 
 
+const CreateNew = lazy(() => import('../pages/CreateNew'))
+const NewEvent = lazy(() => import('../pages/NewEvent'))
+
+
 export const    router = createBrowserRouter([
   {
     path: "/user",
@@ -72,6 +76,19 @@ export const    router = createBrowserRouter([
       {
         path: 'create-module-learning',
         element: <CreateModuleLearning />
+      },
+      {
+        path: 'create-new',
+        element: <CreateNew />
+      },
+      {
+        path: 'new-event',
+        element: <NewEvent />
+      },
+      {
+        path: 'notification',
+        element: <Notification />
+        
       }
       
       

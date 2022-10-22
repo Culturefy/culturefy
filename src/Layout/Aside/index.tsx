@@ -9,7 +9,7 @@ import { useAuth } from "../../hooks/form/useAuth";
 
 // import Button from "../../../../components/common/button";
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 // import Button from "../Button";
 import { useDispatch } from "react-redux";
 import Services from "../../Services/survey.service";
@@ -20,6 +20,7 @@ import Button from "../../components/common/Button";
 
 const AsideMenu = () => {
   const [seletedItem, setSelectedItem] = useState("");
+  const navigate = useNavigate()
 
   const { getSurvey, store } = useSurvey(null);
   const { userLogin } = useAuth(null);
@@ -52,7 +53,12 @@ const AsideMenu = () => {
             </select>
 
             <div className={Styles.topLgBtns}>
-              <Button variant="filled" label="+ Create New" size="medium" />
+              <Button 
+              variant="filled" 
+              label="+ Create New" 
+              size="medium"
+              onClick={()=>navigate('/user/create-new')}
+               />
               <Button
                 variant="filled"
                 label="Upload a File"

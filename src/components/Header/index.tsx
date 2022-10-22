@@ -17,7 +17,7 @@ function Header(props:any) {
           </Link>
         </li>
         <li>
-          <Link to="/" className={Styles.iconHead}>
+          <Link to="/user/notification" className={Styles.iconHead}>
             <FontAwesomeIcon icon={faBell} />
             <span className={Styles.notfCount}>
                 <span>2</span>

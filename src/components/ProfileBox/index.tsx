@@ -49,7 +49,7 @@ function ProfileBox({ show = false, ...props }) {
     <div className={`${Styles.profileBox} ${show ? Styles.show : ""}`}>
       <div className={Styles.userbox}>
         <div className={Styles.userImgbox}>
-          <Link to="/">
+          <Link to="/user/brand-culture-startegy">
             <img src={props.userImg} alt="user" />
           </Link>
         </div>

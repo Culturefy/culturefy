@@ -23,8 +23,7 @@ const Button = ({
       <span>{props.label}</span>
       {isLoading ? (
         <span className={Styles.spinner}>
-          {" "}
-          <FontAwesomeIcon icon={faSpinner} />{" "}
+          <FontAwesomeIcon icon={faSpinner} />
         </span>
       ) : (
         ""

@@ -9,10 +9,14 @@ const FilterBtn = (props: any) => {
   return (
     <div className={Styles.filterBtn}>
       <select name="" id="">
-        <option value="" selected disabled > {props.label} </option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
+        <option value="" selected > {props.label} </option>
+        {
+          props.option?.map((option:any)=>{
+            return(
+              <option value={option.value}> {option.label} </option>
+            )
+          })
+        }
       </select>
       <span className={Styles.iconCaret}>
         <FontAwesomeIcon icon={faChevronDown} />
