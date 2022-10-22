@@ -43,6 +43,7 @@ function MyRewards() {
                       label="You Send"
                       placeholder="5,000"
                       action="Points"
+                      variant="bordered"
                     />
                   </Col>
 
@@ -51,6 +52,7 @@ function MyRewards() {
                       label="Recipient"
                       placeholder="name,username or email"
                       action="Points"
+                      variant="bordered"
                     />
                   </Col>
 

@@ -48,7 +48,7 @@ const ProfileSetting = () => {
                 <Col md={6} className={Styles.coltxt}>
                   <label>Gender</label>
                   <div className={Styles.genderradiobox}>
-                    <div className={Styles.dflex}>
+                    <div className={`${'d-flex gap-2'}`}>
                       <RadioBtn type="radio" value="male" id="male" label="male" />
                       <RadioBtn type="radio" value="female" id="female" label="female" />
                       <RadioBtn type="radio" value="custom" id="custom" label="custom"/>

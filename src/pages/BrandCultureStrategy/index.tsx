@@ -37,6 +37,20 @@ import FilterBtn from "../../components/common/FilterBtn";
 import Recommendation from "../../components/common/Recommendation";
 
 function BrandCultureStartegy() {
+  const filterOptions = [
+    {
+      value: '1',
+      label:'1'
+    },
+    {
+      value: '2',
+      label:'2'
+    },
+    {
+      value: '3',
+      label:'3'
+    }
+  ]
   return (
     <Row>
       <Col md={8}>
@@ -198,8 +212,8 @@ function BrandCultureStartegy() {
           <Heading label="Recommendations" variant="heading3" />
         </div>
         <div className={Styles.filterBtnsGroup}>
-          <FilterBtn label="Filter" />
-          <FilterBtn label="Sort" />
+          <FilterBtn label="Filter" option={filterOptions} />
+          <FilterBtn label="Sort" option={filterOptions} />
         </div>
         <div>
           <Recommendation

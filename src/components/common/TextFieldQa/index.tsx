@@ -8,7 +8,7 @@ const TextFieldQa = ({
   ...props
 }) => {
   return (
-    <div className={`${Styles.TextFieldQa} ${Styles.transaction} `}>
+    <div className={`${Styles.TextFieldQa} ${Styles[variant]} `}>
       {props.label ? <label htmlFor="inp"> {props.label} </label> : ""}
       {props.icon ? props.icon : ""}
       <div className={Styles.inpBox}>

@@ -15,9 +15,7 @@ function RadioBtn(
         <>
             <div className={Styles.RadioBtn}>
             <input type={type} placeholder={`${name}`} value={`${value}`} />
-                { props.label ? <label htmlFor="inp"> {props.label} </label> : '' }
-                
-                
+            { props.label ? <label htmlFor="inp"> {props.label} </label> : '' }
             </div>
         </>
     );

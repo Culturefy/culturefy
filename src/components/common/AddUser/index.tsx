@@ -13,7 +13,7 @@ function Adduser() {
           <Col>
             <Heading label="Create User" />
           </Col>
-          <Col md={12}>
+          <Col md={12} className="pb-3">
             <Button
               label="Upload .csv"
               variant="filled"
@@ -24,38 +24,48 @@ function Adduser() {
           <Row>
             <Col md={8}>
               <div className={Styles.profilesettingform}>
-                <div className="row">
+                <div className="row align-items-center">
                   <Col md={6} className={Styles.coltxt}>
                     <label>First Name</label>
-                    <TextFieldQa placeholder="Jhon " />
+                    <TextFieldQa variant="bordered" placeholder="Jhon " />
                   </Col>
                   <Col md={6} className={Styles.coltxt}>
                     <label>Last Name</label>
-                    <TextFieldQa placeholder="Doe" />
+                    <TextFieldQa variant="bordered" placeholder="Doe" />
                   </Col>
                   <Col md={6} className={Styles.coltxt}>
                     <label>Email</label>
                     <TextFieldQa
+                      variant="bordered"
                       placeholder="Youremail@gmail.com"
                       type="email"
                     />
                   </Col>
                   <Col md={6} className={Styles.coltxt}>
                     <label>Birthday</label>
-                    <TextFieldQa placeholder="Jhon Doe" type="date" />
+                    <TextFieldQa
+                      variant="bordered"
+                      placeholder="Jhon Doe"
+                      type="date"
+                    />
                   </Col>
 
                   <Col md={6} className={Styles.coltxt}>
                     <label>Phone Number</label>
-                    <TextFieldQa placeholder="12345678" type="number" />
+                    <TextFieldQa
+                      variant="bordered"
+                      placeholder="12345678"
+                      type="number"
+                    />
                   </Col>
                   <Col md={6} className={Styles.coltxt}>
                     <label>ID</label>
-                    <TextFieldQa placeholder="IMC-00123" />
+                    <TextFieldQa variant="bordered" placeholder="IMC-00123" />
                   </Col>
                   <Col md={6} className={Styles.coltxt}>
                     <label>Password</label>
                     <TextFieldQa
+                      variant="bordered"
                       placeholder="Profile.userhere"
                       type="password"
                     />
@@ -63,6 +73,7 @@ function Adduser() {
                   <Col md={6} className={Styles.coltxt}>
                     <label>Confirm Password</label>
                     <TextFieldQa
+                      variant="bordered"
                       placeholder="Profile.userher"
                       type="password"
                     />
@@ -70,7 +81,11 @@ function Adduser() {
                   <Col md={6} className={Styles.coltxt}>
                     <label>Gender</label>
                     <div className={Styles.genderradiobox}>
-                      <div className={Styles.dflex}>
+                      <div
+                        className={`${
+                          Styles.radioBoxWrapper
+                        } ${"d-flex gap-3"}`}
+                      >
                         <RadioBtn
                           type="radio"
                           value="male"
@@ -94,23 +109,26 @@ function Adduser() {
                   </Col>
                   <Col md={6} className={Styles.coltxt}>
                     <label>Location</label>
-                    <TextFieldQa placeholder="Sythlet,Bangladesh" />
+                    <TextFieldQa
+                      variant="bordered"
+                      placeholder="Sythlet,Bangladesh"
+                    />
                   </Col>
-                  <Col md={12} className={Styles.btn}>
-                    <Col md={6}>
-                      <Button
-                        color="black"
-                        variant="transparent"
-                        label="Cancel"
-                        size="smallBtn"
-                      />
-                      <Button
-                        label="Save"
-                        variant="filled"
-                        color="secondary"
-                        size="smallBtn"
-                      />
-                    </Col>
+                  <Col md={12}>
+                      <div className={Styles.btn}>
+                        <Button
+                          color="black"
+                          variant="transparent"
+                          label="Cancel"
+                          size="smallBtn"
+                        />
+                        <Button
+                          label="Save"
+                          variant="filled"
+                          color="secondary"
+                          size="smallBtn"
+                        />
+                      </div>
                   </Col>
                 </div>
               </div>
