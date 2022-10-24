@@ -2,7 +2,7 @@ import React from "react";
 import Heading from "../../components/common/Heading";
 import IconButton from "../../components/common/IconButton";
 // import Styles from './styles.module.scss'
-import Styles from "../signup/styles.module.scss";
+import Styles from "../signup/style.module.scss";
 
 import { Link } from "react-router-dom";
 
