@@ -56,6 +56,7 @@ export const router = createBrowserRouter([
       {
         path: "brand-culture-startegy",
         element: <BrandCultureStartegy />,
+        
       },
       {
         path: "surveys",
