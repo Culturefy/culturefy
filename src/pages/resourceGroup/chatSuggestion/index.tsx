@@ -1,4 +1,5 @@
 import Styles from './styles.module.scss'
+import React from 'react'
 
 import inst1Img from '../../../assets/images/inst1.png'
 import inst2Img from '../../../assets/images/inst2.png'

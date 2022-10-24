@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import Businessinfo1 from "../Businessinfo1";
 import Businessinfo2 from "../Businessinfo2";
 import Businessinfo3 from "../Businessinfo3";
@@ -7,10 +7,10 @@ import Styles from "./styles.module.scss";
 
 const Comp = () => {
   const [step, setStep] = useState(1);
-  const nextStepHandler = (prevState:number) => {
+  const nextStepHandler = (prevState: number) => {
     setStep(prevState + 1);
   };
-  const prevStepHandler = (prevState:number) => {
+  const prevStepHandler = (prevState: number) => {
     setStep(prevState - 1);
   };
   switch (step) {
@@ -33,7 +33,7 @@ const Comp = () => {
         />
       );
     default:
-      break;
+      return <></>
   }
 };
 

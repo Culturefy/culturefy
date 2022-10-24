@@ -142,7 +142,7 @@ const Users = () => {
             <Table className={Styles.table}>
               <thead>
                 <tr>
-                  <th colspan="2">First Name</th>
+                  <th colSpan={2}>First Name</th>
                   <th>Last Name</th>
                   <th>Email</th>
                   <th>Company ID</th>
@@ -152,9 +152,9 @@ const Users = () => {
               <tbody>
                 {users.map((user) => {
                   return (
-                    <tr id={user.id}>
+                    <tr id={user.id.toString()}>
                       <td>
-                        <input type="checkbox" name={user.id} id={user.id} />
+                        <input type="checkbox" name={user.id.toString()} id={user.id.toString()} />
                       </td>
                       <td>{user.fname}</td>
                       <td>{user.lname}</td>

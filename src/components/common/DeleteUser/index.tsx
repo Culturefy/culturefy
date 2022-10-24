@@ -1,4 +1,5 @@
 import { Row, Col, Table } from "react-bootstrap";
+import React from "react";
 import Styles from "./styles.module.scss";
 
 import Button from "../Button";
@@ -51,9 +52,9 @@ function DeleteUser() {
               <tbody>
                 {users.map((user) => {
                   return (
-                    <tr id={user.id}>
+                    <tr id={user.id.toString()}>
                       <td>
-                        <input type="checkbox" name={user.id} id={user.id} />
+                        <input type="checkbox" name={user.id.toString()} id={user.id.toString()} />
                       </td>
                       <td className={Styles.initial}>{user.initial}</td>
                       <div className={Styles.dltuser}>

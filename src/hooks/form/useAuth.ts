@@ -54,6 +54,7 @@ export const useAuth = (data: string | null) => {
 
     useMemo(() => {
         if (store.auth && data) {
+            // @ts-ignore
             loginForm.setValue('email', store.auth.email)
         }
         else {

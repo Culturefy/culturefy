@@ -47,6 +47,7 @@ export const useSurvey = (serviceId: string | null) => {
 
     useMemo(() => {
         if (store.survey && serviceId) {
+            // @ts-ignore
             form.setValue('name', store.survey.name)
         }
         else {

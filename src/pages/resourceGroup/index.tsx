@@ -3,6 +3,7 @@ import Group from '../../components/common/Group';
 import Heading from '../../components/common/Heading';
 import Search from '../../components/common/Search';
 import Styles from './styles.module.scss'
+import React from 'react';
 
 
 import inst3Img from '../../assets/images/inst3.png'

@@ -1,5 +1,5 @@
 import { Row, Col, Container } from "react-bootstrap";
-
+import React from "react";
 import Styles from "./styles.module.scss";
 import TextFieldQa from "../../../components/common/TextFieldQa";
 import RadioBtn from "../../../components/common/RadioBtn";
@@ -12,7 +12,7 @@ const ProfileSetting = () => {
         <Row>
           <Col md={12}>
             <h1>Profile Setting</h1>
-            <div classlName={Styles.user}>
+            <div className={Styles.user}>
               <img src={adminImg} alt="new" />
             </div>
           </Col>
