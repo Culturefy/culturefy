@@ -19,7 +19,7 @@ function Learning() {
         <Row>
           <Col md={12}>
             <div className={Styles.btn1}>
-              <Link to='/user/create-new-module'>
+              <Link to='/user/new-course-form'>
                 <Button
                   label=" Create New Module "
                   icon={<AiOutlinePlus />}

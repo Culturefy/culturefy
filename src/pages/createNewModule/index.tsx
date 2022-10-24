@@ -1,5 +1,7 @@
 import React from "react";
 import Styles from "./styles.module.scss";
+
+import { Link, useNavigate } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 import VideoBox from "../../components/common/VideoBox";
 import exp1 from "../../assets/images/exp1.png";
@@ -13,6 +15,7 @@ import UploadButton from "../../components/common/uploadButton";
 import LabelWithInput from "../../components/common/LabelWithInput";
 
 function CreateNewModule() {
+  const navigate = useNavigate()
   return (
     <>
       <Container>
@@ -44,14 +47,13 @@ function CreateNewModule() {
 
               <div className={Styles.buttons}>
                 <Button label="Publish Module" size="large" />
-                <Link to="/create-module-learning">
                   <Button
                     label="Archive Module"
                     size="large"
                     variant="outlined"
                     color="black"
+                    onClick={()=>navigate('/user/create-module-learning')}
                   />
-                </Link>
               </div>
             </div>
           </Col>

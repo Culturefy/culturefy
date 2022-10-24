@@ -6,6 +6,17 @@ import AuthLayout from "../Layout/AuthLayout";
 import UserLayout from "../Layout/UserLayout";
 import SettingLayout from "../Layout/SettingLayout";
 
+
+const UserRole = lazy(() => import("../components/UserRole"));
+const Signup = lazy(() => import("../pages/Signup"));
+const Login = lazy(() => import("../pages/Login"));
+const BusinessInfoMain = lazy(() => import("../components/BusinessInfoMain"));
+
+
+
+
+
+
 const NewCourseForm = lazy(() => import("../pages/NewCourseForm"));
 const Learning = lazy(() => import("../pages/Learning"));
 const CreateNewModule = lazy(() => import("../pages/createNewModule"));
@@ -31,10 +42,8 @@ const Surveys = lazy(() => import("../pages/Surveys"));
 const CreateSurvey = lazy(() => import("../pages/CreateSurvey"));
 
 const EditCourseForm = lazy(() => import("../pages/EditCourseForm"));
-const CreatedModules = lazy(() => import("../pages/CreatedModules"));
 const CreatedModulesAll = lazy(() => import("../pages/CreatedModulesAll"));
 
-const FilterBox = lazy(() => import("../components/common/FilterBox"));
 
 const Tabs = lazy(() => import("../components/common/Tabs"));
 
@@ -48,6 +57,13 @@ const Certifications = lazy(() => import("../pages/Certifications"));
 const CreateNew = lazy(() => import("../pages/CreateNew"));
 const NewEvent = lazy(() => import("../pages/NewEvent"));
 
+const BrandCultureStartegy = lazy(() => import("../pages/BrandCultureStrategy"));
+const Rewards = lazy(() => import("../pages/Rewards"));
+const ResourceGroup = lazy(() => import("../pages/resourceGroup"));
+
+
+
+
 export const router = createBrowserRouter([
   {
     path: "/user",
@@ -56,6 +72,7 @@ export const router = createBrowserRouter([
       {
         path: "brand-culture-startegy",
         element: <BrandCultureStartegy />,
+        
       },
       {
         path: "surveys",
@@ -102,16 +119,8 @@ export const router = createBrowserRouter([
         element: <EditCourseForm />,
       },
       {
-        path: "created-modules",
-        element: <CreatedModules />,
-      },
-      {
         path: "created-modules-all",
         element: <CreatedModulesAll />,
-      },
-      {
-        path: "filter-box",
-        element: <FilterBox />,
       },
       {
         path: "created-modules-tabs",
@@ -136,6 +145,10 @@ export const router = createBrowserRouter([
       {
         path: "notification",
         element: <Notification />,
+      },
+      {
+        path: "resource-group",
+        element: <ResourceGroup />,
       },
     ],
   },
