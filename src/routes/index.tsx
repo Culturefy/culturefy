@@ -70,7 +70,7 @@ export const router = createBrowserRouter([
     element: <UserLayout />,
     children: [
       {
-        path: "brand-culture-startegy",
+        path: "/",
         element: <BrandCultureStartegy />,
         
       },
