@@ -23,7 +23,7 @@ const UserRole = () => {
                 label="Admin"
                 size="large"
                 icon={<img src={buildingImg} />}
-                onClick={() => navigate("/auth/business-info")}
+                onClick={() => navigate("/auth/signup?role=admin")}
               />
             </div>
             <div className={Styles.buttonUser}>
@@ -33,7 +33,7 @@ const UserRole = () => {
                 label="User"
                 size="large"
                 icon={<img src={peopleImg} />}
-                onClick={() => navigate("/auth/signup")}
+                onClick={() => navigate("/auth/signup?role=user")}
               />
             </div>
             <p className={Styles.alreadyHaveAcc}>

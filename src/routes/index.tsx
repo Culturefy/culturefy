@@ -2,64 +2,64 @@ import React from "react";
 import { lazy } from "react";
 import { createBrowserRouter, Router } from "react-router-dom";
 
-import AuthLayout from "../Layout/AuthLayout";
-import UserLayout from "../Layout/UserLayout";
-import SettingLayout from "../Layout/SettingLayout";
+import AuthLayout from "src/Layout/AuthLayout";
+import UserLayout from "src/Layout/UserLayout";
+import SettingLayout from "src/Layout/SettingLayout";
 
 
-const UserRole = lazy(() => import("../components/UserRole"));
-const Signup = lazy(() => import("../pages/Signup"));
-const Login = lazy(() => import("../pages/Login"));
-const BusinessInfoMain = lazy(() => import("../components/BusinessInfoMain"));
-
-
-
+const UserRole = lazy(() => import("src/components/UserRole"));
+const Signup = lazy(() => import("src/pages/Signup"));
+const Login = lazy(() => import("src/pages/Login"));
+const BusinessInfoMain = lazy(() => import("src/components/BusinessInfoMain"));
 
 
 
-const NewCourseForm = lazy(() => import("../pages/NewCourseForm"));
-const Learning = lazy(() => import("../pages/Learning"));
-const CreateNewModule = lazy(() => import("../pages/createNewModule"));
-const CreateNewCourse = lazy(() => import("../pages/createNewCourse"));
-const CreateAiVideo = lazy(() => import("../pages/CreateAiVideo"));
+
+
+
+const NewCourseForm = lazy(() => import("src/pages/NewCourseForm"));
+const Learning = lazy(() => import("src/pages/Learning"));
+const CreateNewModule = lazy(() => import("src/pages/createNewModule"));
+const CreateNewCourse = lazy(() => import("src/pages/createNewCourse"));
+const CreateAiVideo = lazy(() => import("src/pages/CreateAiVideo"));
 
 const CreateModuleLearning = lazy(
-  () => import("../pages/CreateModuleLearning")
+  () => import("src/pages/CreateModuleLearning")
 );
-const Notification = lazy(() => import("../pages/AccountSetting/Notification"));
-const Users = lazy(() => import("../pages/AccountSetting/users"));
+const Notification = lazy(() => import("src/pages/AccountSetting/Notification"));
+const Users = lazy(() => import("src/pages/AccountSetting/users"));
 const ProfileSetting = lazy(
-  () => import("../pages/AccountSetting/ProfileSetting")
+  () => import("src/pages/AccountSetting/profileSetting")
 );
-const AddUser = lazy(() => import("../components/common/AddUser"));
+const AddUser = lazy(() => import("src/components/common/AddUser"));
 const AddMultipleUsers = lazy(
-  () => import("../components/common/AddMultipleUsers")
+  () => import("src/components/common/AddMultipleUsers")
 );
-const DeleteUser = lazy(() => import("../components/common/DeleteUser"));
+const DeleteUser = lazy(() => import("src/components/common/DeleteUser"));
 
-const Community = lazy(() => import("../pages/Community"));
-const Surveys = lazy(() => import("../pages/Surveys"));
-const CreateSurvey = lazy(() => import("../pages/CreateSurvey"));
+const Community = lazy(() => import("src/pages/Community"));
+const Surveys = lazy(() => import("src/pages/Surveys"));
+const CreateSurvey = lazy(() => import("src/pages/CreateSurvey"));
 
-const EditCourseForm = lazy(() => import("../pages/EditCourseForm"));
-const CreatedModulesAll = lazy(() => import("../pages/CreatedModulesAll"));
+const EditCourseForm = lazy(() => import("src/pages/EditCourseForm"));
+const CreatedModulesAll = lazy(() => import("src/pages/CreatedModulesAll"));
 
 
-const Tabs = lazy(() => import("../components/common/Tabs"));
+const Tabs = lazy(() => import("src/components/common/Tabs"));
 
-const Certifications = lazy(() => import("../pages/Certifications"));
+const Certifications = lazy(() => import("src/pages/Certifications"));
 
-// const Learning = lazy(() => import('../pages/Learning'))
-// const CreateNewModule = lazy(() => import('../pages/createNewModule'))
-// const CreateNewCourse = lazy(() => import('../pages/createNewCourse'))
-// const CreateModuleLearning = lazy(() => import('../pages/CreateModuleLearning'))
+// const Learning = lazy(() => import('src/pages/Learning'))
+// const CreateNewModule = lazy(() => import('src/pages/createNewModule'))
+// const CreateNewCourse = lazy(() => import('src/pages/createNewCourse'))
+// const CreateModuleLearning = lazy(() => import('src/pages/CreateModuleLearning'))
 
-const CreateNew = lazy(() => import("../pages/CreateNew"));
-const NewEvent = lazy(() => import("../pages/NewEvent"));
+const CreateNew = lazy(() => import("src/pages/CreateNew"));
+const NewEvent = lazy(() => import("src/pages/NewEvent"));
 
-const BrandCultureStartegy = lazy(() => import("../pages/BrandCultureStrategy"));
-const Rewards = lazy(() => import("../pages/Rewards"));
-const ResourceGroup = lazy(() => import("../pages/resourceGroup"));
+const BrandCultureStartegy = lazy(() => import("src/pages/BrandCultureStrategy"));
+const Rewards = lazy(() => import("src/pages/Rewards"));
+const ResourceGroup = lazy(() => import("src/pages/resourceGroup"));
 
 
 

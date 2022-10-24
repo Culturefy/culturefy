@@ -57,7 +57,7 @@ export const loginAction = createAsyncThunk(
         try {
             const response = await AuthServices.login(data);
             // console.log(response.data);
-            if (response.data.success){
+            if (response){
                 toast.success(response.data.message)
             }
             // dispatch(fetchAllAction(getState().user.params))
@@ -81,7 +81,7 @@ export const registerAction = createAsyncThunk(
             // console.log(response.data);
             
             // dispatch(fetchAllAction(getState().user.params))
-            if (response.data.success){
+            if (response){
                 toast.success(response.data.message||"Success")
             }
             dispatch(slice.actions.handleStatus('success'))

@@ -2,20 +2,14 @@ import React from "react";
 import Heading from "../../components/common/Heading";
 import IconButton from "../../components/common/IconButton";
 import Styles from "./styles.module.scss";
-
-import { Link, useNavigate, useLocation } from "react-router-dom";
-
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookF, faTwitter } from "@fortawesome/free-brands-svg-icons";
-
-import { faEnvelope, faUser, faLock } from "@fortawesome/free-solid-svg-icons";
-
 import goggleImg from "../../assets/authImages/images/image-sliders/Google.png";
-import TextFieldQa from "../../components/common/TextFieldQa";
 import Button from "../../components/common/Button";
 import { useForm } from "react-hook-form";
 import Input from "../../components/Input";
-import { useAuth } from "../../hooks/form/useAuth";
+import { useAuth } from "src/hooks/form/useAuth";
 import { ToastContainer } from "react-toastify";
 
 const Signup = () => {
@@ -29,16 +23,23 @@ const Signup = () => {
 
   const { userRegister, store } = useAuth(null);
 
+  const [params] = useSearchParams()
+
+  const role = params.get("role")
+
+  console.log(role, "role")
+
   const navigate = useNavigate();
-  const location = useLocation();
 
   const onSubmit = (body: object) => {
     let apiData = {
       ...body,
-      role_id: "3",
+      role: role?.toUpperCase(),
     };
+
     userRegister(apiData).then(() => {
       reset();
+      navigate("/user/brand-culture-startegy")
     });
   };
 
@@ -61,18 +62,18 @@ const Signup = () => {
                 label="email"
                 register={register}
                 formState={formState}
-                maxLength={20}
+                // maxLength={20}
                 errors={errors?.email?.type}
                 minLength={5}
               />
               <Input
                 type="text"
                 placeholder="User Name"
-                label="full_name"
+                label="name"
                 register={register}
                 formState={formState}
                 maxLength={20}
-                errors={errors?.full_name?.type}
+                errors={errors?.name?.type}
                 minLength={5}
               />
               <Input

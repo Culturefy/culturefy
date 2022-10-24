@@ -1,5 +1,6 @@
 
 import { useEffect, useMemo } from 'react'
+import Cookies from 'universal-cookie';
 
 // ** Third Party Imports
 import { useForm } from 'react-hook-form'
@@ -26,7 +27,7 @@ import { register } from '../../schema'
 
 const defaultValues = {
     email: '',
-    password:''
+    password: ''
 
 }
 
@@ -53,7 +54,7 @@ export const useAuth = (data: string | null) => {
 
     useMemo(() => {
         if (store.auth && data) {
-            loginForm.setValue('email' , store.auth.email )
+            loginForm.setValue('email', store.auth.email)
         }
         else {
             loginForm.setValue('email', '')
@@ -64,9 +65,9 @@ export const useAuth = (data: string | null) => {
         dispatch(loginAction({ ...data }))
             .then(({ payload }: any) => {
                 // console.log(payload);
-                
-                if (payload.success) {
-                    window.localStorage.setItem('token',payload?.data[0]?.token)
+
+                if (payload) {
+                    window.localStorage.setItem('token', payload?.data[0]?.token)
                     loginForm.reset()
                     //   handleDrawer(null)
                 } else {
@@ -80,8 +81,11 @@ export const useAuth = (data: string | null) => {
     const userRegister = async (data: any) => {
         dispatch(registerAction({ ...data }))
             .then(({ payload }: any) => {
-                if (payload.success===true) {
+                if (payload) {
                     registerForm.reset()
+                    const cookies = new Cookies();
+                    cookies.set('accessToken', payload.data.tokens.accessToken, { path: '/' });
+                    cookies.set('refreshToken', payload.data.tokens.refreshToken, { path: '/' });
                     //   handleDrawer(null)
                 } else {
                     console.log('============API_ERROR===============');
@@ -91,6 +95,6 @@ export const useAuth = (data: string | null) => {
             })
     }
 
-    return { loginForm, registerForm , store, userLogin, userRegister }
+    return { loginForm, registerForm, store, userLogin, userRegister }
 
 }

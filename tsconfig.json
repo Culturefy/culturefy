@@ -3,6 +3,9 @@
     "baseUrl": "./",
     "paths": {
       "@services/*": ["src/Services/*"],
+      "src/*": [
+        "./src/*"
+      ]
     },
     "rootDir": "src",
     "target": "ESNext",

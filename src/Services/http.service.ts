@@ -4,7 +4,7 @@ import axios from 'axios';
 // import authConfig from 'src/config/auth'
 
 const instance = axios.create({
-  baseURL: "https://5caa-110-93-244-255.ap.ngrok.io/api",
+  baseURL: "https://de07-103-244-176-173.ap.ngrok.io/api/v1",
   timeout: 500000,
   headers: {
     Accept: 'application/json',
