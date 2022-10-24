@@ -1,16 +1,17 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import Styles from "./styles.modules.scss";
 import { BiFilterAlt } from "react-icons/bi";
 import Heading from "../Heading";
 import Button from "../Button";
+import { Checkbox } from "../Checkbox";
+import Styles from "./styles.module.scss";
 
-const FilterBox = (props: any) => {
+const FilterBox = () => {
   return (
-    <Container>
+    <>
       <div className={Styles.filterHead}>
         <div className={Styles.start}>
-          <BiFilterAlt />
+          <BiFilterAlt className={Styles.icon} />
           <Heading label="Filter" />
         </div>
         <div className={Styles.end}>
@@ -18,7 +19,14 @@ const FilterBox = (props: any) => {
           <Button label="Reset Filter" variant="outlined" />
         </div>
       </div>
-    </Container>
+
+      <div className={Styles.checkboxMain}>
+        <Checkbox label="Category 1" />
+        <Checkbox label="Sub-Category 1" />
+        <Checkbox label="Type 1" />
+        <Checkbox label="Newest 1" />
+      </div>
+    </>
   );
 };
 

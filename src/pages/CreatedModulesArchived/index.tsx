@@ -8,7 +8,7 @@ import img04 from "../../assets/images/img-0004.png";
 import ctV from "../../assets/images/ct-video.png";
 import FilterBox from "../../components/common/FilterBox";
 
-const CreatedModulesAll = () => {
+const CreatedModulesArchived = () => {
   return (
     <>
       <FilterBox />
@@ -83,4 +83,4 @@ const CreatedModulesAll = () => {
   );
 };
 
-export default CreatedModulesAll;
+export default CreatedModulesArchived;

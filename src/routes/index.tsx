@@ -43,6 +43,10 @@ const CreatedModulesAll = lazy(() => import("../pages/CreatedModulesAll"));
 
 const FilterBox = lazy(() => import("../components/common/FilterBox"));
 
+const Tabs = lazy(() => import("../components/common/Tabs"));
+
+const Certifications = lazy(() => import("../pages/Certifications"));
+
 export const router = createBrowserRouter([
   {
     path: "/user",
@@ -107,6 +111,14 @@ export const router = createBrowserRouter([
       {
         path: "filter-box",
         element: <FilterBox />,
+      },
+      {
+        path: "created-modules-tabs",
+        element: <Tabs />,
+      },
+      {
+        path: "certifications",
+        element: <Certifications />,
       },
     ],
   },
