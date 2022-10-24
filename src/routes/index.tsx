@@ -66,13 +66,23 @@ const ResourceGroup = lazy(() => import("src/pages/resourceGroup"));
 
 export const router = createBrowserRouter([
   {
+    path: "/",
+    element: <UserLayout />,
+    children:[
+      {
+        path: "/",
+        element: <BrandCultureStartegy />,
+      }
+    ]
+  },
+  {
     path: "/user",
     element: <UserLayout />,
     children: [
       {
-        path: "/",
+        path: "brand-culture-startegy",
         element: <BrandCultureStartegy />,
-        
+
       },
       {
         path: "surveys",
