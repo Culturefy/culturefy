@@ -10,23 +10,22 @@ import Button from "../../components/common/Button";
 import Input from "../../components/common/Input";
 import Heading from "../../components/common/Heading";
 import UploadButton from "../../components/common/uploadButton";
+import LabelWithInput from "../../components/common/LabelWithInput";
 
 function CreateNewModule() {
   return (
     <>
       <Container>
-        <h2 className={Styles.pageHeadings}> Create New Module</h2>
-
         <Row>
           <Col md={12}>
-            <div className={Styles.inputf}>
-              <Input placeholder="Subtitle1" type="text" />
-            </div>
+            <h2 className={Styles.pageHeadings}> Create New Module</h2>
           </Col>
         </Row>
 
         <Row>
           <Col md={8}>
+            <LabelWithInput label="Subtitle1" placeholder=" " type="text" />
+
             <Heading label="Upload Video" />
             <div
               className={`${Styles.uploadfilescontainer}  ${Styles.createcourse} `}
@@ -45,17 +44,20 @@ function CreateNewModule() {
 
               <div className={Styles.buttons}>
                 <Button label="Publish Module" size="large" />
-                <Button
-                  label="Archive Module"
-                  size="large"
-                  variant="outlined"
-                  color="black"
-                />
+                <Link to="/create-module-learning">
+                  <Button
+                    label="Archive Module"
+                    size="large"
+                    variant="outlined"
+                    color="black"
+                  />
+                </Link>
               </div>
             </div>
           </Col>
 
-          <Col md={4}>
+          <Col md={4} className={Styles.recentList}>
+            <Heading label="Recent Module" />
             <div className={`${Styles.videoTxt}`}>
               <VideoBox poster={exp1} source={exp1} />
               <CourseTitleDesc

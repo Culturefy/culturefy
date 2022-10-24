@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import Styles from './styles.module.scss'
+import Styles from "./styles.module.scss";
 
 const Heading = ({ color = "primaryText", variant = "heading3", ...props }) => {
   return (
@@ -9,8 +9,7 @@ const Heading = ({ color = "primaryText", variant = "heading3", ...props }) => {
           Styles[props.border]
         }  ${Styles[color]} `}
       >
-        {" "}
-        {props.label}{" "}
+        {props.label}
       </h4>
     </>
   );

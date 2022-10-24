@@ -27,6 +27,12 @@ body{
   padding: 0;
   box-sizing: border-box;
 }
+
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #2394ae !important;
+}
 .rewardsTabsqa.nav-tabs .nav-item .nav-link{
   background: transparent;
   border: none;

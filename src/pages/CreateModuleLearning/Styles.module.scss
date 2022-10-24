@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  button {
+  > a {
     max-width: 32%;
     flex: 0 0 32%;
     padding: 5px 20px;
@@ -83,11 +83,15 @@ div div div .learningCreate {
 
 .videoTxt {
   padding: 0;
-  margin: 10px;
+  margin: 0;
 
   > div {
     padding: 0;
     margin: 0;
+
+    > div {
+      padding-left: 0 !important;
+    }
   }
 }
 
@@ -95,4 +99,36 @@ div div div .learningCreate {
   .heading6 {
     color: #2394ae;
   }
+}
+
+.recentList::before {
+  content: "";
+  height: 100%;
+  width: 1px;
+  background: #e3e3e3;
+  position: absolute;
+  left: 35px;
+}
+
+.recentList {
+  position: relative;
+  padding-left: 80px;
+  margin-top: 20px;
+  > div {
+    margin: 20px auto;
+    > div {
+      border-radius: 0;
+      box-shadow: none;
+
+      + div {
+        div {
+          padding-left: 15px !important;
+        }
+      }
+    }
+  }
+}
+
+.GroupMain img {
+  max-width: 150px;
 }

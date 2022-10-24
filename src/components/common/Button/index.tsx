@@ -1,7 +1,7 @@
 import React, { FC, useState } from "react";
 import Styles from "./styles.module.scss";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSpinner } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 const Button = ({
   disable = false,
