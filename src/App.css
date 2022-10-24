@@ -6,6 +6,10 @@
   font-family: 'Grpahik Regular';
   src: url('./assets/fonts/Graphik/GraphikRegular.otf');
 }
+@font-face {
+  font-family: 'Grpahik Semibold';
+  src: url('./assets/fonts/Graphik/GraphikSemibold.otf');
+}
 ul{
   margin: 0;
   padding: 0;
@@ -28,4 +32,17 @@ body{
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     color: #fff;
     background-color: #2394ae !important;
+}
+.rewardsTabsqa.nav-tabs .nav-item .nav-link{
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  font-family: 'Grpahik Semibold';
+}
+.rewardsTabsqa.nav-tabs .nav-item .nav-link.active{
+  border-bottom: 2px solid #bf161f;
+  color: #000;
+}
+p{
+  margin: 0;
 }

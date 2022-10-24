@@ -35,4 +35,11 @@ h4.heading5 {
 }
 .centered {
   text-align: center;
+  .grayText {
+    color: #929292;
+  }
+  .bottom {
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e8eaee;
+  }
 }

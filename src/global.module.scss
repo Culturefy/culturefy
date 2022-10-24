@@ -5,6 +5,9 @@
     top: 30px;
   }
 }
+.cPrimary {
+  color: #2394ae;
+}
 .redDot {
   display: inline-block;
   width: 12px;
@@ -49,6 +52,16 @@ div {
   align-items: center;
   flex-wrap: wrap;
 }
+.roundImg {
+  display: inline-block;
+  border-radius: 50%;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
 .roundImg55 {
   width: 55px;
   height: 55px;
@@ -60,6 +73,14 @@ div {
   height: 40px;
   border-radius: 50%;
   overflow: hidden;
+}
+.roundImg30 {
+  width: 30px;
+  height: 30px;
+}
+.roundImg20 {
+  width: 20px;
+  height: 20px;
 }
 .fullImg {
   width: 100%;
@@ -136,4 +157,32 @@ div {
       }
     }
   }
+}
+.roundImg70 {
+  width: 70px;
+  height: 70px;
+}
+.pt10 {
+  padding: 10px 0 0;
+}
+.cBlack {
+  color: #000;
+}
+.pGray {
+  font-size: 14px;
+  color: #929292;
+  font-family: "Grpahik Regular";
+}
+.f16 {
+  font-size: 16px;
+}
+.bgSecondary {
+  background-color: #bf161f;
+  color: #fff;
+}
+.cardBox {
+  padding: 20px;
+  box-shadow: 0px 3px 6px #efefef;
+  border-radius: 17px;
+  margin-bottom: 20px;
 }

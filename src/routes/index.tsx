@@ -1,31 +1,10 @@
 import React from "react";
 import { lazy } from "react";
 import { createBrowserRouter, Router } from "react-router-dom";
-// const AuthLayout = lazy(() => import('src/Layout/AuthLayout'))
-// const GeneralLayout = lazy(() => import('src/Layout/AuthLayout'))
-// import AuthLayout from 'src/Layout/AuthLayout'
-// import GeneralLayout from 'src/Layout/UserLayout'
 
 import AuthLayout from "../Layout/AuthLayout";
 import UserLayout from "../Layout/UserLayout";
 import SettingLayout from "../Layout/SettingLayout";
-
-// import GeneralLayout from '../Layout/UserLayout';
-const Login = lazy(() => import("../pages/Login"));
-const Signup = lazy(() => import("../pages/Signup"));
-const UserRole = lazy(() => import("../components/UserRole"));
-const BusinessInfoMain = lazy(() => import("../components/BusinessInfoMain"));
-const BrandCultureStartegy = lazy(
-  () => import("../pages/BrandCultureStrategy")
-);
-
-const Notification = lazy(() => import("../pages/AccountSetting/Notification"));
-const Users = lazy(() => import("../pages/AccountSetting/users"));
-const Community = lazy(() => import("../pages/Community"));
-const Surveys = lazy(() => import("../pages/Surveys"));
-const CreateSurvey = lazy(() => import("../pages/CreateSurvey"));
-
-const Rewards = lazy(() => import("../pages/Rewards"));
 
 const NewCourseForm = lazy(() => import("../pages/NewCourseForm"));
 const Learning = lazy(() => import("../pages/Learning"));
@@ -36,6 +15,20 @@ const CreateAiVideo = lazy(() => import("../pages/CreateAiVideo"));
 const CreateModuleLearning = lazy(
   () => import("../pages/CreateModuleLearning")
 );
+const Notification = lazy(() => import("../pages/AccountSetting/Notification"));
+const Users = lazy(() => import("../pages/AccountSetting/users"));
+const ProfileSetting = lazy(
+  () => import("../pages/AccountSetting/ProfileSetting")
+);
+const AddUser = lazy(() => import("../components/common/AddUser"));
+const AddMultipleUsers = lazy(
+  () => import("../components/common/AddMultipleUsers")
+);
+const DeleteUser = lazy(() => import("../components/common/DeleteUser"));
+
+const Community = lazy(() => import("../pages/Community"));
+const Surveys = lazy(() => import("../pages/Surveys"));
+const CreateSurvey = lazy(() => import("../pages/CreateSurvey"));
 
 const EditCourseForm = lazy(() => import("../pages/EditCourseForm"));
 const CreatedModules = lazy(() => import("../pages/CreatedModules"));
@@ -46,6 +39,14 @@ const FilterBox = lazy(() => import("../components/common/FilterBox"));
 const Tabs = lazy(() => import("../components/common/Tabs"));
 
 const Certifications = lazy(() => import("../pages/Certifications"));
+
+// const Learning = lazy(() => import('../pages/Learning'))
+// const CreateNewModule = lazy(() => import('../pages/createNewModule'))
+// const CreateNewCourse = lazy(() => import('../pages/createNewCourse'))
+// const CreateModuleLearning = lazy(() => import('../pages/CreateModuleLearning'))
+
+const CreateNew = lazy(() => import("../pages/CreateNew"));
+const NewEvent = lazy(() => import("../pages/NewEvent"));
 
 export const router = createBrowserRouter([
   {
@@ -120,6 +121,22 @@ export const router = createBrowserRouter([
         path: "certifications",
         element: <Certifications />,
       },
+      {
+        path: "create-module-learning",
+        element: <CreateModuleLearning />,
+      },
+      {
+        path: "create-new",
+        element: <CreateNew />,
+      },
+      {
+        path: "new-event",
+        element: <NewEvent />,
+      },
+      {
+        path: "notification",
+        element: <Notification />,
+      },
     ],
   },
   {
@@ -144,11 +161,23 @@ export const router = createBrowserRouter([
       },
       {
         path: "profile-setting",
-        element: <Notification />,
+        element: <ProfileSetting />,
       },
       {
         path: "users",
         element: <Users />,
+      },
+      {
+        path: "add-user",
+        element: <AddUser />,
+      },
+      {
+        path: "add-multiple-users",
+        element: <AddMultipleUsers />,
+      },
+      {
+        path: "delete-user",
+        element: <DeleteUser />,
       },
     ],
   },
