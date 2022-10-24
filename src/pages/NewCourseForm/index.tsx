@@ -2,7 +2,7 @@ import React from "react";
 import LabelWithInput from "../../components/common/LabelWithInput";
 
 import Heading from "../../components/common/Heading";
-import { Form, Link } from "react-router-dom";
+import { Form, Link, useNavigate } from "react-router-dom";
 import SelectOptions from "../../components/common/SelectOptions";
 import { Col, Container, Row } from "react-bootstrap";
 import VideoBox from "../../components/common/VideoBox";
@@ -16,6 +16,7 @@ import { BiUpload } from "react-icons/bi";
 import Button from "../../components/common/Button";
 
 function NewCourseForm() {
+  const navigate = useNavigate();
   return (
     <Container>
       <Row>
@@ -68,9 +69,9 @@ function NewCourseForm() {
             </div>
 
             <div className={Styles.buttonDiv}>
-              <Link to="/user/create-new-course">
-                <Button label="Next" size="large" variant="primary" />
-              </Link>
+                <Button label="Next" size="large" variant="primary" 
+                onClick={()=>navigate('/user/create-new-course')}
+                 />
             </div>
           </div>
         </Col>

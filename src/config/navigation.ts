@@ -42,15 +42,15 @@ export const navigation: INavigations[] = [
         children: [
           {
             title: "Courses",
-            link: "/user/learning",
+            link: "/user/created-modules-tabs",
           },
           {
             title: "Videos",
-            link: "/user/learning",
+            link: "/user/created-modules-tabs",
           },
           {
             title: "Archived",
-            link: "/user/learning",
+            link: "/user/created-modules-tabs",
           },
           {
             title: "Certification",
@@ -78,7 +78,7 @@ export const navigation: INavigations[] = [
         children: [
           {
             title: "Resource Groups",
-            link: "/user/resource-groups",
+            link: "/user/resource-group",
           },
           {
             title: "Events",

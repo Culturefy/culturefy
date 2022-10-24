@@ -13,13 +13,14 @@ import inst5Img from '../../../assets/images/inst5.png'
 import Heading from '../../../components/common/Heading'
 import Group from '../../../components/common/Group'
 import Button from '../../../components/common/Button'
+import ChatSuggestion from '../../../pages/resourceGroup/chatSuggestion'
 
 const Notification = () => {
     return (
         <>
             <Container className={Styles.notificationMain}>
                 <Row>
-                    <Col sm={12}>
+                    <Col sm={9}>
                         <div className={global.pBt20}>
                             <Heading label='Activity' variant='heading3' />
                         </div>
@@ -111,6 +112,9 @@ const Notification = () => {
                                 </div>
                             }
                         />
+                    </Col>
+                    <Col md={3}>
+                        <ChatSuggestion />
                     </Col>
                 </Row>
             </Container>
