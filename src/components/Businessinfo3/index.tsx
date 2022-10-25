@@ -2,7 +2,6 @@ import React from "react";
 import Button from "../common/Button";
 import Heading from "../common/Heading";
 import TextFieldQa from "../common/TextFieldQa";
-
 import global from "../../global.module.scss";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
