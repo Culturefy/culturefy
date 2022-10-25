@@ -92,7 +92,7 @@ export const useAuth = (data: string | null) => {
                     cookies.set('refreshToken', payload.data.tokens.refreshToken, { path: '/' });
                     localStorage.setItem("user" , JSON.stringify(payload.data.user))
 
-                    if (role.toUpperCase() === roles.ADMIN) return navigate("/auth/business-info1?tab=1")
+                    if (role.toUpperCase() === roles.ADMIN) return navigate("/auth/business-info?tab=1")
 
                     navigate("/")
 
