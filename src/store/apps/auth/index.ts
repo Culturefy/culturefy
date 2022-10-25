@@ -105,7 +105,7 @@ export const slice = createSlice({
         auth: {},
         total: 0,
         params: {},
-        user: {}
+        user: localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user") || "") : {}
     } as InitialState,
     reducers: {
         handleStatus: (state, action) => {

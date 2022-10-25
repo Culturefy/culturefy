@@ -1,4 +1,5 @@
 import axios from 'axios';
+import cookies from 'src/utils/cookies';
 
 // ** Config
 // import authConfig from 'src/config/auth'
@@ -15,7 +16,7 @@ const instance = axios.create({
 // Add a request interceptor
 instance.interceptors.request.use(function (config) {
 
-  const storedToken = window.localStorage.getItem('token')
+  const storedToken = cookies.get("accessToken")
   // console.log(storedToken)
 
   return {
