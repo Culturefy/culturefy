@@ -91,7 +91,7 @@ export const useAuth = (data: string | null) => {
                     cookies.set('accessToken', payload.data.tokens.accessToken, { path: '/' });
                     cookies.set('refreshToken', payload.data.tokens.refreshToken, { path: '/' });
 
-                    if (role.toUpperCase() === roles.ADMIN) return navigate("/auth/business-info1?tab=1")
+                    if (role.toUpperCase() === roles.ADMIN) return navigate("/auth/business-info?tab=1")
 
                     navigate("/")
 

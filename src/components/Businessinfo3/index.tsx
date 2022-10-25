@@ -17,7 +17,7 @@ const Businessinfo3 = () => {
       <div className={global.formsBusiness}>
         <div className={global.prevIconform}>
           <IconButton
-            icon={<FontAwesomeIcon icon={faArrowLeft} onClick={() => navigate("/auth/business-info2?tab=2")} />}
+            icon={<FontAwesomeIcon icon={faArrowLeft} onClick={() => navigate("/auth/business-info?tab=2")} />}
           />
         </div>
         <Heading

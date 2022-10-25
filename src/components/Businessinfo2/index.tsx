@@ -17,7 +17,7 @@ const Businessinfo2 = () => {
       <div className={global.formsBusiness}>
         <div className={global.prevIconform}>
           <IconButton
-            icon={<FontAwesomeIcon icon={faArrowLeft} onClick={() => navigate("/auth/business-info1?tab=1")}
+            icon={<FontAwesomeIcon icon={faArrowLeft} onClick={() => navigate("/auth/business-info?tab=1")}
             />}
           />
         </div>
@@ -44,7 +44,7 @@ const Businessinfo2 = () => {
             color="secondary"
             label="Next"
             size="medium"
-            onClick={() => navigate("/auth/business-info3?tab=3")}
+            onClick={() => navigate("/auth/business-info?tab=3")}
           />
           <Button
             variant="transparent"
