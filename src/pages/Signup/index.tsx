@@ -25,7 +25,7 @@ const Signup = () => {
 
   const [params] = useSearchParams()
 
-  const role = params.get("role")
+  const role = params.get("role") || ""
 
   console.log(role, "role")
 
@@ -37,9 +37,8 @@ const Signup = () => {
       role: role?.toUpperCase(),
     };
 
-    userRegister(apiData).then(() => {
+    userRegister(apiData , role).then(() => {
       reset();
-      navigate("/user/brand-culture-startegy")
     });
   };
 

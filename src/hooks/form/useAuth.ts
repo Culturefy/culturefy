@@ -1,6 +1,7 @@
 
 import { useEffect, useMemo } from 'react'
-import Cookies from 'universal-cookie';
+import cookies from 'src/utils/cookies';
+import { useNavigate } from 'react-router-dom';
 
 // ** Third Party Imports
 import { useForm } from 'react-hook-form'
@@ -24,6 +25,7 @@ import {
 
 import { auth } from '../../schema'
 import { register } from '../../schema'
+import { roles } from 'src/constants/roles';
 
 const defaultValues = {
     email: '',
@@ -33,6 +35,7 @@ const defaultValues = {
 
 export const useAuth = (data: string | null) => {
 
+    const navigate = useNavigate()
     // ** Hook
     const dispatch = useDispatch<AppDispatch>()
     //   const { handleDrawer, handleModal } = useToggleDrawer();
@@ -79,20 +82,25 @@ export const useAuth = (data: string | null) => {
             })
     }
 
-    const userRegister = async (data: any) => {
+    const userRegister = async (data: any, role: string) => {
         dispatch(registerAction({ ...data }))
             .then(({ payload }: any) => {
-                if (payload) {
+
+                try {
                     registerForm.reset()
-                    const cookies = new Cookies();
                     cookies.set('accessToken', payload.data.tokens.accessToken, { path: '/' });
                     cookies.set('refreshToken', payload.data.tokens.refreshToken, { path: '/' });
-                    //   handleDrawer(null)
-                } else {
+
+                    if (role.toUpperCase() === roles.ADMIN) return navigate("/auth/business-info")
+
+                    navigate("/")
+
+                } catch (error) {
                     console.log('============API_ERROR===============');
                     console.log(payload);
                     console.log('====================================');
                 }
+
             })
     }
 
