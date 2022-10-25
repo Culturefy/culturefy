@@ -55,7 +55,6 @@ const Login = () => {
                 label="email"
                 register={register}
                 formState={formState}
-                maxLength={20}
                 errors={errors?.email?.type}
                 minLength={5}
               />

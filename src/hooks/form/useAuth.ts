@@ -68,13 +68,13 @@ export const useAuth = (data: string | null) => {
     const userLogin = async (data: any) => {
         dispatch(loginAction({ ...data }))
             .then(({ payload }: any) => {
-                // console.log(payload);
-
-                if (payload) {
-                    window.localStorage.setItem('token', payload?.data[0]?.token)
+                try {
                     loginForm.reset()
-                    //   handleDrawer(null)
-                } else {
+                    cookies.set('accessToken', payload.data.tokens.accessToken, { path: '/' });
+                    cookies.set('refreshToken', payload.data.tokens.refreshToken, { path: '/' });
+                    localStorage.setItem("user" , JSON.stringify(payload.data.user))
+                    navigate("/")
+                } catch (error) {
                     console.log('============API_ERROR===============');
                     console.log(payload);
                     console.log('====================================');
@@ -90,6 +90,7 @@ export const useAuth = (data: string | null) => {
                     registerForm.reset()
                     cookies.set('accessToken', payload.data.tokens.accessToken, { path: '/' });
                     cookies.set('refreshToken', payload.data.tokens.refreshToken, { path: '/' });
+                    localStorage.setItem("user" , JSON.stringify(payload.data.user))
 
                     if (role.toUpperCase() === roles.ADMIN) return navigate("/auth/business-info")
 

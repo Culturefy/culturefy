@@ -143,23 +143,23 @@ const AuthProvider = ({ children }: Props) => {
         router('/login')
     };
 
-    const handleRegister = (
-        params: RegisterParams,
-        errorCallback?: ErrCallbackType
-    ) => {
-        axios
-            .post(authConfig.registerEndpoint, params)
-            .then((res) => {
-                if (res.data.error) {
-                    if (errorCallback) errorCallback(res.data.error);
-                } else {
-                    handleLogin({ email: params.email, password: params.password });
-                }
-            })
-            .catch((err: { [key: string]: string }) =>
-                errorCallback ? errorCallback(err) : null
-            );
-    };
+    // const handleRegister = (
+    //     params: RegisterParams,
+    //     errorCallback?: ErrCallbackType
+    // ) => {
+    //     axios
+    //         .post(authConfig.registerEndpoint, params)
+    //         .then((res) => {
+    //             if (res.data.error) {
+    //                 if (errorCallback) errorCallback(res.data.error);
+    //             } else {
+    //                 handleLogin({ email: params.email, password: params.password });
+    //             }
+    //         })
+    //         .catch((err: { [key: string]: string }) =>
+    //             errorCallback ? errorCallback(err) : null
+    //         );
+    // };
 
     const values = {
         user,
@@ -170,7 +170,7 @@ const AuthProvider = ({ children }: Props) => {
         setIsInitialized,
         login: handleLogin,
         logout: handleLogout,
-        register: handleRegister,
+        // register: handleRegister,
     };
 
     // return (

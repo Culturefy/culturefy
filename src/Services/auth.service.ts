@@ -3,7 +3,7 @@ import requests from '../Services/http.service';
 
 const AuthServices = {
   login(body: any): Promise<AxiosResponse<any, any>> {
-    return requests.post(`/login`, body);
+    return requests.post(`/signin`, body);
   },
   signup(body:any): Promise<AxiosResponse<any, any>> {
     return requests.post(`/signup`, body);
