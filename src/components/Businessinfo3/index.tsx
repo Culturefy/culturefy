@@ -2,7 +2,6 @@ import React from "react";
 import Button from "../common/Button";
 import Heading from "../common/Heading";
 import TextFieldQa from "../common/TextFieldQa";
-
 import global from "../../global.module.scss";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -17,7 +16,7 @@ const Businessinfo3 = () => {
       <div className={global.formsBusiness}>
         <div className={global.prevIconform}>
           <IconButton
-            icon={<FontAwesomeIcon icon={faArrowLeft} onClick={() => navigate("/auth/business-info2?tab=2")} />}
+            icon={<FontAwesomeIcon icon={faArrowLeft} onClick={() => navigate("/auth/business-info?tab=2")} />}
           />
         </div>
         <Heading
@@ -65,5 +64,6 @@ const Businessinfo3 = () => {
     </div>
   );
 };
+
 
 export default Businessinfo3;

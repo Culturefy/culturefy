@@ -5,6 +5,7 @@ import { createBrowserRouter, Router } from "react-router-dom";
 import AuthLayout from "src/Layout/AuthLayout";
 import UserLayout from "src/Layout/UserLayout";
 import SettingLayout from "src/Layout/SettingLayout";
+import BusinessInfoMain from "src/components/BusinessInfoMain";
 
 
 const UserRole = lazy(() => import("src/components/UserRole"));
@@ -220,6 +221,10 @@ export const router = createBrowserRouter([
       {
         path: "login",
         element: <Login />,
+      },
+      {
+        path: "business-info",
+        element: <BusinessInfoMain />,
       },
       {
         path: "business-info1",

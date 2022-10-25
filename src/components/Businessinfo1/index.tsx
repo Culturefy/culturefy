@@ -30,7 +30,7 @@ const Businessinfo1 = () => {
             color="secondary"
             label="Next"
             size="medium"
-            onClick={() => navigate("/auth/business-info2?tab=2")}
+            onClick={() => navigate("/auth/business-info?tab=2")}
           />
           <Button
             variant="transparent"
