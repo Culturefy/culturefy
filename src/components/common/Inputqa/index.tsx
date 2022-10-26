@@ -1,7 +1,7 @@
 import React from "react";
 import Styles from './styles.module.scss'
 
-function Input(
+function Inputqa(
     {
         variant = 'white',
         type='text',
@@ -17,4 +17,4 @@ function Input(
 }
 
 
-export default Input;
+export default Inputqa;

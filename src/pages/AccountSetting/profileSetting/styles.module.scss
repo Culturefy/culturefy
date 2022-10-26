@@ -1,21 +1,25 @@
 .notificationMain {
-  .TextFieldQa input {
-    margin: 0;
+  .TextFieldQa{
+    input {
+      margin: 0;
+    }
   }
-  .profilesettingform .coltxt {
-    margin-top: 20px;
-  }
-  .profilesettingform .coltxt > div {
-    margin: 0;
-    border: 2px solid #00000078;
-    border-radius: 10px;
-    padding: 5px;
-  }
-  .profilesettingform > div input {
-    border-bottom: 0px;
-  }
+
   .profilesettingform {
+    max-width: 700px;
     margin-top: 30px;
+    .coltxt {
+      margin-top: 20px;
+      > div {
+        margin: 0;
+        border: 2px solid #00000078;
+        border-radius: 10px;
+        padding: 5px;
+        input {
+          border-bottom: 0px;
+        }
+      }
+    }
   }
   .genderradiobox {
     height: 50px;
@@ -23,16 +27,19 @@
     align-items: center;
     justify-content: space-between;
   }
-  .innerheading h1 {
-    font-size: 1.63rem;
+  .innerheading  {
+    h1{
+      font-size: 1.63rem;
+    }
   }
   .innerheading {
     margin-top: 20px;
   }
-  .btn > div {
-    float: right;
-    text-align: right;
-    margin-top: 20px;
+  .btn{
+    > div {
+      float: right;
+      text-align: right;
+      margin-top: 20px;
+    }
   }
-
 }

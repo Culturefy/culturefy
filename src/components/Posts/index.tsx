@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Styles from './styles.module.scss'
 import IconButton from '../../components/common/IconButton';
 import Button from '../../components/common/Button';
-import Input from '../../components/common/Input';
+import Input from '../../components/common/Inputqa';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEllipsisV, faMoneyBill, faComment, faShare} from '@fortawesome/free-solid-svg-icons'

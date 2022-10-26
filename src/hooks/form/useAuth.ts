@@ -21,6 +21,7 @@ import {
     loginAction,
     fetchAction,
     registerAction,
+    profileAction,
 } from '../../store/apps/auth'
 
 import { auth } from '../../schema'
@@ -46,6 +47,12 @@ export const useAuth = (data: string | null) => {
         resolver: yupResolver(auth.login)
     })
     const registerForm = useForm({
+        defaultValues,
+        mode: 'onChange',
+        resolver: yupResolver(register.register)
+    })
+
+    const profileForm = useForm({
         defaultValues,
         mode: 'onChange',
         resolver: yupResolver(register.register)
@@ -104,6 +111,21 @@ export const useAuth = (data: string | null) => {
             })
     }
 
-    return { loginForm, registerForm, store, userLogin, userRegister }
+    const userProfile = async (data: any) => {
+        dispatch(profileAction({ ...data }))
+            .then(({ payload }: any) => {
+                console.log(payload);
+                // try {
+                //     console.log(payload);
+                //     profileForm.reset()
+                // } catch (error) {
+                //     console.log('============API_ERROR===============');
+                //     console.log(payload);
+                //     console.log('====================================');
+                // }
+            })
+    }
+
+    return { loginForm, registerForm, profileForm, store, userLogin, userRegister, userProfile }
 
 }
