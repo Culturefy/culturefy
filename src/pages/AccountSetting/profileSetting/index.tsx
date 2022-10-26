@@ -70,7 +70,7 @@ const ProfileSetting = () => {
                 <Col md={6} className={Styles.coltxt}>
                   <label>Email</label>
                   {/* <TextFieldQa placeholder="Youremail@gmail.com" type="email" /> */}
-                  <Input
+                  {/* <Input
                     type="email"
                     placeholder="Youremail@gmail.com"
                     label="email"
@@ -78,7 +78,7 @@ const ProfileSetting = () => {
                     formState={formState}
                     errors={errors?.email?.type}
                     required={true}
-                  />
+                  /> */}
                 </Col>
                 <Col md={6} className={Styles.coltxt}>
                   <label>Bio</label>
