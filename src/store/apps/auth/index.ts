@@ -5,7 +5,7 @@ import { Dispatch } from 'redux'
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 // import toast from 'react-hot-toast'
 import { toast } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 import AuthServices from '../../../Services/auth.service'
 import ProfileServices from '../../../Services/profile.service'
@@ -20,6 +20,7 @@ interface InitialState {
     total: number;
     params: {};
     status: 'pending' | 'error' | 'success' | 'idle';
+    user: {}
 }
 
 interface DataParams {
@@ -59,11 +60,12 @@ export const loginAction = createAsyncThunk(
         try {
             const response = await AuthServices.login(data);
             // console.log(response.data);
-            if (response){
+            if (response) {
                 toast.success(response.data.message)
             }
             // dispatch(fetchAllAction(getState().user.params))
             // toast.success("Assignment Added successfully!")
+            dispatch(slice.actions.handleUser(response.data.data.user))
             dispatch(slice.actions.handleStatus('success'))
             return response.data;
         } catch (error: any) {
@@ -81,10 +83,32 @@ export const registerAction = createAsyncThunk(
         try {
             const response = await AuthServices.signup(data);
             // console.log(response.data);
-            
+
             // dispatch(fetchAllAction(getState().user.params))
-            if (response){
-                toast.success(response.data.message||"Success")
+            if (response) {
+                toast.success(response.data.message || "Success")
+            }
+            dispatch(slice.actions.handleUser(response.data.data.user))
+            dispatch(slice.actions.handleStatus('success'))
+            return response.data;
+        } catch (error: any) {
+            toast.error(error.response.data.message || "Something went wrong!")
+            dispatch(slice.actions.handleStatus('error'))
+            return error.response.data;
+        }
+    }
+)
+
+export const businessInformationAction = createAsyncThunk(
+    'auth/business',async (data: any, { getState, dispatch }: Redux) => {
+        dispatch(slice.actions.handleStatus('pending'))
+        try {
+            const response = await AuthServices.businessAdd(data);
+            console.log(response.data);
+
+            // dispatch(fetchAllAction(getState().user.params))
+            if (response) {
+                toast.success(response.data.message || "Success")
             }
             dispatch(slice.actions.handleStatus('success'))
             return response.data;
@@ -122,13 +146,16 @@ export const slice = createSlice({
         auth: {},
         total: 0,
         params: {},
+        user: localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user") || "") : {}
     } as InitialState,
     reducers: {
         handleStatus: (state, action) => {
-            // console.log(action.payload);
-            
             state.status = action.payload;
         },
+        handleUser: (state, action) => {
+            action.payload.role_code = action.payload.role.code
+            return { ...state, user: action.payload }
+        }
     },
     // extraReducers: builder => {
     //     builder.addCase(fetchAllAction.fulfilled, (state, action) => {

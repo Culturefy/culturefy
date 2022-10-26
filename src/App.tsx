@@ -7,7 +7,7 @@ import "./App.css";
 import "./App.css";
 // import { router } from 'src/routes/index'
 import { store } from "./store";
-import { router } from "./routes/index";
+import { router } from "./routes";
 import Loader from "./components/Loader";
 
 function App() {
