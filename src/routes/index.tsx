@@ -12,13 +12,6 @@ const UserRole = lazy(() => import("src/components/UserRole"));
 const Signup = lazy(() => import("src/pages/Signup"));
 const Login = lazy(() => import("src/pages/Login"));
 
-const BusinessInfo1 = lazy(() => import("src/components/Businessinfo1"));
-const BusinessInfo2 = lazy(() => import("src/components/Businessinfo2"));
-const BusinessInfo3 = lazy(() => import("src/components/Businessinfo3"));
-
-
-
-
 const NewCourseForm = lazy(() => import("src/pages/NewCourseForm"));
 const Learning = lazy(() => import("src/pages/Learning"));
 const CreateNewModule = lazy(() => import("src/pages/createNewModule"));
@@ -226,18 +219,6 @@ export const router = createBrowserRouter([
         path: "business-info",
         element: <BusinessInfoMain />,
       },
-      {
-        path: "business-info1",
-        element: <BusinessInfo1 />,
-      },
-      {
-        path: "business-info2",
-        element: <BusinessInfo2 />,
-      },
-      {
-        path: "business-info3",
-        element: <BusinessInfo3 />,
-      }
     ],
   },
 ]);

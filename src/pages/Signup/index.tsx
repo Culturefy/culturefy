@@ -15,11 +15,14 @@ import { ToastContainer } from "react-toastify";
 const Signup = () => {
   const {
     register,
+    getValues ,
     handleSubmit,
     formState,
     reset,
     formState: { errors },
   } = useForm();
+
+  console.log('getValues',getValues()); 
 
   const { userRegister, store } = useAuth(null);
 

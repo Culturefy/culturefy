@@ -10,7 +10,10 @@ const AuthServices = {
   },
   logout(): Promise<AxiosResponse<any, any>> {
     return requests.get(`/auth/logout`);
-  }
+  },
+  businessAdd(body: any): Promise<AxiosResponse<any, any>> {
+    return requests.post(`/business` , body);
+  },
 };
 
 export default AuthServices;

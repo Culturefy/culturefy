@@ -37,3 +37,11 @@ export type AuthValuesType = {
   login: (params: LoginParams, errorCallback?: ErrCallbackType) => void
   register: (params: RegisterParams, errorCallback?: ErrCallbackType) => void
 }
+
+
+export type BusinessInfoType = {
+  onSubmit?: () => void,
+  onSkip: () => void,
+  businessInfo: Dispatch<SetStateAction<any>>;
+  setBusinessInfo: Dispatch<SetStateAction<any>>;
+}

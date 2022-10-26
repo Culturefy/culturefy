@@ -21,6 +21,7 @@ import {
     loginAction,
     fetchAction,
     registerAction,
+    businessInformationAction
 } from '../../store/apps/auth'
 
 import { auth } from '../../schema'
@@ -105,6 +106,20 @@ export const useAuth = (data: string | null) => {
             })
     }
 
-    return { loginForm, registerForm, store, userLogin, userRegister }
+    const userBusinessAdd = async (data: any) => {
+        dispatch(businessInformationAction({ ...data }))
+            .then(({ payload }: any) => {
+                try {
+                    navigate("/")
+                } catch (error) {
+                    console.log('============API_ERROR===============');
+                    console.log(payload);
+                    console.log('====================================');
+                }
+
+            })
+    }
+
+    return { loginForm, registerForm, store, userLogin, userRegister , userBusinessAdd }
 
 }

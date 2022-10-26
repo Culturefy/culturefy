@@ -97,6 +97,27 @@ export const registerAction = createAsyncThunk(
     }
 )
 
+export const businessInformationAction = createAsyncThunk(
+    'auth/business',async (data: any, { getState, dispatch }: Redux) => {
+        dispatch(slice.actions.handleStatus('pending'))
+        try {
+            const response = await AuthServices.businessAdd(data);
+            console.log(response.data);
+
+            // dispatch(fetchAllAction(getState().user.params))
+            if (response) {
+                toast.success(response.data.message || "Success")
+            }
+            dispatch(slice.actions.handleStatus('success'))
+            return response.data;
+        } catch (error: any) {
+            toast.error(error.response.data.message || "Something went wrong!")
+            dispatch(slice.actions.handleStatus('error'))
+            return error.response.data;
+        }
+    }
+)
+
 // @ts-ignore
 export const slice = createSlice({
     name: 'auth',
