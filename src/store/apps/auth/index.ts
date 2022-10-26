@@ -8,6 +8,8 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import AuthServices from '../../../Services/auth.service'
+import ProfileServices from '../../../Services/profile.service'
+
 
 // ** Types Imports
 import { IAuth } from '../../../types/auth'
@@ -118,6 +120,24 @@ export const businessInformationAction = createAsyncThunk(
     }
 )
 
+export const profileAction = createAsyncThunk(
+    'setting/profile',
+    async (data: any, { getState, dispatch }: Redux) => {
+        dispatch(slice.actions.handleStatus('pending'))
+        try {
+            const response = await ProfileServices.update(data);
+            if (response){
+                toast.success(response.data.message||"Success")
+            }
+            dispatch(slice.actions.handleStatus('success'))
+            return response.data;
+        } catch (error: any) {
+            toast.error(error.response.data.message || "Something went wrong!")
+            dispatch(slice.actions.handleStatus('error'))
+            return error.response.data;
+        }
+    }
+)
 // @ts-ignore
 export const slice = createSlice({
     name: 'auth',

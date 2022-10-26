@@ -9,7 +9,7 @@ import CourseTitleDesc from "../../components/common/CourseTitleDesc";
 import { BiUpload } from "react-icons/bi";
 
 import Button from "../../components/common/Button";
-import Input from "../../components/common/Input";
+import Input from "../../components/common/Inputqa";
 import Heading from "../../components/common/Heading";
 import UploadButton from "../../components/common/uploadButton";
 import LabelWithInput from "../../components/common/LabelWithInput";

@@ -9,12 +9,11 @@ const Input = ({
   minLength,
   maxLength,
   defaultValue,
+  required,
   errors,
   register,
 }: any) => {
-  const errorMsgClr = {
-    color: "red",
-  };
+
 
   return (
     <div className={Styles.TextFieldQa}>
@@ -22,22 +21,23 @@ const Input = ({
         type={type}
         placeholder={placeholder}
         {...register(label, {
-          required: true,
+          required: required,
           minLength: minLength ? minLength : null,
           maxLength: maxLength ? maxLength : null,
         })}
+        
         defaultValue={defaultValue ? defaultValue : null}
       />
       {errors === "required" && (
-        <span style={errorMsgClr}>This Field Is Required</span>
+        <span className={Styles.errorMsgClr}>This Field Is Required</span>
       )}
       {errors === "maxLength" && (
-        <p style={errorMsgClr}>
+        <p className={Styles.errorMsgClr}>
           {placeholder} cannot exceed {maxLength} characters
         </p>
       )}
       {errors === "minLength" && (
-        <p style={errorMsgClr}>
+        <p className={Styles.errorMsgClr}>
           {placeholder} must contain atleast {minLength} characters
         </p>
       )}

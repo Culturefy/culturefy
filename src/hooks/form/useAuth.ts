@@ -21,6 +21,7 @@ import {
     loginAction,
     fetchAction,
     registerAction,
+    profileAction,
     businessInformationAction
 } from '../../store/apps/auth'
 
@@ -47,6 +48,12 @@ export const useAuth = (data: string | null) => {
         resolver: yupResolver(auth.login)
     })
     const registerForm = useForm({
+        defaultValues,
+        mode: 'onChange',
+        resolver: yupResolver(register.register)
+    })
+
+    const profileForm = useForm({
         defaultValues,
         mode: 'onChange',
         resolver: yupResolver(register.register)
@@ -106,6 +113,22 @@ export const useAuth = (data: string | null) => {
             })
     }
 
+    const userProfile = async (data: any) => {
+        dispatch(profileAction({ ...data }))
+            .then(({ payload }: any) => {
+                console.log(payload);
+                // try {
+                //     console.log(payload);
+                //     profileForm.reset()
+                // } catch (error) {
+                //     console.log('============API_ERROR===============');
+                //     console.log(payload);
+                //     console.log('====================================');
+                // }
+            })
+    }
+
+    return { loginForm, registerForm, profileForm, store, userLogin, userRegister, userProfile }
     const userBusinessAdd = async (data: any) => {
         dispatch(businessInformationAction({ ...data }))
             .then(({ payload }: any) => {
