@@ -73,6 +73,16 @@ div button.saveBtn:hover {
   border: 2px solid #3cc473;
   color: #3cc473;
 }
+div button.dark {
+  background-color: transparent;
+  color: #000;
+  border: 2px solid #000;
+}
+div button.dark:hover {
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #000;
+}
 button.primary:hover {
   background-color: transparent;
   border: 2px solid #2394ae;

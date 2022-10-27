@@ -14,33 +14,32 @@
       object-fit: cover;
     }
   }
-  h4{
+  h4 {
     color: #000000;
   }
-  p{
+  p {
     color: #959595;
   }
- 
 }
-h4.small{
+h4.small {
   font-size: 15px;
 }
-h4.larger{
+h4.larger {
   font-size: 22px;
 }
-.GroupMain{
+.GroupMain {
   display: flex;
   width: 100%;
   position: relative;
   justify-content: space-between;
   align-items: center;
 }
-.GroupMain.borderBottom{
+.GroupMain.borderBottom {
   padding: 10px;
   padding-right: 7%;
   border-bottom: 1px solid #f1f2f4;
 }
-.GroupMain.borderTop{
+.GroupMain.borderTop {
   padding: 10px;
   padding-right: 7%;
   border-top: 1px solid #f1f2f4;
