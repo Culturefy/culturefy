@@ -1,8 +1,5 @@
 import React from "react";
-import CreatedModulesAll from "../CreatedModulesAll";
-import CreatedModulesArchived from "../CreatedModulesArchived";
-import CreatedModulesCourses from "../CreatedModulesCourses";
-import CreatedModulesVideos from "../CreatedModulesVideos";
+import TableBox from "src/components/common/TableBox";
 import Styles from "./styles.module.scss";
 const Certifications = () => {
   return (
@@ -59,7 +56,7 @@ const Certifications = () => {
             role="tabpanel"
             aria-labelledby="pills-all-tab"
           >
-            <CreatedModulesAll />
+            <TableBox />
           </div>
           <div
             className="tab-pane fade"
@@ -67,7 +64,7 @@ const Certifications = () => {
             role="tabpanel"
             aria-labelledby="pills-courses-tab"
           >
-            <CreatedModulesCourses />
+            <TableBox />
           </div>
           <div
             className="tab-pane fade"
@@ -75,7 +72,7 @@ const Certifications = () => {
             role="tabpanel"
             aria-labelledby="pills-videos-tab"
           >
-            <CreatedModulesVideos />
+            <TableBox />
           </div>
         </div>
       </div>

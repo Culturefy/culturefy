@@ -1,6 +1,10 @@
 .flexDiv {
   display: flex;
   align-items: center;
+  flex-direction: column;
+  button{
+    font-size: 14px;
+  }
 }
 .modules {
   .pl_O {
@@ -70,5 +74,22 @@
         font-family: "Grpahik Medium";
       }
     }
+  }
+}
+
+
+.courseinfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  p:first-child {
+    color: #2394ae;
+    margin-bottom: 6px;
+  }
+  p {
+    font-size: 14px;
+    font-family: "Grpahik REgular";
+    color: #c9c9c9;
+    padding-left: 10px; 
   }
 }

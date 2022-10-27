@@ -3,6 +3,7 @@ import Styles from "./styles.module.scss";
 import Group from "../Group";
 
 const CourseTitleDesc = (props: any) => {
+  console.log("pp", props);
   return (
     <div
       className={`${Styles.expbox}  ${Styles.borderless}  ${Styles.uploadVideo}`}
