@@ -126,6 +126,7 @@ const Signup = () => {
                   size="large"
                 />
               )} */}
+              
               <p className={Styles.rememText}>Forget password</p>
               <p className={Styles.rememText}>
                 Already have an account?
