@@ -7,7 +7,6 @@ import UserLayout from "src/Layout/UserLayout";
 import SettingLayout from "src/Layout/SettingLayout";
 import BusinessInfoMain from "src/components/BusinessInfoMain";
 
-
 const UserRole = lazy(() => import("src/components/UserRole"));
 const Signup = lazy(() => import("src/pages/Signup"));
 const Login = lazy(() => import("src/pages/Login"));
@@ -21,7 +20,9 @@ const CreateAiVideo = lazy(() => import("src/pages/CreateAiVideo"));
 const CreateModuleLearning = lazy(
   () => import("src/pages/CreateModuleLearning")
 );
-const Notification = lazy(() => import("src/pages/AccountSetting/Notification"));
+const Notification = lazy(
+  () => import("src/pages/AccountSetting/Notification")
+);
 const Users = lazy(() => import("src/pages/AccountSetting/users"));
 const ProfileSetting = lazy(
   () => import("src/pages/AccountSetting/profileSetting")
@@ -39,7 +40,6 @@ const CreateSurvey = lazy(() => import("src/pages/CreateSurvey"));
 const EditCourseForm = lazy(() => import("src/pages/EditCourseForm"));
 const CreatedModulesAll = lazy(() => import("src/pages/CreatedModulesAll"));
 
-
 const Tabs = lazy(() => import("src/components/common/Tabs"));
 
 const Certifications = lazy(() => import("src/pages/Certifications"));
@@ -52,23 +52,30 @@ const Certifications = lazy(() => import("src/pages/Certifications"));
 const CreateNew = lazy(() => import("src/pages/CreateNew"));
 const NewEvent = lazy(() => import("src/pages/NewEvent"));
 
-const BrandCultureStartegy = lazy(() => import("src/pages/BrandCultureStrategy"));
+const BrandCultureStartegy = lazy(
+  () => import("src/pages/BrandCultureStrategy")
+);
 const Rewards = lazy(() => import("src/pages/Rewards"));
 const ResourceGroup = lazy(() => import("src/pages/resourceGroup"));
 
+const SearchResults = lazy(() => import("src/pages/SearchResults"));
 
+const Profile = lazy(() => import("src/pages/Profile"));
 
+const UserProfile = lazy(() => import("src/pages/UserProfile"));
+
+const ProfileTabs = lazy(() => import("src/pages/ProfileTabs"));
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <UserLayout />,
-    children:[
+    children: [
       {
         path: "/",
         element: <BrandCultureStartegy />,
-      }
-    ]
+      },
+    ],
   },
   {
     path: "/user",
@@ -77,7 +84,6 @@ export const router = createBrowserRouter([
       {
         path: "brand-culture-startegy",
         element: <BrandCultureStartegy />,
-
       },
       {
         path: "surveys",
@@ -154,6 +160,22 @@ export const router = createBrowserRouter([
       {
         path: "resource-group",
         element: <ResourceGroup />,
+      },
+      {
+        path: "profile",
+        element: <Profile />,
+      },
+      {
+        path: "profile-tabs",
+        element: <ProfileTabs />,
+      },
+      {
+        path: "search-results",
+        element: <SearchResults />,
+      },
+      {
+        path: "user-profile",
+        element: <UserProfile />,
       },
     ],
   },
