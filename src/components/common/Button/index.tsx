@@ -22,11 +22,11 @@ const Button = ({
       {props.icon ? <span className={Styles.btnIcon}> {props.icon} </span> : ""}
       <span>{props.label}</span>
       {isLoading ? (
-        <span className={Styles.spinner}>
+        <span className="loader_spinner">
           <FontAwesomeIcon icon={faSpinner} />
         </span>
       ) : (
-        ""
+        <></>
       )}
     </button>
   );

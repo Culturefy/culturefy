@@ -5,7 +5,7 @@ import cookies from 'src/utils/cookies';
 // import authConfig from 'src/config/auth'
 
 const instance = axios.create({
-  baseURL: "https://487e-103-104-192-70.ap.ngrok.io/api/v1",
+  baseURL: "https://79c6-103-104-192-70.ap.ngrok.io/api/v1",
   timeout: 500000,
   headers: {
     Accept: 'application/json',

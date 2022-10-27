@@ -10,25 +10,25 @@ import Button from "../../components/common/Button";
 import { useForm } from "react-hook-form";
 import Input from "../../components/Input";
 import { useAuth } from "src/hooks/form/useAuth";
-import { ToastContainer } from "react-toastify";
+// import { ToastContainer } from "react-toastify";
 
 const Signup = () => {
   const {
     register,
-    getValues ,
+    getValues,
     handleSubmit,
     formState,
     reset,
     formState: { errors },
   } = useForm();
 
-  console.log('getValues',getValues()); 
+  console.log("getValues", getValues());
 
   const { userRegister, store } = useAuth(null);
 
-  const [params] = useSearchParams()
+  const [params] = useSearchParams();
 
-  const role = params.get("role") || ""
+  const role = params.get("role") || "";
 
   const navigate = useNavigate();
 
@@ -38,7 +38,7 @@ const Signup = () => {
       role: role?.toUpperCase(),
     };
 
-    userRegister(apiData , role).then(() => {
+    userRegister(apiData, role).then(() => {
       reset();
     });
   };
@@ -102,7 +102,15 @@ const Signup = () => {
                   ></label>
                 </div>
               </p>
-              {store.status === "pending" ? (
+              <Button
+                variant="filled"
+                color="secondary"
+                label="SIGN UP"
+                size="large"
+                disable={store.status === "pending"}
+                isLoading={store.status === "pending"}
+              />
+              {/* {store.status === "pending" ? (
                 <Button
                   variant="filled"
                   color="secondary"
@@ -117,19 +125,17 @@ const Signup = () => {
                   label="SIGN UP"
                   size="large"
                 />
-              )}
+              )} */}
               <p className={Styles.rememText}>Forget password</p>
               <p className={Styles.rememText}>
                 Already have an account?
-                <span onClick={() => navigate("/auth/login")}>
-                  Sign in
-                </span>
+                <span onClick={() => navigate("/auth/login")}>Sign in</span>
               </p>
             </div>
           </form>
         </div>
       </div>
-      <ToastContainer />
+      {/* <ToastContainer /> */}
     </>
   );
 };

@@ -2,25 +2,26 @@
   font-family: "Grpahik Medium";
   src: url("../../../assets-qa/fonts/Graphik/GraphikMedium.otf");
 }
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-.spinner {
-  i {
-    display: inline-block;
-    animation: spin infinite linear 5000ms;
-  }
-}
+// @keyframes spin {
+//   from {
+//     transform: rotate(0deg);
+//   }
+//   to {
+//     transform: rotate(360deg);
+//   }
+// }
+// .spinner {
+//   i {
+//     display: inline-block;
+//     animation: spin infinite linear 5000ms;
+//   }
+// }
 button {
   margin: 5px;
 }
 button.isLoadinga {
   opacity: 0.6;
+  pointer-events: none;
 }
 button.notLoading {
   opacity: 1;
