@@ -1,0 +1,85 @@
+.workspace_agendastemplates_wrepper{
+    margin-left: 23%;
+    width: 100%;
+    margin-top: 1.875rem;
+    display: flex;
+    width: 100%;
+}
+.agendatemplate_section{
+    width: 51%; 
+    
+}
+.agendatemplate_header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+    padding:0.625rem;
+    background-color: white;
+
+}
+
+.cross{
+    font-size: 1.875rem;
+    color: #bf161f;
+}
+.Agenda_buttons{
+    padding: 0.625rem;
+
+    
+
+}
+.create_template{
+    padding: 0.5rem 3.75rem;
+    border-radius:1.875rem;
+    background-color:#f5a41d;
+    border: none;
+    color: white;
+    font-weight: 500;
+}
+.agenda_view_section{
+    display: flex;
+    flex-wrap: wrap;
+    height: 70vh;
+    overflow: scroll;
+    
+    
+}
+.agendas_view_style3{
+    border: 1px solid gray;
+    width: 18.75rem;
+    height: 25rem;
+    margin: 0.625rem;
+    border-radius: 0.5rem;
+   
+}
+.agenda_style3{
+    background-color:#929292;
+    color: white;
+    width: 100%;
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    outline: 1px solid #929292 ;
+    border: 1px solid #929292 ;
+    padding: 0.937rem 0.625rem;
+}
+.agenda_style6{
+    background-color:white;
+    color: white;
+    width: 100%;
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    
+    padding: 0.937rem 0.625rem;
+    color: black;
+}
+.agenda_list{
+    display: flex;
+}
+.agenda_list ul{
+    padding-left: 0.5rem;
+    font-size: 0.75rem;
+}
+.agendacall_section{
+    width: 49%;
+    
+}

@@ -1,0 +1,55 @@
+.workspace_agendas_wrepper {
+    margin-left: 23%;
+    width: 100%;
+    margin-top: 1.875rem;
+
+}
+.agendas{
+    display: flex;
+}
+.agendas a{
+    text-decoration: none;
+    color: black;
+}
+.agendas_view{
+    border: 1px solid gray;
+    width: 18.75rem;
+    height: 25rem;
+    margin: 0.625rem;
+    border-radius: 8px;
+    padding: 1.25rem 0.937rem;
+}
+.agendas_view p{
+    font-size: 0.812rem;
+}
+.agenda_date_time{
+    border-top:1px solid #2394ae ;
+    border-bottom:1px solid #2394ae ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.agenda_date_time span{
+    font-size: 0.812rem
+} 
+.agenda_items ol{
+    font-size: 0.687rem;
+}
+.agenda_items p{
+    margin: 0;
+}
+.new_agendas{
+    width: 18.75rem;
+    height: 25rem;
+    margin: 0.625rem;
+    border: 2px solid #2394ae;
+    border-radius: 0.5rem;
+    border-style: dashed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.agendas_plus{
+    font-size: 4.687rem;
+    color: #2394ae;
+}

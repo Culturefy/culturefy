@@ -23,10 +23,10 @@ const AsideRight = () => {
     <div className="aside-right">
       <div className="top-buttons">
         <select name="" id="" className="compnay_name">
-          <option value="1">Compnay Name1</option>
-          <option value="2">Compnay Name2</option>
-          <option value="3">Compnay Name3</option>
-          <option value="4">Compnay Name4</option>
+          <option value="1">Company Name 1</option>
+          <option value="2">Company Name 2</option>
+          <option value="3">Company Name 3</option>
+          <option value="4">Company Name 4</option>
         </select>
         <button className="createnew">+ Create New</button>
         <button className="upload">Upload a File</button>

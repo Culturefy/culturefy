@@ -29,7 +29,9 @@ const Worksplaceindex = () => {
         </div>
         <hr className="hr-tag" />
         <div className="workpaces-content">
-          <div className="workpaces-name">
+          <div className="wrkspc_nm">
+            <div className="wrkspc_nm_ch">
+            {/* ========================= */}
             <div className="workpaces-card">
               <div className="workpaces-details">
                 <h1>Workpace Name</h1>
@@ -40,6 +42,7 @@ const Worksplaceindex = () => {
                 <p>12:00 PM EST</p>
               </div>
             </div>
+              {/* ========================= */}
             <div className="workpaces-card">
               <div className="workpaces-details">
                 <h1>Workpace Name</h1>
@@ -50,6 +53,7 @@ const Worksplaceindex = () => {
                 <p>12:00 PM EST</p>
               </div>
             </div>
+            {/* ========================= */}
             <div className="workpaces-card">
               <div className="workpaces-details">
                 <h1>Workpace Name</h1>
@@ -60,6 +64,7 @@ const Worksplaceindex = () => {
                 <p>12:00 PM EST</p>
               </div>
             </div>
+            {/* ========================= */}
             <div className="workpaces-card">
               <div className="workpaces-details">
                 <h1>Workpace Name</h1>
@@ -70,6 +75,32 @@ const Worksplaceindex = () => {
                 <p>12:00 PM EST</p>
               </div>
             </div>
+            {/* ========================= */}
+            <div className="workpaces-card">
+              <div className="workpaces-details">
+                <h1>Workpace Name</h1>
+                <p>Short description here,perspic unde omnis iste natus</p>
+              </div>
+              <div className="workpaces-date">
+                <p>Aug 5,2020</p>
+                <p>12:00 PM EST</p>
+              </div>
+            </div>
+            {/* ========================= */}
+            <div className="workpaces-card">
+              <div className="workpaces-details">
+                <h1>Workpace Name</h1>
+                <p>Short description here,perspic unde omnis iste natus</p>
+              </div>
+              <div className="workpaces-date">
+                <p>Aug 5,2020</p>
+                <p>12:00 PM EST</p>
+              </div>
+            </div>
+            {/* ========================= */}
+        
+            
+          </div>
           </div>
 
           <div className="filter">
@@ -135,7 +166,8 @@ const Worksplaceindex = () => {
 
           </div>
         </div>
-      </div>
+        </div>
+
     </>
   );
 };

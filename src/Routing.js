@@ -4,6 +4,7 @@ import { Router, Route, Routes } from "react-router-dom"
 import Create from "./campaigns/Create"
 import Campaign from "./campaigns/Index"
 import Searchcampaign from "./campaigns/Searchcampaign/Searchcampaign"
+import CampaignAd from "./campaigns/Searchcampaign/CampaignAd"
 // Workspace
 import Workspace from './WorkSpace/Workspacesindex'
 import CreateWorkspaces from "./WorkSpace/CreateWorkspaces"
@@ -19,6 +20,10 @@ import WorkpacesUpload from "./WorkSpace/WorkSpaceFile/WorkpacesUpload"
 import WorkspacefilePng from "./WorkSpace/WorkSpaceFile/WorkspacefilePng"
 import Workspacefiledoc from "./WorkSpace/WorkSpaceFile/Workspacefiledoc"
 import WorkspacefileMp4 from "./WorkSpace/WorkSpaceFile/WorkspacefileMp4"
+import WorkspaceAgendas from "./WorkSpace/Agendas/WorkspaceAgendas"
+import WorkspaceAgendaTemplates from "./WorkSpace/Agendas/WorkspaceAgendasTemplates"
+import WorkspaceAgendaView from "./WorkSpace/Agendas/WorkspaceAgendaView"
+
 const Routing = () => {
     return (
         <Routes>
@@ -26,6 +31,7 @@ const Routing = () => {
             <Route path="/campaigns" element={<Campaign />} />
             <Route path="/create-campaigns" element={<Create />} />
             <Route path="/campaign/searchcapaign" element={<Searchcampaign />} />
+            <Route path="/campaign/campaign-ad" element={<CampaignAd />} />
 
             <Route path="/workspace-main" element={<Workspace />} />
             <Route path="/createworkspaces" element={<CreateWorkspaces />} />
@@ -41,6 +47,9 @@ const Routing = () => {
             <Route path="/workspace/gapanalysis" element={<Gapanalysis />} />
             <Route path="/workspace/meetingview" element={<Meetingview />} />
             <Route path="/workspace/meetingshareview" element={<Screenshareview />} />
+            <Route path="/workspaceagendas" element={<WorkspaceAgendas />} />
+            <Route path="/workspaceagendatemplates" element={<WorkspaceAgendaTemplates />} />
+            <Route path="/workspaceagendasview" element={<WorkspaceAgendaView />} />
         </Routes>
     )
 }

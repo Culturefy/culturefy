@@ -49,20 +49,32 @@
     width: 100%;
     display: flex; 
 }
-.workpaces-name{
-    width: 80%;
+.wrkspc_nm{
+    width: 70%;    
     display: flex;
+    align-items: center;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+.wrkspc_nm_ch{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
 }
 .workpaces-card{
-    width: 45%;
-    box-shadow: 0px 3px 6px #efefef;
-    margin: 1.25rem;
-    display: flex;
+    width:45%;
+    box-shadow: 0px 2px 6px grey !important;
+    margin:  0.5rem;
     border-radius: 0.625rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
 }
 .workpaces-details{
     width: 50%;   
+    padding: 0.5rem;
 }
 .workpaces-details h1{
     font-size: 1.56rem;

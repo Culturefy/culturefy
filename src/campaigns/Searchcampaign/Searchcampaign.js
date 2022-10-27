@@ -1,6 +1,7 @@
 import React from 'react'
 import Content from '../../component/Content'
 import './Searchcampaign.css'
+import { Link } from 'react-router-dom';
 // mui Search
 import Paper from '@mui/material/Paper';
 import InputBase from '@mui/material/InputBase';
@@ -16,6 +17,8 @@ import cola from '../../assets/coca-cola.png'
 // Mui Button
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
+
+
 const Searchcampaign = () => {
 
     const [age, setAge] = React.useState(''); //Mui DropDown
@@ -177,9 +180,11 @@ const Searchcampaign = () => {
 
                         <div className='srchd_btns'>
                             <div className='edt_ad_srchd'>
+                                <Link to='/campaign/campaign-ad'>
                                 <Stack spacing={2} direction="row" >
                                     <Button variant="outlined" className='srched_edt_btn'>Edit ad</Button>
                                 </Stack>
+                                </Link>
                             </div>
                             <div className='dlt_ad_srchd'>
                                 <Stack spacing={2} direction="row">
