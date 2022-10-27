@@ -13,8 +13,6 @@ const Input = ({
   errors,
   register,
 }: any) => {
-
-
   return (
     <div className={Styles.TextFieldQa}>
       <input
@@ -25,7 +23,6 @@ const Input = ({
           minLength: minLength ? minLength : null,
           maxLength: maxLength ? maxLength : null,
         })}
-        
         defaultValue={defaultValue ? defaultValue : null}
       />
       {errors === "required" && (

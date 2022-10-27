@@ -8,6 +8,12 @@
 .cPrimary {
   color: #2394ae;
 }
+.cSecondary {
+  color: #bf161f;
+}
+.cYellow {
+  color: #f5a41d;
+}
 .redDot {
   display: inline-block;
   width: 12px;
@@ -168,6 +174,9 @@ div {
 .cBlack {
   color: #000;
 }
+.cGray {
+  color: #929292;
+}
 .pGray {
   font-size: 14px;
   color: #929292;
@@ -175,6 +184,9 @@ div {
 }
 .f16 {
   font-size: 16px;
+}
+.f14 {
+  font-size: 14px;
 }
 .bgSecondary {
   background-color: #bf161f;
@@ -187,14 +199,13 @@ div {
   margin-bottom: 20px;
 }
 
-
-.businessInfoMain{
+.businessInfoMain {
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 100%;
   min-height: 100vh;
-  .formsBusiness{
+  .formsBusiness {
     display: block;
     width: 80%;
     margin: 0 auto;

@@ -18,9 +18,21 @@ import Input from "../../components/Input";
 import { useForm } from "react-hook-form";
 import Button from "../../components/common/Button";
 
+import Tab from "react-bootstrap/Tab";
+import Tabs from "react-bootstrap/Tabs";
+import TaskList from "src/components/common/TaskList";
+import Group from "src/components/common/Group";
+
+import inst1Img from "src/assets/images/inst1.png";
+import inst2Img from "src/assets/images/inst2.png";
+import inst3Img from "src/assets/images/inst3.png";
+import inst4Img from "src/assets/images/inst4.png";
+import inst5Img from "src/assets/images/inst5.png";
+import RecognitionUser from "src/components/Recognition/RecognitionUser";
+
 const AsideMenu = () => {
   const [seletedItem, setSelectedItem] = useState("");
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const { getSurvey, store } = useSurvey(null);
   const { userLogin } = useAuth(null);
@@ -53,12 +65,12 @@ const AsideMenu = () => {
             </select>
 
             <div className={Styles.topLgBtns}>
-              <Button 
-              variant="filled" 
-              label="+ Create New" 
-              size="medium"
-              onClick={()=>navigate('/user/create-new')}
-               />
+              <Button
+                variant="filled"
+                label="+ Create New"
+                size="medium"
+                onClick={() => navigate("/user/create-new")}
+              />
               <Button
                 variant="filled"
                 label="Upload a File"
@@ -115,6 +127,58 @@ const AsideMenu = () => {
                 ))}
               </ul>
             </nav>
+            <div>
+              <Tabs
+                defaultActiveKey="tasks"
+                id="uncontrolled-tab-example"
+                className="mb-3"
+              >
+                <Tab eventKey="tasks" title="TASKS">
+                  <TaskList
+                    taskName="Task Name"
+                    taskDueDate="08/01/2022"
+                    taskProgress={75}
+                  />
+                  <TaskList
+                    taskName="Task Name"
+                    taskDueDate="08/01/2022"
+                    taskProgress={25}
+                  />
+                  <TaskList
+                    taskName="Task Name"
+                    taskDueDate="08/01/2022"
+                    taskProgress={0}
+                  />
+                  <TaskList
+                    taskName="Task Name"
+                    taskDueDate="08/01/2022"
+                    taskProgress={75}
+                  />
+                </Tab>
+                <Tab eventKey="inbox" title="INBOX">
+                  <RecognitionUser
+                    userImg={inst1Img}
+                    username="Kayleigh Bysouth"
+                    time="online"
+                  />
+                  <RecognitionUser
+                    userImg={inst2Img}
+                    username="Kayleigh Bysouth"
+                    time="online"
+                  />
+                  <RecognitionUser
+                    userImg={inst3Img}
+                    username="Kayleigh Bysouth"
+                    time="online"
+                  />
+                  <RecognitionUser
+                    userImg={inst4Img}
+                    username="Kayleigh Bysouth"
+                    time="online"
+                  />
+                </Tab>
+              </Tabs>
+            </div>
           </div>
         </div>
       </aside>

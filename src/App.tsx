@@ -9,6 +9,7 @@ import "./App.css";
 import { store } from "./store";
 import { router } from "./routes";
 import Loader from "./components/Loader";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <RouterProvider router={router} />
         </Provider>
       </Suspense>
+      <ToastContainer />
     </div>
   );
 }
