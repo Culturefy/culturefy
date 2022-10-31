@@ -51,3 +51,9 @@
     border: none;
     background-color: white;
 }
+.input_date{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-bottom: 15px;
+}

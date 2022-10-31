@@ -1,12 +1,31 @@
-import { Box } from "@material-ui/core";
+
 import { TextField } from "@mui/material";
 import "./CreateWorksplace.css";
 import React from "react";
 import Content from "../component/Content";
 import CreateWorksplaceimg from "../assets/createworksplace.jpg";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+
 
 const CreateWorkspaces = () => {
+
+  const [workspaceData, setworkspaceData] = useState({
+    workspace_name: "",
+    workspace_hosts: "",
+    workspace_date: "",
+    workspace_description: "",
+    workspace_invite: "",
+  })
+
+  const handleWorkspaceData = (e) => {
+    setworkspaceData({...workspaceData,[e.target.name]:e.target.value})
+  }
+  console.log(workspaceData)
+
+
+
+
   return (
     <>
       <Content />
@@ -16,38 +35,53 @@ const CreateWorkspaces = () => {
             <h1>Create Workspaces</h1>
             <label htmlFor="">Workspaces Name</label>
             <TextField
+              name="workspace_name"
               id="standard-basic"
               placeholder="Enter Name..."
               variant="standard"
               style={{ paddingBottom: "20px" }}
+              onChange={handleWorkspaceData}
+              value={workspaceData.workspace_name}
             />
             <label htmlFor="">Hosts</label>
             <TextField
+              name="workspace_hosts"
               id="standard-basic"
               placeholder="Search Names..."
               variant="standard"
               style={{ paddingBottom: "20px" }}
+              onChange={handleWorkspaceData}
+              value={workspaceData.workspace_hosts}
             />
             <label htmlFor="">Date and Time</label>
-            <TextField
-              id="standard-basic"
-              placeholder="Enter Date"
-              variant="standard"
-              style={{ paddingBottom: "20px" }}
+
+            <input type="datetime-local"
+              placeholder="Enter date"
+              className="input_date"
+              name="workspace_date"
+              onChange={handleWorkspaceData}
+              value={workspaceData.workspace_date}
             />
+
             <label htmlFor="">Description</label>
             <TextField
+              name="workspace_description"
               id="standard-basic"
               placeholder="Description Hear..."
               variant="standard"
               style={{ paddingBottom: "20px" }}
+              onChange={handleWorkspaceData}
+              value={workspaceData.workspace_description}
             />
             <label htmlFor="">Invite Team Members</label>
             <TextField
+              name="workspace_invite"
               id="standard-basic"
               placeholder="Search Names..."
               variant="standard"
               style={{ paddingBottom: "20px" }}
+              onChange={handleWorkspaceData}
+              value={workspaceData.workspace_invite}
             />
 
             <div className="buttons">
