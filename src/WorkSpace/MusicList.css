@@ -1,0 +1,20 @@
+._mp3_music_player{
+    width:100%;
+}
+._mp3_music_waves{
+    width: 100% !important;
+    height: 45vh !important;
+}
+._mp3_music_waves .waveform{
+    height: 100% !important;
+    position: inherit;
+    top: 100px;
+}
+._mp3_music_waves .waveform .wave{
+    height: 100%!important;
+    margin: auto;
+    text-align: center !important;
+}
+._mp3_music_waves .waveform .wave wave{
+    height: 100% !important;
+}

@@ -1,7 +1,7 @@
 .wrapper-workpaces{
     padding-top: var(--maintop-nav-height) !important;
     --maintop-nav-height:200px;
-    padding-left: 20%;
+    padding-left: 23%;
     padding-right: 3.25rem;
 }
 .create-new-Workspace{
@@ -28,6 +28,7 @@
     padding: 0.5rem 0;
     
 }
+
 .workspaces-tabs ul{
     width: 50%;
     display: flex;
@@ -51,20 +52,26 @@
 }
 .wrkspc_nm{
     width: 70%;    
-    display: flex;
-    align-items: center;
     flex-wrap:wrap;
     justify-content: center;
+    /* border: 1px solid red; */
 }
 .wrkspc_nm_ch{
-    display: flex;
+   
+     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center;  */
     flex-wrap: wrap;
 }
 .workpaces-card{
+    width:100%;
+   display: flex;
+}
+.workspace_container {
     width:45%;
+    height: 130px;
     box-shadow: 0px 2px 6px grey !important;
+    /* border: 1px solid black; */
     margin:  0.5rem;
     border-radius: 0.625rem;
     display: flex;
@@ -72,34 +79,48 @@
     align-items: center;
     padding: 0 1rem;
 }
+.workspace_container > a{
+    text-decoration: none;
+}
 .workpaces-details{
     width: 50%;   
     padding: 0.5rem;
 }
-.workpaces-details h1{
-    font-size: 1.56rem;
+.workpaces-details > h1{
+    font-size: 1.5rem;
     font-weight: bold;
+    color: black;
+    font-weight: bold;
+    
 }
-.workpaces-details p{
-    font-size: 1.125rem;
+.workpaces-details > p{
+    font-size: 1rem;
     color: grey;
+    margin: 0;
 }
 .workpaces-date{
+    height: 100%;
     width: 50%;
     display: flex;
     flex-direction: column;
     align-items: end;
     color: grey;
 }
+.workpaces-date >p{
+    margin: 0;
+    padding: 0;
+}
+    
+
 .filter{
     width: 20%;
     padding: 0.625rem;
 }
-.filter p{
+.filter> p{
     padding: .625rem 0;
     font-size: 1.25rem;
 }
-.dropdown .MuiFormControl-root{    
+.dropdown >.MuiFormControl-root{    
     padding-bottom: 0.625rem;   
 }
 

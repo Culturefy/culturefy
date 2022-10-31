@@ -1,16 +1,12 @@
-
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Campaigns.css'
-import ReactPaginate from 'react-paginate';
 import '../component/Content.css';
 import 'react-dates/initialize';
 import PlanCircle from "../assets/plan-circle.svg"
 import "./create.css"
 import GoCircle from "../assets/go-circle.svg"
 import PossesIcon from "../assets/posses-icon.svg"
-import AsideLeft from '../Dashboard/AsideLeft';
-import AsideRight from '../Dashboard/AsideRight';
 import Slide1 from "../assets/slide-01.png";
 import Slide2 from "../assets/slide-02.png";
 import "../component/Content.css"
@@ -19,7 +15,14 @@ import Content from '../component/Content';
 import Upload2 from "../assets/Icon-Upload2.svg"
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs"
 import Icon from "../assets/Icon-Upload1.svg"
-import { makeStyles } from '@material-ui/core/styles'
+import Paper from '@mui/material/Paper';
+import InputBase from '@mui/material/InputBase';
+import Divider from '@mui/material/Divider';
+import IconButton from '@mui/material/IconButton';
+import SearchIcon from '@mui/icons-material/Search';
+import Calender from "../assets/Calender.svg"
+import Notification from "../assets/Notifiction.svg"
+import AdminImg from "../assets/admin-img.png"
 
 
 const Create = () => {
@@ -172,109 +175,66 @@ const Create = () => {
     }
     console.log(job)
 
-    // const [slide,setSlide]=useState()
-    // const settings =()=> {
-    //    const dots=( true)
-    //    const arrows= true
-    //    const infinite= false
-    //    const speed= 500
-    //    const slidesToShow= 1
-    //    const slidesToScroll= 1
-    //    const appendDots= dots => {
-    //       return <MagicSliderDots dots={dots} numDotsToShow={4} dotWidth={30} />;
-    //     }
-    //   };
+
       
     return (
         <div>
             <Content />
+            <div className="content">
+                <div className="main-top-nav">
+                    <ul class="bts-profile align-items-center justify-content-end pb-5">
+                        <li>
+                            <img src={Calender} alt="" />
+                        </li>
+                        <li>
+                            <img src={Notification} alt="" />
+                        </li>
+                        <li>
+                            <img src={AdminImg} alt="" />
+                        </li>
+                    </ul>
+
+                    <div className='heading_search_container'>
+                        <h1 className='heading_main_container'>Create Compaign</h1>
+                        <Paper
+                            component="form"
+                            sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 400 }}
+                        >
+                            <InputBase
+                                sx={{ ml: 1, flex: 1 }}
+                                placeholder="Search Brand Culture Strategy"
+                                inputProps={{ 'aria-label': 'Search Brand Culture Strategy' }}
+                            />
+                            <IconButton type="button" sx={{ p: '10px' }} aria-label="search">
+                                <SearchIcon />
+                            </IconButton>
+                            <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />
+
+                        </Paper>
+                    </div>
+                </div>
+            </div>
             <div class="main-inner-content inner-cont-pt">
                 <div class="row mt-4">
                     <div class="col-lg-8">
                         <div class="action-sec">
-                            {/* <div class="key-action-wraper">
-                                
-                                <ul class="nav nav-tabs">
-                                    <li>
-                                        <a class="active" data-bs-toggle="tab" onClick={handlePlans} aria-selected="true">Plan <i class="fa-solid fa-chevron-right" ></i></a>
-                                    </li>
-                                    <li>
-                                        <a data-bs-toggle="tab" aria-selected="false" onClick={handlePosition}>Position <i class="fa-solid fa-chevron-right"></i></a>
-                                    </li>
-                                    <li>
-                                        <a id="contact-tab" data-bs-toggle="tab" aria-selected="false" onClick={handlePossess}>Possess <i class="fa-solid fa-chevron-right"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="tab-content key-content" style={{ paddingLeft: " 75px" }}>
-                                {plan && <ul id="plan" class="tab-pane fade in active show">
-                                    <li><a href="#">Campaign Goal</a></li>
-                                    <li><a href="#">Audience Targeting</a></li>
-                                    <li><a href="#">Schedule</a></li>
-                                </ul>}
-                                {position && <ul id="position" class="tab-pane fade">
-                                    <li><a href="#">Design Campaign</a></li>
-                                </ul>}
-                                {possess && <ul id="possess" class="tab-pane fade">
-                                    <li><a href="#">Review Campaign</a></li>
-                                </ul>}
-                            </div> */}
-
-
-
-
-                            {/* <th>Status
-						
-						{sortField === 'Status' && sortType === 'dsc' && <svg className={LicenseStyles.sortIcon}
-							onClick={() => onSort('Status', 'asc')}>
-							<use xlinkHref="/sprite.svg#icon-arrow-down2" />
-						</svg>}
-						{sortField === 'Status' && sortType === 'asc' && <svg className={LicenseStyles.sortIcon}
-							onClick={() => onSort('Status', 'dsc')}>
-							<use xlinkHref="/sprite.svg#icon-arrow-up2" />
-						</svg>}
-						{(sortField !== 'Status' || sortType === '') && <svg className={LicenseStyles.sortIcon}
-							onClick={() => onSort('Status', 'asc')}>
-							<use xlinkHref="/sprite.svg#icon-tab" />
-						</svg>}
-					</th> */}
-
-
+       
                             <div className="key-action-wraper">
-                                {/* <Tabs>
-                                <TabList className="nav nav-tabs">    
-                                     
-                                   <Tab class="tab-pane fade in active show" >Plan <i class="fa-solid fa-chevron-right"></i></Tab> 
-                                <Tab>Position <i class="fa-solid fa-chevron-right" ></i></Tab>
-                                <Tab>Possess <i class="fa-solid fa-chevron-right" ></i></Tab>
-                                </TabList>
-                                <div class="tab-content key-content" style={{ paddingLeft: " 75px" }}>
-                                <TabPanel>
-                                 Campaign Goal | 
-                                   Audience Targeting | 
-                                    Schedule
-                                </TabPanel>
-                                <TabPanel>
-                                <li>Design Campaign</li>
-                                </TabPanel>
-                                <TabPanel>
-                                <li>Review Campaign</li>
-                                </TabPanel>
-                                </div>
-                            </Tabs> */}
+                               
                                 <ul class="nav nav-tabs" onClick={handleChange}>
                                     Plan
                                     <li onClick={() => setShows(!shows)}>{shows ? <i class="fa fa-chevron-down" aria-hidden="true"></i> : <i class="fa-solid fa-chevron-right" ></i>}</li>
-                                    Possess
-                                    <li onClick={() => setTexts(!texts)}>{texts ? <i class="fa fa-chevron-down" aria-hidden="true"></i> : <i class="fa-solid fa-chevron-right" ></i>}</li>
                                     Position
                                     <li onClick={() => setToggle(!toggle)}>{toggle ? <i class="fa fa-chevron-down" aria-hidden="true"></i> : <i class="fa-solid fa-chevron-right" ></i>}</li>
+                                    Possess
+                                    <li onClick={() => setTexts(!texts)}>{texts ? <i class="fa fa-chevron-down" aria-hidden="true"></i> : <i class="fa-solid fa-chevron-right" ></i>}</li>
+                                    
                                 </ul>
                                 <div className="tab-contents key-content">
                                     <ul className='para'>
                                         {shows && <><li > Campaign Goal</li><li>Audience Targeting</li><li> Schedule</li></>}
-                                        {texts && <p> Design Campaign</p>}
-                                        {toggle && <p>Review Campaign</p>}
+                                        {texts && <p>Review Campaign</p>}
+                                        {toggle && <p>Design Campaign</p>}
                                     </ul>
                                 </div>
                             </div>
@@ -378,23 +338,7 @@ const Create = () => {
                                             <span class="yellow-circle" ><i class="fa-solid fa-check" style={{ borderColor: "#f5a41d" }} /></span>
                                         </div>
                                         <div class="design-form-wraper">
-                                            {/* <ul class="nav ds-form-tabs" role="tablist">
-                                                <li class="nav-item" >
-                                                    <button onClick={showTab1}>Info</button>
-                                                </li>
-                                                <li class="nav-item" >
-                                                    <button onClick={showTab2}>native</button>
-                                                </li>
-                                                <li class="nav-item" >
-                                                    <button onClick={showTab3}>Display</button>
-                                                </li>
-                                                <li class="nav-item" >
-                                                    <button onClick={showTab4}>Video</button>
-                                                </li>
-                                                <li class="nav-item" >
-                                                    <button onClick={showTab5}>Audio</button>
-                                                </li>
-                                            </ul> */}
+                                            
                                             <Tabs className="myClass">
                                                 <TabList class=" ds-form-tabs" role="tablist" activeTintColor='blue'>
                                                     <div className='navbar'>
@@ -422,16 +366,7 @@ const Create = () => {
                                                                 <div class="row">
                                                                     <div class="col-lg-6">
                                                                         <div class="form-dropdown">
-                                                                            {/* <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                                                <span>March 2022</span>
-                                                            </button>
-                                                            <ul class="dropdown-menu">
-                                                                <li><a class="dropdown-item" href="#">Full
-                                                                    Time</a></li>
-                                                                <li><a class="dropdown-item" href="#">Part
-                                                                    Time</a></li>
-                                                                <li><a class="dropdown-item" href="#">Contract</a></li>
-                                                            </ul> */}
+                                                                           
                                                                             <select onChange={(e) => { setFull(e.target.value) }}>
                                                                                 <option>Full Time</option>
                                                                                 <option>Part Time</option>
@@ -439,15 +374,7 @@ const Create = () => {
                                                                             </select>
                                                                         </div>
                                                                         <div class="form-dropdown">
-                                                                            {/* <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                                                <span>Job Level</span>
-                                                            </button>
-                                                            <ul class="dropdown-menu">
-                                                                <li><a class="dropdown-item" href="#">Entry
-                                                                    Level</a></li>
-                                                                <li><a class="dropdown-item" href="#">Mid-Senior
-                                                                    Level</a></li>
-                                                            </ul> */}
+                                                                         
                                                                             <select class="btn dropdown-toggle" onChange={(e) => { setLevel(e.target.value) }}>
                                                                                 <option>Job Level</option>
                                                                                 <option>Entery Level</option>
@@ -462,11 +389,7 @@ const Create = () => {
                                                                                 <option>Marketing</option>
                                                                                 <option>Production</option>
                                                                             </select>
-                                                                            {/* <select class="js-example-basic-multiple select2-hidden-accessible" name="states[]" multiple="" data-select2-id="select2-data-1-d914" tabindex="-1" aria-hidden="true">
-                                                                <option value="MK">Marketing</option>
-                                                                <option value="PR">Production</option>
-                                                            </select> */}
-                                                                            {/* <span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-2-vffe" style={{width: "103.469px;"}}><span class="selection"><span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1" aria-disabled="false"><ul class="select2-selection__rendered" id="select2-states-vs-container"></ul><span class="select2-search select2-search--inline"><textarea class="select2-search__field" type="search" tabindex="0" autocorrect="off" autocapitalize="none" spellcheck="false" role="searchbox" aria-autocomplete="list" autocomplete="off" aria-label="Search" aria-describedby="select2-states-vs-container" placeholder="" style={{width:" 0.75em;"}}></textarea></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span> */}
+                                                                           
                                                                         </div>
                                                                         <div class="form-dropdown">
                                                                             <select class="btn dropdown-toggle" onChange={(e) => { setIndustry(e.target.value) }}>
@@ -475,12 +398,7 @@ const Create = () => {
                                                                                 <option>Other</option>
                                                                             </select>
                                                                         </div>
-                                                                        {/* <div class="form-group">
-                                                            <select class="js-example-basic-multiple select2-hidden-accessible" name="states[]" multiple="" data-select2-id="select2-data-3-gc5b" tabindex="-1" aria-hidden="true">
-                                                                <option value="tech">Technology</option>
-                                                                <option value="Oth">Other</option>
-                                                            </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-4-cx23" style={{width: "107.938px;"}}><span class="selection"><span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1" aria-disabled="false"><ul class="select2-selection__rendered" id="select2-states-nl-container"></ul><span class="select2-search select2-search--inline"><textarea class="select2-search__field" type="search" tabindex="0" autocorrect="off" autocapitalize="none" spellcheck="false" role="searchbox" aria-autocomplete="list" autocomplete="off" aria-label="Search" aria-describedby="select2-states-nl-container" placeholder="" style={{width: "0.75em;"}}></textarea></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
-                                                        </div> */}
+                                                                        
                                                                     </div>
                                                                 </div>
                                                                 <div class="form-group">

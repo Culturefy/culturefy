@@ -14,7 +14,8 @@ import InputBase from '@mui/material/InputBase';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
-import { Tab, Tabs, TabList, TabPanel} from "react-tabs"
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs"
+
 
 const Index = () => {
   const minDays = 5;
@@ -117,12 +118,12 @@ const Index = () => {
       Reach: "5,890 users",
       Click: "6,238 clicks"
     }
-    // }
+
   ]
-    // }
+
 
   )
-  
+
   const perPageUser = 4;
   const totalPages = data.length / perPageUser;
   console.log(totalPages)
@@ -150,8 +151,8 @@ const Index = () => {
     })
     setStatussearch(updateStatus);
     setActive(!active);
-    setActives(!actives); 
-    setActivess(!activess); 
+    setActives(!actives);
+    setActivess(!activess);
     setActivesss(!activesss);
 
   }
@@ -167,7 +168,7 @@ const Index = () => {
   // };
   const [actives, setActives] = useState(true);
 
-  const handleChanges =()=>{
+  const handleChanges = () => {
 
   }
   const [activess, setActivess] = useState(true);
@@ -185,65 +186,70 @@ const Index = () => {
   const handleClick = () => {
     setAct(!act);
   };
-  
-      const [color,setColor]=useState('red');
-      const [textColor,setTextColor]=useState('white');
+
+  const [color, setColor] = useState('red');
+  const [textColor, setTextColor] = useState('white');
 
   return (
     <div>
       <Content />
-      <div className='upper_container'>
 
+      <div className='upper_container'>
+        <div className="content">
+          <div className="main-top-nav">
+            <ul class="bts-profile align-items-center justify-content-end">
+              <li>
+                {/* <img src={Calender} /> */}
+              </li>
+              <li>
+                {/* <img src={Notification} /> */}
+              </li>
+              <li>
+                {/* <img src={AdminImg} /> */}
+              </li>
+            </ul>
+
+           
+             
+            <div className='heading_search_container'>
+              <h1 className='heading_main_container'>Compaigns</h1>
+              <Paper
+                component="form"
+                sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 400 }}
+              >
+                <InputBase
+                  sx={{ ml: 1, flex: 1 }}
+                  placeholder="Search a Campaigns"
+                  inputProps={{ 'aria-label': 'Search a Campaigns' }}
+                />
+                <IconButton type="button" sx={{ p: '10px' }} aria-label="search">
+                  <SearchIcon />
+                </IconButton>
+                <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />
+
+              </Paper>
+            </div>
+          </div>
+        </div>
       </div>
       <div className='Sub_container'>
         <div className='wrapper'>
-          {/* <div className='heading_search_container'>
-            <h1 className='heading_main_container'>Compaigns</h1>
-            <Paper
-              component="form"
-              sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 400 }}
-            >
-              <InputBase
-                sx={{ ml: 1, flex: 1 }}
-                placeholder="Search Google Maps"
-                inputProps={{ 'aria-label': 'search google maps' }}
-              />
-              <IconButton type="button" sx={{ p: '10px' }} aria-label="search">
-                <SearchIcon />
-              </IconButton>
-              <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />
-            </Paper>
-          </div> */}
+
           <div className="create-new-campaigns">
             <Link to="/create-campaigns"><button >+<span> Create New Campaigns</span></button></Link>
           </div>
           <div className="nav-campaign-tabs" >
             <Tabs>
-            <ul className="nav campaign-tabs">
-            <TabList>
-             <Tab onClick={() => setStatussearch(data) }>All</Tab>
-             <Tab onClick={() => handleStatus('Pending')}>Pending</Tab>
-             <Tab onClick={() => handleStatus('Active')}>Active</Tab> 
-             <Tab onClick={() => handleStatus('Completed')}>Complete</Tab>
-             </TabList>
+              <ul className="nav campaign-tabs">
+                <TabList>
+                  <Tab onClick={() => setStatussearch(data)}>All</Tab>
+                  <Tab onClick={() => handleStatus('Pending')}>Pending</Tab>
+                  <Tab onClick={() => handleStatus('Active')}>Active</Tab>
+                  <Tab onClick={() => handleStatus('Completed')}>Complete</Tab>
+                </TabList>
               </ul>
             </Tabs>
-            {/* <ul className="nav campaign-tabs">
-              <li>
-                <button onClick={() => setStatussearch(data)} style={{color: active? "black" : "white" }}>All</button>
-              </li>
-              <li>
-                <button onClick={() => handleStatus('Pending')} style={{color: active=='Pending' ? "black" : "white" }} id="btn">Pending
-                </button>
-              </li>
-              <li>
-                <button onClick={() => handleStatus('Active')} style={{color: active=='Active' ? "black" : "white" }} id="btn">
-                  Active
-                </button>
-              </li>
-              <li><button onClick={() => handleStatus('Completed')} style={{color: active=='Completed' ? "black" : "white" }} id="btn">Complete</button></li>
 
-            </ul> */}
           </div>
 
           <div className="campaign-wraper">
@@ -363,7 +369,7 @@ const Index = () => {
                   nextLinkClassName={'nextBttn'}
                   disabledClassName={'paginationDisabled'}
                   activeClassName={'paginationActive'}
-                  
+
                 />
               </div>
             )

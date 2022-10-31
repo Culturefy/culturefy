@@ -1,17 +1,20 @@
 import Filter from '../../component/Filter'
 import React from 'react'
 import Content from '../../component/Content'
+import WorkspaceHeader from '../WorkspaceHeader'
 import './WorkpacesUpload.css'
+import { Link } from 'react-router-dom'
 
 const WorkpacesUpload = () => {
     return (
         <>
             <div className="workspacesdata">
                 <Content />
+                <WorkspaceHeader />
                 {/* <div className="workpacesdata-wepper"> */}
                 <div className="Upload_wepper">
                     <div className="workpace_upload_header">
-                        <button >Back</button>
+                        <Link to="/workspacesdata"><button >Back</button></Link>
                         <h2>Add Files to Folder</h2>
                     </div>
                     <div className="upload_files_Section">

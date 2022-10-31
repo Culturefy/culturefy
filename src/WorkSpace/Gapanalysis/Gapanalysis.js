@@ -5,12 +5,14 @@ import user1 from '../../assets/user_img.jpg'
 import user2 from '../../assets/user2.jpg'
 import add_person from '../../assets/person-add.svg'
 import StarBorderIcon from '@mui/icons-material/StarBorder';
-
+import WorkspaceHeader from '../WorkspaceHeader'
 const Gapanalysis = () => {
     return (
         <>
             <Content />
-            <div className='bbc'></div>
+     
+            <WorkspaceHeader/>
+        
 
             <div className='wrksp_gap_ana_pr'>
                 <div className='wrksp_gap_ana_ch'>

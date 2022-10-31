@@ -2,13 +2,51 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Content from "../component/Content";
 import "./Workspacesindex.css";
-import { FormControl, MenuItem, Select } from "@mui/material";
+import { FormControl, MenuItem, Paper, Select } from "@mui/material";
+import InputBase from '@mui/material/InputBase';
+import Divider from '@mui/material/Divider';
+import IconButton from '@mui/material/IconButton';
+import SearchIcon from '@mui/icons-material/Search';
 
 
 const Worksplaceindex = () => {
   return (
     <>
       <Content />
+      <div className="content">
+        <div className="main-top-nav">
+          <ul class="bts-profile align-items-center justify-content-end">
+            <li>
+              {/* <img src={Calender} /> */}
+            </li>
+            <li>
+              {/* <img src={Notification} /> */}
+            </li>
+            <li>
+              {/* <img src={AdminImg} /> */}
+            </li>
+          </ul>
+
+          <div className='heading_search_container'>
+            <h1 className='heading_main_container'>Workspaces</h1>
+            <Paper
+              component="form"
+              sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 400 }}
+            >
+              <InputBase
+                sx={{ ml: 1, flex: 1 }}
+                placeholder="Search"
+                inputProps={{ 'aria-label': 'Search' }}
+              />
+              <IconButton type="button" sx={{ p: '10px' }} aria-label="search">
+                <SearchIcon />
+              </IconButton>
+              <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />
+
+            </Paper>
+          </div>
+        </div>
+      </div>
       <div className="wrapper-workpaces">
         <div className="create-new-Workspace">
           <Link to="/createworkspaces">
@@ -31,76 +69,101 @@ const Worksplaceindex = () => {
         <div className="workpaces-content">
           <div className="wrkspc_nm">
             <div className="wrkspc_nm_ch">
-            {/* ========================= */}
-            <div className="workpaces-card">
-              <div className="workpaces-details">
-                <h1>Workpace Name</h1>
-                <p>Short description here,perspic unde omnis iste natus</p>
-              </div>
-              <div className="workpaces-date">
-                <p>Aug 5,2020</p>
-                <p>12:00 PM EST</p>
-              </div>
-            </div>
               {/* ========================= */}
-            <div className="workpaces-card">
-              <div className="workpaces-details">
-                <h1>Workpace Name</h1>
-                <p>Short description here,perspic unde omnis iste natus</p>
+              <div className="workspace_container">
+                <Link to="/workspacesdata">
+                  <div className="workpaces-card">
+                    <div className="workpaces-details">
+                      <h1>Workpace Name</h1>
+                      <p>Short description here,perspic unde omnis iste natus</p>
+                    </div>
+                    <div className="workpaces-date">
+                      <p>Aug 5,2020</p>
+                      <p>12:00 PM EST</p>
+                    </div>
+                  </div>
+                </Link>
               </div>
-              <div className="workpaces-date">
-                <p>Aug 5,2020</p>
-                <p>12:00 PM EST</p>
+
+              {/* ========================= */}
+              <div className="workspace_container">
+                <Link to="/workspacesdata">
+                  <div className="workpaces-card">
+                    <div className="workpaces-details">
+                      <h1>Workpace Name</h1>
+                      <p>Short description here,perspic unde omnis iste natus</p>
+                    </div>
+                    <div className="workpaces-date">
+                      <p>Aug 5,2020</p>
+                      <p>12:00 PM EST</p>
+                    </div>
+                  </div>
+                </Link>
               </div>
+              {/* ========================= */}
+              <div className="workspace_container">
+                <Link to="/workspacesdata">
+                  <div className="workpaces-card">
+                    <div className="workpaces-details">
+                      <h1>Workpace Name</h1>
+                      <p>Short description here,perspic unde omnis iste natus</p>
+                    </div>
+                    <div className="workpaces-date">
+                      <p>Aug 5,2020</p>
+                      <p>12:00 PM EST</p>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+              {/* ========================= */}
+              <div className="workspace_container">
+                <Link to="/workspacesdata">
+                  <div className="workpaces-card">
+                    <div className="workpaces-details">
+                      <h1>Workpace Name</h1>
+                      <p>Short description here,perspic unde omnis iste natus</p>
+                    </div>
+                    <div className="workpaces-date">
+                      <p>Aug 5,2020</p>
+                      <p>12:00 PM EST</p>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+              {/* ========================= */}
+              <div className="workspace_container">
+                <Link to="/workspacesdata">
+                  <div className="workpaces-card">
+                    <div className="workpaces-details">
+                      <h1>Workpace Name</h1>
+                      <p>Short description here,perspic unde omnis iste natus</p>
+                    </div>
+                    <div className="workpaces-date">
+                      <p>Aug 5,2020</p>
+                      <p>12:00 PM EST</p>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+              {/* ========================= */}
+              <div className="workspace_container">
+                <Link to="/workspacesdata">
+                  <div className="workpaces-card">
+                    <div className="workpaces-details">
+                      <h1>Workpace Name</h1>
+                      <p>Short description here,perspic unde omnis iste natus</p>
+                    </div>
+                    <div className="workpaces-date">
+                      <p>Aug 5,2020</p>
+                      <p>12:00 PM EST</p>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+              {/* ========================= */}
+
+
             </div>
-            {/* ========================= */}
-            <div className="workpaces-card">
-              <div className="workpaces-details">
-                <h1>Workpace Name</h1>
-                <p>Short description here,perspic unde omnis iste natus</p>
-              </div>
-              <div className="workpaces-date">
-                <p>Aug 5,2020</p>
-                <p>12:00 PM EST</p>
-              </div>
-            </div>
-            {/* ========================= */}
-            <div className="workpaces-card">
-              <div className="workpaces-details">
-                <h1>Workpace Name</h1>
-                <p>Short description here,perspic unde omnis iste natus</p>
-              </div>
-              <div className="workpaces-date">
-                <p>Aug 5,2020</p>
-                <p>12:00 PM EST</p>
-              </div>
-            </div>
-            {/* ========================= */}
-            <div className="workpaces-card">
-              <div className="workpaces-details">
-                <h1>Workpace Name</h1>
-                <p>Short description here,perspic unde omnis iste natus</p>
-              </div>
-              <div className="workpaces-date">
-                <p>Aug 5,2020</p>
-                <p>12:00 PM EST</p>
-              </div>
-            </div>
-            {/* ========================= */}
-            <div className="workpaces-card">
-              <div className="workpaces-details">
-                <h1>Workpace Name</h1>
-                <p>Short description here,perspic unde omnis iste natus</p>
-              </div>
-              <div className="workpaces-date">
-                <p>Aug 5,2020</p>
-                <p>12:00 PM EST</p>
-              </div>
-            </div>
-            {/* ========================= */}
-        
-            
-          </div>
           </div>
 
           <div className="filter">
@@ -135,38 +198,38 @@ const Worksplaceindex = () => {
             <input type="date" name="date" />
             <hr style={{ marginTop: "0.625rem", marginBottom: "0.625rem" }} />
             <div className="dropdown">
-            <FormControl fullWidth  className="abc" >
-              <Select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
-                size="small"
-                label="Age"
-                // onChange={handleChange}
-                placeholder="Title here"
-              >
-                <MenuItem value={1}>Title here</MenuItem>
-                
-              </Select>
-            </FormControl>
+              <FormControl fullWidth className="abc" >
+                <Select
+                  labelId="demo-simple-select-label"
+                  id="demo-simple-select"
+                  size="small"
+                  label="Age"
+                  // onChange={handleChange}
+                  placeholder="Title here"
+                >
+                  <MenuItem value={1}>Title here</MenuItem>
+
+                </Select>
+              </FormControl>
             </div>
             <div className="dropdown">
-            <FormControl fullWidth  className="abc" >
-              <Select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
-                size="small"
-                label="Age"
+              <FormControl fullWidth className="abc" >
+                <Select
+                  labelId="demo-simple-select-label"
+                  id="demo-simple-select"
+                  size="small"
+                  label="Age"
                 // onChange={handleChange}
-              >
-                <MenuItem value={1}>Title here</MenuItem>
-                
-              </Select>
-            </FormControl>
+                >
+                  <MenuItem value={1}>Title here</MenuItem>
+
+                </Select>
+              </FormControl>
             </div>
 
           </div>
         </div>
-        </div>
+      </div>
 
     </>
   );

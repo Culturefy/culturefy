@@ -111,6 +111,8 @@
     font-size: 1.25rem;
 }
 .comment_section{
-    width: 40%;
-    
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

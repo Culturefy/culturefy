@@ -6,10 +6,11 @@ import filepng from '../../assets/fav_img1.jpg'
 import user1 from '../../assets/user_img.jpg'
 import user2 from '../../assets/user2.jpg'
 import add_person from '../../assets/person-add.svg'
-
+import Chat from '../../component/Chat'
 const WorkspacefilePng = () => {
     return (
         <>
+
             <Content />
             <div className="workspacesfile_wapper">
                 <div className="inner_wepper">
@@ -47,7 +48,11 @@ const WorkspacefilePng = () => {
                     </div>
                     <div className="comment_section">
                       <Comment/>
+                      <div className="chat_Section">
+                        <Chat/>
                     </div>
+                    </div>
+                    
                 </div>
 
             </div>

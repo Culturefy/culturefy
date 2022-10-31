@@ -142,7 +142,7 @@ const CampaignAd = () => {
                       aria-describedby="alert-dialog-description"
                     >
                       <div className='_popup_del_image'>
-                        <img src={del_popup} alt=""             className='pop_ad_del_img' />
+                        <img src={archive_pop} alt=""             className='pop_ad_del_img' />
                         <h4>Are you Sure?</h4>
                       </div>
                       <DialogContent>

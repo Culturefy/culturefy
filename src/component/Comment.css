@@ -1,11 +1,22 @@
 .comment_wepper{
     width: 100%;
-    padding-left: 1.875rem;
-    padding-right: 1.875rem;
-    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 1rem;
+
 }
 .comment_div{
-    width: 50%;
+    width: 100%;
+}
+._cmnt_btn{
+    border: none;
+    outline: none;
+}
+.comment_wepper_ch{
+    height: 55vh;
+    overflow: scroll;
+    /* border: 1px solid red; */
 }
 .comment_header{
     width: 100%;
@@ -13,7 +24,7 @@
     display: flex;
     justify-content: flex-start;
 }
-.comment_header img{
+.comment_header >img{
     height: 1.875rem;
     width: 1.875rem;
     border-radius: 50%;
@@ -27,12 +38,13 @@
     font-weight: 700;
 }
 .ptag{
-   
     font-size: 0.812rem;
     display: flex;
     align-items: center;
     color: gray;
-
+}
+.ptag >p{
+    margin: 0 !important;
 }
 .comment_text{
     width: 100%;
@@ -45,7 +57,7 @@
     display: flex;
     align-items: center;
     font-size: 1.06rem;
-    
+    width: 40%;
 }
 .task{
     font-size: 0.687rem;
@@ -61,15 +73,21 @@
     align-items:center;
     color: gray;
 }
+.comment_reply > p{
+    margin: 0 !important;
+    margin: 0 10px !important;
+}
 .comment_hr{
     padding: 0;
     margin-bottom: 0.937rem;
 }
 .write{
-    width: 25%;
+    width: 100%;
     display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
     /* border-bottom: 1px solid gray; */
-    position: absolute;
+    /* position: absolute; */
     
 }
 .write input{
@@ -84,5 +102,5 @@
     position: relative;
     right: 0;
     color: red;
-    
+  
 }

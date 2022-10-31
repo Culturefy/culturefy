@@ -26,7 +26,6 @@
     box-sizing: border-box;
     overflow: hidden;
     border-radius: 10px;
-
 }
 
 .view_frame {
@@ -57,9 +56,10 @@
     display: flex;
     flex-wrap: wrap;
 }
-
 .meet_view_card {
-    width: 49.5%;
+    /* width: 45%;
+    border: 2px solid red !important; */
+
 }
 
 .meet_user_cont {
@@ -147,7 +147,7 @@
     width: 180px;
 }
 
-.scrn_crd_host .MuiCardContent-root {
+.scrn_crd_host > .MuiCardContent-root {
     padding: 0;
     padding-bottom: 0 !important;
     display: flex;

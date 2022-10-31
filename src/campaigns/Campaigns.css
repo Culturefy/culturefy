@@ -207,3 +207,12 @@ color:white;
     background-color: #2394ae;
     color:white;
 }
+.rs-btn-icon{
+border: none;
+background-color: #2394ae;
+border-radius: 50%;
+padding: 10px;
+}
+.MuiSvgIcon-root{
+    color: white;
+}

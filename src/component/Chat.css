@@ -1,0 +1,136 @@
+
+.chat_main{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.chat_box{
+    /* border: 1px solid black; */
+    width: 400px;
+    cursor: pointer; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 0 15px; 
+    border: 1px solid lightgrey;
+}
+
+.a{
+    width: 400px;
+    height: 500px;
+}
+.MuiDrawer-paper{
+    /* border: 1px solid red; */
+    width: 400px;
+    left: 79.1% !important;
+}
+.chatbox_body{
+    width: 100%;
+    height: 100%;
+   
+}
+.chatbox_header{
+    width: 100%;
+    height: 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;   
+    border: 1px solid lightgrey;
+    margin-bottom: 25px;
+    padding: 10px 10px;
+}
+.chatbox_chat{
+    width: 100%;
+    height: 93%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+.send_message{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid blue; */
+    margin-bottom: 10px;
+}
+.chatuser{
+    width: 20%;
+    height: 50px;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+}
+.chatuser img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.chat_send_message{
+    width: 80%;
+    height: 100%;
+    /* border: 1px solid black; */
+}
+.chat_user_name{
+    display: flex;
+    /* border: 1px solid yellow; */
+}
+.chat_user_name p{
+    margin: 5px;
+    font-size: 10px;
+}
+.chat_user_message{
+    width: 100%;
+    /* border: 1px solid green; */
+}
+.chat_user_message p{
+    font-size: 14px;
+    margin-bottom: 0;
+}
+.chat_replay{
+    display: flex;
+    align-items: center; 
+}
+.chat_replay p{
+    margin-right:7px ;
+    margin-bottom: 0;
+    font-size: 12px;
+}
+.receive_message{
+    width: 75%;
+    /* border: 1px solid red; */
+    margin-left: 60px;
+    margin-bottom:20px;
+    display: flex;
+    justify-content: center;
+}
+.send_message_input{
+    /* border: 1px solid green; */
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+
+
+}
+.send_message_input input{
+    width: 90%;
+    border-bottom: 1px solid lightgrey;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+.send_message_input p{
+    color: red;
+    margin: 0;
+}
+.send_message_input input:focus{
+    border: none;
+    outline: none;
+}
