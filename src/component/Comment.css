@@ -36,12 +36,14 @@
     display: flex;
     align-items: center;
     font-weight: 700;
+    font-family: "Graphik_Medium";
 }
 .ptag{
     font-size: 0.812rem;
     display: flex;
     align-items: center;
     color: gray;
+    font-family: "Graphik_Light";
 }
 .ptag >p{
     margin: 0 !important;
@@ -57,7 +59,9 @@
     display: flex;
     align-items: center;
     font-size: 1.06rem;
-    width: 40%;
+    width: 80%;
+    font-family: "Graphik_Regular";
+    
 }
 .task{
     font-size: 0.687rem;
@@ -76,18 +80,18 @@
 .comment_reply > p{
     margin: 0 !important;
     margin: 0 10px !important;
+    font-family: "Graphik_Light";
 }
 .comment_hr{
     padding: 0;
-    margin-bottom: 0.937rem;
+    margin-bottom: 0.625rem;
 }
 .write{
-    width: 100%;
+    width: 75%;
     display: flex;
     justify-content: space-between;
     padding: 0 10px;
     /* border-bottom: 1px solid gray; */
-    /* position: absolute; */
     
 }
 .write input{

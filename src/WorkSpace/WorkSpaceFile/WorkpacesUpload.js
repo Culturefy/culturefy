@@ -4,14 +4,17 @@ import Content from '../../component/Content'
 import WorkspaceHeader from '../WorkspaceHeader'
 import './WorkpacesUpload.css'
 import { Link } from 'react-router-dom'
+import WorkspaceSidebar from '../../component/WorkspaceSidebar'
 
 const WorkpacesUpload = () => {
     return (
-        <>
-            <div className="workspacesdata">
+        <div className='workspaceupload_main_header'>
                 <Content />
-                <WorkspaceHeader />
-                {/* <div className="workpacesdata-wepper"> */}
+            <div className="workspacesdata_upload">
+                <div className="workspaceuplod_header">
+
+                    <WorkspaceHeader />
+                </div>
                 <div className="Upload_wepper">
                     <div className="workpace_upload_header">
                         <Link to="/workspacesdata"><button >Back</button></Link>
@@ -25,19 +28,20 @@ const WorkpacesUpload = () => {
                         <Filter />
                     </div>
                     <div className="uoload_search">
-                    <input
+                        <input
                             type="search"
                             placeholder="Search assets"
                         />
                         <div className="upload_search_button">
-                        <i class="fa-solid fa-magnifying-glass"></i>
+                            <i class="fa-solid fa-magnifying-glass"></i>
                         </div>
                     </div>
                 </div>
-                {/* </div> */}
-            </div>
 
-        </>
+            </div>
+            <WorkspaceSidebar/>
+
+        </div>
     )
 }
 

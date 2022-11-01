@@ -13,6 +13,7 @@ import user2 from '../assets/meet user2.png'
 // import Carousel from 'react-elastic-carousel';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import WorkspaceSidebar from '../component/WorkspaceSidebar'
 
 const responsive = {
   superLargeDesktop: {
@@ -49,9 +50,12 @@ const WorkspacesData = () => {
   }
   return (
     <>
+
+
+      <Content />
+      
+      {/* <WorkspaceHeader /> */}
       <div className="workspacesdata">
-        <Content />
-        <WorkspaceHeader />
         <div className="workpacesdata-wepper">
           <div className="workpacesdata_Section">
             <div className="workpacesdata_hader">
@@ -80,31 +84,13 @@ const WorkspacesData = () => {
             <div className="workpaces_favorits">
               <div className="favorits_header">
                 <i className="fa-regular fa-star"></i>
-                <h2 style={{ fontWeight: "bold" }}>Favorites</h2>
+                <h2 style={{ fontWeight: "bold", fontFamily: "Graphik_Bold" }}>Favorites</h2>
               </div>
-             
-                <Carousel responsive={responsive}>
-                  <div className="favorits_card">
 
-                    <Link to='/workspacesfilepng'>
-                      <div className="favorits_card_img">
-                        <img src={fav_img1} alt="" />
-                      </div>
-                      <div className="favorits_discription">
-                        <div className="favorits_name">
-                          <p className='favorits_file_name'>file.png</p>
-                          <p className='favorits_comments'>1 comment</p>
-                        </div>
-                        <div className="favorits_icon">
-                          <i className="fa-solid fa-ellipsis"></i>
-                          <i className="fa-solid fa-star fill_star"></i>
-                        </div>
-                      </div>
-                    </Link>
+              <Carousel responsive={responsive}>
+                <div className="favorits_card">
 
-                  </div>
-
-                  <div className="favorits_card">
+                  <Link to='/workspacesfilepng'>
                     <div className="favorits_card_img">
                       <img src={fav_img1} alt="" />
                     </div>
@@ -118,63 +104,81 @@ const WorkspacesData = () => {
                         <i className="fa-solid fa-star fill_star"></i>
                       </div>
                     </div>
+                  </Link>
 
+                </div>
+
+                <div className="favorits_card">
+                  <div className="favorits_card_img">
+                    <img src={fav_img1} alt="" />
                   </div>
-
-                  <div className="favorits_card">
-                    <div className="favorits_card_img">
-                      <img src={fav_img1} alt="" />
+                  <div className="favorits_discription">
+                    <div className="favorits_name">
+                      <p className='favorits_file_name'>file.png</p>
+                      <p className='favorits_comments'>1 comment</p>
                     </div>
-                    <div className="favorits_discription">
-                      <div className="favorits_name">
-                        <p className='favorits_file_name'>file.png</p>
-                        <p className='favorits_comments'>1 comment</p>
-                      </div>
-                      <div className="favorits_icon">
-                        <i className="fa-solid fa-ellipsis"></i>
-                        <i className="fa-solid fa-star fill_star"></i>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="favorits_card">
-                    <div className="favorits_card_img">
-                      <img src={fav_img1} alt="" />
-                    </div>
-                    <div className="favorits_discription">
-                      <div className="favorits_name">
-                        <p className='favorits_file_name'>file.png</p>
-                        <p className='favorits_comments'>1 comment</p>
-                      </div>
-                      <div className="favorits_icon">
-                        <i className="fa-solid fa-ellipsis"></i>
-                        <i className="fa-solid fa-star fill_star"></i>
-                      </div>
+                    <div className="favorits_icon">
+                      <i className="fa-solid fa-ellipsis"></i>
+                      <i className="fa-solid fa-star fill_star"></i>
                     </div>
                   </div>
 
+                </div>
 
-                  <div className="favorits_card">
-                    <div className="favorits_card_img">
-                      <img src={fav_img1} alt="" />
+                <div className="favorits_card">
+                  <div className="favorits_card_img">
+                    <img src={fav_img1} alt="" />
+                  </div>
+                  <div className="favorits_discription">
+                    <div className="favorits_name">
+                      <p className='favorits_file_name'>file.png</p>
+                      <p className='favorits_comments'>1 comment</p>
                     </div>
-                    <div className="favorits_discription">
-                      <div className="favorits_name">
-                        <p className='favorits_file_name'>file.png</p>
-                        <p className='favorits_comments'>1 comment</p>
-                      </div>
-                      <div className="favorits_icon">
-                        <i className="fa-solid fa-ellipsis"></i>
-                        <i className="fa-solid fa-star fill_star"></i>
-                      </div>
+                    <div className="favorits_icon">
+                      <i className="fa-solid fa-ellipsis"></i>
+                      <i className="fa-solid fa-star fill_star"></i>
                     </div>
                   </div>
-                  <div className="uplode_section" >
+                </div>
+
+                <div className="favorits_card">
+                  <div className="favorits_card_img">
+                    <img src={fav_img1} alt="" />
+                  </div>
+                  <div className="favorits_discription">
+                    <div className="favorits_name">
+                      <p className='favorits_file_name'>file.png</p>
+                      <p className='favorits_comments'>1 comment</p>
+                    </div>
+                    <div className="favorits_icon">
+                      <i className="fa-solid fa-ellipsis"></i>
+                      <i className="fa-solid fa-star fill_star"></i>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div className="favorits_card">
+                  <div className="favorits_card_img">
+                    <img src={fav_img1} alt="" />
+                  </div>
+                  <div className="favorits_discription">
+                    <div className="favorits_name">
+                      <p className='favorits_file_name'>file.png</p>
+                      <p className='favorits_comments'>1 comment</p>
+                    </div>
+                    <div className="favorits_icon">
+                      <i className="fa-solid fa-ellipsis"></i>
+                      <i className="fa-solid fa-star fill_star"></i>
+                    </div>
+                  </div>
+                </div>
+                <div className="uplode_section" >
                   <Link to="/workspacesupload">
                     <i className="fa-solid fa-plus plus"></i>
                   </Link>
                 </div>
-                </Carousel>
+              </Carousel>
             </div>
             {/* ==================================== Advertisements section ====================================================== */}
             <div className="workpaces_favorits">
@@ -607,6 +611,9 @@ const WorkspacesData = () => {
 
           </div>
         </div>
+      
+       <WorkspaceSidebar />
+       
       </div>
     </>
   )

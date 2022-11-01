@@ -41,7 +41,7 @@ const AsideRight = () => {
                   <img src={Culture_Check} alt="" />
                 </div>
                 <div className="list_name">
-                  <p >Culture Check</p>
+                  <p>Culture Check</p>
                 </div>
                 <div className="down_arrow_icon">
                   <img src={Down} alt="" />

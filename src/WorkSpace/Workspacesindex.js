@@ -193,38 +193,28 @@ const Worksplaceindex = () => {
               </li>
             </ul>
             <hr style={{ marginTop: "0.625rem", marginBottom: "0.625rem" }} />
-            <input type="date" name="date" />
-            <span> to </span>
-            <input type="date" name="date" />
+            <div className="filter_date1">
+            <input type="month" name="date" className="filter_date" />
+            <span style={{ margin: "0 0.2rem" }}> to </span>
+            <input type="month" name="date" className="filter_date" />
+            </div>
             <hr style={{ marginTop: "0.625rem", marginBottom: "0.625rem" }} />
             <div className="dropdown">
-              <FormControl fullWidth className="abc" >
-                <Select
-                  labelId="demo-simple-select-label"
-                  id="demo-simple-select"
-                  size="small"
-                  label="Age"
-                  // onChange={handleChange}
-                  placeholder="Title here"
-                >
-                  <MenuItem value={1}>Title here</MenuItem>
 
-                </Select>
-              </FormControl>
+              <select className="filter_dropdown"  >
+                <option value="title">Title hear</option>
+                <option value="title">Title hear</option>
+                <option value="title">Title hear</option>
+                <option value="title">Title hear</option>
+              </select>
             </div>
-            <div className="dropdown">
-              <FormControl fullWidth className="abc" >
-                <Select
-                  labelId="demo-simple-select-label"
-                  id="demo-simple-select"
-                  size="small"
-                  label="Age"
-                // onChange={handleChange}
-                >
-                  <MenuItem value={1}>Title here</MenuItem>
-
-                </Select>
-              </FormControl>
+            <div className="dropdown" >
+              <select className="filter_dropdown" >
+                <option value="title">Title hear</option>
+                <option value="title">Title hear</option>
+                <option value="title">Title hear</option>
+                <option value="title">Title hear</option>
+              </select>
             </div>
 
           </div>

@@ -1,11 +1,12 @@
 
 .workspace_header_container{
-    margin-left:23% ;
+    /* margin-left:23% ; */
     height: 120px;
-    width: 75%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    /* border: 1px solid green; */
 
 }
 .workspace_title{
@@ -15,6 +16,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.header_title{
+    font-family: "Graphik_Bold";
 }
 .header_logo{
     height: 80%;
@@ -49,6 +53,7 @@
 }
 .user1 p{
     margin: 0;
+    font-family: "Graphik_Light"; 
 }
 .inneruser1{
     height: 70%;
@@ -160,6 +165,8 @@
     background-color: #bf161f;
     color: white;
     border: none;
+    font-family: "Graphik_Regular";
+    font-size: 15px;
 }
 .send_review_link{
     margin: 10px;
@@ -168,4 +175,6 @@
     background-color: black;
     color: white;
     border: none;
+    font-family: "Graphik_Regular";
+    font-size: 15px;
 }

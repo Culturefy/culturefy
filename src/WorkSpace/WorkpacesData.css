@@ -1,10 +1,15 @@
+.workspacesdata{
+  display: flex;
+}
 .workpacesdata-wepper{
     margin-left:23% ;
-    width: 100%;
+    width: 80%;
     display: flex;
+    /* border: 2px solid red; */
+    overflow: scroll;
 }
 .workpacesdata_Section{
-  width: 50%;
+  width: 70%;
   /* border: 1px solid red; */
 }
 .workpacesdata_hader{
@@ -26,6 +31,7 @@
   background-color:#cf212f;
   color: white;
   border: none;
+  font-family: "Graphik_Regular";
 }
 .workpaces_createfolder_btn{
   display: flex;
@@ -38,12 +44,14 @@
   background-color: #2394ae;
   color: white;
   border: none;
+  font-family: "Graphik_Regular";
 }
 .workspaces_filter{
   display: flex;
 }
 .workspaces_filter > p{
   cursor: pointer;
+  font-family: "Graphik_Regular";
 }
 .filter_section{
   width: 100%;
@@ -129,14 +137,16 @@
   align-items: flex-start;
 }
 .favorits_file_name{
-  font-size: 1.125rem;
+  font-size: 1rem;
   margin: 0 !important; 
   margin-top: 10px !important;
   color: black;
+  font-family: "Graphik_Regular";
 }
 .favorits_comments{
   font-size: 0.75rem;
   color: #cf212f;
+  font-family: "Graphik_Regular";
 }
 
 .favorits_icon{
@@ -155,7 +165,7 @@
 
 .workpaces_commentsection{
   margin-top: 70px;
-  width: 50%;
+  width: 30%;
   /* border: 0.062rem solid yellow; */
 }
 .calling_Section{
@@ -204,4 +214,9 @@
 .cards_wreppers{
   display: flex;
  
+}
+.right_side{
+  height: 100px;
+  width: 100px;
+  background-color: #cf212f;
 }

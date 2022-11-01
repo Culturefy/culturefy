@@ -19,7 +19,7 @@ const CreateWorkspaces = () => {
   })
 
   const handleWorkspaceData = (e) => {
-    setworkspaceData({...workspaceData,[e.target.name]:e.target.value})
+    setworkspaceData({ ...workspaceData, [e.target.name]: e.target.value })
   }
   console.log(workspaceData)
 
@@ -31,8 +31,8 @@ const CreateWorkspaces = () => {
       <Content />
       <div className="createWorkspaces-wepper">
         <div className="createworkspaces">
-          <div className="create-workspaces-Form">
-            <h1>Create Workspaces</h1>
+          <div className="create_workspaces_Form">
+            <h1 className="createworkspace_title">Create Workspaces</h1>
             <label htmlFor="">Workspaces Name</label>
             <TextField
               name="workspace_name"
@@ -55,12 +55,23 @@ const CreateWorkspaces = () => {
             />
             <label htmlFor="">Date and Time</label>
 
-            <input type="datetime-local"
+            {/* <input type="datetime-local"
               placeholder="Enter date"
               className="input_date"
               name="workspace_date"
               onChange={handleWorkspaceData}
               value={workspaceData.workspace_date}
+              
+            /> */}
+            <TextField
+              id="date"
+              
+              type="date"
+              defaultValue="2017-05-24"
+              sx={{ width: "100%",border:"none" }}
+              InputLabelProps={{
+                shrink: true,
+              }}
             />
 
             <label htmlFor="">Description</label>

@@ -7,15 +7,17 @@
 }
 .content{
     height: 100%;
-    /* background-color: aqua; */
+    background-color: aqua;
     color: black;
-    padding: 0 3rem;
     width:78%;
 }
 .date_comp{
     width: 50%;
     display: flex;
     align-items: center;
+}
+.date_filter_main_menu{
+    width: 27rem !important;
 }
 .datpick{
     width: 23rem;
@@ -25,9 +27,11 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    border: 1px solid grey;
+    border: 1px solid #dbd2d2;
     border-radius: 5px;
-    
+}
+.date_input_fields>::-webkit-input-placeholder{
+    font-size: 15px !important;
 }
 .dasshed__{
     font-size: 25px;
@@ -60,9 +64,10 @@
     display: none;
 }
 .start_end_date{
-    font-weight: 900;
+    font-weight: 600;
     margin: 10px 0;
     padding: 5px;
+    color: black;
 }
 .rsd__select-month{
     font-size: 15px !important;
@@ -96,36 +101,6 @@
     font-size: 18px;
     color: grey; 
 }
-
-/* .content {
-    display: block;
-    width: calc(100% - var(--aside-width));
-    margin-left: var(--aside-width);
-    padding: 30px 100px 30px 50px;
-    max-height: 100vh;
-    overflow-y: auto;
-    position: relative;
-} */
-
-
-
-
-/* .main-top-nav{
-    width: 100%;
-    height: 12.5rem;
-    display: flex;
-    flex-direction: column;
-    padding: 2rem 0;
-} */
-
-
-/* .list-user{
-    width: 100%;
-    display: flex;
-    justify-content: end;
-    margin-bottom: 1.87rem;
-
-} */
 .bio-box{
     display: flex;
     justify-content: space-between;
@@ -136,28 +111,37 @@
 }
 
 .search{
-    margin-top: 40px;
-    /* display: flex; */
-    position: relative;
     display: flex;
-    justify-content: space-between;
-    margin-top: 40px;
-    /* display: flex; */
+    justify-content: flex-end;
+    align-items: center;
     position: relative;
+    width: 50%;
+
+}
+.search .MuiPaper-elevation {
+    border-radius: 25px;
+    width: 10%;
+    height: 20px;
 }
 .search input{
-    width: 400px;
+    width: 50%;
     border-radius:30px;
-    padding: 13px;
-    background-color: rgb(246,246,246);
-    border: 1px solid rgb(246,246,246);
+    background-color: #f6f6f6;
+    border: 1px solid #f6f6f6;
+    height: 45px;
+    box-shadow: 2px 2px 5px grey ;
+    padding: 10px;
 }
 .search-button{
+    right: 1%;
+    width: 40px;
+    height: 40px;
     background-color: #2394ae;
-    padding: 13px;
     border-radius: 50%;
     position: absolute;
-    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .search-buttons{
@@ -177,26 +161,6 @@
     font-weight: 600;
 }
 .calander{
-/* .calander{
-    height: 50px;
-    width: 50px;
-    border:1px solid black;
-    border-radius: 50%;
-}
-.notification{
-    height: 50px;
-    width: 50px;
-    border:1px solid black;
-    border-radius: 50%;
-}
-.user{
-    height: 50px;
-    width: 50px;
-    border:1px solid black;
-    border-radius: 50%;
-}
-} */
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -447,20 +411,7 @@ p {
         color: #929292;
         box-shadow: none;
     }
-    /* .main-top-nav {
-        width: 100%;
-        height: 12.5rem;
-        display: flex;
-        flex-direction: column;
-        padding: 2rem 0;
-        position: fixed;
-        width: calc(100% - var(--aside-width) - 40px);
-        background: transparent;
-        z-index: 99;
-        background-color: #fff;
-        --aside-width: 380px;
-        --maintop-nav-height: 200px;
-    } */
+
     .main-top-nav {
         display: block;
         position: fixed;
@@ -540,4 +491,78 @@ p {
         border-radius: 30px;
         font-size: var(--f-12);
     }
-   
+   /* Media Query */
+   @media (max-width:1440px){
+    .search input{
+        width: 60%;
+        border-radius:30px;
+        background-color: #f6f6f6;
+        border: 1px solid #f6f6f6;
+        height: 45px;
+        box-shadow: 2px 2px 5px grey ;
+        padding: 10px;
+    }
+    .search >::-webkit-input-placeholder{
+        font-size: 16px ;
+    }
+    .date_comp h4{
+        font-size: 18px; 
+    }
+    .date_input_fields{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        border: 1px solid #dbd2d2;
+        border-radius: 15px;
+    }
+    .date_input{
+        /* width: 22.5rem; */
+        width: 150px;
+        border: none !important;
+        border-radius: 5px;
+        height: 30px;
+        outline: none;
+        margin: 0 5px !important;
+        text-align: center;
+    }
+    .date_input_fields >::-webkit-input-placeholder{
+        font-size: 15px !important ;
+    }
+    .cal_icon{
+        color: #f5a41d;
+        text-align: center;
+        align-items: center;
+        margin: 5px !important;
+        font-size: 18px !important;
+    }
+   }
+   @media (max-width:1024px){
+    .search input{
+        width: 70%;
+        border-radius:30px;
+        background-color: #f6f6f6;
+        border: 1px solid #f6f6f6;
+        height: 45px;
+        box-shadow: 2px 2px 5px grey ;
+        padding: 10px;
+    }
+    .search >::-webkit-input-placeholder{
+        font-size: 13px ;
+    }
+    .cal_icon{
+        color: #f5a41d;
+        text-align: center;
+        align-items: center;
+        margin: 5px !important;
+        font-size: 18px !important;
+    }
+    .date_comp{
+        width: 60%;
+        display: flex;
+        align-items: center;
+    }
+    .date_comp h4{
+        font-size: 13px; 
+    }
+   }

@@ -9,30 +9,29 @@
     align-items: center;
     justify-content: center;
 }
-.create-workspaces-Form{
+.create_workspaces_Form{
     display: flex;
     justify-content: center;
     flex-direction: column;
     width: 40%;
     /* border: 1px solid black; */
 }
-.create-worksplace-Form h1{
+.createworkspace_title{
     padding-bottom:25px;
+    font-family: "Graphik_Bold"; 
 }
-.create-worksplace-Form label{
+.create_workspaces_Form label{
     padding-bottom: 7px;
     font-size: 20px;
     font-weight: 700;
+    font-family: "Graphik_Regular";
 }
 
 .create-workspaces-picture{
     width: 60%;
     /* border: 1px solid black; */
 }
-::placeholder{
-    font-size: 15px;
-    font-weight: 100;
-}
+
 .buttons{
     width: 100%; 
 }
@@ -44,16 +43,30 @@
     color: aliceblue;
     margin-right: 15px;
     font-size: 17px;
+    font-family: "Graphik_Regular";
 }
 .Skip-btn{
     font-size: 17px;
     color: gray;
     border: none;
     background-color: white;
+    font-family: "Graphik_Regular";
 }
 .input_date{
     border-top: none;
     border-left: none;
     border-right: none;
+    border-bottom: 1px solid gray;
     margin-bottom: 15px;
 }
+.input_date :focus{
+    border: none;
+    outline: none;
+    
+}
+.create_workspaces_Form>.MuiTextField-root>.MuiInputBase-root ::-webkit-input-placeholder{
+    
+    font-family: "Graphik_Light";
+    font-size: 15px;
+}
+

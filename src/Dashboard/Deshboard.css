@@ -15,13 +15,21 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
+}
+.aside_left_logos{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .logo{
-    width: 55%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+    width: 60%;
+}
+.logo > img{
+    width: 100%;
 }
 .aside-left-nav{
   display: flex;
@@ -29,6 +37,11 @@
   align-items: center;
   justify-content: center;
   padding-top: 100px;
+  position: relative;
+  top: 100px;
+}
+.aside-left-nav ul{
+    padding: 0 !important;
 }
 .aside-left-nav li{
     list-style: none;
@@ -42,12 +55,14 @@
     align-items: center;
     justify-content: center;
 }
+.list img{
+    width: 50px;
+}
 #icon{
     font-size: 20px;
 }
 .asidebottom{
     position: relative;
-    top: 11%;
 }
 .aside-right{
     width: 67%;
@@ -215,11 +230,41 @@ outline: none;
 }
 /* Media Query */
 @media  (max-width: 1440px) {
+
+    /* Aside left */
+    .logo{
+        bottom: 5px;
+        width: 50%;
+    }
+    .aside-left-nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 100px;
+        position: relative;
+        top: 40px;
+      }
+    .list img{
+        width: 40px;
+    }
+    .asidebottom img{
+        height: auto;
+    }
+
+    /* ==========Aside Right====== */
+    .list_name p{
+        font-size: 15px;
+        font-weight: 700;
+        margin: 0;
+        padding-left: 8px;
+        color: gray;
+    }
+
     .createnew{
         /* margin-top:0.625rem; */
         /* padding: 1rem 3rem; */
-        width: 65%;
-        padding: 1rem 0;
+        width: 85%;
         /* padding: 10px; */
         border-radius: 2rem;
         border: none;
@@ -228,9 +273,9 @@ outline: none;
         font-weight: 700;
         color: white;
     }
+
     .upload{
-        width: 65%;
-        padding: 1rem 0;
+        width: 85%;
         margin-top: 1rem;
         border-radius: 2rem;
         border: none;
@@ -240,12 +285,12 @@ outline: none;
         color: white;
     }
     .compnay_name{
-        font-size: 1rem;
+        font-size: 0.9rem;
         border: none;
         margin-top: 1rem;
         margin-bottom: 1rem;
         font-weight: 700;
-        width: 70%;
+        width: 80%;
         outline: none;
         }
         .campaigns {
@@ -254,13 +299,44 @@ outline: none;
             justify-content: space-between;
             font-size: 15px;
         }
+
+  
   }
   @media  (max-width: 1024px){
+
+        /* Aside left */
+        .logo{
+            bottom: 5px;
+            width: 50%;
+        }
+        .aside-left-nav{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-top: 100px;
+            position: relative;
+            top: 40px;
+          }
+        .list img{
+            width: 30px;
+        }
+        .asidebottom img{
+            height: auto;
+        }
+    
+        /* ==========Aside Right====== */
+        .list_name p{
+            font-size: 12px;
+            font-weight: 700;
+            margin: 0;
+            padding-left: 8px;
+            color: gray;
+        }
     .createnew{
         /* margin-top:0.625rem; */
         /* padding: 1rem 3rem; */
-        width: 65%;
-        padding: 1rem 0;
+        width: 85%;
         /* padding: 10px; */
         border-radius: 2rem;
         border: none;
@@ -270,8 +346,7 @@ outline: none;
         color: white;
     }
     .upload{
-        width: 65%;
-        padding: 1rem 0;
+        width: 85%;
         margin-top: 1rem;
         border-radius: 2rem;
         border: none;
@@ -293,4 +368,13 @@ outline: none;
             width: 100%;
             height: 30%;
         }
+           .compnay_name{
+            font-size: 0.65rem;
+            border: none;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            width: 80%;
+            outline: none;
+            }
   }

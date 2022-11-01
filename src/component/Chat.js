@@ -17,6 +17,8 @@ import MailIcon from '@mui/icons-material/Mail';
 import './Chat.css'
 import chatuser from '../assets/user2.jpg'
 import SendIcon from '@mui/icons-material/Send';
+import ScrollableFeed from 'react-scrollable-feed'
+
 
 //Live Chat
 import { v4 as uuid } from 'uuid'
@@ -141,17 +143,11 @@ export default function SwipeableTemporaryDrawer() {
                       <h3>Chat</h3>
                       <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
+                   
                     <div className="chatbox_chat">
-                      {/* {messages.map((message, index) => (
-                        <div key={index} className='message'>
-                          {message.uid === uid && (<div className='user_self'><span>You</span> :  {message.text}</div>
-                          )}
-                          {message.uid !== uid && (<div className='user_them'><span>User</span>: {message.text}</div>
-                          )}
-                        </div>
-                      ))} */}
+          
 
-
+                    <ScrollableFeed>
                       {
                         messages.map((message, index) => (
                           <div key={index} className='message'>
@@ -162,7 +158,7 @@ export default function SwipeableTemporaryDrawer() {
                                 </div>
                                 <div className="chat_send_message">
                                   <div className="chat_user_name">
-                                    <h6>Bimby</h6>
+                                    <h6>User</h6>
                                     <p>just Now</p>
                                   </div>
                                   <div className="chat_user_message">
@@ -176,44 +172,48 @@ export default function SwipeableTemporaryDrawer() {
                               </div>
                             )}
                             {message.uid !== uid && (
-                            
-                      <div className="receive_message">
-                      <div className="chatuser">
-                        <img src={chatuser} alt="" />
-                      </div>
-                      <div className="chat_send_message">
-                        <div className="chat_user_name">
-                          <h6>Bimby</h6>
-                          <p>just Now</p>
-                        </div>
-                        <div className="chat_user_message">
-                          <p><span>Other :</span> {message.text} </p>
-                        </div>
-                        <div className="chat_replay">
-                          <p>Replay</p>
-                          <i class="fa-solid fa-thumbs-up"></i>
-                        </div>
-                      </div>
-                    </div>
+
+                              <div className="receive_message">
+                                <div className='receive_message_ch'>
+                                <div className="chatuser">
+                                  <img src={chatuser} alt="" />
+                                </div>
+                                <div className="chat_send_message">
+                                  <div className="chat_user_name">
+                                    <h6>Others</h6>
+                                    <p>just Now</p>
+                                  </div>
+                                  <div className="chat_user_message">
+                                    <p><span>Other :</span> {message.text} </p>
+                                  </div>
+                                  <div className="chat_replay">
+                                    <p>Replay</p>
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                  </div>
+                                </div>
+                                </div>
+                              </div>
                             )}
                           </div>
                         ))
                       }
-                      
+                        </ScrollableFeed>
                     </div>
+                  
 
-      
+
 
                   </div>
                   <div className="send_message_input">
                     <form action="" onSubmit={submitHandler}>
                       <input type="text"
-                        
                         placeholder='Write Something..'
-                        onChange={(e)=>setText(e.target.value)}
+                        onChange={(e) => setText(e.target.value)}
                         value={text}
                       />
-                      <button type='submit'>Send</button>
+                      <button type='submit'>
+                      <SendIcon/>
+                      </button>
                     </form>
                   </div>
                 </Box>

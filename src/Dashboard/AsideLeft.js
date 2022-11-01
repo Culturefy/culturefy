@@ -9,6 +9,7 @@ import asideBottom from "../assets/asideBottom-line.png";
 const AsideLeft = () => {
   return (
     <div className="aside-left">
+      <div className="aside_left_logos">
     <div className="logo">
       <img src={Logo} alt="logo" />
     </div>
@@ -30,6 +31,7 @@ const AsideLeft = () => {
           </div>
         </li>
       </ul>
+    </div>
     </div>
     <div className="asidebottom">
       <img src={asideBottom}  alt="" />

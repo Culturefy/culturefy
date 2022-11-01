@@ -1,4 +1,93 @@
 
+  @font-face {
+    font-family: "Graphik_Black";   /*Can be any text*/
+    src: local("Graphik"),
+      url("./Fonts/GRAPHIK-BLACK.TTF") format("truetype");
+  }
+  @font-face {
+    font-family: "Graphik_Italic";   /*Can be any text*/
+    src: local("Graphik"),
+      url("./Fonts/GRAPHIK-BLACKITALIC.TTF") format("truetype");
+  }
+  @font-face {
+    font-family: "Graphik_Bold";   /*Can be any text*/
+    src: local("Graphik"),
+      url("./Fonts/GRAPHIK-BOLD.TTF") format("truetype");
+  }
+  @font-face {
+    font-family: "Graphik_Extralight";   /*Can be any text*/
+    src: local("Graphik"),
+      url("./Fonts/GRAPHIK-EXTRALIGHT.TTF") format("truetype");
+  }
+  @font-face {
+    font-family: "Graphik_Extralightitalic";   /*Can be any text*/
+    src: local("Graphik_Extralightitalic"),
+      url("./Fonts/GRAPHIK-EXTRALIGHTITALIC.TTF") format("truetype");
+  }
+  @font-face {
+    font-family: "Graphik_Light";   /*Can be any text*/
+    src: local("Graphik"),
+      url("./Fonts/GRAPHIK-LIGHT.TTF") format("truetype");
+  }
+  @font-face {
+    font-family: "Graphik_Lightitalic";   /*Can be any text*/
+    src: local("Graphik"),
+      url("./Fonts/GRAPHIK-LIGHTITALIC.TTF") format("truetype");
+  }
+  @font-face {
+    font-family: "Graphik_Medium";   /*Can be any text*/
+    src: local("Graphik"),
+      url("./Fonts/GRAPHIK-MEDIUM.TTF") format("truetype");
+  }
+  @font-face {
+    font-family: "Graphik_Mediumitalic";   /*Can be any text*/
+    src: local("Graphik"),
+      url("./Fonts/GRAPHIK-MEDIUMITALIC.TTF") format("truetype");
+  }
+  @font-face {
+    font-family: "Graphik_Regular";   /*Can be any text*/
+    src: local("Regular"),
+      url("./Fonts/GRAPHIK-REGULAR.TTF") format("truetype");
+  }
+  @font-face {
+    font-family: "Graphik_Regularitalic";   /*Can be any text*/
+    src: local("Graphik"),
+      url("./Fonts/GRAPHIK-BLACK.TTF") format("truetype");
+  }
+  @font-face {
+    font-family: "Graphik_Semibold";   /*Can be any text*/
+    src: local("Graphik"),
+      url("./Fonts/GRAPHIK-SEMIBOLD.TTF") format("truetype");
+  }
+  @font-face {
+    font-family: "Graphik_Semibolditalic";   /*Can be any text*/
+    src: local("Graphik"),
+      url("./Fonts/GRAPHIK-SEMIBOLDITALIC.TTF") format("truetype");
+  }
+  @font-face {
+    font-family: "Graphik_Super";   /*Can be any text*/
+    src: local("Graphik"),
+      url("./Fonts/GRAPHIK-SUPER.TTF") format("truetype");
+  }
+  @font-face {
+    font-family: "Graphik_Superitalic";   /*Can be any text*/
+    src: local("Graphik"),
+      url("./Fonts/GRAPHIK-SUPERITALIC.TTF") format("truetype");
+  }
+  @font-face {
+    font-family: "Graphik_Thin";   /*Can be any text*/
+    src: local("Graphik"),
+      url("./Fonts/GRAPHIK-THIN.TTF") format("truetype");
+  }
+  @font-face {
+    font-family: "Graphik_Thinitalic";   /*Can be any text*/
+    src: local("Graphik"),
+      url("./Fonts/GRAPHIK-THINITALIC.TTF") format("truetype");
+  }
+ 
+  
+
+
 .App {
   text-align: center;
 }

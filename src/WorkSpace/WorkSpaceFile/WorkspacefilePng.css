@@ -1,116 +1,158 @@
-.workspacesfile_wapper{
-    width: 80% !important;
-    margin-left: 20%;
+.workspacesfile_wapper {
+    width: 72% !important;
+    margin-left: 23%;
+}
+
+.workspace_file_main_wrapper {
+    display: flex;
+}
+
+.workspace_file_header {
     width: 100%;
 }
-.inner_wepper{
+
+.inner_wepper {
     width: 100%;
-    display: flex;   
+    display: flex;
 }
-.workspacesfilepng_section{
-    width: 60%;
+
+.workspacefile_footer {
+    border: 1px solid black;
+    height: 100%;
+    width: 5%;
+    position: fixed;
+    right: 0;
 }
-.workspacesfilepng_header{
+
+.workspacesfilepng_section {
+    width: 70%;
+}
+
+.workspacesfilepng_header {
     width: 100%;
     display: flex;
     justify-content: end;
     align-items: center;
     /* margin-bottom: 5px; */
 }
-.workspacesfilepng_image{
+
+.workspacesfilepng_header p {
+    margin: 0;
+    font-family: "Graphik_Light";
+}
+
+.workspacesfilepng_image {
     height: 60vh;
     width: 100%;
     margin-bottom: 0.937rem;
 }
-.workspacesfilepng_image img{
-      height: 100%;
-      width: 100%;
-}
-.workspacesfilepng_footer{
+
+.workspacesfilepng_image img {
+    height: 100%;
     width: 100%;
-    display: flex;
 }
-.workspacesfilepng_viewer{
-    width: 20%;
+
+.workspacesfilepng_footer {
+    width: 100%;
     display: flex;
     align-items: center;
-  
-   
+    margin: 0;
 }
-.viewer1{
-    height: 1.875rem;
-    width: 1.875rem;
-    
-    border-radius: 50%;
-    position: absolute;
-}
-.viewer2{
-    height: 1.875rem;
-    width: 1.875rem;
-    
-    border-radius: 50%;  
-    margin-right: -10px; 
-    position: relative;
-}
-.viewer2 img{
-    height: 100%;
-    width: 100%;
-    border-radius: 50%;
-}
-.viewer3{
-    height: 1.875rem;
-    width: 1.875rem;  
-    border-radius: 50%;   
-    margin-right: -0.625rem; 
-    position: relative;
-}
-.viewer3 img{
-    height: 100%;
-    width: 100%;
-    border-radius: 50%;
-}
-.viewer4{
-    height: 1.875rem;
-    width: 1.875rem;   
-    border-radius: 50%; 
-    margin-right: -0.625rem; 
-    position: relative;  
-}
-.viewer4 img{
-    height: 100%;
-    width: 100%;
-    border-radius: 50%;
-}
-.viewer5{
-    height: 1.875rem;
-    width: 1.875rem; 
-    border-radius: 50%; 
-    position: relative; 
-    display: flex;
-    align-items: center;
-    justify-content: center;  
-    background-color: black;
-}
-.viewer5 p{
-   color: white;
-}
-.add_contribution{
-    width: 70%;
+
+.workspacesfilepng_viewer {
+    width: 13%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
 }
-.workspacesfilepng_like{
-    width: 10%;
+
+.viewer1 {
+    height: 1.875rem;
+    width: 1.875rem;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.viewer2 {
+    height: 1.875rem;
+    width: 1.875rem;
+    border-radius: 50%;
+    margin-right: -10px;
+    position: relative;
+}
+
+.viewer2 img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.viewer3 {
+    height: 1.875rem;
+    width: 1.875rem;
+    border-radius: 50%;
+    margin-right: -0.625rem;
+    position: relative;
+}
+
+.viewer3 img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.viewer4 {
+    height: 1.875rem;
+    width: 1.875rem;
+    border-radius: 50%;
+    margin-right: -0.625rem;
+    position: relative;
+}
+
+.viewer4 img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.viewer5 {
+    height: 1.875rem;
+    width: 1.875rem;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+.viewer5 p {
+    color: white;
+}
+
+.add_contribution {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    font-family: "Graphik_Light";
+
+}
+
+.workspacesfilepng_like {
+    width: 17%;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    color:#f5a41d ;
+    color: #f5a41d;
 }
-.workspacesfilepng_likeStar{
+
+.workspacesfilepng_likeStar {
     font-size: 1.25rem;
 }
-.comment_section{
+
+.comment_section {
     width: 30%;
     display: flex;
     justify-content: center;

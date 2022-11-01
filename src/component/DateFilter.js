@@ -72,51 +72,32 @@ const DateFilter = () => {
                         MenuListProps={{
                             'aria-labelledby': 'basic-button',
                         }}
+                        className='date_filter_main_menu'
                     >
                         <MenuItem >
                             <div className='datpick'>
-                                <h3 className='start_end_date'>
+                                <h5 className='start_end_date'>
                                     Start Date
-                                </h3>
+                                </h5>
                                 <SelectDatepicker
                                     // selectedDate={value}
                                     onDateChange={onDateChange}
                                 />
-
-
-                                <h3 className='start_end_date'>
+                                <h5 className='start_end_date'>
                                     End Date
-                                </h3>
+                                </h5>
                                 <SelectDatepicker
                                     // selectedDate={endDate}
                                     onDateChange={onEndDateChange}
                                 />
                             </div>
 
-
-
                         </MenuItem>
-
-                        {/* <MenuItem onClick={handleClose} className="date_menu">
-                    <div>
-                      <h3 className='start_end_date'>
-                        Start Date
-                      </h3>
-                      <SelectDatepicker
-                        selectedDate={value}
-                        onDateChange={onDateChange}
-                      />
-                      <h3 className='start_end_date'>End Date</h3>
-                      <SelectDatepicker
-                        selectedDate={value}
-                        onDateChange={onDateChange}
-                      />
-                    </div>
-                  </MenuItem> */}
                     </Menu>
                 </div>
             </div>
         </div>
+ 
     )
 }
 

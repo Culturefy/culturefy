@@ -1,10 +1,11 @@
-.create-new-campaigns{
+.create-new-campaigns {
     width: 100%;
-    margin-bottom:5rem;
+    margin-bottom: 5rem;
 }
-.create-new-campaigns button{
+
+.create-new-campaigns button {
     border-radius: 30px;
-    background-color:#2394ae ;
+    background-color: #2394ae;
     border: 1px solid #2394ae;
     color: white;
     font-size: 1.25rem;
@@ -13,32 +14,63 @@
     width: 20%;
     padding: 15px 0;
 }
-.heading_search_container{
+
+.Campaign_header_pr {
+    width: 77%;
+    margin-left: 23%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.campaign_header_user_data {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.campaign_header_user_data ul {
+    display: flex;
+    width: 10%;
+    justify-content: space-between;
+    margin: 0 !important;
+}
+
+.campaign_header_user_data ul li img {
+    width: 35px;
+    height: 35px;
+}
+
+.heading_search_container {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
-.Sub_container{
-    margin-left: 3%;
-    padding-top: 8%;
-}
-.heading_search_container .MuiPaper-elevation{
+
+
+
+.heading_search_container .MuiPaper-elevation {
     border-radius: 25px;
 }
-.heading_search_container .MuiIconButton-root{
-    background-color: rgb(35,148,174);
+
+.heading_search_container .MuiIconButton-root {
+    background-color: rgb(35, 148, 174);
     position: relative;
     color: white;
     right: -3%;
 }
 
-.heading_search_container .MuiIconButton-root :hover{
+.heading_search_container .MuiIconButton-root :hover {
     position: relative !important;
     right: -3% !important;
     color: black;
     border-radius: 50%;
-    background-color: rgb(35,148,174);
+    background-color: rgb(35, 148, 174);
 }
+
 /* .nav-campaign-tabs{
     width: 100%;
     background-color: #f1f1f1;
@@ -47,22 +79,24 @@
 } */
 
 .nav-campaign-tabs {
-    padding: 8px;
+    padding: 6px;
     background: #f1f1f1;
     border-radius: 100px;
     justify-content: space-between;
-    margin-bottom: 60px;
 }
-.heading_main_container{
+
+.heading_main_container {
     font-weight: 500;
 }
-.nav-campaign-tabs ul{
+
+.nav-campaign-tabs ul {
     width: 100%;
-    height: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;    
+    align-items: center;
+    padding: 0 !important;
 }
+
 .nav-campaign-tabs li {
     width: 25%;
     list-style: none;
@@ -70,66 +104,45 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2rem;  
-    padding: 3px;
+    font-size: 2rem;
     border-radius: 30px;
-
 }
-.nav-campaign-tabs li button{
+
+.nav-campaign-tabs li button {
     border: none;
     list-style: none;
     text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;  
+    font-size: 1.5rem;
     padding: 3px;
-    border-radius: 30px;   
+    border-radius: 30px;
     border-radius: 30px;
     background: none;
 
 }
- /* .nav-campaign-tabs  li:first-child {
-    background-color :#2394ae; 
-} */
 
-/* .nav-campaign-tabs  li:first-child button{
-    background-color :#2394ae; 
-}  */
-
-.nav-campaign-tabs li  :focus{
+.nav-campaign-tabs li :focus {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    background-color:#2394ae;
+    background-color: #2394ae;
     padding: 5px;
-    border-radius: 30px;  
-}
-.nav-campaign-tabs li  :hover{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    background-color:#2394ae;
-    padding: 5px;
-    border-radius: 30px;  
-    color: white;
-}
-body {
-    font-size: var(--f-16);
-    font-family: "Grpahik Medium";
-    color: #000000;
+    border-radius: 30px;
 }
 
-.nav-campaign-tabs a{
+.nav-campaign-tabs a {
     text-decoration: none;
     color: black;
 }
+
 ul.campaign-tabs li button.active {
     background-color: #2394ae;
 }
- .paginationActive {
+
+.paginationActive {
     border: 1px solid #2394ae;
     background: #fff;
     color: #2394ae;
@@ -137,13 +150,25 @@ ul.campaign-tabs li button.active {
     border-radius: 6px;
     padding: 5px 12px;
 }
+
 .pagine li:last-child .page-link {
     color: #000;
 }
+.campaign-table{
+    width: 100%;
+}
+.campaign-table table thead{
+    width: 100%;
+}
+.campaign-table table  tr{
+   width: 100%;
+}
+
 .campaign-table table tbody td h4.Pending {
     color: #f5a41d;
     text-decoration: underline;
 }
+
 .campaign-table table tbody td h4.Active {
     color: #2394ae;
     text-decoration: underline;
@@ -153,38 +178,52 @@ ul.campaign-tabs li button.active {
     color: #649084;
     text-decoration: underline;
 }
+
 .campaign-table table .progress {
     height: 20px;
     border-radius: 16px;
 }
+
 .campaign-table table .progress .Active {
     background-color: #b17aa3;
-    width:40%
+    width: 40%
 }
-.campaign-table table .progress .Completed
-{
+
+.campaign-table table .progress .Completed {
     background-color: #649084;
-    width:100%
+    width: 100%
 }
-.upper_container{
+
+.upper_container {
     height: 10vh;
 }
- .wrapper {
-    /* padding-top: var(--maintop-nav-height) !important;
-    --maintop-nav-height:300px; */
-    margin-left: 20%;
-    width: 80%;
-} 
+
+
+.Sub_container {
+    margin-left: 23%;
+}
+
+.wrapper {
+    width: 100%;
+}
+
 .d-flex {
-    display: flex!important;
+    display: flex !important;
     position: fixed;
 }
 
 
 @media (max-width:1440px) {
-    .create-new-campaigns button{
+    .campaign_header_user_data ul {
+        display: flex;
+        width: 15%;
+        justify-content: space-between;
+        margin: 0 !important;
+    }
+
+    .create-new-campaigns button {
         border-radius: 30px;
-        background-color:#2394ae ;
+        background-color: #2394ae;
         border: 1px solid #2394ae;
         color: white;
         font-size: 1rem;
@@ -193,26 +232,102 @@ ul.campaign-tabs li button.active {
         width: 20%;
         padding: 15px 0;
     }
-    .heading_search_container .MuiPaper-elevation{
+
+    .heading_search_container .MuiPaper-elevation {
         border-radius: 25px;
-        width: auto;
+        width: 35%;
+        height: 40px;
     }
-}
-.react-tabs__tab.react-tabs__tab--selected{
-background-color: #2394ae;
-color:white;
+
+    .heading_search_container .MuiIconButton-root {
+        background-color: rgb(35, 148, 174);
+        position: relative;
+        color: white;
+        right: -2%;
+        height: 35px;
+        width: 35px;
+    }
+
+    .nav-campaign-tabs {
+        background: #f1f1f1;
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 60px;
+        padding: 3px !important;
+    }
+
+    .nav-campaign-tabs li {
+        width: 25%;
+        list-style: none;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        border-radius: 30px;
+    }
+
 }
 
-.react-tabs__tab-list :hover{
+.react-tabs__tab.react-tabs__tab--selected {
     background-color: #2394ae;
-    color:white;
-}
-.rs-btn-icon{
-border: none;
-background-color: #2394ae;
-border-radius: 50%;
-padding: 10px;
-}
-.MuiSvgIcon-root{
     color: white;
+
+}
+
+.react-tabs__tab-list :hover {
+    background-color: #2394ae;
+    color: white;
+}
+
+.rs-btn-icon {
+    border: none;
+    background-color: #2394ae;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.MuiSvgIcon-root {
+    color: white;
+}
+
+@media (max-width:1024px) {
+
+    .campaign_header_user_data ul {
+        display: flex;
+        width: 25%;
+        justify-content: space-between;
+        margin: 0 !important;
+    }
+
+    .heading_search_container .MuiPaper-elevation {
+        border-radius: 25px;
+        width: 35%;
+        padding: 0 !important;
+        height: 40px;
+    }
+
+    .heading_search_container .MuiIconButton-root {
+        background-color: rgb(35, 148, 174);
+        position: relative;
+        color: white;
+        right: -2%;
+        height: 35px;
+        width: 35px;
+    }
+
+    .create-new-campaigns button {
+        border-radius: 30px;
+        background-color: #2394ae;
+        border: 1px solid #2394ae;
+        color: white;
+        font-size: 0.8rem;
+        font-family: inherit;
+        font-weight: 600;
+        width: 25%;
+        padding: 15px 0;
+    }
+    .campaign-table{
+        width: 82.8vw;
+    }
 }

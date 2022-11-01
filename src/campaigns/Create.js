@@ -175,52 +175,17 @@ const Create = () => {
     }
     console.log(job)
 
-
-      
     return (
         <div>
             <Content />
-            <div className="content">
-                <div className="main-top-nav">
-                    <ul class="bts-profile align-items-center justify-content-end pb-5">
-                        <li>
-                            <img src={Calender} alt="" />
-                        </li>
-                        <li>
-                            <img src={Notification} alt="" />
-                        </li>
-                        <li>
-                            <img src={AdminImg} alt="" />
-                        </li>
-                    </ul>
 
-                    <div className='heading_search_container'>
-                        <h1 className='heading_main_container'>Create Compaign</h1>
-                        <Paper
-                            component="form"
-                            sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 400 }}
-                        >
-                            <InputBase
-                                sx={{ ml: 1, flex: 1 }}
-                                placeholder="Search Brand Culture Strategy"
-                                inputProps={{ 'aria-label': 'Search Brand Culture Strategy' }}
-                            />
-                            <IconButton type="button" sx={{ p: '10px' }} aria-label="search">
-                                <SearchIcon />
-                            </IconButton>
-                            <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />
-
-                        </Paper>
-                    </div>
-                </div>
-            </div>
             <div class="main-inner-content inner-cont-pt">
                 <div class="row mt-4">
                     <div class="col-lg-8">
                         <div class="action-sec">
-       
+
                             <div className="key-action-wraper">
-                               
+
                                 <ul class="nav nav-tabs" onClick={handleChange}>
                                     Plan
                                     <li onClick={() => setShows(!shows)}>{shows ? <i class="fa fa-chevron-down" aria-hidden="true"></i> : <i class="fa-solid fa-chevron-right" ></i>}</li>
@@ -228,7 +193,7 @@ const Create = () => {
                                     <li onClick={() => setToggle(!toggle)}>{toggle ? <i class="fa fa-chevron-down" aria-hidden="true"></i> : <i class="fa-solid fa-chevron-right" ></i>}</li>
                                     Possess
                                     <li onClick={() => setTexts(!texts)}>{texts ? <i class="fa fa-chevron-down" aria-hidden="true"></i> : <i class="fa-solid fa-chevron-right" ></i>}</li>
-                                    
+
                                 </ul>
                                 <div className="tab-contents key-content">
                                     <ul className='para'>
@@ -338,7 +303,7 @@ const Create = () => {
                                             <span class="yellow-circle" ><i class="fa-solid fa-check" style={{ borderColor: "#f5a41d" }} /></span>
                                         </div>
                                         <div class="design-form-wraper">
-                                            
+
                                             <Tabs className="myClass">
                                                 <TabList class=" ds-form-tabs" role="tablist" activeTintColor='blue'>
                                                     <div className='navbar'>
@@ -366,7 +331,7 @@ const Create = () => {
                                                                 <div class="row">
                                                                     <div class="col-lg-6">
                                                                         <div class="form-dropdown">
-                                                                           
+
                                                                             <select onChange={(e) => { setFull(e.target.value) }}>
                                                                                 <option>Full Time</option>
                                                                                 <option>Part Time</option>
@@ -374,7 +339,7 @@ const Create = () => {
                                                                             </select>
                                                                         </div>
                                                                         <div class="form-dropdown">
-                                                                         
+
                                                                             <select class="btn dropdown-toggle" onChange={(e) => { setLevel(e.target.value) }}>
                                                                                 <option>Job Level</option>
                                                                                 <option>Entery Level</option>
@@ -389,7 +354,7 @@ const Create = () => {
                                                                                 <option>Marketing</option>
                                                                                 <option>Production</option>
                                                                             </select>
-                                                                           
+
                                                                         </div>
                                                                         <div class="form-dropdown">
                                                                             <select class="btn dropdown-toggle" onChange={(e) => { setIndustry(e.target.value) }}>
@@ -398,7 +363,7 @@ const Create = () => {
                                                                                 <option>Other</option>
                                                                             </select>
                                                                         </div>
-                                                                        
+
                                                                     </div>
                                                                 </div>
                                                                 <div class="form-group">
@@ -674,17 +639,17 @@ const Create = () => {
 
                                                                             </div>
                                                                         </div>
-                                                                       
+
                                                                         <ul class="slick-dots" role="tablist" onClick={arrowLeftClick}>
-                                                                           <li class="slick-active" role="presentation">
+                                                                            <li class="slick-active" role="presentation">
                                                                                 <button type="button" role="tab" id="slick-slide-control00" aria-controls="slick-slide00" aria-label="1 of 4" tabindex="0" aria-selected="true" >1</button>
                                                                             </li>
                                                                             <li role="presentation"><button type="button" role="tab" id="slick-slide-control01" aria-controls="slick-slide01" aria-label="2 of 4" tabindex="-1">2</button></li>
                                                                             <li role="presentation"><button type="button" role="tab" id="slick-slide-control02" aria-controls="slick-slide02" aria-label="3 of 4" tabindex="-1">3</button></li>
                                                                             <li role="presentation"><button type="button" role="tab" id="slick-slide-control03" aria-controls="slick-slide03" aria-label="4 of 4" tabindex="-1">4</button></li>
                                                                         </ul>
-                                                                       
-                                                                        </div>
+
+                                                                    </div>
                                                                     <div class="arrows-camp">
                                                                         <div class="left-arrow slick-arrow" onClick={arrowLeftClick} ><i class="fa-solid fa-chevron-left"></i></div>
                                                                         <div class="right-arrow slick-arrow" onClick={arrowRightClick}><i class="fa-solid fa-chevron-right"></i></div>

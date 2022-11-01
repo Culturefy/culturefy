@@ -1,8 +1,20 @@
+.workspaceupload_main_header{
+    display: flex;
+}
+.workspacesdata_upload{
+    width: 70%;
+    margin-left: 23%;
+    /* border: 1px solid green; */
+}
+.workspaceuplod_header{
+    width: 100%;
+    /* border: 1px solid blue; */
+}
 .Upload_wepper {
     margin-top: 3%;
     width: 100%;
-    margin-left: 23%;
-    width: 100%;
+    /* margin-left: 23%; */
+    /* border: 1px solid red; */
 }
 
 .workpace_upload_header button {
@@ -12,14 +24,16 @@
     color: white;
     border: none;
     margin-bottom: 10px;
+    font-family: "Graphik_Regular";
 }
 
 .workpace_upload_header h2 {
     font-weight: bold;
+    font-family: "Graphik_Bold";
 }
 
 .upload_files_Section {
-    width: 70%;
+    width: 100%;
     height: 300px;
     border-style: dashed;
     border-color: #2394ae;
@@ -32,10 +46,12 @@
 }
 .upload_files_Section p{
     color: gray;
+    font-family: "Graphik_Light"; 
 }
 .filter_component{
-    width: 70%;
+    width: 100%;
     margin-top: 15px;
+  
 }
 .upload_btn{
     display: flex;
@@ -48,6 +64,7 @@
     background-color:#2394ae;
     color: white;
     border: none;
+    font-family: "Graphik_Regular";
 }
 .uoload_search{
     width: 70%;

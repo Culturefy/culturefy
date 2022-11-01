@@ -15,7 +15,9 @@ import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs"
-
+import Calender from '../assets/calendar-icon.png'
+import  Notification from '../assets/Notifiction.svg'
+import  AdminImg from '../assets/admin-img.png'
 
 const Index = () => {
   const minDays = 5;
@@ -193,45 +195,42 @@ const Index = () => {
   return (
     <div>
       <Content />
-
-      <div className='upper_container'>
-        <div className="content">
-          <div className="main-top-nav">
-            <ul class="bts-profile align-items-center justify-content-end">
+      <div>
+      <div className='Campaign_header_pr'>
+      <div className='campaign_header_user_data'>
+            <ul>
               <li>
-                {/* <img src={Calender} /> */}
+                <img src={Calender} />
               </li>
               <li>
-                {/* <img src={Notification} /> */}
+                <img src={Notification} />
               </li>
               <li>
-                {/* <img src={AdminImg} /> */}
+                <img src={AdminImg} />
               </li>
             </ul>
-
-           
-             
-            <div className='heading_search_container'>
-              <h1 className='heading_main_container'>Compaigns</h1>
-              <Paper
-                component="form"
-                sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 400 }}
-              >
-                <InputBase
-                  sx={{ ml: 1, flex: 1 }}
-                  placeholder="Search a Campaigns"
-                  inputProps={{ 'aria-label': 'Search a Campaigns' }}
-                />
-                <IconButton type="button" sx={{ p: '10px' }} aria-label="search">
-                  <SearchIcon />
-                </IconButton>
-                <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />
-
-              </Paper>
-            </div>
           </div>
+        <div className='heading_search_container'>
+          <h1 className='heading_main_container'>Compaigns</h1>
+          <Paper
+            component="form"
+            sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 400 }}
+          >
+            <InputBase
+              sx={{ ml: 1, flex: 1 }}
+              placeholder="Search a Campaigns"
+              inputProps={{ 'aria-label': 'Search a Campaigns' }}
+            />
+            <IconButton type="button" sx={{ p: '10px' }} aria-label="search">
+              <SearchIcon />
+            </IconButton>
+            <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />
+          </Paper>
         </div>
       </div>
+
+{/* Tabs From Here */}
+
       <div className='Sub_container'>
         <div className='wrapper'>
 
@@ -249,10 +248,10 @@ const Index = () => {
                 </TabList>
               </ul>
             </Tabs>
-
           </div>
 
           <div className="campaign-wraper">
+
             <div className="campaign-top">
               <div className="header">
                 <h2>Campaigns</h2>
@@ -270,8 +269,9 @@ const Index = () => {
               </div>
               <DateFilter />
             </div>
-            <div className="tab-content campaign">
-              <div className="tab-pane fade show active" id="All" role="tabpanel">
+      
+            {/* <div className="tab-content campaign"> */}
+              {/* <div className="tab-pane fade show active" id="All" role="tabpanel"> */}
                 <div className="campaign-table">
                   <table className="table">
                     <thead>
@@ -349,8 +349,8 @@ const Index = () => {
                     </tbody>
                   </table>
                 </div>
-              </div>
-            </div>
+              {/* </div> */}
+            {/* </div> */}
           </div>
           {data &&
             data.length > 4 &&
@@ -369,12 +369,12 @@ const Index = () => {
                   nextLinkClassName={'nextBttn'}
                   disabledClassName={'paginationDisabled'}
                   activeClassName={'paginationActive'}
-
                 />
               </div>
             )
           }
         </div>
+      </div>
       </div>
 
 
