@@ -1,8 +1,19 @@
+.workspace_agenda_main_workspace_agendas_wrepper{
+    display: flex;
+    /* border: 1px solid red; */
+}
 .workspace_agendas_wrepper {
     margin-left: 23%;
+    width: 72%;
+    /* border: 1px solid red; */
+}
+.workspace_agendas_wrepper h3{
+    font-family: "Graphik_Bold";
+}
+.workspace_agenda_header{
+    /* border: 1px solid blue; */
     width: 100%;
-    margin-top: 1.875rem;
-
+    margin-bottom: 30px;
 }
 .agendas{
     display: flex;
@@ -22,6 +33,9 @@
 .agendas_view p{
     font-size: 0.812rem;
 }
+.agendas_view h6{
+    font-family: "Graphik_Bold";
+}
 .agenda_date_time{
     border-top:1px solid #2394ae ;
     border-bottom:1px solid #2394ae ;
@@ -30,13 +44,16 @@
     align-items: center;
 }
 .agenda_date_time span{
-    font-size: 0.812rem
+    font-size: 0.812rem;
+    font-family: "Graphik_Regular";
 } 
 .agenda_items ol{
     font-size: 0.687rem;
+    font-family: "Graphik_Regular";
 }
 .agenda_items p{
     margin: 0;
+    font-family: "Graphik_Regular";
 }
 .new_agendas{
     width: 18.75rem;

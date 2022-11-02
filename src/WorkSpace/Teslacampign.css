@@ -1,164 +1,219 @@
-.bbc{
-    height: 10rem;
+.teslacampign_main_Wrepper {
+    display: flex;
 }
-.teslacampign{
-    width: 100vw;
-    margin-left: 20%;
-    margin-top: 50px;
+
+.teslacampign {
+    width: 72%;
+    margin-left: 23%;
 }
-.tesla_pr{
-    width: 55%;
+
+.teslacampaign_header { 
+    position: sticky;
+    background-color: white;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+.tesla_inner_main{
+    width: 100%;
+    display: flex;
+}
+.tesla_section{
+    width: 70%;
+    overflow: scroll;
+}
+.tesla_comment{
+    width: 30%;
+}
+.tesla_pr {
+    width: 100%;
     display: flex;
     justify-content: space-around;
-    height: 50vh;
+    margin-top: 200px;    
 }
-.image_color{
+.image_color {
     width: 25%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.image_color img{
-    width:200px;
+.image_color img {
+    width: 200px;
     height: 200px;
     padding: 5px 0;
     border-radius: 10px;
     background-color: #e31937;
 }
-.color_div_pr{
+.color_div_pr {
     margin-top: 10px;
-    width:200px;
+    width: 200px;
     height: 300px;
     display: flex;
-    
+
 }
-.color_box{
-    width:40%;
+
+.color_box {
+    width: 40%;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
 }
-.hex_code{
-    width:45%;
+
+.hex_code {
+    width: 45%;
     border-radius: 10px;
 }
-.img_slider{
-    width:50%;
+
+.img_slider {
+    width: 50%;
     box-shadow: 3px 3px 12px grey;
     border-radius: 10px;
 }
-.clr_blc{
+
+.clr_blc {
     width: 50%;
     height: 15%;
     border-radius: 10px;
     margin: 3px;
     background-color: #111111;
 }
-.clr_blc:hover{
-    transform: scale(0.9,0.9);
+
+.clr_blc:hover {
+    transform: scale(0.9, 0.9);
 }
-.clr_red{
+
+.clr_red {
     width: 50%;
     height: 15%;
     border-radius: 10px;
-    background-color: #e31937; 
+    background-color: #e31937;
     margin: 3px;
-    
+
 }
-.clr_red:hover{
-    transform: scale(0.9,0.9);
+
+.clr_red:hover {
+    transform: scale(0.9, 0.9);
 }
-.clr_blu{
+
+.clr_blu {
     width: 50%;
     height: 15%;
     border-radius: 10px;
-    background-color: #144178;  
+    background-color: #144178;
     margin: 3px;
 }
-.clr_blu:hover{
-    transform: scale(0.9,0.9);
+
+.clr_blu:hover {
+    transform: scale(0.9, 0.9);
 }
-.clr_gre{
+
+.clr_gre {
     width: 50%;
     height: 15%;
     border-radius: 10px;
-    background-color: #d5d5d5;   
+    background-color: #d5d5d5;
     margin: 3px;
 }
-.clr_gre:hover{
-    transform: scale(0.9,0.9);
+
+.clr_gre:hover {
+    transform: scale(0.9, 0.9);
 }
-.clr_whi{
+
+.clr_whi {
     width: 50%;
     height: 15%;
     border-radius: 10px;
-    background-color: #ffffff;  
+    background-color: #ffffff;
     margin: 3px;
 }
-.clr_whi:hover{
-    transform: scale(0.9,0.9);
+
+.clr_whi:hover {
+    transform: scale(0.9, 0.9);
 }
-.clr_code{
+
+.clr_code {
     height: 15%;
     align-items: center;
     display: flex;
     align-items: center;
     font-weight: 700;
+    font-family: "Graphik_Regular";
+    color: #111111;
 }
-.img_slider{
+
+.img_slider {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 0;
 }
-.image_fir{
+
+
+.image_fir {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    
 }
-.img_slider .visually-hidden{
+
+.img_slider .visually-hidden {
     color: black;
 }
-.first_img{
+
+.first_img {
     width: 45%;
     border-radius: 10px;
     margin: 10px;
 }
-.second_img{
+
+.second_img {
     width: 45%;
     border-radius: 10px;
     margin: 10px;
 }
-.image_sec_{
-    width:100%;
+
+.image_sec_ {
+    width: 100%;
     height: 150px;
     margin-top: 10px;
     border-radius: 10px;
     margin: 10px;
 }
-.image_sec_ img{
-    width:96%;
+
+.image_sec_ img {
+    width: 96%;
     height: 100%;
     border-radius: 10px;
 }
-.comapny_details{
+
+.comapny_details {
     width: 100%;
     margin-top: 50px;
     line-height: 2;
 }
-.details_child{
-    width:51%;
+
+.details_child {
+    width: 51%;
     margin-left: 4%;
 }
-.details_child h1,h5{
-    font-weight: bold;
+
+.details_child h1,
+h5 {
+    font-family: "Graphik_Bold";
 }
+
 .details_child p {
     font-weight: 400;
+    font-family: "Graphik_Regular";
 }
-.company_details_table tr th{
-    width: 150px;
+
+.company_details_table tr th {
+    width: 200px;
+    font-family: "Graphik_Bold";
 }
-.company_details_table tr td{
-    width: 150px;
+
+.company_details_table tr td {
+    width: 200px;
+    font-family: "Graphik_Regular";
 }

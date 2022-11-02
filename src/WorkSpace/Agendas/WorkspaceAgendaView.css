@@ -2,49 +2,64 @@
     margin-left: 23%;
     width: 70%;
     margin-top: 1.875rem;
-    display: flex;
     width: 70% !important;
 }
-.agendaview_section{
+
+.agendaview_section {
     width: 60%;
-  
 }
-.agendaview_header{
+
+.agendaview_inner_wrepper {
+    display: flex;
+}
+
+.agendaview_header {
     display: flex;
     justify-content: space-between;
     margin-bottom: 1.562rem;
 }
-.agenda_button button{
+
+.agenda_button button {
     padding: 0.5rem 2.5rem;
     background-color: #f5a41d;
     border-radius: 1.875rem;
     border: none;
     color: white;
     font-weight: 500;
+    font-family: "Graphik_Regular";
 }
-.agenda_wordpad{
+
+.agenda_wordpad {
     width: 97%;
-    height: 78vh;
+    height: 73vh;
     margin-left: 3%;
     border: 1px solid lightgray;
     display: flex;
     flex-direction: column;
 }
-.wordpad_view_header{
-    border-bottom:1px solid lightgrey ;
+
+.wordpad_view_header {
+    border-bottom: 1px solid lightgrey;
     height: 3.125rem;
     display: flex;
     /* border: 1px solid black; */
 }
-.wordpad_view_header button{
+
+.wordpad_view_header button {
     padding: 0.312rem;
     border: none;
     background-color: white;
 }
-.wordpad_container{
+
+.wordpad_container {
     padding: 3.125rem 3.125rem;
 }
-.agendaview_date_time{
+
+.wordpad_container h1 {
+    font-family: "Graphik_Bold";
+}
+
+.agendaview_date_time {
     height: 3.125rem;
     display: flex;
     align-items: center;
@@ -53,14 +68,17 @@
     border-bottom: 1px solid #2394ae;
     margin-bottom: 1.562rem;
 }
-.wordpad_container h1{
+
+.wordpad_container h1 {
     padding: 0.625rem 0;
 }
-.buttons_1{
+
+.buttons_1 {
     width: 50%;
     display: flex;
 }
-.innerbutton_1{
+
+.innerbutton_1 {
     width: 20%;
     border-right: 1px solid lightgrey;
 
@@ -68,21 +86,24 @@
     align-items: center;
     justify-content: center;
 }
-.innerbutton_2{
+
+.innerbutton_2 {
     width: 30%;
     border-right: 1px solid lightgrey;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.innerbutton_3{
+
+.innerbutton_3 {
     width: 50%;
     border-right: 1px solid lightgrey;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.innerbutton_3 button{
+
+.innerbutton_3 button {
     background-color: black;
     height: 1.25rem;
     width: 1.25rem;
@@ -93,23 +114,39 @@
     align-items: center;
     justify-content: center;
 }
-.bold,.italic,.underline,.strike,.superscript,.subscript,.text_hight,.font_left,.font_center,.font_right,.justify,.font_list,.wordpad_text,.wordpad_upercase{
+
+.bold,
+.italic,
+.underline,
+.strike,
+.superscript,
+.subscript,
+.text_hight,
+.font_left,
+.font_center,
+.font_right,
+.justify,
+.font_list,
+.wordpad_text,
+.wordpad_upercase {
     font-size: 0.625rem;
 }
 
-.buttons_2{
+.buttons_2 {
     width: 55%;
-    /* border: 1px solid black; */ 
-    display: flex; 
+    /* border: 1px solid black; */
+    display: flex;
 }
-.innerbutton_4{
+
+.innerbutton_4 {
     width: 25%;
     border-right: 1px solid lightgray;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.innerbutton_4 button{
+
+.innerbutton_4 button {
     background-color: black;
     height: 1.25rem;
     width: 1.25rem;
@@ -119,16 +156,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-} 
+}
 
-.innerbutton_5{
+.innerbutton_5 {
     width: 40%;
     border-right: 1px solid lightgray;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.innerbutton_5 button{
+
+.innerbutton_5 button {
     background-color: black;
     height: 1.25rem;
     width: 1.25rem;
@@ -138,15 +176,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-} 
-.innerbutton_6{
+}
+
+.innerbutton_6 {
     width: 25%;
     border-right: 1px solid lightgray;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.innerbutton_6 button{
+
+.innerbutton_6 button {
     background-color: black;
     height: 1.25rem;
     width: 1.25rem;
@@ -156,25 +196,29 @@
     display: flex;
     align-items: center;
     justify-content: center;
-} 
-.innerbutton_7{
+}
+
+.innerbutton_7 {
     width: 10%;
     /* border-right: 1px solid lightgray; */
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.innerbutton_7 button{
+
+.innerbutton_7 button {
     border: none;
     background-color: white;
     color: black;
 }
-.wordpad_dots{
+
+.wordpad_dots {
     color: black;
-    
+
 }
 
-.agenda_commentsection{
+.agenda_commentsection {
     width: 40%;
- 
+    /* border: 1px solid black; */
+
 }

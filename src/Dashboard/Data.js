@@ -5,7 +5,6 @@ import AsideRight from "./AsideRight";
 import { Route, Routes } from 'react-router-dom'
 import Campaigns from '../campaigns/Index'
 import Content from "../component/Content";
-import Create from "../campaigns/Create"
 
 
 const Data = () => {

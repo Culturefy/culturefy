@@ -58,8 +58,6 @@ const WorkspacefilePng = () => {
                                 <Chat />
                             </div>
                         </div>
-
-
                     </div>
                 </div>
 

@@ -1,0 +1,813 @@
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import './Campaigns.css'
+import '../component/Content.css';
+import 'react-dates/initialize';
+import PlanCircle from "../assets/plan-circle.svg"
+import "./create.css"
+import GoCircle from "../assets/go-circle.svg"
+import PossesIcon from "../assets/posses-icon.svg"
+import Slide1 from "../assets/slide-01.png";
+import Slide2 from "../assets/slide-02.png";
+import "../component/Content.css"
+import "../App.css";
+import Content from '../component/Content';
+import Upload2 from "../assets/Icon-Upload2.svg"
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs"
+import Icon from "../assets/Icon-Upload1.svg"
+import Paper from '@mui/material/Paper';
+import InputBase from '@mui/material/InputBase';
+import Divider from '@mui/material/Divider';
+import IconButton from '@mui/material/IconButton';
+import SearchIcon from '@mui/icons-material/Search';
+import Calender from "../assets/Calender.svg"
+import Notification from "../assets/Notifiction.svg"
+import AdminImg from "../assets/admin-img.png"
+// Mui Breadcrumbs
+import Typography from '@mui/material/Typography';
+import Breadcrumbs from '@mui/material/Breadcrumbs';
+
+
+
+const Create = () => {
+    const [showtab, setShowtab] = useState(1)
+    const [text, setText] = useState()
+    const [value, setValue] = useState()
+    const [active, setActive] = useState()
+    // const [success, setSucess] = useState(false);
+    const tabs = ["Campaign Goal", "Audience Targeting", "Schedule"]
+    const users = ["Plan", "Position", "Possess"]
+
+    const handletab = (e) => {
+        setShowtab(e);
+    }
+    const handleText = (e) => {
+        setText(e)
+    }
+
+    const [show, setshow] = useState("hide");
+    const handleHide = () => {
+        if (show == "show") {
+            setshow("hide");
+        }
+        else {
+            setshow("show");
+        }
+    }
+    const [toggles, setToggles] = useState(null);
+    let handleToggle = (id) => {
+        if (toggle === id) {
+            setToggle(null);
+            return false
+        }
+        setToggle(id)
+    }
+
+    const [checked, setChecked] = useState('checked1');
+
+    const [job, setJob] = useState()
+    const [location, setLocation] = useState()
+    const [description, setDescription] = useState()
+    const [full, setFull] = useState()
+    const [level, setLevel] = useState()
+    const [skill, setSkill] = useState()
+    const [industry, setIndustry] = useState()
+
+    const handlSubmit = () => {
+        setJob(job)
+    }
+
+    const [showForm, setShowForm] = useState(false);
+
+    const showForms = () => {
+        setShowForm(!showForm);
+        setJob(job)
+    }
+    const [tab1, setTab1] = useState(true)
+    const showTab1 = () => {
+        setTab1(!tab1)
+    }
+    const [tab2, setTab2] = useState(false)
+    const showTab2 = () => {
+        setTab2(!tab2)
+    }
+    const [tab3, setTab3] = useState(false)
+    const showTab3 = () => {
+        setTab3(!tab3)
+    }
+    const [tab4, setTab4] = useState(false)
+    const showTab4 = () => {
+        setTab4(!tab4)
+    }
+    const [tab5, setTab5] = useState(false)
+    const showTab5 = () => {
+        setTab5(!tab5)
+    }
+
+    const [plan, setPlan] = useState(false)
+
+    const handlePlans = () => {
+        setPlan(!plan)
+    }
+
+    const [position, setPosition] = useState(false)
+    const handlePosition = () => {
+        setPosition(!position)
+    }
+    const [possess, setPossess] = useState(false)
+    const handlePossess = () => {
+        setPossess(!possess)
+    }
+
+    const [slides, setSlides] = useState([
+        {
+            src: "https://webprojectmockup.com/html/Culturefy/assets-qa/images/slide-01.png",
+            title: "Half Moon Pier"
+        },
+        {
+            src: "https://webprojectmockup.com/html/Culturefy/assets-qa/images/slide-02.png",
+            title: "Port Washington Rocks"
+        },
+    ]);
+
+    console.log(slides)
+    // SET CAROUSEL DEFAULTS
+    let [currentPosition, setCurrentPosition] = useState(0); // Initial slide index value
+    let currentSlide = slides[currentPosition]; // variable index value we can reference later
+
+    const arrowRightClick = () => {
+        currentPosition !== slides.length - 1 ? // Check index length
+            setCurrentPosition(currentPosition + 1) : setCurrentPosition(currentPosition = 0);
+        currentSlide = slides[currentPosition];
+    }
+
+    const arrowLeftClick = () => {
+        currentPosition !== 0 ? // Check index length
+            setCurrentPosition(currentPosition - 1) : setCurrentPosition(currentPosition = slides.length - 1);
+        currentSlide = slides[currentPosition];
+    }
+    const shirts = { Slide1, Slide2 }
+    const [selected, setSelected] = useState(shirts.Slide1)
+
+
+    const [shows, setShows] = useState(false)
+    const [texts, setTexts] = useState(false)
+    const [toggle, setToggle] = useState(false)
+
+    const planHandler = () => {
+        if (shows === false) {
+            setShows(true)
+            setTexts(false)
+            setToggle(false)
+        } else if (shows === true) {
+            setShows(false)
+        }
+    }
+    const positnHandler = () => {
+        if (toggle === false) {
+            setToggle(true)
+            setShows(false)
+            setTexts(false)
+        } else if (toggle === true) {
+            setToggle(false)
+        }
+    }
+    const possesHandler = () => {
+        if (texts === false) {
+            setTexts(true)
+            setToggle(false)
+            setShows(false)
+        } else if (texts === true) {
+            setTexts(false)
+        }
+    }
+
+    const [activeTab, setActiveTab] = useState(2)
+    const state = {
+        activeTab: activeTab || 1
+    };
+
+
+
+    return (
+        <div>
+            <Content />
+
+            <div className="main-inner-content inner-cont-pt">
+                <div className="row ">
+                    <div className="col-lg-8 ">
+                        <div className="action-sec">
+
+                            <div className="key-action-wraper">
+
+                                <ul className="nav nav-tabs" >
+                                    <div className='plan_head'>
+
+                                        {
+                                            !shows ? <h4 style={{ color: "grey" }}>Plan</h4> : <h4 style={{ color: "black", fontWeight: "700" }}>Plan</h4>
+                                        }
+
+                                        <li onClick={planHandler}>{shows ? <i className="fa fa-chevron-down heyyyy" aria-hidden="true"></i> : <i className="fa-solid fa-chevron-right heyyyy" ></i>}</li>
+                                    </div>
+
+                                    <div className='plan_head'>
+
+                                        {
+                                            !toggle ? <h4 style={{ color: "grey" }}>Position</h4> : <h4 style={{ color: "black", fontWeight: "700" }}>Position</h4>
+                                        }
+
+                                        <li onClick={positnHandler}>{toggle ? <i className="fa fa-chevron-down heyyyy" aria-hidden="true"></i> : <i className="fa-solid fa-chevron-right heyyyy" ></i>}</li>
+                                    </div>
+                                    <div className='plan_head'>
+
+                                        {
+                                            !texts ? <h4 style={{ color: "grey" }}>Possess</h4> : <h4 style={{ color: "black", fontWeight: "700" }}>Possess</h4>
+                                        }
+
+                                        <li onClick={possesHandler}>{texts ? <i className="fa fa-chevron-down heyyyy" aria-hidden="true"></i> : <i className="fa-solid fa-chevron-right heyyyy " ></i>}</li>
+                                    </div>
+
+                                </ul>
+                                <div className="tab-contents key-content">
+                                    <ul className='para'>
+                                        {shows && <p className='_drp_dn_plan'>      <Breadcrumbs aria-label="breadcrumb">
+                                            <Link underline="hover" color="inherit" href="/">
+                                                Campaign goal
+                                            </Link>
+                                            <Link
+                                                underline="hover"
+                                                color="inherit"
+                                                href="/material-ui/getting-started/installation/"
+                                            >
+                                                Audience targeting
+                                            </Link>
+                                            <Link
+                                                underline="hover"
+                                                color="inherit"
+                                                href="/material-ui/getting-started/installation/"
+                                            >
+                                                <Typography color="text.primary">Schedule</Typography>
+                                            </Link>
+                                        </Breadcrumbs></p>}
+                                        {toggle && <p className='_drp_dn_position'> <i> Design Campaign</i></p>}
+                                        {texts && <p className='_drp_dn_possess'><i> Review Campaign</i></p>}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="ac-content crt-campaign">
+                            <div className="ac-sec plan-sec">
+                                <div className="sub-sec">
+                                    <div className="main-head">
+                                        <h2>Plan</h2>
+                                        <span><img src={PlanCircle} /></span>
+                                    </div>
+                                    <div className="a-sm-content-box">
+                                        <div className="sm-head checked">
+                                            <h3>Campaign Goal</h3>
+                                            <span><i className="fa-solid fa-check"></i></span>
+                                        </div>
+                                        <div className="cg-form">
+                                            <form action="">
+                                                <div className="cg-dropdown">
+                                                    <select placeholder='Choose a goal'>
+                                                        <option>Choose a goal</option>
+                                                        <option>Recruit more employees</option>
+                                                        <option>Attract more customers</option>
+                                                    </select>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="sub-sec">
+                                    <div className="a-sm-content-box">
+                                        <div className="sm-head">
+                                            <span><i className="fa-solid fa-check"></i></span>
+                                            <h3>Audience Targeting</h3>
+                                        </div>
+                                        <div className="at-checks">
+                                            <ul>
+                                                <li><label><input type="checkbox" /> <span> Use AI audience targeting
+                                                </span></label></li>
+                                                <li><label><input type="checkbox" /> <span>Use custom
+                                                    audiences</span></label></li>
+                                                <div className="cst-dropdowns">
+                                                    <div className="sh-date">
+                                                        <select>
+                                                            <option><li>Gender</li></option>
+                                                            <otion><sapn>All Gender</sapn></otion>
+                                                            <option><li>Female</li></option>
+                                                            <option><li>Male</li></option>
+                                                        </select>
+                                                    </div>
+
+                                                    <div className="sh-date">
+                                                        <select>
+                                                            <option><li><label><input type="checkbox" /> All
+                                                                Ages</label></li></option>
+                                                            <option>  <li><label><input type="checkbox" />18 -
+                                                                24</label></li></option>
+                                                            <option> <li><label><input type="checkbox" /> 25 -
+                                                                34</label></li></option>
+                                                            <option><li><label><input type="checkbox" /> 35 -
+                                                                44</label></li></option>
+                                                            <option> <li><label><input type="checkbox" /> 45 -
+                                                                54</label></li></option>
+                                                            <option> <li><label><input type="checkbox" /> 55 -
+                                                                64</label></li></option>
+                                                            <option>  <li><label><input type="checkbox" />
+                                                                65+</label></li></option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="sub-sec">
+                                    <div className="a-sm-content-box">
+                                        <div className="sm-head">
+                                            <h3>Schedule</h3>
+                                            <span><i className="fa-solid fa-check"></i></span>
+                                        </div>
+                                        <div className="sh-date">
+                                            <input placeholder="Start Date" type="text" onfocus="(type='date')" onblur="(this.type='text')" id="date" />
+                                            <input placeholder="End Date" type="text" onfocus="(type='date')" onblur="(this.type='text')" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div className="ac-sec position">
+                                <div className="sub-sec">
+                                    <div className="main-head">
+                                        <h2>Position</h2>
+                                        <span><img src={GoCircle} /></span>
+                                    </div>
+                                    <div className="a-sm-content-box">
+                                        <div className="sm-head">
+                                            <h3>Design Campaign</h3>
+                                            <span className="yellow-circle" ><i className="fa-solid fa-check" style={{ borderColor: "#f5a41d" }} /></span>
+                                        </div>
+                                        <div className="design-form-wraper">
+
+                                            <Tabs className="myClass">
+                                                <TabList className=" ds-form-tabs" role="tablist" activeTintColor='blue'>
+                                                    <div className='navbar'>
+                                                        <Tab className="nav-item active" >Info</Tab>
+                                                        <Tab className="nav-item" >native</Tab>
+                                                        <Tab className="nav-item" >Display</Tab>
+                                                        <Tab className="nav-item" >Video</Tab>
+                                                        <Tab className="nav-item" >Audio</Tab>
+                                                    </div>
+                                                </TabList>
+                                                <div className='tab-content'>
+                                                    <TabPanel className="tab-content design">
+                                                        <section id='tab-laboratory-values' className='tab-panel' checked="checked1">
+                                                            <form action="" className="form-design" >
+                                                                <div className="form-group">
+                                                                    <input type="text" className="form-control title" placeholder="Job Title" onChange={(e) => setJob(e.target.value)} />
+                                                                    {console.log(job)}
+                                                                </div>
+                                                                <div className="form-group">
+                                                                    <input type="text" className="form-control" placeholder="Job Description" onChange={(e) => setDescription(e.target.value)} />
+                                                                </div>
+                                                                <div className="form-group">
+                                                                    <input type="text" className="form-control" placeholder="Job Locaton" onChange={(e) => setLocation(e.target.value)} />
+                                                                </div>
+                                                                <div className="row">
+                                                                    <div className="col-lg-6">
+                                                                        <div className="form-dropdown">
+
+                                                                            <select onChange={(e) => { setFull(e.target.value) }}>
+                                                                                <option>Full Time</option>
+                                                                                <option>Part Time</option>
+                                                                                <option>Contract</option>
+                                                                            </select>
+                                                                        </div>
+                                                                        <div className="form-dropdown">
+
+                                                                            <select className="btn dropdown-toggle" onChange={(e) => { setLevel(e.target.value) }}>
+                                                                                <option>Job Level</option>
+                                                                                <option>Entery Level</option>
+                                                                                <option>Mid-Senior Level</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className="col-lg-6">
+                                                                        <div className="form-dropdown">
+                                                                            <select className="btn dropdown-toggle" onChange={(e) => { setSkill(e.target.value) }}>
+                                                                                <option></option>
+                                                                                <option>Marketing</option>
+                                                                                <option>Production</option>
+                                                                            </select>
+
+                                                                        </div>
+                                                                        <div className="form-dropdown">
+                                                                            <select className="btn dropdown-toggle" onChange={(e) => { setIndustry(e.target.value) }}>
+                                                                                <option></option>
+                                                                                <option>Technology</option>
+                                                                                <option>Other</option>
+                                                                            </select>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                                <div className="form-group">
+                                                                    <input type="text" className="form-control" placeholder="Add required skills +" />
+                                                                    <div className="keywords">
+                                                                        <span>Advertising <button><i className="fa-solid fa-xmark"></i></button></span>
+                                                                        <span>Search Engine Optimization (SEO) <button><i className="fa-solid fa-xmark"></i></button></span>
+                                                                        <span>Adobe Photoshop <button><i className="fa-solid fa-xmark"></i></button></span>
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+                                                        </section>
+                                                    </TabPanel>
+
+                                                    <TabPanel>
+                                                        <div >
+                                                            <form action="" className="form-design">
+                                                                <div className="row">
+                                                                    <div className="col-lg-6">
+                                                                        <div className="form-group">
+                                                                            <input type="text" className="form-control title" placeholder="Ad Title" />
+                                                                        </div>
+                                                                        <div className="form-group">
+                                                                            <input type="text" className="form-control" placeholder="Ad Description" />
+                                                                        </div>
+                                                                        <div className="form-group">
+                                                                            <input type="url" className="form-control" placeholder="URL" />
+                                                                        </div>
+                                                                        <div className="btn-upload">
+                                                                            <button><img src={Icon} alt="" /> Upload Files</button>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className="col-lg-6">
+                                                                        <div className="upload-img-box">
+                                                                            <div className="img-preview">
+                                                                                <img src="" alt="" id="userImg" />
+                                                                            </div>
+                                                                            <input type="file" id="imgInp" />
+                                                                            <div className="upload-txt" id="uploadTxt">
+                                                                                <div className="icon"><img src={Upload2} alt="" /></div>
+                                                                                <h3>Upload Files</h3>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </TabPanel>
+                                                    <TabPanel>
+                                                        <div >
+                                                            {/* class="tab-pane fade" className={showtab === 3 ? "tab-pane fade show active" : "tab-pane fade"} */}
+                                                            <form action="" className="form-design">
+                                                                <div className="row">
+                                                                    <div className="col-lg-4">
+                                                                        <div className="form-group">
+                                                                            <input type="text" className="form-control title" placeholder="Ad Title" />
+                                                                        </div>
+                                                                        <div className="form-group">
+                                                                            <input type="text" className="form-control" placeholder="Ad Description" />
+                                                                        </div>
+                                                                        <div className="form-group">
+                                                                            <input type="url" className="form-control" placeholder="URL" />
+                                                                        </div>
+                                                                        <div className="btn-upload">
+                                                                            <button><img src={Icon} alt="" /> Upload Files</button>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className="col-lg-8">
+                                                                        <div className="upload-img-box display">
+                                                                            <div className="img-preview">
+                                                                                <img src="" alt="" id="displayImg" />
+                                                                            </div>
+                                                                            <input type="file" id="imgInp-display" />
+                                                                            <div className="upload-txt" id="uploadTxt">
+                                                                                <div className="icon"><img src="assets-qa/images/Icon-Upload2.svg" alt="" /></div>
+                                                                                <h3>Upload Files</h3>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </TabPanel>
+                                                    <TabPanel>
+                                                        <div id="video" role="tabpanel">
+                                                            {/* className={showtab === 4 ? "tab-pane fade show active" : "tab-pane fade"} */}
+                                                            <form action="" className="form-design">
+                                                                <div className="row">
+                                                                    <div className="col-lg-4">
+                                                                        <div className="form-group">
+                                                                            <input type="text" className="form-control title" placeholder="Video Title" />
+                                                                        </div>
+                                                                        <div className="form-group">
+                                                                            <input type="text" className="form-control" placeholder="Video description" />
+                                                                        </div>
+                                                                        <div className="form-group">
+                                                                            <input type="url" className="form-control" placeholder="URL" />
+                                                                        </div>
+                                                                        <div className="btn-upload">
+                                                                            <button><img src={Icon} /> Upload Files</button>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className="col-lg-8">
+                                                                        <div className="upload-img-box display">
+                                                                            <div className="img-preview">
+                                                                                <img src="" alt="" id="displayImg" />
+                                                                            </div>
+                                                                            <input type="file" id="imgInp-display" />
+                                                                            <div className="upload-txt" id="uploadTxt">
+                                                                                <div className="icon"><img src="assets-qa/images/Icon-Upload2.svg" alt="video" /></div>
+                                                                                <h3>Upload Files</h3>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </TabPanel>
+                                                    <TabPanel>
+                                                        <div className="tab-pane fade show active">
+                                                            <form action="" className="form-design">
+                                                                <div className="row">
+                                                                    <div className="col-lg-7">
+                                                                        <div className="form-group">
+                                                                            <input type="text" className="form-control title" placeholder="Ad Title" />
+                                                                        </div>
+                                                                        <div className="form-group">
+                                                                            <input type="text" className="form-control" placeholder="Ad Description" />
+                                                                        </div>
+                                                                        <div className="form-group">
+                                                                            <input type="url" className="form-control" placeholder="URL" />
+                                                                        </div>
+                                                                        <div className="btn-upload">
+                                                                            <button><img src={Icon} alt="" /> Upload Files</button>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className="col-lg-5">
+                                                                        <div className="upload-img-box display">
+                                                                            <div className="img-preview">
+                                                                                <img src="" alt="" id="displayImg" />
+                                                                            </div>
+                                                                            <input type="file" id="imgInp-display" />
+                                                                            <div className="upload-txt" id="uploadTxt">
+                                                                                <div className="icon"><img src="assets-qa/images/Icon-Upload2.svg" alt="" /></div>
+                                                                                <h3>Upload Files</h3>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </TabPanel>
+                                                </div>
+                                            </Tabs>
+                                            <div className="ac-sec possess">
+                                                <div className="sub-sec">
+                                                    <div className="main-head">
+                                                        <h2>Possess</h2>
+                                                        <span><img src={PossesIcon} alt="" /></span>
+                                                    </div>
+                                                    <div className="a-sm-content-box">
+                                                        <div className="sm-head">
+                                                            <h3>Review Campaign</h3>
+                                                            <span className="prim-circle"><i className="fa-solid fa-check" style={{ borderColor: "#2394ae" }} /></span>
+                                                            <button className="btn-generate" onClick={showForms} >Generate Preview</button>
+                                                        </div>
+                                                        {showForm &&
+                                                            <form className="form-design">
+                                                                <div className="tp-list-wraper">
+                                                                    <div className="toplist">
+                                                                        <h3 className="top-head">Campaign Goal</h3>
+                                                                        <ul>
+                                                                            <li>Recruit more employees</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                    <div className="toplist">
+                                                                        <h3 className="top-head">Audience Targeting </h3>
+                                                                        <ul>
+                                                                            <li>Custom audiences</li>
+                                                                            <li>All Genders</li>
+                                                                            <li>All Ages</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                    <div className="toplist">
+                                                                        <h3 className="top-head">Schedule</h3>
+                                                                        <ul>
+                                                                            <li>Starts August 9, 2022</li>
+                                                                            <li>Ends October 1, 2022</li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                                <div className="rows">
+                                                                    <div className="col-12">
+                                                                        <div className="job-sec">
+                                                                            <div className="title">
+                                                                                <h4>Job Title</h4>
+                                                                                <h4 className="text">{job}</h4>
+                                                                            </div>
+                                                                            <div className="job-desc">
+                                                                                <h4>Job Description</h4>
+                                                                                {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                                                                        sed do eiusmod tempor incididunt ut labore et dolore
+                                                                                        magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                                                                        exercitation ullamco laboris nisi ut aliquip ex ea
+                                                                                        commodo consequat. Duis aute irure dolor in
+                                                                                        reprehenderit in voluptate velit esse cillum dolore eu
+                                                                                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                                                                                        non proident. </p> */}
+                                                                                <p>{description}</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className="col-12">
+                                                                        <div className="heading-box">
+                                                                            <h4>Job Location</h4>
+                                                                            {/* <h4 className="text">Acworth, GA</h4> */}
+                                                                            <h4 className="text">{location}</h4>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className="col-lg-12" style={{ display: "flex" }}>
+                                                                        <div className="col-lg-6">
+                                                                            <div className="heading-box">
+                                                                                <h4>Employment Type</h4>
+                                                                                <h4 className="text">{full}</h4>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div className="col-lg-6">
+                                                                            <div className="heading-box">
+                                                                                <h4>Job Function</h4>
+                                                                                {/* <h4 className="text">Marketing</h4> */}
+                                                                                <h4 className="text">{skill}</h4>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className="col-lg-12" style={{ display: "flex" }}>
+                                                                        <div className="col-lg-6">
+                                                                            <div className="heading-box">
+                                                                                <h4>Job Level</h4>
+                                                                                <h4 className="text">{level}</h4>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div className="col-lg-6">
+                                                                            <div className="heading-box">
+                                                                                <h4>Company Industry</h4>
+                                                                                {/* <h4 className="text">Technology</h4> */}
+                                                                                <h4 className="text">{industry}</h4>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div className="col-12">
+                                                                        <div className="heading-box">
+                                                                            <h4>Required Skills</h4>
+                                                                            <h4 className="text">Advertising, Search Engine Optimization
+                                                                                (SEO), Adobe Photoshop</h4>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div className="slider-wraper">
+                                                                    <div className="slider-camp slick-initialized slick-slider slick-dotted">
+                                                                        <div className="slick-list draggable">
+                                                                            {/* {<div class="slick-track" style={{ opacity: "1", width: "0px", transform: "translate3d(0px, 0px, 0px)" }}>
+                                                                                <div class="img slick-slide slick-cloned" data-slick-index="-1" id="" aria-hidden="true" tabindex="-1">
+                                                                                    <img src={Slide2} />
+                                                                                </div>?
+                                                                                <div class="img slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="0" role="tabpanel" id="slick-slide00" aria-describedby="slick-slide-control00">
+                                                                                    <img src={Slide1} />
+                                                                                </div>
+                                                                                </div>
+                                                                                   } */}
+                                                                            <div className="slide">
+                                                                                <img src={currentSlide.src} alt={currentSlide.title} title={currentSlide.title} className="slider-img" />
+
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <ul className="slick-dots" role="tablist" onClick={arrowLeftClick}>
+                                                                            <li className="slick-active" role="presentation">
+                                                                                <button type="button" role="tab" id="slick-slide-control00" aria-controls="slick-slide00" aria-label="1 of 4" tabindex="0" aria-selected="true" >1</button>
+                                                                            </li>
+                                                                            <li role="presentation"><button type="button" role="tab" id="slick-slide-control01" aria-controls="slick-slide01" aria-label="2 of 4" tabindex="-1">2</button></li>
+                                                                            <li role="presentation"><button type="button" role="tab" id="slick-slide-control02" aria-controls="slick-slide02" aria-label="3 of 4" tabindex="-1">3</button></li>
+                                                                            <li role="presentation"><button type="button" role="tab" id="slick-slide-control03" aria-controls="slick-slide03" aria-label="4 of 4" tabindex="-1">4</button></li>
+                                                                        </ul>
+
+                                                                    </div>
+                                                                    <div className="arrows-camp">
+                                                                        <div className="left-arrow slick-arrow" onClick={arrowLeftClick} ><i className="fa-solid fa-chevron-left"></i></div>
+                                                                        <div className="right-arrow slick-arrow" onClick={arrowRightClick}><i className="fa-solid fa-chevron-right"></i></div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div className="publish-btns">
+                                                                    <Link to="/workspace-main"> <button>View in Workspace</button></Link>
+                                                                    <button>Publish</button>
+                                                                </div>
+                                                            </form>}
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div className="col-lg-4">
+                        <div className="c-right-content">
+                            <h2>Recommendations</h2>
+                            <form action="" className="form-design">
+                                <div className="hz-sort-filter">
+                                    <div className="hz-filter">
+                                        <select name="" id="">
+                                            <option value="" selected="" disabled="">Filter</option>
+                                            <option value="">1</option>
+                                            <option value="">2</option>
+                                            <option value="">3</option>
+                                        </select>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="17.414" height="8.431" viewBox="0 0 17.414 8.431">
+                                            <path id="Path_2504" data-name="Path 2504" d="M12,15.724,3.293,8.471,4.707,7.293,12,13.368l7.293-6.075,1.414,1.178Z" transform="translate(-3.293 -7.293)"></path>
+                                        </svg>
+                                    </div>
+                                    <div className="hz-sort">
+                                        <select name="" id="">
+                                            <option value="" selected="" disabled="">Sort</option>
+                                            <option value="">1</option>
+                                            <option value="">2</option>
+                                            <option value="">3</option>
+                                        </select>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="17.414" height="8.431" viewBox="0 0 17.414 8.431">
+                                            <path id="Path_2504" data-name="Path 2504" d="M12,15.724,3.293,8.471,4.707,7.293,12,13.368l7.293-6.075,1.414,1.178Z" transform="translate(-3.293 -7.293)"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </form>
+                            <div className="hz-profecional-skills brand">
+                                <div className="hzps-inner">
+                                    <h2>Campaign</h2>
+                                    <h3>Sexism</h3>
+                                    <p>There should be no gender-coded content that could exclude candidates based on gender
+                                        identities.</p>
+                                    <a href="campaign-ad.html"> <button className="hz-add">Create Task</button></a>
+                                </div>
+                                <div className="hzps-inner">
+                                    <h2>Campaign</h2>
+                                    <h3>Racism and Tokenism</h3>
+                                    <p>There should be no racially insensitive content and language that tokenizes groups.
+                                    </p>
+                                    <a href="campaign-ad.html"> <button className="hz-add">Create Task</button></a>
+                                </div>
+                                <div className="hzps-inner">
+                                    <h2>Campaign</h2>
+                                    <h3>Ableism</h3>
+                                    <p>There should be no language that could exclude people with physical disabilites.</p>
+                                    <a href="campaign-ad.html"> <button className="hz-add">Create Task</button></a>
+                                </div>
+                                <div className="hzps-inner">
+                                    <h2>Campaign</h2>
+                                    <h3>Ageism</h3>
+                                    <p>There should be no ageist content that could exclude people based on age, both young
+                                        and old.</p>
+                                    <a href="campaign-ad.html"> <button className="hz-add">Create Task</button></a>
+                                </div>
+                                <div className="hzps-inner">
+                                    <h2>Campaign</h2>
+                                    <h3>Elitism</h3>
+                                    <p>There should be no content that excludes people from different socioconomic
+                                        backgrounds</p>
+                                    <a href="campaign-ad.html"> <button className="hz-add">Create Task</button></a>
+                                </div>
+                                <div className="hzps-inner">
+                                    <h2>Campaign</h2>
+                                    <h3>Religion</h3>
+                                    <p>There should be no language that excludes people from different religious backgrounds
+                                    </p>
+                                    <a href="campaign-ad.html"> <button className="hz-add">Create Task</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div >
+
+
+    )
+}
+
+export default Create;

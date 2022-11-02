@@ -4,7 +4,7 @@
    
 }
 .document_section{
-    width: 60%;
+    width: 70%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -41,7 +41,9 @@
     
 }
 .header p{
-    padding: 0.437rem;
+    padding: 0 !important;
+    margin: 0;
+    font-family: "Graphik_Regular"; 
 }
 .title{
     width: 100%;
@@ -49,6 +51,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    font-family: "Graphik_Bold";
     
 }
 .document_content{
@@ -56,7 +59,8 @@
     padding-left: 3.125rem;
     padding-right: 3.125rem;
     text-align: justify;
+    font-family: "Graphik_Regular"; 
 }
 .document_comment_section{
-    width: 40%;
+    width: 30%;
 }

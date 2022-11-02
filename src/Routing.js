@@ -1,7 +1,8 @@
 import React from "react"
 import { Router, Route, Routes } from "react-router-dom"
 // Campaign
-import Create from "./campaigns/Create"
+// import CreateWorkSpace from "./campaigns/Create"
+import CreateCampaignNewVersion from "./campaigns/CreateCampaignNewVersion"
 import Campaign from "./campaigns/Index"
 import Searchcampaign from "./campaigns/Searchcampaign/Searchcampaign"
 import CampaignAd from "./campaigns/Searchcampaign/CampaignAd"
@@ -31,7 +32,8 @@ const Routing = () => {
             {/* Campaign */}
             <Route path="/" element={<Campaign />} />
             <Route path="/campaigns" element={<Campaign />} />
-            <Route path="/create-campaigns" element={<Create />} />
+            {/* <Route path="/create-campaigns" element={<Create />} /> */}
+            <Route path="/create-campaigns" element={<CreateCampaignNewVersion />} />
             <Route path="/campaign/searchcapaign" element={<Searchcampaign />} />
             <Route path="/campaign/campaign-ad" element={<CampaignAd />} />
             {/* Work Space */}

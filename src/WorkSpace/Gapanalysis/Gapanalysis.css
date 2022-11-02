@@ -1,5 +1,23 @@
+.gapanalysis{
+    display: flex;
+    width: 72%;
+    margin-left: 23%;
+}
+.gapanalysis_main_wrepper{
+    width: 100%; 
+}
+.gapanalysis_inner_wrepper{
+    width: 100%;
+    /* border: 1px solid blue; */
+    display: flex;
+}
 .wrksp_gap_ana_pr {
-    margin-left: 20%;
+    width: 70%;
+    /* border: 2px solid red; */
+}
+.gapanalysis_comment{
+    width: 30%;
+    /* border: 1px solid green; */
 }
 
 .wrksp_gap_ana_ch {
@@ -9,11 +27,13 @@
 
 .wrksp_gap_ana_ch>h4 {
     font-weight: bold;
+    font-family: "Graphik_Bold"; 
 }
 
 .wrksp_gap_ana_table {
-    width: 70%;
-    margin-left: 3%;
+    width: 100%;
+    /* margin-left: 3%; */
+    /* border: 1px solid black; */
 }
 
 .wrksp_gap_ana_table table {
@@ -25,6 +45,7 @@
     border: 1px solid #edeff1;
     text-align: center;
     padding: 10px;
+    font-family: "Graphik_Regular";
 }
 
 .wrksp_gap_ana_table>table>tr>td {
@@ -32,6 +53,7 @@
     border: 2px solid #edeff1;
     text-align: center;
     padding: 5px;
+    font-family: "Graphik_Regular";
 }
 
 .gp_ana_td {
@@ -150,6 +172,7 @@
     margin: 0;
     font-size: 12px;
     font-weight: bold;
+    font-family: "Graphik_Regular";
 }
 
 .workspacesfilepng_like {
@@ -174,6 +197,7 @@
 .wrkspc_flwrs_pr span {
     font-size: 12px;
     font-weight: 700;
+    font-family: "Graphik_Regular";
 }
 /* dlfkd */
 .gp_flwrs_pr{

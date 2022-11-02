@@ -1,12 +1,11 @@
 .meeting_view_pr {
-    width: 100%;
-    margin-left: 20%;
+    width: 70%;
+    /* border: 1px solid red; */
+    margin-top: 30px;
 }
 
 .meeting_view_ch {
-    width: 60%;
-    height: 80vh;
-    margin-left: 3%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
@@ -56,6 +55,7 @@
     display: flex;
     flex-wrap: wrap;
 }
+
 .meet_view_card {
     /* width: 45%;
     border: 2px solid red !important; */
@@ -107,19 +107,24 @@
 
 /* ==================Screen Share View=============== */
 .scrn_shr_viw_pr {
-    width: 70vw;
-    height: 100vh;
-    margin-left: 20%;
+   
+    width: 72%;
+    height: 90vh;
+    
+    position: absolute;
 }
 
+
 .scrn_shr_viw_ch {
-    width: 55%;
+    width: 80%;
     height: 80%;
-    margin-left: 3%;
+    margin-top: 30px;
     border: 2px solid #6c91ae;
-    position: absolute;
     border-radius: 20px;
-    top: 30%;
+    /* top: 30%; */
+}
+.screenshareview_comment{
+    width: 20%;
 }
 
 .scrn_frame {
@@ -129,16 +134,16 @@
 
 .screen_shr_users {
     position: relative;
-    width: 54.8vw;
-    margin-left: 4.5%;
-    top: 94%;
+    width: 80%;
+    bottom: 17.5%;
     display: flex;
-    box-shadow: 2px 2px 3px black;
-    background-color: #f6f6f6;
+    /* box-shadow: 2px 2px 3px black; */
+    background-color: white;
 }
 
 .scrn_crd {
-    width: 150px;
+    width: 150px !important;
+    height: 150px !important;
     margin: 5px;
     box-shadow: 1px 1px 1px grey !important;
 }
@@ -147,7 +152,7 @@
     width: 180px;
 }
 
-.scrn_crd_host > .MuiCardContent-root {
+.scrn_crd_host>.MuiCardContent-root {
     padding: 0;
     padding-bottom: 0 !important;
     display: flex;
