@@ -2,7 +2,7 @@ import React from "react"
 import { Router, Route, Routes } from "react-router-dom"
 // Campaign
 // import CreateWorkSpace from "./campaigns/Create"
-import CreateCampaignNewVersion from "./campaigns/CreateCampaignNewVersion"
+import CreateCampaignNewVersion from "./campaigns/CreateCampaignNewVersion/CreateCampaignNewVersion"
 import Campaign from "./campaigns/Index"
 import Searchcampaign from "./campaigns/Searchcampaign/Searchcampaign"
 import CampaignAd from "./campaigns/Searchcampaign/CampaignAd"
