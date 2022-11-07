@@ -1,6 +1,4 @@
 .createWorkspaces-wepper{
-    padding-top: var(--maintop-nav-height) !important;
-    --maintop-nav-height:150px;
     margin-left: 23% !important;
 }
 .createworkspaces{
@@ -70,3 +68,18 @@
     font-size: 15px;
 }
 
+@media (max-width:1024px){
+
+    .create-workspaces-picture{
+        width:20%;
+        /* border: 1px solid black; */
+    }
+    .create_campaignNew_version_ch{
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        background-color: white;
+        height: 11.25rem;  
+        margin-left: 20%;
+    }
+}

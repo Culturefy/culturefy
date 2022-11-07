@@ -8,8 +8,6 @@ const Comment = () => {
   const [coomment, setComment] = useState();
   const [saveData, setSaveData] = useState([])
 
-
-
   const changeHandler = (e) => {
     setComment(e.target.value)
   }
@@ -21,60 +19,11 @@ const Comment = () => {
     } else {
       setSaveData([...saveData, coomment])
     }
-
   }
   return (
     <>
       <div className="comment_wepper">
         <div className='comment_wepper_ch'>
-          {/* <div className="comment_div" >
-            <div className="comment_header">
-              <img src={user} alt="" />
-              <div className="h3tag" >
-                <h3>User</h3>
-              </div>
-              <div className="ptag">
-                <p>just now</p>
-              </div>
-            </div>
-            <div className="comment_text">
-              <div className="comment" >
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate, magnam?</p>
-              </div>
-              <div className="task">
-                <p>Add to task +</p>
-              </div>
-            </div>
-            <div className="comment_reply">
-              <p style={{ marginRight: "5px" }}>Replay</p>
-              <i className="fa-solid fa-thumbs-up"></i>
-            </div>
-            <hr className="comment_hr" />
-          </div>
-          <div className="comment_div" >
-            <div className="comment_header">
-              <img src={user} alt="" />
-              <div className="h3tag" >
-                <h3>User</h3>
-              </div>
-              <div className="ptag">
-                <p>just now</p>
-              </div>
-            </div>
-            <div className="comment_text">
-              <div className="comment" >
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-              </div>
-              <div className="task">
-                <p>Add to task +</p>
-              </div>
-            </div>
-            <div className="comment_reply">
-              <p style={{ marginRight: "5px" }}>Replay</p>
-              <i className="fa-solid fa-thumbs-up"></i>
-            </div>
-            <hr className="comment_hr" />
-          </div> */}
           <ScrollableFeed>
             {
               saveData.map((CurrValue, index) => {

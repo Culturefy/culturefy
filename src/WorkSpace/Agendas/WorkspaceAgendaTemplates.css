@@ -1,7 +1,6 @@
 .workspace_agendastemplates_wrepper {
     margin-left: 23%;
     width: 72%;
-    /* border: 1px solid blue; */
     
 }
 
@@ -35,9 +34,6 @@
 
 .Agenda_buttons {
     padding: 0.625rem;
-
-
-
 }
 
 .create_template {
@@ -55,10 +51,21 @@
     flex-wrap: wrap;
     height: 70vh;
     overflow: scroll;
-
-
 }
-
+.agendas_view{
+    border: 1px solid gray;
+    width: 18.75rem;
+    height: 25rem;
+    margin: 0.625rem;
+    border-radius: 8px;
+    padding: 1.25rem 0.937rem;
+}
+.agendas_view p{
+    font-size: 0.812rem;
+}
+.agendas_view h6{
+    font-family: "Graphik_Bold";
+}
 .agendas_view h6{
     font-family: "Graphik_Bold"; 
 }
@@ -109,5 +116,22 @@
 .agendacall_section {
     width: 30%;
     /* border: 1px solid black; */
-
+}
+@media (max-width:1024px){
+    .agendas_view{
+        border: 1px solid gray;
+        width: 13.75rem;
+        height: 25rem;
+        margin: 0.625rem;
+        border-radius: 8px;
+        padding: 1.25rem 0.937rem;
+    }
+    .agendas_view_style3 {
+        border: 1px solid gray;
+        width: 13.75rem;
+        height: 25rem;
+        margin: 0.625rem;
+        border-radius: 0.5rem;
+    
+    }
 }

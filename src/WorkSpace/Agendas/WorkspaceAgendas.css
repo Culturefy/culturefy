@@ -22,20 +22,7 @@
     text-decoration: none;
     color: black;
 }
-.agendas_view{
-    border: 1px solid gray;
-    width: 18.75rem;
-    height: 25rem;
-    margin: 0.625rem;
-    border-radius: 8px;
-    padding: 1.25rem 0.937rem;
-}
-.agendas_view p{
-    font-size: 0.812rem;
-}
-.agendas_view h6{
-    font-family: "Graphik_Bold";
-}
+
 .agenda_date_time{
     border-top:1px solid #2394ae ;
     border-bottom:1px solid #2394ae ;

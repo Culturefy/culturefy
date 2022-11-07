@@ -37,7 +37,6 @@
 .workspace_users{
     width: 45%;
     height: 100%;
-    /* border: 1px solid yellow; */
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -142,7 +141,7 @@
     background: none;
     outline: none;
     border-radius: 25px;
-    background-color: #2294ae;
+    /* background-color: #2294ae; */
     padding:5px 10px ;
 }
 .invite_radio_btn_grp{
@@ -177,4 +176,89 @@
     border: none;
     font-family: "Graphik_Regular";
     font-size: 15px;
+}
+@media (max-width:1440px){
+    .header_logo{
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content:center;
+        border-radius: 5px;
+    }
+    .leave_call{
+        margin: 10px;
+        /* padding: 10px 40px; */
+        border-radius: 30px;
+        background-color: #bf161f;
+        color: white;
+        border: none;
+        font-family: "Graphik_Regular";
+        font-size: 12px;
+        width: 60%;
+        height: 50px;
+    }
+    .send_review_link{
+        margin: 10px;
+        border-radius: 30px;
+        background-color: black;
+        color: white;
+        border: none;
+        font-family: "Graphik_Regular";
+        font-size: 12px;
+        width: 100%;
+    }
+}
+
+@media (max-width:1024px){
+    .workspace_user_buttons{
+        width: 50%;
+        height: 100%;
+        /* border: 1px solid green; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .leave_call{
+        margin: 10px;
+        /* padding: 10px 40px; */
+        border-radius: 30px;
+        background-color: #bf161f;
+        color: white;
+        border: none;
+        font-family: "Graphik_Regular";
+        font-size: 10px;
+        width: 60%;
+        height: 50px;
+    }
+    .send_review_link{
+        margin: 10px;
+        padding: 10px 40px;
+        border-radius: 30px;
+        background-color: black;
+        color: white;
+        border: none;
+        font-family: "Graphik_Regular";
+        font-size: 8px;
+        width: 60%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .workspace_users{
+        width: 80%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .user1{
+        height: 35px;
+        width: 35px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 5px;
+    }
 }

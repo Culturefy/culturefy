@@ -115,11 +115,14 @@ const AsideRight = () => {
             campaign ?
               <div className="campaign_list">
                 
-                 <ul>
+                 <ul className="campaign_list_ul">
                   <li><Link to="/workspaces">Workspaces</Link></li>
                   <li><Link>Tasks</Link></li>
-                  <li><Link>Recruiting</Link></li>
+                  <li><Link to="/recruiting">Recruiting</Link></li>
                  </ul>
+                 <div className="campaign_list_ul_div">
+
+                 </div>
               </div>
               : null
           }

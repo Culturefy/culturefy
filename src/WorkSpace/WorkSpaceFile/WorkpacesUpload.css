@@ -2,7 +2,7 @@
     display: flex;
 }
 .workspacesdata_upload{
-    width: 70%;
+    width: 72%;
     margin-left: 23%;
     /* border: 1px solid green; */
 }
@@ -33,7 +33,7 @@
 }
 
 .upload_files_Section {
-    width: 100%;
+    width: 95%;
     height: 300px;
     border-style: dashed;
     border-color: #2394ae;

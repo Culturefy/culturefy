@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 .workspace_agendasviews_wrepper {
     margin-left: 23%;
     width: 70%;
@@ -36,6 +39,7 @@
     border: 1px solid lightgray;
     display: flex;
     flex-direction: column;
+    /* border: 2px solid green; */
 }
 
 .wordpad_view_header {
@@ -76,12 +80,12 @@
 .buttons_1 {
     width: 50%;
     display: flex;
+    /* border: 2px solid green; */
 }
 
 .innerbutton_1 {
     width: 20%;
     border-right: 1px solid lightgrey;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -94,19 +98,17 @@
     align-items: center;
     justify-content: center;
 }
-
 .innerbutton_3 {
     width: 50%;
     border-right: 1px solid lightgrey;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
 }
-
 .innerbutton_3 button {
     background-color: black;
-    height: 1.25rem;
-    width: 1.25rem;
+    /* height: 1.25rem; */
+    width: 16%;
     border-radius: 0.125rem;
     margin: 0.312rem;
     color: white;
@@ -134,7 +136,6 @@
 
 .buttons_2 {
     width: 55%;
-    /* border: 1px solid black; */
     display: flex;
 }
 
@@ -203,7 +204,8 @@
     /* border-right: 1px solid lightgray; */
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center;    
+
 }
 
 .innerbutton_7 button {
@@ -220,5 +222,43 @@
 .agenda_commentsection {
     width: 40%;
     /* border: 1px solid black; */
+}
+@media (max-width:1440px){
+    .wordpad_view_header {
+        height: 4.5rem;
+        display: block;
+        
+    }
+.buttons_1 {
+    width: 100%;
+    display: flex;
+    /* border: 2px solid green; */
+    border-bottom: 1px solid lightgrey;
+}
+.buttons_2 {
+    width: 100%;
+    display: flex;
+}
+.innerbutton_4 {
+    width: 20%;
+    border-right: 1px solid lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.innerbutton_5 {
+    width: 30%;
+    border-right: 1px solid lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.innerbutton_7 {
+    width: 10%;
+    border-right: 1px solid lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
 
+}
 }

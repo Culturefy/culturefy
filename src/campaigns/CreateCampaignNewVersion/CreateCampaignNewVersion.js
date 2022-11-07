@@ -26,6 +26,7 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Possess from './Possess';
+import './MediaQueryCreateCampaignNewVersion.css'
 
 
 
@@ -125,7 +126,7 @@ const CreateCampaignNewVersion = () => {
           </div>
 
           <div className='heading_search_container'>
-            <h1 className='heading_main_container'>Compaigns</h1>
+            <h1 className='heading_main_container'> Create Campaigns</h1>
             <Paper
               component="form"
               sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 400 }}

@@ -6,7 +6,9 @@ import Content from "../component/Content";
 import CreateWorksplaceimg from "../assets/createworksplace.jpg";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-
+import Calender from '../assets/calendar-icon.png'
+import Notification from '../assets/Notifiction.svg'
+import AdminImg from '../assets/admin-img.png'
 
 const CreateWorkspaces = () => {
 
@@ -29,7 +31,25 @@ const CreateWorkspaces = () => {
   return (
     <>
       <Content />
+
       <div className="createWorkspaces-wepper">
+        <div className='create_campaignNew_version_ch'>
+
+          {/* Users */}
+          <div className='campaign_header_user_data'>
+            <ul>
+              <li>
+                <img src={Calender} />
+              </li>
+              <li>
+                <img src={Notification} />
+              </li>
+              <li>
+                <img src={AdminImg} />
+              </li>
+            </ul>
+          </div>
+        </div>
         <div className="createworkspaces">
           <div className="create_workspaces_Form">
             <h1 className="createworkspace_title">Create Workspaces</h1>
@@ -65,10 +85,10 @@ const CreateWorkspaces = () => {
             /> */}
             <TextField
               id="date"
-              
+
               type="date"
               defaultValue="2017-05-24"
-              sx={{ width: "100%",border:"none" }}
+              sx={{ width: "100%", border: "none" }}
               InputLabelProps={{
                 shrink: true,
               }}

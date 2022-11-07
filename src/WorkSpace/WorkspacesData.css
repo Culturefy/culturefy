@@ -1,11 +1,20 @@
 .workspacesdata{
   display: flex;
+  /* border: 1px solid red; */
+}
+.inner_workspacedata_wrapper{
+  margin-left:23% ;
+  width: 72%;
+  /* border: 2px solid blue; */
+}
+.workspace_data_header{
+  width: 100%;
+  margin-bottom: 30px;
 }
 .workpacesdata-wepper{
-    margin-left:23% ;
-    width: 80%;
+    width: 100%;
     display: flex;
-    /* border: 2px solid red; */
+    /* border: 2px solid green; */
     overflow: scroll;
 }
 .workpacesdata_Section{
@@ -24,9 +33,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.562rem 3.75rem;
-  height: 1.875rem;
-  font-size: 1.25rem;
+  height: 50px;
+  width: 180px;
+  font-size: 15px;
   border-radius: 1.875rem;
   background-color:#cf212f;
   color: white;
@@ -37,11 +46,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.562rem 3.75rem;
-  height: 1.875rem;
-  font-size: 1.25rem;
-  border-radius: 1.87rem;
-  background-color: #2394ae;
+  height: 50px;
+  width: 180px;
+  font-size: 15px;
+  border-radius: 1.875rem;
+  background-color:#2394ae;
   color: white;
   border: none;
   font-family: "Graphik_Regular";
@@ -219,4 +228,65 @@
   height: 100px;
   width: 100px;
   background-color: #cf212f;
+}
+
+/* ===========Media Query==== */
+
+
+@media (max-width:1440px){
+  .favorits_discription{
+    height: 20%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .workpaces_upload_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 35px;
+    font-size: 12px;
+    border-radius: 1.875rem;
+    background-color:#cf212f;
+    color: white;
+    border: none;
+    font-family: "Graphik_Regular";
+  }
+  .workpaces_createfolder_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 35px;
+    font-size: 12px;
+    border-radius: 1.875rem;
+    background-color:#2394ae;
+    color: white;
+    border: none;
+    font-family: "Graphik_Regular";
+  }
+}
+@media (max-width:1024px){
+  .calling_Section{
+    /* border: 1px solid black; */
+    width: 300px;
+    height: 80px;
+    margin-top: 30px;
+    display: block;
+    
+  }
+  .call_img1{
+    width: 50%;
+    height: 100%;
+    margin-left: 70px;
+  }
+  .call_img2{
+    /* border: 1px solid blue; */
+    width: 50%;
+    height: 100%;
+    margin-left: 70px;
+
+  }
 }

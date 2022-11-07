@@ -1,0 +1,158 @@
+@media (max-width:1440px){
+    .Drop_Dwn_cnten_plan{
+        width: 60%;
+        height: 25px;
+        display: flex;
+        justify-content: start;
+        font-size: 15px;
+    }
+    .Drop_Dwn_cnten_position > p{
+        width: 60%;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        padding-right: 25px;
+    }
+    .Drop_Dwn_cnten_position p i{
+        margin-left: 40px;
+    }
+    .Drop_Dwn_cnten_possess{
+        width: 70%;
+        height: 25px;
+        display: flex;
+        justify-content: end;
+        padding-right: 30px;
+    }
+    ._header_title_plan{
+        display: flex;
+        width: 16%;
+    }
+    .cmgn_h3{
+    margin-left: 4.062rem ;
+    align-items: center;
+    display: flex;
+}
+.campaign_goal_check_pr{
+    width: 16%;
+}
+    .crt_cmpgn_inpt{
+        /* margin-left: 4.687rem !important; */
+        width: 35vw;
+    }
+    .position_tabs_info{
+        width: 85%;     
+        margin-left: 15%;
+    }
+    .campaign_goal_check_possess_pr{
+        width: 20%;
+    }
+    .campaign_goal_check_possess_ch{
+        width: 100%;
+    }
+    .campaign_goal_check_possess{
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        background-color: #2294ae;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right:50px ;    
+        
+    }
+}
+/* ========1024PX======== */
+@media (max-width:1024px){
+    .crt_cmgn_drp_dn_ch{
+        width: 80%;
+        display: flex;
+        align-items: center;
+        margin-left:9%;
+    }
+    .Drop_Dwn_cnten_position {
+        width: 90%;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        padding-right: 25px;
+    }
+    .Drop_Dwn_cnten_possess{
+        width: 95%;
+        height: 25px;
+        display: flex;
+        justify-content: end;
+        padding-right: 30px;
+    }
+    .cmgn_h3{
+        margin-left:2.5rem ;
+        align-items: center;
+        display: flex;
+    }
+    .crt_cmpgn_inpt{
+        margin-left: 42px !important;
+        width: 35vw;
+    }
+    .creat_cmpgn_check_box{
+        margin-left: 2.5rem;
+        width: 100%;
+    }
+    .date_input_fields_campign_schedule{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-left: 2.5rem;
+    }
+    .Position_crt_cmgn{
+        width: 100%;
+        display: flex;
+        margin: 1.25rem 0;
+
+    }
+
+    .cmpg_position_tabs_header .MuiButtonBase-root{
+        color: grey !important;
+        font-size: 12px !important;
+        font-weight: 700;
+        min-width: none !important;
+        width: 5%;
+        padding: 0 !important; ;
+    }
+ 
+    .campaign_goal_check_possess_ch{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .position_h3{
+        /* margin-left: 30px; */
+        align-items: center;
+        display: flex;
+        align-items: center;
+    }
+    .campaign_goal_check_pr{
+        width: 20% !important;
+    }
+    .position_h3_des{
+        align-items: center;
+        display: flex;
+        align-items: center; 
+        margin-left: 38px;
+    }
+
+    .campaign_goal_check_possess_pr{
+        width: 17%;
+    }
+    .campaign_goal_check_possess{
+        min-width: 40px;
+        min-height: 40px;
+        border-radius: 50%;
+        background-color: #2294ae;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 25px;    
+    }
+ 
+}

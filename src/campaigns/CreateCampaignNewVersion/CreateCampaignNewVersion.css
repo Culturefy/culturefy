@@ -7,16 +7,11 @@
     top: 0;
     z-index: 1;
     background-color: white;
-    height: 180px;
-    
+    height: 11.25rem;  
 }
 .crt_cmgn_drp_dn_pr{
     width: 100%;
-    height: 100px;
-    position: sticky;
-    top: 16.5%;
-    background-color: white;
-    z-index: 1;
+    height: 6.25rem;    background-color: white;
 }
 .campaign_header_user_data >ul> li{
     text-decoration: none !important;
@@ -25,7 +20,7 @@
 .crt_cmpgn_main_pr{
     width: 100%;
     display: flex;
-    margin: 50px 0;
+    margin: 3.125rem 0;
     
 }
 .crt_cmpgn_aside_left{
@@ -46,7 +41,7 @@
     align-items: center;
 }
 ._ppp_header{
-    height: 30px;
+    height: 1.875rem;
     margin-left: 12%;
 }
 .crt_cmgn_drp_position{
@@ -64,35 +59,35 @@
 }
 .Drop_Dwn_cnten_plan{
     width: 60%;
-    height: 25px;
+    height: 1.562rem;
     display: flex;
     justify-content: start;
 }
-.Drop_Dwn_cnten_position{
-    width: 60%;
-    height: 25px;
-    display: flex;
-    justify-content: center;
-    padding-right: 25px;
 
-}
 .Drop_Dwn_cnten_possess{
     width: 60%;
-    height: 25px;
+    height: 1.562rem;
     display: flex;
     justify-content: end;
-    padding-right: 30px;
+    padding-right: 1.875rem;
+
 }
 .crt_cmpgn_plan__{
     width: 100%;
 }
+._header_title_plan_pr{
+    display: flex;
+}
 ._header_title_plan{
     display: flex;
-    justify-content: space-between;
-    width: 20%;
+    width: 10%;
+}
+._header_title_plan_ch{
+    width: 50%;
+
 }
 .cmgn_h3{
-    margin-left: 75px;
+    margin-left: 4.687rem;
     align-items: center;
     display: flex;
     align-items: center;
@@ -100,14 +95,17 @@
 .campaign_goal{
     width: 100%;
     display: flex;
-    margin: 20px 0;
+    margin: 1.25rem 0;
+}
+.campaign_goal_check_pr{
+    width: 10%;
 }
 
 .campaign_goal_check{
-    width: 40px;
-    height: 40px;
+    width: 2.5rem;
+    height: 2.5rem;
     border-radius: 50%;
-    border: 3px solid #be171f;
+    border: 0.187rem solid #be171f;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -117,7 +115,7 @@
     color: red;
 }
 .crt_cmpgn_inpt{
-    margin-left: 75px !important;
+    margin-left: 4.687rem !important;
     width: 40vw;
 }
 /* Audience targeting */
@@ -125,18 +123,18 @@
 .Audience_targeting{
     width: 100%;
     display: flex;
-    margin: 20px 0;
+    margin: 1.25rem 0;
 }
 .auience_targeting_para{
-    margin: 0 10px;
+    margin: 0 0.625rem;
 }
 .creat_cmpgn_check_box{
-    margin-left: 75px;
+    margin-left: 4.687rem;
     width: 100%;
 }
 .crt_cmpgn_aud_drpdn{
     width: 100%;
-    height: 50px;
+    height: 3.125rem;
     display: flex;
     justify-content: space-between;
 }
@@ -145,26 +143,32 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-left: 68px;
+    margin-left: 4.25rem;
 }
 .date_input_fields_campign_schedule ::-webkit-input-placeholder{
-    font-size: 18px;
+    font-size: 1.125rem;
     text-align: left;
 }
 .date_input_crt_cmpgn_start{
     border: none;
     outline: none;
-    border-bottom: 2px solid grey;
-    width: 120px;
+    border-bottom: 0.125rem solid grey;
+    width: 7.5rem;
 }
 .date_input_crt_cmpgn_end{
     border: none;
     outline: none;
-    border-bottom: 2px solid grey;
-    width: 120px;  
-    margin-left: 10px;
+    border-bottom: 0.125rem solid grey;
+    width: 7.5rem;  
+    margin-left: 0.625rem;
 }
 /* ==============Position================= */
+
+.cmpg_position_tabs_header .MuiButtonBase-root{
+    font-size: 20px;
+    width: 20%;
+}
+
 ._header_title_position{
     width: 27%;
     display: flex;
@@ -172,7 +176,7 @@
 }
 .position_tabs{
     width: 100%;
-    margin-left: 75px;
+    /* margin-left: 75px; */
 }
 .position_tabs_info{
     width: 88%;     
@@ -183,22 +187,22 @@
 }
 .position_tabs_title input{
     width: 100%;
-    height: 40px;
-    padding: 10px;
+    height: 2.5rem;
+    padding: 0.625rem 0;
     border: none;
-    border-bottom: 1px solid grey;
+    border-bottom: 0.0625rem solid grey;
 }
 .position_tabs_title ::-webkit-input-placeholder{
-    font-size: 22px;
+    font-size: 1.375rem;
 }
 
 .Position_crt_cmgn{
     width: 100%;
     display: flex;
-    margin: 20px 0;
+    margin: 1.25rem 0;
 }
 .position_tabs_para{
-    border-bottom: 2px solid grey;
+    border-bottom: 0.125rem solid grey;
 }
 .position_tabs_para >p{
     margin: 0;
@@ -208,12 +212,12 @@
 }
 .position_tabs_fields input{
     width: 100%;
-    padding: 10px;
+    padding: 0.625rem 0;
     border: none;
-    border-bottom: 1px solid grey;
+    border-bottom: 0.0625rem solid grey;
 }
 .position_tabs_fields ::-webkit-input-placeholder{
-    font-size: 15px;
+    font-size: 0.937rem;
 }
 .position_tabs_drpdn{
     width: 100%;
@@ -223,64 +227,160 @@
     width: 48%;
 }
 .position_tabs_drpdn_td ::-webkit-input-placeholder{
-    font-size: 15px;
-    padding: 10px;
+    font-size: 0.937rem;
+    padding: 0.625rem 0;
 }
 .position_tabs_drpdn_td input{
     width: 100%;
-    padding: 5px;
+    padding: 0.312rem;
     border: none;
-    border-bottom: 1px solid grey;
+    border-bottom: 0.0625rem solid grey ;
 }
 .position_tabs_drpdn_tr{
         width: 100%;
         display: flex;
         justify-content: space-between;
 }
+.position_h3_pr{
+    width: 92% ;
+}
 .position_h3{
-    margin-left: 75px;
+    /* margin-left: 75px; */
     align-items: center;
     display: flex;
     align-items: center;
+}
+.position_h3_des{
+    align-items: center;
+    display: flex;
+    align-items: center; 
 }
 
 
 .position_native{
     width: 89%;
-    border: 3px solid red;
     margin-left: 12%;
+    display: flex;
+}
+.position_native_asideleft{
+    width: 50%;
 }
 .position_native_inputs{
-    width: 50%;
+    width: 100%;
 }
-.position_native_inputs input{
+.position_native_inputs>input{
     width: 100%;
     border: none;
-    border-bottom: 2px solid grey;
-    padding: 10px 0;
+    border-bottom: 0.125rem solid grey;
+    padding: 0.625rem 0;
+
 }
 .position_native_button{
-    width: 50%;
+    width: 100%;
     text-align: right;
-    margin: 10px 0;
+    margin: 0.625rem 0;
 }
 .position_native_button button{
-    padding: 5px 20px;
-    border-radius: 25px;
+    padding: 0.312rem 1.25rem;
+    border-radius: 1.562rem;
     background-color: #2294ae;
     color: white;
+}
+.position_native_asideright{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.position_native_asideright_fileupload{
+    width: 70%;
+    height: 12.5rem;
+    border: 0.25rem dashed #2294ae;
+    border-radius: 0.937rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.uploadwer_btn{
+    background: none;
+    border: none;
+    outline: none;
+    color: transparent;
+    position: absolute;
+    width: 6.25rem;
+    height: 6.25rem;
 
 }
+.native_file_uploader{
+    width: 6.25rem;
+    height: 6.25rem;
+    text-align: center;
+}
+/* Display */
+.position_display_asideleft{
+    width: 30%;
+}
+.position_display_inputs{
+    width: 100%;
+    padding: 0.187rem 0;
+}
+.position_display_inputs>input{
+    width: 100%;
+    border: none;
+    border-bottom: 0.125rem solid grey;
+    padding: 0.312rem 0;
+    outline: none;
+}
+.position_display_inputs ::-webkit-input-placeholder {
+    font-size: 1.125rem;
+}
+.position_display_asideright{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.position_display_asideright_fileupload{
+    width: 90%;
+    height: 9.375rem;
+    border: 0.25rem dashed #2294ae;
+    border-radius: 0.937rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.position_video_asideright_fileupload{
+    width: 90%;
+    height: 12.5rem;
+    border: 0.25rem dashed #2294ae;
+    border-radius: 0.937rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Audio */
+.position_audio_asideleft{
+    width: 80%;
+}
+
+
 /* ================Possess================= */
 .__Crt_cmpgn_possess__{
-    margin-top: 50px;
+    margin-top: 3.125rem;
 }
-
+.campaign_goal_check_possess_pr{
+    width: 11%;
+}
+.campaign_goal_check_possess_ch{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .campaign_goal_check_possess{
-    width: 40px;
-    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
     border-radius: 50%;
-    border: 3px solid #2294ae ;
     background-color: #2294ae;
     display: flex;
     justify-content: center;
@@ -292,32 +392,34 @@
 }
 .Position_crt_cmgn_review{
     width: 92%;
-    margin-left: 8%;
+    /* margin-left: 8%; */
     display: flex;
     justify-content: space-between;
+
 }
 .Position_crt_cmgn_review p{
     margin: 0;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 600;
 }
 ._posses_title{
     width: 92%;
-    margin-left: 8%;
+    /* margin-left: 8%; */
     margin-top: 3%;
     margin-bottom: 3%;
+
 }
 ._posses_title_ch{
     width: 100%;
 }
 ._posses_title_ch p{
     margin: 0;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 600;
 }
 ._posses_title_trs{
     width: 70%;
-    margin-left: 8%;
+    /* margin-left: 8%; */
     margin-top: 3%;
     margin-bottom: 3%;
     display: flex;
@@ -329,7 +431,7 @@
     width: 30%;
     display: flex;
     justify-content: center;
-    border-left: 1px solid lightgrey;
+    border-left: 0.0625rem solid lightgrey;
     margin-left: 5%;
     position: fixed;
     right: 0%;
@@ -343,27 +445,27 @@
 .__recomandation_input_pr{
     display: flex;
     justify-content: space-between;
-    width: 250px;
+    width: 15.625rem;
 }
 .__recomandation_input{
-    width: 120px !important;
+    width: 7.5rem !important;
 }
 .__recomandation_input select{
-    padding: 5px;
+    padding: 0.312rem;
     width:100%;
-    border-radius: 25px;
+    border-radius: 1.562rem;
 }
 .recommandation_cards{
-    margin: 50px 0;
-    box-shadow: 2px 2px 5px grey;
+    margin: 3.125rem 0;
+    box-shadow: 0.125rem 0.125rem 0.312rem grey;
 }
 .recommandation_cards_button{
     width: 100%;
     text-align: right;
 }
 .recommandation_cards_button button{
-    border-radius: 25px;
-    padding: 2px 20px;
+    border-radius: 1.562rem;
+    padding: 0.125rem 1.25rem;
     background-color: #2294ae;
     color: white;
     border: none;
@@ -373,6 +475,7 @@
 .recommandation_cards_p{
     margin: 0;
     color:#2294ae ;
-    font-size: 12px;
+    font-size: 1.125rem;
     font-weight: 900;
 }
+

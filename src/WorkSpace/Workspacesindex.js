@@ -7,6 +7,9 @@ import InputBase from '@mui/material/InputBase';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
+import AdminImg from '../assets/admin-img.png'
+import Calender from '../assets/calendar-icon.png'
+import Notification from '../assets/Notifiction.svg'
 
 
 const Worksplaceindex = () => {
@@ -14,38 +17,41 @@ const Worksplaceindex = () => {
     <>
       <Content />
       <div className="content">
-        <div className="main-top-nav">
-          <ul class="bts-profile align-items-center justify-content-end">
-            <li>
-              {/* <img src={Calender} /> */}
-            </li>
-            <li>
-              {/* <img src={Notification} /> */}
-            </li>
-            <li>
-              {/* <img src={AdminImg} /> */}
-            </li>
-          </ul>
+      <div className='create_campaignNew_version_ch'>
 
-          <div className='heading_search_container'>
-            <h1 className='heading_main_container'>Workspaces</h1>
-            <Paper
-              component="form"
-              sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 400 }}
-            >
-              <InputBase
-                sx={{ ml: 1, flex: 1 }}
-                placeholder="Search"
-                inputProps={{ 'aria-label': 'Search' }}
-              />
-              <IconButton type="button" sx={{ p: '10px' }} aria-label="search">
-                <SearchIcon />
-              </IconButton>
-              <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />
+{/* Users */}
+<div className='campaign_header_user_data'>
+  <ul>
+    <li>
+      <img src={Calender} />
+    </li>
+    <li>
+      <img src={Notification} />
+    </li>
+    <li>
+      <img src={AdminImg} />
+    </li>
+  </ul>
+</div>
 
-            </Paper>
-          </div>
-        </div>
+<div className='heading_search_container'>
+  <h1 className='heading_main_container'> </h1>
+  <Paper
+    component="form"
+    sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 400 }}
+  >
+    <InputBase
+      sx={{ ml: 1, flex: 1 }}
+      placeholder="Search a Campaigns"
+      inputProps={{ 'aria-label': 'Search a Campaigns' }}
+    />
+    <IconButton type="button" sx={{ p: '10px' }} aria-label="search">
+      <SearchIcon />
+    </IconButton>
+    <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />
+  </Paper>
+</div>
+</div>
       </div>
       <div className="wrapper-workpaces">
         <div className="create-new-Workspace">

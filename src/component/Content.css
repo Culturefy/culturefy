@@ -7,10 +7,11 @@
 }
 .content{
     height: 100%;
-    background-color: aqua;
     color: black;
-    width:78%;
+    width:75%;
+    margin-left: 23%;
 }
+
 .date_comp{
     width: 50%;
     display: flex;
@@ -412,19 +413,7 @@ p {
         box-shadow: none;
     }
 
-    .main-top-nav {
-        display: block;
-        position: fixed;
-        height: var(--maintop-nav-height);
-        width: calc(100% - var(--aside-width) - 40px);
-        top: 0;
-        right: 0;
-        padding: 30px 100px 30px 10px;
-        background: transparent;
-        z-index: 99;
-        background-color: #fff;
-       
-    }
+
 
     /* Ujj */
     .campaign-top .wraper-filter h4 {
