@@ -69,10 +69,7 @@ const Routing = () => {
             <Route path="/workspaceagendasview" element={<WorkspaceAgendaView />} />
 
             {/* Recruiting */}
-
             {/* <Route path="/recruiting/dashboard" element={<Recruiting />} /> */}
-         
-
             <Route path="/recruiting" element={<Recruiting/>}>
                 <Route path="dashboard" element={<RecruitingDashboard />} />
                 <Route path="jobs" element={<Jobs />} />

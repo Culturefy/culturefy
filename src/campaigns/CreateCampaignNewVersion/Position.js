@@ -33,7 +33,7 @@ const Position = () => {
                         <img src={position} alt="" />
                     </div>
                 </div>
-                <div>
+                <div className='position_h3_pr'>
                     <h1>Position</h1>
                 </div>
             </div>
@@ -47,7 +47,7 @@ const Position = () => {
                     </div>
                 </div>
                 <div className='position_h3_pr' >
-                    <div className='position_h3_des'>
+                    <div className='cmgn_h3'>
                         <h3>Design campaign</h3>
                     </div>
                     <div className='position_tabs'>
@@ -82,6 +82,9 @@ const Position = () => {
                             </Tabs>
                         </Box>
                     </div>
+
+
+                    
                 </div>
             </div>
 

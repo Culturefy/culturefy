@@ -8,7 +8,16 @@
     /* border: 2px solid green; */
     display: flex;
 }
-
+.add_application_btn select{
+    border-radius: 25px;
+    width: 10vw;
+    padding: 5px;
+    border: none;
+    outline: none;
+    border: 1px solid grey;
+    display: flex;
+    justify-content: space-between;
+}
 .job_Applications {
     width: 70%;
     border-right: 1px solid lightgray;

@@ -80,14 +80,19 @@
 }
 ._header_title_plan{
     display: flex;
+    justify-content: center;
     width: 10%;
+    align-items: center;
 }
+
 ._header_title_plan_ch{
-    width: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 
 }
 .cmgn_h3{
-    margin-left: 4.687rem;
+    /* margin-left: 4.687rem; */
     align-items: center;
     display: flex;
     align-items: center;
@@ -99,6 +104,9 @@
 }
 .campaign_goal_check_pr{
     width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
 }
 
 .campaign_goal_check{
@@ -109,14 +117,28 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 0.5%;    
+    /* margin-left: 0.5%;     */
+}
+.campaign_goal_check_possess{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: 0.187rem solid #2294ae;
+    background-color: #2294ae;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    color: white;
+}
+.cmpgn_check_icon_possess{
+    color: white;
 }
 .cmpgn_check_icon{
     color: red;
 }
 .crt_cmpgn_inpt{
-    margin-left: 4.687rem !important;
-    width: 40vw;
+    /* margin-left: 4.687rem !important; */
+    width: 20vw;
 }
 /* Audience targeting */
 
@@ -129,7 +151,7 @@
     margin: 0 0.625rem;
 }
 .creat_cmpgn_check_box{
-    margin-left: 4.687rem;
+    /* margin-left: 4.687rem; */
     width: 100%;
 }
 .crt_cmpgn_aud_drpdn{
@@ -143,7 +165,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-left: 4.25rem;
+    /* margin-left: 4.25rem; */
 }
 .date_input_fields_campign_schedule ::-webkit-input-placeholder{
     font-size: 1.125rem;
@@ -180,7 +202,7 @@
 }
 .position_tabs_info{
     width: 88%;     
-    margin-left: 12%;
+    margin-left: 10%;
 }
 .position_tabs_title{
     width: 100%;
@@ -259,7 +281,7 @@
 
 .position_native{
     width: 89%;
-    margin-left: 12%;
+    margin-left: 10%;
     display: flex;
 }
 .position_native_asideleft{
@@ -370,6 +392,9 @@
 }
 .campaign_goal_check_possess_pr{
     width: 11%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
 }
 .campaign_goal_check_possess_ch{
     width: 50%;
@@ -377,7 +402,7 @@
     justify-content: center;
     align-items: center;
 }
-.campaign_goal_check_possess{
+/* .campaign_goal_check_possess{
     min-width: 40px;
     min-height: 40px;
     border-radius: 50%;
@@ -385,8 +410,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 0.5%;    
-}
+} */
 .cmpgn_check_icon_possess{
     color: white;
 }

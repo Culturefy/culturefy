@@ -211,7 +211,7 @@ const Index = () => {
             </ul>
           </div>
         <div className='heading_search_container'>
-          <h1 className='heading_main_container'>Compaigns</h1>
+          <h1 className='heading_main_container'>Campaigns</h1>
           <Paper
             component="form"
             sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 400 }}

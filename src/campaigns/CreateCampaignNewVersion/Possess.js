@@ -7,28 +7,36 @@ const Possess = () => {
   return (
     <div className='__Crt_cmpgn_possess__'>
       <div className='crt_cmpgn_plan__'>
-        {/* <div className='_header_title_position'>
-          <img src={possess} alt="" />
+
+      <div className='_header_title_plan_pr'>
+        <div className='_header_title_plan'>
+          <img src={possess} alt=""  />
+        </div>
+        <div className='position_h3_pr'>
           <h1>Possess</h1>
+        </div>
+      </div>
+
+
+{/* 
+        <div className='_header_title_plan_pr'>
+          <div className='_header_title_plan'>
+            <img src={possess} alt="" />
+          </div>
+          <div>
+            <h1>Possess</h1>
+          </div>
         </div> */}
-                <div className='_header_title_plan_pr'>
-                <div className='_header_title_plan'>
-                    <img src={possess} alt="" />
-                </div>
-                <div>
-                    <h1>Possess</h1>
-                </div>
-            </div>
         {/* ==================CampaignGoal=========================== */}
         <div className='Position_crt_cmgn'>
-          <div className='campaign_goal_check_possess_pr'>
-            <div className='campaign_goal_check_possess_ch'>
-          <div className='campaign_goal_check_possess'>
-            <CheckIcon className='cmpgn_check_icon_possess' />
+        <div className='campaign_goal_check_pr'>
+          <div className='campaign_goal_check_possess_ch'>
+            <div className='campaign_goal_check_possess'>
+              <CheckIcon className='cmpgn_check_icon_possess' />
+            </div>
           </div>
-          </div>
-          </div>
-          <div style={{ width: "100%" }}>
+        </div>
+          <div className="position_h3_pr">
             <div className='position_h3'>
               <h3>Review Campaign</h3>
             </div>
@@ -58,7 +66,7 @@ const Possess = () => {
                 <p>Job Title</p>
               </div>
             </div>
-            
+
             <div className='_posses_title'>
               <div className='_posses_title_ch'>
                 <h3>Job Description</h3>

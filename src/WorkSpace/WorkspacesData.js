@@ -36,9 +36,6 @@ const responsive = {
 };
 
 const WorkspacesData = () => {
-
-
-
   const [filterClicked, setfilterclicked] = useState(false)
   const handleFilterClick = () => {
 
@@ -186,11 +183,13 @@ const WorkspacesData = () => {
                 </Carousel>
               </div>
               {/* ==================================== Advertisements section ====================================================== */}
+              
               <div className="workpaces_favorits">
                 <div className="favorits_header">
                   <h2 style={{ fontWeight: "bold" }}>Advertisements</h2>
                 </div>
-                <div className="card_wapper">
+                <Carousel responsive={responsive}>
+                {/* <div className="card_wapper"> */}
                   <div className="favorits_card">
                     <div className="favorits_card_img">
                       <img src={fav_img1} alt="" />
@@ -226,14 +225,17 @@ const WorkspacesData = () => {
                       <i className="fa-solid fa-plus plus"></i>
                     </Link>
                   </div>
-                </div>
+                {/* </div> */}
+                </Carousel>
               </div>
               {/* ==================================== Audio section ====================================================== */}
               <div className="workpaces_favorits">
                 <div className="favorits_header">
                   <h2 style={{ fontWeight: "bold" }}>Audio</h2>
                 </div>
-                <div className="card_wapper">
+                {/* <div className="card_wapper"> */}
+                <Carousel responsive={responsive}>
+
                   <div className="favorits_card">
                     <div className="favorits_card_img">
                       <img src={fav_img1} alt="" />
@@ -267,7 +269,8 @@ const WorkspacesData = () => {
                   <div className="uplode_section" >
                     <i className="fa-solid fa-plus plus"></i>
                   </div>
-                </div>
+                  </Carousel>
+                {/* </div> */}
 
               </div>
               {/* ==================================== Banners section ====================================================== */}
@@ -277,17 +280,35 @@ const WorkspacesData = () => {
                 <div className="favorits_header">
                   <h2 style={{ fontWeight: "bold" }}>Banners</h2>
                 </div>
-                <div className="card_wapper">
+                {/* <div className="card_wapper"> */}
+                <Carousel responsive={responsive}>
+                <div className="favorits_card">
+                    <div className="favorits_card_img">
+                      <img src={fav_img1} alt="" />
+                    </div>
+                    <div className="favorits_discription">
+                      <div className="favorits_name">
+                        <p className='favorits_file_name'>file.png</p>
+                        <p className='favorits_comments'>1 comment</p>
+                      </div>
+                      <div className="favorits_icon">
+                        <i className="fa-solid fa-ellipsis"></i>
+                        <i className="fa-solid fa-star fill_star"></i>
+                      </div>
+                    </div>
+                  </div>
                   <div className="uplode_section" >
                     <i className="fa-solid fa-plus plus"></i>
                   </div>
-                </div>
+                  </Carousel>
+                {/* </div> */}
               </div>
               <div className="workpaces_favorits">
                 <div className="favorits_header">
                   <h2 style={{ fontWeight: "bold" }}>Documents</h2>
                 </div>
-                <div className="card_wapper">
+                {/* <div className="card_wapper"> */}
+                <Carousel responsive={responsive}>
                   <div className="favorits_card">
                     <div className="favorits_card_img">
                       <img src={fav_img1} alt="" />
@@ -306,7 +327,8 @@ const WorkspacesData = () => {
                   <div className="uplode_section" >
                     <i className="fa-solid fa-plus plus"></i>
                   </div>
-                </div>
+                  </Carousel>
+                {/* </div> */}
               </div>
               {/* ==================================== Hashtags section ====================================================== */}
 
@@ -314,7 +336,8 @@ const WorkspacesData = () => {
                 <div className="favorits_header">
                   <h2 style={{ fontWeight: "bold" }}>Hashtags</h2>
                 </div>
-                <div className="card_wapper">
+                {/* <div className="card_wapper"> */}
+                <Carousel responsive={responsive}>
                   <div className="favorits_card">
                     <div className="favorits_card_img">
                       <img src={fav_img1} alt="" />
@@ -333,7 +356,8 @@ const WorkspacesData = () => {
                   <div className="uplode_section" >
                     <i className="fa-solid fa-plus plus"></i>
                   </div>
-                </div>
+                  </Carousel>
+                {/* </div> */}
               </div>
 
               {/* ==================================== Photos section ====================================================== */}
@@ -342,7 +366,8 @@ const WorkspacesData = () => {
                 <div className="favorits_header">
                   <h2 style={{ fontWeight: "bold" }}>Photos</h2>
                 </div>
-                <div className="card_wapper">
+                {/* <div className="card_wapper"> */}
+                <Carousel responsive={responsive}>
                   <div className="favorits_card">
                     <div className="favorits_card_img">
                       <img src={fav_img1} alt="" />
@@ -376,7 +401,8 @@ const WorkspacesData = () => {
                   <div className="uplode_section" >
                     <i className="fa-solid fa-plus plus"></i>
                   </div>
-                </div>
+                  </Carousel>
+                {/* </div> */}
               </div>
               {/* ==================================== Polls section ====================================================== */}
 
@@ -384,7 +410,8 @@ const WorkspacesData = () => {
                 <div className="favorits_header">
                   <h2 style={{ fontWeight: "bold" }}>Polls</h2>
                 </div>
-                <div className="card_wapper">
+                {/* <div className="card_wapper"> */}
+                <Carousel responsive={responsive}>
                   <div className="favorits_card">
                     <div className="favorits_card_img">
                       <img src={fav_img1} alt="" />
@@ -430,7 +457,8 @@ const WorkspacesData = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                  </Carousel>
+                {/* </div> */}
               </div>
               {/* ==================================== Social Media section ====================================================== */}
 
@@ -439,7 +467,9 @@ const WorkspacesData = () => {
                 <div className="favorits_header">
                   <h2 style={{ fontWeight: "bold" }}>Social Media</h2>
                 </div>
-                <div className="card_wapper">
+                {/* <div className="card_wapper">
+                 */}
+                  <Carousel responsive={responsive}>
                   <div className="favorits_card">
                     <div className="favorits_card_img">
                       <img src={fav_img1} alt="" />
@@ -473,7 +503,8 @@ const WorkspacesData = () => {
                   <div className="uplode_section" >
                     <i className="fa-solid fa-plus plus"></i>
                   </div>
-                </div>
+                  </Carousel>
+                {/* </div> */}
               </div>
 
               {/* ==================================== Tesla Campaign section ====================================================== */}
@@ -482,7 +513,8 @@ const WorkspacesData = () => {
                 <div className="favorits_header">
                   <h2 style={{ fontWeight: "bold" }}>Tesla Campaign 1</h2>
                 </div>
-                <div className="card_wapper">
+                {/* <div className="card_wapper"> */}
+                <Carousel responsive={responsive}>
                   <div className="favorits_card">
                     <div className="favorits_card_img">
                       <img src={fav_img1} alt="" />
@@ -528,7 +560,8 @@ const WorkspacesData = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                {/* </div> */}
+                </Carousel>
               </div>
               {/* ==================================== Videos section ====================================================== */}
 
@@ -537,7 +570,9 @@ const WorkspacesData = () => {
                 <div className="favorits_header">
                   <h2 style={{ fontWeight: "bold" }}>Videos</h2>
                 </div>
-                <div className="card_wapper">
+                {/* <div className="card_wapper">
+                 */}
+                  <Carousel responsive={responsive}>
                   <div className="favorits_card">
                     <div className="favorits_card_img">
                       <img src={fav_img1} alt="" />
@@ -571,7 +606,8 @@ const WorkspacesData = () => {
                   <div className="uplode_section" >
                     <i className="fa-solid fa-plus plus"></i>
                   </div>
-                </div>
+                  </Carousel>
+                {/* </div> */}
               </div>
               {/* ==================================== Unsorted section ====================================================== */}
 
@@ -579,7 +615,8 @@ const WorkspacesData = () => {
                 <div className="favorits_header">
                   <h2 style={{ fontWeight: "bold" }}>Unsorted</h2>
                 </div>
-                <div className="card_wapper">
+                {/* <div className="card_wapper"> */}
+                <Carousel responsive={responsive}>
                   <div className="favorits_card">
                     <div className="favorits_card_img">
                       <img src={fav_img1} alt="" />
@@ -598,7 +635,8 @@ const WorkspacesData = () => {
                   <div className="uplode_section" >
                     <i classname="fa-solid fa-plus plus"></i>
                   </div>
-                </div>
+                  </Carousel>
+                {/* </div> */}
               </div>
             </div>
             <div className="workpaces_commentsection">

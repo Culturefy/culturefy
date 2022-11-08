@@ -58,46 +58,58 @@ const Plan = () => {
 
     <div className='crt_cmpgn_plan__'>
       <div className='_header_title_plan_pr'>
-        <div className='_header_title_plan'>
+        <div className='campaign_goal_check_pr'>
           <img src={planImage} alt="" />
         </div>
-        <div className='_header_title_plan_h1'>
+        <div className='position_h3_pr'>
           <h1>Plan</h1>
         </div>
       </div>
       {/* ==================CampaignGoal=========================== */}
-      <div className='campaign_goal'>
-        
-        <div className='campaign_goal_check'>
-          <CheckIcon className='cmpgn_check_icon' />
+
+
+      {/* ==========Logo========== */}
+      <div className='Position_crt_cmgn'>
+        <div className='campaign_goal_check_pr'>
+          <div className='campaign_goal_check_possess_ch'>
+            <div className='campaign_goal_check'>
+              <CheckIcon className='cmpgn_check_icon' />
+            </div>
+          </div>
         </div>
-        <div>
-          <div className='cmgn_h3'>
+        <div className='position_h3_pr' >
+          <div className='position_h3_des'>
             <h3>Campaign Goal</h3>
           </div>
-          {/* <div className='crt_cmpgn_inpt' > */}
-          <FormControl className='crt_cmpgn_inpt'>
+          <div className='position_tabs'>
+            <FormControl className='crt_cmpgn_inpt'>
 
-            <NativeSelect
-              defaultValue={30}
-              inputProps={{
-                name: 'age',
-                id: 'uncontrolled-native',
-              }}
-            >
-              <option value={"Recruit More Employee"}>Recruit More Employee</option>
-              <option value={"Attract more Customer"}>Attract more Customer</option>
-            </NativeSelect>
-          </FormControl>
-          {/* </Box> */}
+              <NativeSelect
+                defaultValue={30}
+                inputProps={{
+                  name: 'age',
+                  id: 'uncontrolled-native',
+                }}
+              >
+                <option value={"Recruit More Employee"}>Recruit More Employee</option>
+                <option value={"Attract more Customer"}>Attract more Customer</option>
+              </NativeSelect>
+            </FormControl>
+          </div>
         </div>
       </div>
+      {/* =============== */}
+
       {/* ==================Audience Targeting=========================== */}
       <div className='Audience_targeting'>
-        <div className='campaign_goal_check'>
-          <CheckIcon className='cmpgn_check_icon' />
+      <div className='campaign_goal_check_pr'>
+          <div className='campaign_goal_check_possess_ch'>
+            <div className='campaign_goal_check'>
+              <CheckIcon className='cmpgn_check_icon' />
+            </div>
+          </div>
         </div>
-        <div>
+        <div className='position_h3_pr'>
           <div className='cmgn_h3'>
             <h3>Audience targeting</h3>
           </div>
@@ -146,10 +158,14 @@ const Plan = () => {
       </div>
       {/* =========================Schedule============================== */}
       <div className='Audience_targeting'>
-        <div className='campaign_goal_check'>
-          <CheckIcon className='cmpgn_check_icon' />
+      <div className='campaign_goal_check_pr'>
+          <div className='campaign_goal_check_possess_ch'>
+            <div className='campaign_goal_check'>
+              <CheckIcon className='cmpgn_check_icon' />
+            </div>
+          </div>
         </div>
-        <div>
+        <div  className='position_h3_pr'>
           <div className='cmgn_h3'>
             <h3>Schedule</h3>
           </div>

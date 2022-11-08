@@ -18,7 +18,7 @@ const Candidates = () => {
         { sort_name: "AS", name: "Annable Summers", job_title: "Software Devloper", date_submited: "08-08-2022", Status: "Hired" },
         { sort_name: "AS", name: "Annable Summers", job_title: "Software Devloper", date_submited: "08-08-2022", Status: "Rejected" },
     ]
-
+    
     const Devloper_data = [
         { fild: "softwere devloper", image: "../../assets/user2.jpg", name: "Steve Harris" },
         { fild: "softwere devloper", image: "../../assets/user2.jpg", name: "Steve Harris" },
