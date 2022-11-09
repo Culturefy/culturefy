@@ -34,6 +34,7 @@
 .workspaces-tabs ul{
     width: 50%;
     display: flex;
+    margin: 0;
 }
 .workspaces-tabs li{
     margin-left: 0.625rem;
@@ -115,7 +116,6 @@
 .workpaces-date >p{
     margin: 0;
     padding: 0;
-
 }
     
 
@@ -125,11 +125,16 @@
 }
 .filter h2{
     font-family: "Graphik_Bold";
+    margin: 0;
 }
 .filter> p{
     padding: .625rem 0;
     font-size: 1.25rem;
     font-family: "Graphik_Bold";
+    margin: 0;
+}
+.filter ul{
+    margin: 0;
 }
 li input{
     margin-right: 0.5rem;
@@ -192,6 +197,77 @@ li input{
         justify-content: center;
         align-items: center;
         padding: 0 1rem;
+    }
+
+}
+@media (max-width:1819px){
+    .workpaces-details h1{
+        font-size: 15px;
+    }
+    .workpaces-date >p{
+        margin: 0;
+        padding: 0;
+        font-size: 12px;
+    }
+    .filter h2{
+        font-family: "Graphik_Bold";
+        font-size: 20px;
+    }
+    .filter> p{
+        padding: .625rem 0;
+        font-size: 15px;
+        font-family: "Graphik_Bold";
+    }
+    .create-new-Workspace button{
+        padding: 0.625rem 3rem;
+        border-radius: 1.87rem;
+        background-color:#2394ae ;
+        border: 1px solid #2394ae;
+        color: white;
+        font-size: 15px;
+        font-family: "Graphik_Extralight";
+        font-weight: 600;
+    }
+    .heading_search_container .MuiPaper-elevation {
+        border-radius: 25px;
+        width: 25%;
+        height: 50px;
+    }
+    .heading_search_container .MuiPaper-elevation ::-webkit-input-placeholder{
+        font-size: 15px;
+    }
+    .heading_search_container .MuiIconButton-root {
+        background-color: rgb(35, 148, 174);
+        position: relative;
+        color: white;
+        right: -4%;
+        width: 40px;
+        height: 40px;
+    }
+}
+@media (max-width:1410px){
+    .heading_search_container .MuiPaper-elevation {
+        border-radius: 25px;
+        width: 30%;
+        height: 50px;
+    }
+    .heading_search_container .MuiPaper-elevation ::-webkit-input-placeholder{
+        font-size: 15px;
+    }
+    .heading_search_container .MuiIconButton-root {
+        background-color: rgb(35, 148, 174);
+        position: relative;
+        color: white;
+        right: -4%;
+        width: 40px;
+        height: 40px;
+    } 
+}
+@media (max-width:1327px){
+    .workpaces-date >p{
+        margin: 0;
+        padding: 0;
+        font-size: 12px;
     }
 }
 @media (max-width:1363px){

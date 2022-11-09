@@ -1,3 +1,74 @@
+@media (max-width:1748px){
+    /* ========Plan====== */
+    /* images plan */
+    .campaign_goal_check_pr_img{
+        width: 45px;
+        height: 45px;
+    }
+    /* h1 */
+    .position_h3_pr h1{
+        font-size: 32px;
+    }
+    /* checked image */
+    .campaign_goal_check {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: 0.187rem solid #be171f;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* margin-left: 0.5%;     */
+    }
+    
+    .campaign_goal_check_possess {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: 0.187rem solid #2294ae;
+        background-color: #2294ae;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+    .position_h3_des h3{
+        font-size: 20px;
+    }
+    .cmgn_h3 h3{
+        font-size: 20px;
+    }
+    /* ======Possess========= */
+    .Position_crt_cmgn_review p {
+        margin: 0;
+        font-size: 15px;
+        font-weight:500;
+    }
+    ._posses_title_ch h3{
+        font-size: 24px;
+    }
+    ._posses_title_ch p {
+        margin: 0;
+        font-size: 15px;
+        font-weight: 500;
+    }
+    /* Recommandation */
+    .crt_cmpgn_aside_recommandation h3{
+        font-size: 20px;
+    }
+
+    .__recomandation_input select {
+        padding: 0px;
+        width: 80%;
+        border-radius: 1.562rem;
+    }
+    .recommandation_cards_p {
+        margin: 0;
+        color: #2294ae;
+        font-size: 16px;
+        font-weight: 600;
+    }
+}
 @media (max-width:1440px){
     .Drop_Dwn_cnten_plan{
         width: 60%;

@@ -24,13 +24,11 @@ const Position = () => {
         setValue(newValue);
     };
     return (
-
-
         <div className='crt_cmpgn_plan__'>
             <div className='_header_title_plan_pr'>
                 <div className='_header_title_plan'>
                     <div className='_header_title_plan_ch'>
-                        <img src={position} alt="" />
+                        <img src={position} alt="" className="campaign_goal_check_pr_img"/>
                     </div>
                 </div>
                 <div className='position_h3_pr'>

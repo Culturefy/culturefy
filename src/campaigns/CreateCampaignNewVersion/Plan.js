@@ -59,7 +59,7 @@ const Plan = () => {
     <div className='crt_cmpgn_plan__'>
       <div className='_header_title_plan_pr'>
         <div className='campaign_goal_check_pr'>
-          <img src={planImage} alt="" />
+          <img src={planImage} alt="" className='campaign_goal_check_pr_img' />
         </div>
         <div className='position_h3_pr'>
           <h1>Plan</h1>

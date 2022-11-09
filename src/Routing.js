@@ -37,7 +37,8 @@ import Candidates from "./Recruiting/Candidates/Candidates"
 import Offerletter from "./Recruiting/Offerletter/Offerletter"
 import NewOfferletter from "./Recruiting/Offerletter/NewOfferletter"
 import Interviews from "./Recruiting/Interviews/Interviews"
-
+// 
+import VideoCallMain from "./VideoCalll/VideoCallMain"
 const Routing = () => {
     return (
         <Routes>
@@ -67,6 +68,14 @@ const Routing = () => {
             <Route path="/workspaceagendas" element={<WorkspaceAgendas />} />
             <Route path="/workspaceagendatemplates" element={<WorkspaceAgendaTemplates />} />
             <Route path="/workspaceagendasview" element={<WorkspaceAgendaView />} />
+            <Route path="/videocallmain" element={<VideoCallMain />} />
+
+
+
+        {/* Video Calll Sdk */}
+
+
+
 
             {/* Recruiting */}
             {/* <Route path="/recruiting/dashboard" element={<Recruiting />} /> */}

@@ -121,7 +121,6 @@ const AsideRight = () => {
                   <li><Link to="/recruiting">Recruiting</Link></li>
                  </ul>
                  <div className="campaign_list_ul_div">
-
                  </div>
               </div>
               : null

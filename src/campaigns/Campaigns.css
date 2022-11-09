@@ -1,6 +1,6 @@
 .create-new-campaigns {
     width: 100%;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
 }
 
 .create-new-campaigns button {
@@ -54,7 +54,9 @@
 
 .heading_search_container .MuiPaper-elevation {
     border-radius: 25px;
+
 }
+
 
 .heading_search_container .MuiIconButton-root {
     background-color: rgb(35, 148, 174);
@@ -212,7 +214,46 @@ ul.campaign-tabs li button.active {
     position: fixed;
 }
 
-
+/* Media Query */
+@media (max-width:1644px){
+    .create-new-campaigns button {
+        border-radius: 30px;
+        background-color: #2394ae;
+        border: 1px solid #2394ae;
+        color: white;
+        font-size: 15px;
+        font-family: inherit;
+        font-weight: 600;
+        width: 18%;
+        padding: 15px 0;
+    }
+}
+@media (max-width:1322px){
+    .create-new-campaigns button {
+        border-radius: 30px;
+        background-color: #2394ae;
+        border: 1px solid #2394ae;
+        color: white;
+        font-size: 12px !important;
+        font-family: inherit;
+        font-weight: 600;
+        width: 18% !important;
+        padding: 15px 0;
+    }
+}
+@media (max-width:1140px){
+    .create-new-campaigns button {
+        border-radius: 30px;
+        background-color: #2394ae;
+        border: 1px solid #2394ae;
+        color: white;
+        font-size: 12px !important;
+        font-family: inherit;
+        font-weight: 600;
+        width: 20% !important;
+        padding: 15px 0;
+    }
+}
 @media (max-width:1440px) {
     .campaign_header_user_data ul {
         display: flex;

@@ -249,9 +249,7 @@ const Index = () => {
               </ul>
             </Tabs>
           </div>
-
           <div className="campaign-wraper">
-
             <div className="campaign-top">
               <div className="header">
                 <h2>Campaigns</h2>
@@ -269,7 +267,6 @@ const Index = () => {
               </div>
               <DateFilter />
             </div>
-      
             {/* <div className="tab-content campaign"> */}
               {/* <div className="tab-pane fade show active" id="All" role="tabpanel"> */}
                 <div className="campaign-table">

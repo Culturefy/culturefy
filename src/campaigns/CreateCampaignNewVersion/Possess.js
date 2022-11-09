@@ -10,7 +10,7 @@ const Possess = () => {
 
       <div className='_header_title_plan_pr'>
         <div className='_header_title_plan'>
-          <img src={possess} alt=""  />
+          <img src={possess} alt=""  className="campaign_goal_check_pr_img" />
         </div>
         <div className='position_h3_pr'>
           <h1>Possess</h1>
