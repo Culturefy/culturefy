@@ -1,0 +1,212 @@
+.interviewspace_main_wrapper {
+    width: 95%;
+    display: flex;
+    /* border: 2px solid red; */
+}
+
+.interviewer_question_section {
+    width: 65%;
+    border-right: 1px solid lightgray;
+}
+
+.interview_header {
+    width: 95%;
+    height: 70px;
+    /* border: 2px solid black; */
+    display: flex;
+}
+
+.interview_name {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+
+.interview_name h1 {
+    font-family: "Graphik_Medium";
+}
+
+.interviewer {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /* border: 1px solid black; */
+}
+
+.interviewer1 {
+    height: 50px;
+    width: 50px;
+    margin-left:5px ;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.interview_end_btn {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid black; */
+}
+
+.interview_end_btn button {
+    width: 150px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: #bf161f;
+    color: white;
+    border: none;
+    font-family: "Graphik_Regular"; 
+}
+
+.interview_question {
+    width: 95%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+.interview_question span {
+    margin: 5px;
+    font-family: "Graphik_Regular"; 
+}
+.interview_screen{
+    width: 95%;
+    height: 50vh;
+    /* border: 1px solid black; */
+}
+.interview_screen img{
+    width: 100%;
+    height: 100%;
+}
+.interview_footer{
+    width: 95%;
+    display: flex;
+}
+.notes{
+    width: 50%;
+    height: 200px;   
+}
+.notes_header{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    align-items: center;
+   
+}
+.notes_header h3{
+    font-family: "Graphik_Medium";
+}
+
+.notes_input{
+    width: 90%;
+    height: 75%;
+}
+.notes_input textarea{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+.notes_input textarea::-webkit-input-placeholder{
+    font-size: 15px;
+    font-family: "Graphik_Regular"; 
+    color: gray;
+}
+.candidate_rating{
+    width: 50%;
+    height: 200px;    
+}
+.candidate_header{
+    width: 100%;
+    height: 25%;
+   
+}
+.candidate_header h3{
+    font-family: "Graphik_Medium";
+}
+.candidate_stars{
+    color: #f5ab30;
+    margin: 0;
+    padding: 0;
+}
+
+.interviewer_profile_section {
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid green; */
+}
+.inner_interview{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.profile_header{
+    width: 100%;
+    height: 110px;
+    display: flex;
+    /* border: 1px solid green; */
+}
+.profile_user_image{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid blue; */
+}
+.user_image_div{
+    width: 70px;
+    height: 70px;
+    background-color: #2394ae;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profile_user{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.profile_user h3{
+    margin: 0;
+}
+.profile_tabs{
+    width: 100%;
+    /* border: 1px solid red; */
+}
+.profile_tabs ul{
+    width: 95%;
+    display: flex;
+    padding: 0;
+}
+.profile_tabs ul li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Graphik_Regular";
+}
+
+.profile_tabs ul li:nth-child(-n+2) {
+    width: 30%;
+    border-right: 1px solid gray;
+}
+.profile_tabs ul li:nth-child(3){
+    width: 40%;
+}
+.profile_tabs ul li a{
+    text-decoration: none;
+    color: gray;
+}
+
+.profile_containt{
+    width: 100%;
+}

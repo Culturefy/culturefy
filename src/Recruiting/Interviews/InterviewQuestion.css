@@ -1,0 +1,66 @@
+.interview_que_main {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.question_inputbox {
+    width: 100%;
+    height: 50px;
+    display: flex;
+}
+
+.question_inputbox input {
+    width: 75%;
+    height: 35px;
+    padding-left: 5px;
+}
+
+.question_inputbox button {
+    margin-left: 10px;
+    height: 35px;
+    width: 20%;
+    border: none;
+    border-radius: 30px;
+    background-color: #bf161f;
+    color: white;
+}
+
+.question_inputbox input::-webkit-input-placeholder {
+    font-size: 15px;
+}
+
+.question_wrapper {
+    width: 85%;
+    height: 60px;
+    display: flex;
+    border-bottom: 1px solid lightgray;
+}
+
+.chackbox_div {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    /* border: 1px solid green; */
+}
+
+.chackbox_div input {
+    height: 20px;
+    width: 20px;
+    margin-top: 5px;
+}
+
+.question_div {
+    width: 90%;
+    height: 100%;
+    /* border: 1px solid green; */
+}
+
+.question_div span {
+    font-size: 20px;
+    font-family: "Graphik_Regular";
+}

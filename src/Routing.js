@@ -37,8 +37,13 @@ import Candidates from "./Recruiting/Candidates/Candidates"
 import Offerletter from "./Recruiting/Offerletter/Offerletter"
 import NewOfferletter from "./Recruiting/Offerletter/NewOfferletter"
 import Interviews from "./Recruiting/Interviews/Interviews"
-// 
-import VideoCallMain from "./VideoCalll/VideoCallMain"
+import InterviewspaceProfile from "./Recruiting/Interviews/InterviewspaceProfile"
+import Profile from "./Recruiting/Interviews/Profile"
+import Resume from "./Recruiting/Interviews/Resume"
+import InterviewQuestion from "./Recruiting/Interviews/InterviewQuestion"
+import Anofferletter from "./Recruiting/Offerletter/Anofferletter"
+import MyCalendar from "./Calendarclone/MyCalendar"
+// import Annotations from "./component/Annotations"
 const Routing = () => {
     return (
         <Routes>
@@ -68,30 +73,31 @@ const Routing = () => {
             <Route path="/workspaceagendas" element={<WorkspaceAgendas />} />
             <Route path="/workspaceagendatemplates" element={<WorkspaceAgendaTemplates />} />
             <Route path="/workspaceagendasview" element={<WorkspaceAgendaView />} />
-            <Route path="/videocallmain" element={<VideoCallMain />} />
+            {/* <Route path="/a" element={<Annotations />} /> */}
 
 
-
-        {/* Video Calll Sdk */}
-
-
-
-
+            <Route path="/cal" element={<MyCalendar />} />
             {/* Recruiting */}
             {/* <Route path="/recruiting/dashboard" element={<Recruiting />} /> */}
-            <Route path="/recruiting" element={<Recruiting/>}>
+            <Route path="/recruiting" element={<Recruiting />}>
                 <Route path="dashboard" element={<RecruitingDashboard />} />
                 <Route path="jobs" element={<Jobs />} />
-                <Route path="addjobs" element={<Addjobs/>} />
-                <Route path="application" element={<Application/>} />
-                <Route path="addapplication" element={<Addapplication/>} />
-                <Route path="skill" element={<Skills/>} />
-                <Route path="addskill" element={<Addskills/>} />
-                <Route path="candidates" element={<Candidates/>} />
-                <Route path="offerletter" element={<Offerletter/>} />
-                <Route path="newofferletter" element={<NewOfferletter/>} />
-                <Route path="interviews" element={<Interviews/>} />
-                
+                <Route path="addjobs" element={<Addjobs />} />
+                <Route path="application" element={<Application />} />
+                <Route path="addapplication" element={<Addapplication />} />
+                <Route path="skill" element={<Skills />} />
+                <Route path="addskill" element={<Addskills />} />
+                <Route path="candidates" element={<Candidates />} />
+                <Route path="offerletter" element={<Offerletter />} />
+                <Route path="anofferletter" element={<Anofferletter />} />
+                <Route path="newofferletter" element={<NewOfferletter />} />
+                <Route path="interviews" element={<Interviews />} />
+                <Route path="interviewspaceprofile" element={<InterviewspaceProfile />} >
+                    <Route path="profile" element={<Profile />} />
+                    <Route path="resume" element={<Resume />} />
+                    <Route path="interviewquestion" element={<InterviewQuestion />} />
+                </Route>
+
             </Route>
 
         </Routes>

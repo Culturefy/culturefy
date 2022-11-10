@@ -10,13 +10,25 @@ import WorkspaceHeader from '../WorkspaceHeader'
 import WorkspaceSidebar from '../../component/WorkspaceSidebar'
 import Comment from '../../component/Comment'
 import Chat from '../../component/Chat'
+import { useEffect, useState } from 'react';
+import { VideoRoom} from './VideoCalll/VideoRoom'
 
 const Meetingview = () => {
+    const [image, setImage] = useState()
+    const [joined, setJoined] = useState(false);
 
+
+    const googleScreen = () => {
+        console.log("clicked")
+    }
+
+
+    useEffect(() => {
+        googleScreen();
+    }, [])
     return (
         <>
             <Content />
-            {/* <div className='bbc'></div> */}
             <div className="gapanalysis">
                 <div className="gapanalysis_main_wrepper">
                     <div className="gapanalysis_header">
@@ -28,14 +40,41 @@ const Meetingview = () => {
                                 {/* aside left */}
                                 <div className='meet_as_lef'>
                                     <div className='mting_iframe'>
-
+                                        {/* 
                                         <Link to='/workspace/meetingshareview'>
                                             <img src={google} className='view_frame' alt="" />
+                                        </Link> */}
+
+                                        <Link to='/workspace/meetingshareview'>
+                                            <div className='scrn_shr_viw_ch'>
+                                                <iframe src="https://www.google.com/webhp?igu=1" className="view_frame" ></iframe>
+                                            </div>
                                         </Link>
                                     </div>
-                                    <div className='mting_host'>
+
+
+                                    {/* <div className='mting_host'>
                                         <img src={host} alt="" />
+                                    </div> */}
+                                    <div className='mting_host'>
+                                        <div className="mting_host_ch">
+                                      
+                                            {!joined && (
+                                                <>
+                                                 <h5> Create Video Call </h5>
+                                                <button onClick={() => setJoined(true)}>
+                                                    Make a Video Call
+                                                </button>
+                                                </>
+                                            )}
+                                            {joined && <VideoRoom />}
+                                        </div>
                                     </div>
+
+
+
+
+
                                 </div>
                                 {/* aside right */}
                                 <div className='meet_as_rig'>

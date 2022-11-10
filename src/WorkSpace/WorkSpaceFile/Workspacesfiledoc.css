@@ -55,11 +55,13 @@
     
 }
 .document_content{
+    
     z-index: 0;
     padding-left: 3.125rem;
     padding-right: 3.125rem;
     text-align: justify;
     font-family: "Graphik_Regular"; 
+    
 }
 .document_comment_section{
     width: 30%;

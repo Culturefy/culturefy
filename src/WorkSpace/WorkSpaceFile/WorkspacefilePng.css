@@ -1,6 +1,7 @@
 .workspacesfile_wapper {
     width: 72% !important;
     margin-left: 23%;
+    /* border: 2px solid blue; */
 }
 
 .workspace_file_main_wrapper {
@@ -34,7 +35,7 @@
     justify-content: end;
     align-items: center;
     /* margin-bottom: 5px; */
-    
+
 }
 
 .workspacesfilepng_header p {
@@ -49,10 +50,59 @@
 }
 
 .workspacesfilepng_image img {
-    height: 100%;
-    width: 100%;
+    height: 60vh;
+    width: 50vw;
+    position: absolute;
 }
 
+.grid_main_div {
+    height: 60vh;
+    width: 50vw;
+    display: grid;
+}
+
+.grid_main_div form {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto;
+    /* border: 2px solid red; */
+    position: relative;
+}
+
+.grid_div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid blue; */
+
+}
+
+.red_dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: red;
+
+}
+.red_dot>title{
+    width: 100px;
+    background-color: violet;
+}
+
+.tag_input {
+    width: 100px;
+    height: 20px;
+    padding: 0;
+    background-color: white;
+    color: black;
+    outline: none;
+    border: none;
+
+}
 .workspacesfilepng_footer {
     width: 100%;
     display: flex;

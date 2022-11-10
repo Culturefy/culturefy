@@ -87,7 +87,7 @@ class MusicList extends Component {
           Click me to trigger play: {!this.state.playing ? "▶" : "■"}
         </div> */}
         {/* <div id="analyzer"></div> */}
-        <div>
+        <div style={{ width: "50vw", height: "60vh",position: "absolute" }}>
   
         <ReactWaves
           audioFile={this.state.track.source}

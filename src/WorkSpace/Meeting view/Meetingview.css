@@ -29,27 +29,39 @@
 }
 
 .view_frame {
-    width: 100%;
+    width: 24vw;
     height: 40vh;
-    border-radius: 10px;
-    border-top: 1px solid #368da0;
-    border-right: 1px solid #368da0;
-    border-left: 1px solid #368da0;
-
+    border-radius: 25px;
+    border-top: 2px solid #368da0;
+    border-right: 4px solid #368da0;
+    border-left: 2px solid #368da0;
 }
 
 .mting_host {
-    width: 100%;
+    width: 98%;
     height: 50%;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    margin-left: 5px;
 }
-
-.mting_host img {
-    width: 100%;
+.mting_host_ch{
+    width: 87%;
     height: 100%;
-    border-radius: 10px;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
-
+.mting_host_ch button{
+    border-radius: 25px;
+    padding: 2px 10px;
+    border: none;
+    background-color: #368da0;
+    color: white;
+}
 .meet_as_rig {
     width: 49.5%;
     height: 80vh;
@@ -115,9 +127,9 @@
     width: 80%;
     height: 80%;
     margin-top: 30px;
-    border: 2px solid #6c91ae;
     border-radius: 20px;
     /* top: 30%; */
+    box-sizing: border-box;
 }
 .screenshareview_comment{
     width: 20%;

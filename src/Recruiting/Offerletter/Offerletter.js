@@ -43,12 +43,12 @@ const Offerletter = () => {
            
                      <div className="addjob_button">
                      <Link to="/recruiting/newofferletter">
-                        <button onClick={handleAddjob}>Add a Job +</button>
+                        <button onClick={handleAddjob}>Add offer Letter +</button>
                         </Link>
                     </div>
                     <div className="jobs_header">
                       
-                            <h2>Open Jobs</h2>
+                            <h2>Files</h2>
                        
                     </div>
                     <div className="jobs_table">
@@ -64,7 +64,7 @@ const Offerletter = () => {
                                     return (
                                         <>
                                             <tr>
-                                                <td className='job_title'>{e.job_title}</td>
+                                                <td className='job_title'><Link to="/recruiting/anofferletter">{e.job_title}</Link></td>
                                                 <td className='job_other'>{e.applicant}</td>
                                                 <td className='job_other'>{e.job_types}</td>
                                             </tr>
