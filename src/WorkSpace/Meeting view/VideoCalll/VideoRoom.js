@@ -4,7 +4,8 @@ import {VideoPlayer} from './VideoPlayer'
 
 const APP_ID = '0190e0516f5a47df8232522a5d9c4c6f';
 const TOKEN =
-  '007eJxTYMhqjW6aVjP5qaLkk7nvjyozNeteWe5yqSD7+rVbDOu/Bz9SYDAwtDRINTA1NEszTTQxT0mzMDI2MjUySjRNsUw2STZLW1eRndwQyMiw3/UUKyMDBIL4PAwBQQo+nmGuCs4ejiEMDADOgyKz';
+  '007eJxTYBCW+7fcVD6MPbRodv8S36mPFaXin/8MYvhhmP05uIVriacCg4GhpUGqgamhWZppool5SpqFkbGRqZFRommKZbJJslnaofc5yQ2BjAwxi5hZGBkgEMTnYQgIUvDxDHNVcPZwDGFgAACc+h8L';
+  
 const CHANNEL = 'PR LIVE CHAT';
 
 const client = AgoraRTC.createClient({

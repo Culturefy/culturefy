@@ -12,7 +12,6 @@ const VideoCallMain = () => {
           Join Room
         </button>
       )}
-
       {joined && <VideoRoom />}
     </div>
   )

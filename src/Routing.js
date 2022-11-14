@@ -43,7 +43,7 @@ import Resume from "./Recruiting/Interviews/Resume"
 import InterviewQuestion from "./Recruiting/Interviews/InterviewQuestion"
 import Anofferletter from "./Recruiting/Offerletter/Anofferletter"
 import MyCalendar from "./Calendarclone/MyCalendar"
-// import Annotations from "./component/Annotations"
+
 const Routing = () => {
     return (
         <Routes>
@@ -53,7 +53,7 @@ const Routing = () => {
             <Route path="/create-campaigns" element={<CreateCampaignNewVersion />} />
             <Route path="/campaign/searchcapaign" element={<Searchcampaign />} />
             <Route path="/campaign/campaign-ad" element={<CampaignAd />} />
-            {/* Work Space */}
+            {/* WorkSpace */}
             <Route path="/workspace-main" element={<Workspace />} />
             <Route path="/createworkspaces" element={<CreateWorkspaces />} />
             <Route path="/workspaces" element={<Worksplaceindex />} />
@@ -73,7 +73,7 @@ const Routing = () => {
             <Route path="/workspaceagendas" element={<WorkspaceAgendas />} />
             <Route path="/workspaceagendatemplates" element={<WorkspaceAgendaTemplates />} />
             <Route path="/workspaceagendasview" element={<WorkspaceAgendaView />} />
-            {/* <Route path="/a" element={<Annotations />} /> */}
+           
 
 
             <Route path="/cal" element={<MyCalendar />} />
