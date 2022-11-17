@@ -23,7 +23,7 @@ const Interviews = () => {
         <h2>Calendar</h2>
       </div>
       <div className="calendar_view">
-        {/* <Calander/> */}
+        <Calander/>
       </div>
 
 

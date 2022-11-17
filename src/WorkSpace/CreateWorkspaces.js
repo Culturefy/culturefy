@@ -83,17 +83,19 @@ const CreateWorkspaces = () => {
               value={workspaceData.workspace_date}
               
             /> */}
-            <TextField
+<div className="Date_n_time">
+            {/* <TextField
               id="date"
-
               type="date"
               defaultValue="2017-05-24"
+              
               sx={{ width: "100%", border: "none" }}
               InputLabelProps={{
                 shrink: true,
               }}
-            />
-
+            /> */}
+            <input type="Date" className="workspace_date" />
+</div>
             <label htmlFor="">Description</label>
             <TextField
               name="workspace_description"

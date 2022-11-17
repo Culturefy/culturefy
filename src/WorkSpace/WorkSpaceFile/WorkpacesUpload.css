@@ -16,6 +16,14 @@
     /* margin-left: 23%; */
     /* border: 1px solid red; */
 }
+.workpace_upload_header{
+    display: flex;
+    /* border: 1px solid red; */
+}
+.upload_inner_header{
+    width: 50%;
+    /* border: 1px solid green; */
+}
 
 .workpace_upload_header button {
     padding: 8px 30px;
@@ -29,7 +37,7 @@
 
 .workpace_upload_header h2 {
     font-weight: bold;
-    font-family: "Graphik_Bold";
+    font-family: "Graphik_Medium"; 
 }
 
 .upload_files_Section {

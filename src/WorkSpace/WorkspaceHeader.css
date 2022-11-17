@@ -17,7 +17,9 @@
     /* justify-content: space-between; */
 }
 .header_title{
-    font-family: "Graphik_Bold";
+    font-family: "Graphik_Semibold";
+   
+    margin-left: 20px;
 }
 .header_logo{
     width: 100px !important;

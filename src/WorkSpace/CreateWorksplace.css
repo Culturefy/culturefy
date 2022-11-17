@@ -24,6 +24,21 @@
     font-weight: 700;
     font-family: "Graphik_Regular";
 }
+.workspace_date{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid grey;
+    padding: 10px 0;
+    margin: 10px 0 ;
+    outline: none;
+}
+.Date_n_time ::-webkit-input-placeholder{
+    color: grey;
+}
+.Date_n_time .MuiFormControl-root .MuiOutlinedInput-root{
+    border: none !important;
+    outline: none;
+}
 
 .create-workspaces-picture{
     width: 60%;

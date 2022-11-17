@@ -215,7 +215,7 @@ const CreateCampaignNewVersion = () => {
             </div>
             <Plan />
             <Position />
-            <Possess/>
+            <Possess />
           </div>
 
           {/* ======================================Aside Right */}
@@ -242,70 +242,70 @@ const CreateCampaignNewVersion = () => {
 
                 </div>
               </div>
-            
-                <Card className='recommandation_cards'>
-                  <CardContent>
+
+              <Card className='recommandation_cards'>
+                <CardContent>
                   <p className='recommandation_cards_p'>CAMPAIGN</p>
                   <h4>Sexism</h4>
                   <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque eligendi ipsum et doloribus blanditiis nostrum, rem voluptatibus aut nihil consequuntur.</p>
                   <div className='recommandation_cards_button'>
                     <button>Create Task</button>
                   </div>
-                  </CardContent>
-                </Card>
+                </CardContent>
+              </Card>
 
-                <Card className='recommandation_cards'>
-                  <CardContent>
+              <Card className='recommandation_cards'>
+                <CardContent>
                   <p className='recommandation_cards_p' >CAMPAIGN</p>
                   <h4>Racism and Tokenism</h4>
                   <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque eligendi ipsum et doloribus blanditiis nostrum, rem voluptatibus aut nihil consequuntur.</p>
                   <div className='recommandation_cards_button'>
                     <button>Create Task</button>
                   </div>
-                  </CardContent>
-                </Card>
+                </CardContent>
+              </Card>
 
-                <Card className='recommandation_cards'>
-                  <CardContent>
+              <Card className='recommandation_cards'>
+                <CardContent>
                   <p className='recommandation_cards_p'>CAMPAIGN</p>
                   <h4>Ableism</h4>
                   <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque eligendi ipsum et doloribus blanditiis nostrum, rem voluptatibus aut nihil consequuntur.</p>
                   <div className='recommandation_cards_button'>
                     <button>Create Task</button>
                   </div>
-                  </CardContent>
-                </Card>
-                <Card className='recommandation_cards'>
-                  <CardContent>
+                </CardContent>
+              </Card>
+              <Card className='recommandation_cards'>
+                <CardContent>
                   <p className='recommandation_cards_p'>CAMPAIGN</p>
                   <h4>Ableism</h4>
                   <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque eligendi ipsum et doloribus blanditiis nostrum, rem voluptatibus aut nihil consequuntur.</p>
                   <div className='recommandation_cards_button'>
                     <button>Create Task</button>
                   </div>
-                  </CardContent>
-                </Card>
-                <Card className='recommandation_cards'>
-                  <CardContent>
+                </CardContent>
+              </Card>
+              <Card className='recommandation_cards'>
+                <CardContent>
                   <p className='recommandation_cards_p'>CAMPAIGN</p>
                   <h4>Ableism</h4>
                   <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque eligendi ipsum et doloribus blanditiis nostrum, rem voluptatibus aut nihil consequuntur.</p>
                   <div className='recommandation_cards_button'>
                     <button>Create Task</button>
                   </div>
-                  </CardContent>
-                </Card>
-                <Card className='recommandation_cards'>
-                  <CardContent>
+                </CardContent>
+              </Card>
+              <Card className='recommandation_cards'>
+                <CardContent>
                   <p className='recommandation_cards_p'>CAMPAIGN</p>
                   <h4>Ableism</h4>
                   <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque eligendi ipsum et doloribus blanditiis nostrum, rem voluptatibus aut nihil consequuntur.</p>
                   <div className='recommandation_cards_button'>
                     <button>Create Task</button>
                   </div>
-                  </CardContent>
-                </Card>
-           
+                </CardContent>
+              </Card>
+
               <div>
 
               </div>

@@ -17,9 +17,10 @@
     outline: none;
 }
 .comment_wepper_ch{
-    height: 55vh;
+    height: 50vh;
     /* margin: 0 10px; */
     overflow: scroll;
+    margin-top: 60px;
 }
 .comment_header{
     width: 100%;
