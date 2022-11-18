@@ -52,8 +52,12 @@ const Task = () => {
         }
 
         setState({ ...state, [anchor]: open });
-        
-        setarrow(true)
+         
+        if(arrow === false){
+            setarrow(true)
+        }else if(arrow === true){
+            setarrow(false)
+        }
     };
 
     const handleUsers = () => {

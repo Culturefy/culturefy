@@ -15,7 +15,7 @@
     width: 49.5%;
     height: 90vh;
     border-radius: 10px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .mting_iframe {
@@ -27,20 +27,22 @@
     box-sizing: border-box;
     overflow: hidden;
     border-radius: 10px;
-    border: 1px solid green;
+    /* border: 1px solid green; */
 }
 .mting_iframe a{
     width: 100%;
 }
 
 .view_frame {
-    width: 100%;
+    width: 30vw;
     height: 40vh;
     border-radius: 25px;
-    border-top: 1px solid #368da0;
-    border-right: 2px solid #368da0;
+    border-top: 2px solid #368da0;
+    border-right: 1px solid #368da0;
     border-left: 1px solid #368da0;
+    
 }
+
 
 .mting_host {
 
@@ -61,7 +63,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 /* .mting_host_ch button{
     border-radius: 25px;
@@ -71,7 +73,7 @@
     color: white;
 } */
 .live_video_stream{
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     height: 100%;
     width: 100%;
 }

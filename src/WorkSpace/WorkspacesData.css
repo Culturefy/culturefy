@@ -133,13 +133,18 @@
 }
 
 .filter_section {
-  width: 100%;
+  width: 95%;
+  margin-left: 25px;
   height: 6.25rem;
 
-
+}
+.workspaces_filter{
+  width: 95%;
+  margin-left: 25px;
 }
 
 .workspaces_filter>p {
+ 
   margin: 0.625rem;
   color: #2394ae;
 }
@@ -149,12 +154,16 @@
   width: 100%;
   /* margin-bottom: 3.125rem; */
   margin: 1.125rem 0;
+
 }
 
 .favorits_header {
+
+  width: 95%;
   display: flex;
   align-items: center;
   height: 15%;
+  margin-left:25px ;
 }
 
 .wor_data_fav_star {

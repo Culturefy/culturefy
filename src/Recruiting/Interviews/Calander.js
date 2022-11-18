@@ -87,15 +87,15 @@ const Calander = () => {
 
   return (
     <>
-      {/* <div>
+      <div>
         <input type="text" placeholder="Add Title" style={{ width: "20%", marginRight: "10px" }} value={newEvent.title} onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })} />
         <DatePicker placeholderText="Start Date" style={{ marginRight: "10px" }} selected={newEvent.start} onChange={(start) => setNewEvent({ ...newEvent, start })} />
-        <DatePicker placeholderText="End Date" selected={newEvent.end} onChange={(end) => setNewEvent({ ...newEvent, end })} /> */}
+        <DatePicker placeholderText="End Date" selected={newEvent.end} onChange={(end) => setNewEvent({ ...newEvent, end })} />
         {/* <input type="time"  id=""  selected={newEvent.end} onChange={(end) => setNewEvent({ ...newEvent, end })} /> */}
-        {/* <button stlye={{ marginTop: "10px" }} onClick={handleAddEvent}>
+        <button stlye={{ marginTop: "10px" }} onClick={handleAddEvent}>
           Add Event
         </button>
-      </div> */}
+      </div>
       {/* <input type="text" placeholder="Add Title" style={{ width: "20%", marginRight: "10px" }} value={newEvent.job} onChange={(e) => setNewEvent({ ...newEvent, job: e.target.value })} />
       <input type="text" placeholder="Add Title" style={{ width: "20%", marginRight: "10px" }} value={newEvent.jobapp} onChange={(e) => setNewEvent({ ...newEvent, jobapp: e.target.value })} />
       <DatePicker placeholderText="Start Date" style={{ marginRight: "10px" }} selected={newEvent.date} onChange={(date) => setNewEvent({ ...newEvent, date })} /> */}

@@ -1,11 +1,11 @@
-*{
+* {
     box-sizing: border-box;
 }
+
 .workspace_agendasviews_wrepper {
     margin-left: 23%;
-    width: 70%;
     margin-top: 1.875rem;
-    width: 70% !important;
+    width: 72% !important;
 }
 
 .agendaview_section {
@@ -98,6 +98,7 @@
     align-items: center;
     justify-content: center;
 }
+
 .innerbutton_3 {
     width: 50%;
     border-right: 1px solid lightgrey;
@@ -105,6 +106,7 @@
     align-items: center;
     justify-content: space-evenly;
 }
+
 .innerbutton_3 button {
     background-color: black;
     /* height: 1.25rem; */
@@ -204,7 +206,7 @@
     /* border-right: 1px solid lightgray; */
     display: flex;
     align-items: center;
-    justify-content: center;    
+    justify-content: center;
 
 }
 
@@ -220,45 +222,76 @@
 }
 
 .agenda_commentsection {
-    width: 40%;
+    margin-left:20px;
+    width: 38%;
+
     /* border: 1px solid black; */
 }
-@media (max-width:1440px){
+.agenda_comment{
+    width: 90%;
+    /* border: 1px solid red; */
+}
+.agend_team{
+    width: 100%;
+    height: 80px;
+    /* border: 1px solid green; */
+}
+.agenda_chat{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    /* border: 1px solid red; */
+}
+
+/* ================================================================================ */
+
+.editor{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 73vh;
+}
+
+@media (max-width:1440px) {
     .wordpad_view_header {
         height: 4.5rem;
         display: block;
-        
-    }
-.buttons_1 {
-    width: 100%;
-    display: flex;
-    /* border: 2px solid green; */
-    border-bottom: 1px solid lightgrey;
-}
-.buttons_2 {
-    width: 100%;
-    display: flex;
-}
-.innerbutton_4 {
-    width: 20%;
-    border-right: 1px solid lightgray;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.innerbutton_5 {
-    width: 30%;
-    border-right: 1px solid lightgray;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.innerbutton_7 {
-    width: 10%;
-    border-right: 1px solid lightgray;
-    display: flex;
-    align-items: center;
-    justify-content: center;    
 
-}
+    }
+
+    .buttons_1 {
+        width: 100%;
+        display: flex;
+        /* border: 2px solid green; */
+        border-bottom: 1px solid lightgrey;
+    }
+
+    .buttons_2 {
+        width: 100%;
+        display: flex;
+    }
+
+    .innerbutton_4 {
+        width: 20%;
+        border-right: 1px solid lightgray;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .innerbutton_5 {
+        width: 30%;
+        border-right: 1px solid lightgray;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .innerbutton_7 {
+        width: 10%;
+        border-right: 1px solid lightgray;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
 }

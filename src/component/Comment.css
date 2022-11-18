@@ -104,6 +104,9 @@
     border: none;
     width: 95%;
 }
+.write ::-webkit-input-placeholder{
+    font-size: 13px;
+}
 .write input:focus{
     border: none;
     outline: none;
