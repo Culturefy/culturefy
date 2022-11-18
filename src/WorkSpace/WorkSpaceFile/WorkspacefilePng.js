@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Content from '../../component/Content'
 import Comment from '../../component/Comment'
+import { Link } from 'react-router-dom'
 import './WorkspacefilePng.css'
 import filepng from '../../assets/fav_img1.jpg'
 import user1 from '../../assets/user_img.jpg'
@@ -11,8 +12,13 @@ import WorkspaceSidebar from '../../component/WorkspaceSidebar'
 import Workspaces from '../../WorkSpace/WorkspaceHeader'
 import { Tooltip } from '@mui/material'
 import { tooltipClasses } from '@mui/material/Tooltip';
-
+import Calender from '../../assets/calendar-icon.png'
+import Notification from '../../assets/Notifiction.svg'
+import AdminImg from '../../assets/admin-img.png'
 import { styled } from '@mui/material/styles';
+import user from '../../assets/meet user.png'
+import Team from '../../component/Team'
+
 const WorkspacefilePng = () => {
     const [show, setshow] = useState({
         input1: false,
@@ -178,23 +184,38 @@ const WorkspacefilePng = () => {
         })
     }
     console.log(savedata)
-   
+
     const LightTooltip = styled(({ className, ...props }) => (
         <Tooltip {...props} classes={{ popper: className }} />
-      ))(({ theme }) => ({
+    ))(({ theme }) => ({
         [`& .${tooltipClasses.tooltip}`]: {
-          backgroundColor: theme.palette.common.white,
-          color: 'gray',
-          boxShadow: theme.shadows[1],
-          fontSize: 11,
+            maxWidth: 500,
+            backgroundColor: theme.palette.common.white,
+            color: 'gray',
+            boxShadow: theme.shadows[1],
+            fontSize: 11,
+
         },
-      }));
+    }));
     return (
         <>
 
             <Content />
             <div className="workspace_file_main_wrapper">
                 <div className="workspacesfile_wapper">
+                    <div className='campaign_header_user_data'>
+                        <ul>
+                            <li>
+                                <img src={Calender} />
+                            </li>
+                            <li>
+                                <img src={Notification} />
+                            </li>
+                            <li>
+                                <img src={AdminImg} />
+                            </li>
+                        </ul>
+                    </div>
                     <div className="workspace_file_header">
                         <Workspaces />
                     </div>
@@ -218,7 +239,7 @@ const WorkspacefilePng = () => {
                                                 return (
                                                     <div className='tagd_div'>
                                                         {
-                                                            !e.inp_1 ? null : <LightTooltip  title={e.inp_1}><div className="red_dot" ></div></LightTooltip >
+                                                            !e.inp_1 ? null : <LightTooltip title={e.inp_1}><div className="red_dot" ></div></LightTooltip >
                                                         }
                                                     </div>
                                                 )
@@ -234,7 +255,7 @@ const WorkspacefilePng = () => {
                                                 return (
                                                     <div className='tagd_div'>
                                                         {
-                                                            !e.inp_2 ? null : <LightTooltip  title={e.inp_2}><div className="red_dot" ></div></LightTooltip >
+                                                            !e.inp_2 ? null : <LightTooltip title={e.inp_2}><div className="red_dot" ></div></LightTooltip >
                                                         }
                                                     </div>
                                                 )
@@ -250,7 +271,7 @@ const WorkspacefilePng = () => {
                                                 return (
                                                     <div className='tagd_div'>
                                                         {
-                                                            !e.inp_3 ? null : <LightTooltip  title={e.inp_3}><div className="red_dot" ></div></LightTooltip >
+                                                            !e.inp_3 ? null : <LightTooltip title={e.inp_3}><div className="red_dot" ></div></LightTooltip >
                                                         }
                                                     </div>
                                                 )
@@ -266,7 +287,7 @@ const WorkspacefilePng = () => {
                                                 return (
                                                     <div className='tagd_div'>
                                                         {
-                                                            !e.inp_4 ? null : <LightTooltip  title={e.inp_4}><div className="red_dot" ></div></LightTooltip >
+                                                            !e.inp_4 ? null : <LightTooltip title={e.inp_4}><div className="red_dot" ></div></LightTooltip >
                                                         }
                                                     </div>
                                                 )
@@ -283,7 +304,7 @@ const WorkspacefilePng = () => {
                                                 return (
                                                     <div className='tagd_div'>
                                                         {
-                                                            !e.inp_5 ? null : <LightTooltip  title={e.inp_5}><div className="red_dot" ></div></LightTooltip >                                                        }
+                                                            !e.inp_5 ? null : <LightTooltip title={e.inp_5}><div className="red_dot" ></div></LightTooltip >}
 
                                                     </div>
                                                 )
@@ -300,7 +321,7 @@ const WorkspacefilePng = () => {
                                                 return (
                                                     <div className='tagd_div'>
                                                         {
-                                                            !e.inp_6 ? null : <LightTooltip  title={e.inp_6}><div className="red_dot" ></div></LightTooltip >                                                        }
+                                                            !e.inp_6 ? null : <LightTooltip title={e.inp_6}><div className="red_dot" ></div></LightTooltip >}
 
                                                     </div>
                                                 )
@@ -317,7 +338,7 @@ const WorkspacefilePng = () => {
                                                 return (
                                                     <div className='tagd_div'>
                                                         {
-                                                            !e.inp_7 ? null : <LightTooltip  title={e.inp_7}><div className="red_dot" ></div></LightTooltip >                                                        }
+                                                            !e.inp_7 ? null : <LightTooltip title={e.inp_7}><div className="red_dot" ></div></LightTooltip >}
 
                                                     </div>
                                                 )
@@ -334,7 +355,7 @@ const WorkspacefilePng = () => {
                                                 return (
                                                     <div className='tagd_div'>
                                                         {
-                                                            !e.inp_8 ? null : <LightTooltip  title={e.inp_8}><div className="red_dot" ></div></LightTooltip >                                                        }
+                                                            !e.inp_8 ? null : <LightTooltip title={e.inp_8}><div className="red_dot" ></div></LightTooltip >}
 
                                                     </div>
                                                 )
@@ -351,7 +372,7 @@ const WorkspacefilePng = () => {
                                                 return (
                                                     <div className='tagd_div'>
                                                         {
-                                                            !e.inp_9 ? null : <LightTooltip  title={e.inp_9}><div className="red_dot" ></div></LightTooltip >                                                        }
+                                                            !e.inp_9 ? null : <LightTooltip title={e.inp_9}><div className="red_dot" ></div></LightTooltip >}
 
                                                     </div>
                                                 )
@@ -368,7 +389,7 @@ const WorkspacefilePng = () => {
                                                 return (
                                                     <div className='tagd_div'>
                                                         {
-                                                            !e.inp_10 ? null : <LightTooltip  title={e.inp_10}><div className="red_dot" ></div></LightTooltip >
+                                                            !e.inp_10 ? null : <LightTooltip title={e.inp_10}><div className="red_dot" ></div></LightTooltip >
                                                         }
 
                                                     </div>
@@ -386,7 +407,7 @@ const WorkspacefilePng = () => {
                                                 return (
                                                     <div className='tagd_div'>
                                                         {
-                                                            !e.inp_11 ? null : <LightTooltip  title={e.inp_11}><div className="red_dot" ></div></LightTooltip >
+                                                            !e.inp_11 ? null : <LightTooltip title={e.inp_11}><div className="red_dot" ></div></LightTooltip >
                                                         }
 
                                                     </div>
@@ -404,7 +425,7 @@ const WorkspacefilePng = () => {
                                                 return (
                                                     <div className='tagd_div'>
                                                         {
-                                                            !e.inp_12 ? null : <LightTooltip  title={e.inp_12}><div className="red_dot" ></div></LightTooltip >
+                                                            !e.inp_12 ? null : <LightTooltip title={e.inp_12}><div className="red_dot" ></div></LightTooltip >
                                                         }
 
                                                     </div>
@@ -422,7 +443,7 @@ const WorkspacefilePng = () => {
                                                 return (
                                                     <div className='tagd_div'>
                                                         {
-                                                            !e.inp_13 ? null : <LightTooltip  title={e.inp_13}><div className="red_dot" ></div></LightTooltip >
+                                                            !e.inp_13 ? null : <LightTooltip title={e.inp_13}><div className="red_dot" ></div></LightTooltip >
                                                         }
 
                                                     </div>
@@ -440,7 +461,7 @@ const WorkspacefilePng = () => {
                                                 return (
                                                     <div className='tagd_div'>
                                                         {
-                                                            !e.inp_14 ? null : <LightTooltip  title={e.inp_14}><div className="red_dot" ></div></LightTooltip >
+                                                            !e.inp_14 ? null : <LightTooltip title={e.inp_14}><div className="red_dot" ></div></LightTooltip >
                                                         }
 
                                                     </div>
@@ -458,7 +479,7 @@ const WorkspacefilePng = () => {
                                                 return (
                                                     <div className='tagd_div'>
                                                         {
-                                                            !e.inp_15 ? null : <LightTooltip  title={e.inp_15}><div className="red_dot" ></div></LightTooltip >
+                                                            !e.inp_15 ? null : <LightTooltip title={e.inp_15}><div className="red_dot" ></div></LightTooltip >
                                                         }
 
                                                     </div>
@@ -476,7 +497,7 @@ const WorkspacefilePng = () => {
                                                 return (
                                                     <div className='tagd_div'>
                                                         {
-                                                            !e.inp_16 ? null : <LightTooltip  title={e.inp_16}><div className="red_dot" ></div></LightTooltip >
+                                                            !e.inp_16 ? null : <LightTooltip title={e.inp_16}><div className="red_dot" ></div></LightTooltip >
                                                         }
 
                                                     </div>
@@ -494,7 +515,7 @@ const WorkspacefilePng = () => {
                                                 return (
                                                     <div className='tagd_div'>
                                                         {
-                                                            !e.inp_17 ? null : <LightTooltip  title={e.inp_17}><div className="red_dot" ></div></LightTooltip >
+                                                            !e.inp_17 ? null : <LightTooltip title={e.inp_17}><div className="red_dot" ></div></LightTooltip >
                                                         }
 
                                                     </div>
@@ -512,7 +533,7 @@ const WorkspacefilePng = () => {
                                                 return (
                                                     <div className='tagd_div'>
                                                         {
-                                                            !e.inp_18 ? null : <LightTooltip  title={e.inp_18}><div className="red_dot" ></div></LightTooltip >
+                                                            !e.inp_18 ? null : <LightTooltip title={e.inp_18}><div className="red_dot" ></div></LightTooltip >
                                                         }
 
                                                     </div>
@@ -530,7 +551,7 @@ const WorkspacefilePng = () => {
                                                 return (
                                                     <div className='tagd_div'>
                                                         {
-                                                            !e.inp_19 ? null : <LightTooltip  title={e.inp_19}><div className="red_dot" ></div></LightTooltip >
+                                                            !e.inp_19 ? null : <LightTooltip title={e.inp_19}><div className="red_dot" ></div></LightTooltip >
                                                         }
 
                                                     </div>
@@ -548,7 +569,7 @@ const WorkspacefilePng = () => {
                                                 return (
                                                     <div className='tagd_div'>
                                                         {
-                                                            !e.inp_20 ? null : <LightTooltip  title={e.inp_20}><div className="red_dot" ></div></LightTooltip >
+                                                            !e.inp_20 ? null : <LightTooltip title={e.inp_20}><div className="red_dot" ></div></LightTooltip >
                                                         }
 
                                                     </div>
@@ -566,7 +587,7 @@ const WorkspacefilePng = () => {
                                                 return (
                                                     <div className='tagd_div'>
                                                         {
-                                                            !e.inp_21 ? null : <LightTooltip  title={e.inp_21}><div className="red_dot" ></div></LightTooltip >
+                                                            !e.inp_21 ? null : <LightTooltip title={e.inp_21}><div className="red_dot" ></div></LightTooltip >
                                                         }
 
                                                     </div>
@@ -584,7 +605,7 @@ const WorkspacefilePng = () => {
                                                 return (
                                                     <div className='tagd_div'>
                                                         {
-                                                            !e.inp_22 ? null : <LightTooltip  title={e.inp_22}><div className="red_dot" ></div></LightTooltip >
+                                                            !e.inp_22 ? null : <LightTooltip title={e.inp_22}><div className="red_dot" ></div></LightTooltip >
                                                         }
 
                                                     </div>
@@ -602,7 +623,7 @@ const WorkspacefilePng = () => {
                                                 return (
                                                     <div className='tagd_div'>
                                                         {
-                                                            !e.inp_23 ? null : <LightTooltip  title={e.inp_23}><div className="red_dot" ></div></LightTooltip >
+                                                            !e.inp_23 ? null : <LightTooltip title={e.inp_23}><div className="red_dot" ></div></LightTooltip >
                                                         }
 
                                                     </div>
@@ -620,7 +641,7 @@ const WorkspacefilePng = () => {
                                                 return (
                                                     <div className='tagd_div'>
                                                         {
-                                                            !e.inp_24 ? null : <LightTooltip  title={e.inp_24}><div className="red_dot" ></div></LightTooltip >
+                                                            !e.inp_24 ? null : <LightTooltip title={e.inp_24}><div className="red_dot" ></div></LightTooltip >
                                                         }
 
                                                     </div>
@@ -638,7 +659,7 @@ const WorkspacefilePng = () => {
                                                 return (
                                                     <div className='tagd_div'>
                                                         {
-                                                            !e.inp_25 ? null : <LightTooltip  title={e.inp_25}><div className="red_dot" ></div></LightTooltip >
+                                                            !e.inp_25 ? null : <LightTooltip title={e.inp_25}><div className="red_dot" ></div></LightTooltip >
                                                         }
 
                                                     </div>
@@ -656,7 +677,7 @@ const WorkspacefilePng = () => {
                                                 return (
                                                     <div className='tagd_div'>
                                                         {
-                                                            !e.inp_26 ? null : <LightTooltip  title={e.inp_26}><div className="red_dot" ></div></LightTooltip >
+                                                            !e.inp_26 ? null : <LightTooltip title={e.inp_26}><div className="red_dot" ></div></LightTooltip >
                                                         }
 
                                                     </div>
@@ -674,7 +695,7 @@ const WorkspacefilePng = () => {
                                                 return (
                                                     <div className='tagd_div'>
                                                         {
-                                                            !e.inp_27 ? null : <LightTooltip  title={e.inp_27}><div className="red_dot" ></div></LightTooltip >
+                                                            !e.inp_27 ? null : <LightTooltip title={e.inp_27}><div className="red_dot" ></div></LightTooltip >
                                                         }
 
                                                     </div>
@@ -692,7 +713,7 @@ const WorkspacefilePng = () => {
                                                 return (
                                                     <div className='tagd_div'>
                                                         {
-                                                            !e.inp_28 ? null : <LightTooltip  title={e.inp_28}><div className="red_dot" ></div></LightTooltip >
+                                                            !e.inp_28 ? null : <LightTooltip title={e.inp_28}><div className="red_dot" ></div></LightTooltip >
                                                         }
 
                                                     </div>
@@ -710,7 +731,7 @@ const WorkspacefilePng = () => {
                                                 return (
                                                     <div className='tagd_div'>
                                                         {
-                                                            !e.inp_29 ? null : <LightTooltip  title={e.inp_29}><div className="red_dot" ></div></LightTooltip >
+                                                            !e.inp_29 ? null : <LightTooltip title={e.inp_29}><div className="red_dot" ></div></LightTooltip >
                                                         }
 
                                                     </div>
@@ -728,7 +749,7 @@ const WorkspacefilePng = () => {
                                                 return (
                                                     <div className='tagd_div'>
                                                         {
-                                                            !e.inp_30 ? null : <LightTooltip  title={e.inp_30}><div className="red_dot" ></div></LightTooltip >
+                                                            !e.inp_30 ? null : <LightTooltip title={e.inp_30}><div className="red_dot" ></div></LightTooltip >
                                                         }
 
                                                     </div>
@@ -746,7 +767,7 @@ const WorkspacefilePng = () => {
                                                 return (
                                                     <div className='tagd_div'>
                                                         {
-                                                            !e.inp_31 ? null : <LightTooltip  title={e.inp_31}><div className="red_dot" ></div></LightTooltip >
+                                                            !e.inp_31 ? null : <LightTooltip title={e.inp_31}><div className="red_dot" ></div></LightTooltip >
                                                         }
 
                                                     </div>
@@ -764,7 +785,7 @@ const WorkspacefilePng = () => {
                                                 return (
                                                     <div className='tagd_div'>
                                                         {
-                                                            !e.inp_32 ? null : <LightTooltip  title={e.inp_32}><div className="red_dot" ></div></LightTooltip >
+                                                            !e.inp_32 ? null : <LightTooltip title={e.inp_32}><div className="red_dot" ></div></LightTooltip >
                                                         }
 
                                                     </div>
@@ -782,7 +803,7 @@ const WorkspacefilePng = () => {
                                                 return (
                                                     <div className='tagd_div'>
                                                         {
-                                                            !e.inp_33 ? null : <LightTooltip  title={e.inp_33}><div className="red_dot" ></div></LightTooltip >
+                                                            !e.inp_33 ? null : <LightTooltip title={e.inp_33}><div className="red_dot" ></div></LightTooltip >
                                                         }
 
                                                     </div>
@@ -800,7 +821,7 @@ const WorkspacefilePng = () => {
                                                 return (
                                                     <div className='tagd_div'>
                                                         {
-                                                            !e.inp_34 ? null : <LightTooltip  title={e.inp_34}><div className="red_dot" ></div></LightTooltip >
+                                                            !e.inp_34 ? null : <LightTooltip title={e.inp_34}><div className="red_dot" ></div></LightTooltip >
                                                         }
 
                                                     </div>
@@ -818,7 +839,7 @@ const WorkspacefilePng = () => {
                                                 return (
                                                     <div className='tagd_div'>
                                                         {
-                                                            !e.inp_35 ? null : <LightTooltip  title={e.inp_35}><div className="red_dot" ></div></LightTooltip >
+                                                            !e.inp_35 ? null : <LightTooltip title={e.inp_35}><div className="red_dot" ></div></LightTooltip >
                                                         }
 
                                                     </div>
@@ -836,7 +857,7 @@ const WorkspacefilePng = () => {
                                                 return (
                                                     <div className='tagd_div'>
                                                         {
-                                                            !e.inp_36 ? null : <LightTooltip  title={e.inp_36}><div className="red_dot" ></div></LightTooltip >
+                                                            !e.inp_36 ? null : <LightTooltip title={e.inp_36}><div className="red_dot" ></div></LightTooltip >
                                                         }
 
                                                     </div>
@@ -872,7 +893,18 @@ const WorkspacefilePng = () => {
                             </div>
                         </div>
                         <div className="comment_section">
+                            <Team/>
                             <Comment />
+                            <Link to='/workspace/meetingview'>
+                                <div className="calling_Section">
+                                    <div className="call_img1">
+                                        <img src={user2} alt="" />
+                                    </div>
+                                    <div className="call_img2">
+                                        <img src={user} alt="" />
+                                    </div>
+                                </div>
+                            </Link>
                             <div className="chat_Section">
                                 <Chat />
                             </div>

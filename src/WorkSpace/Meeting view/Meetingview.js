@@ -11,7 +11,8 @@ import WorkspaceSidebar from '../../component/WorkspaceSidebar'
 import Comment from '../../component/Comment'
 import Chat from '../../component/Chat'
 import { useEffect, useState } from 'react';
-import { VideoRoom} from './VideoCalll/VideoRoom'
+import { VideoRoom } from './VideoCalll/VideoRoom'
+import LiveVideoStreaming from './VideoCalll/App'
 
 const Meetingview = () => {
     const [image, setImage] = useState()
@@ -58,8 +59,8 @@ const Meetingview = () => {
                                     </div> */}
                                     <div className='mting_host'>
                                         <div className="mting_host_ch">
-                                      
-                                            {!joined && (
+
+                                            {/* {!joined && (
                                                 <>
                                                  <h5> Create Video Call </h5>
                                                 <button onClick={() => setJoined(true)}>
@@ -67,7 +68,9 @@ const Meetingview = () => {
                                                 </button>
                                                 </>
                                             )}
-                                            {joined && <VideoRoom />}
+                                            {joined && <VideoRoom />} */}
+
+                                            <LiveVideoStreaming />
                                         </div>
                                     </div>
 
@@ -125,10 +128,10 @@ const Meetingview = () => {
                             </div>
 
                         </div>
-                        <div className="gapanalysis_comment">
+                        {/* <div className="gapanalysis_comment">
                             <Comment />
                             <Chat />
-                        </div>
+                        </div> */}
                     </div>
                 </div>
                 <WorkspaceSidebar />

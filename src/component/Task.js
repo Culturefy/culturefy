@@ -22,8 +22,12 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 import { Link } from 'react-router-dom';
+import left_arrow from '../assets/left_arrow.svg'
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 const Task = () => {
+    const [arrow,setarrow] = useState(false)
     const [state, setState] = React.useState({
         top: false,
         left: false,
@@ -48,6 +52,8 @@ const Task = () => {
         }
 
         setState({ ...state, [anchor]: open });
+        
+        setarrow(true)
     };
 
     const handleUsers = () => {
@@ -64,7 +70,12 @@ const Task = () => {
                 <React.Fragment key={anchor}>
                     <div className="team_drawer">
                         <Button onClick={toggleDrawer(anchor, true)}
-                        >Task</Button>
+                        >
+                            
+                            {!arrow ?<ArrowBackIosIcon style={{ color: "black" }} /> :null}
+                            Task
+                            {arrow ?<ArrowForwardIosIcon style={{ color: "black" }} /> :null}
+                        </Button>
                     </div>
 
 
@@ -186,11 +197,11 @@ const Task = () => {
                                             </li>
                                             <li>
                                                 <div className="section_inner_li">
-                                                <Link to="/workspace/meetingview">
-                                                    <i class="fa-solid fa-plus section_plus"></i>
+                                                    <Link to="/workspace/meetingview">
+                                                        <i class="fa-solid fa-plus section_plus"></i>
 
-                                                    <span className='section_additem'>Add items...</span>
-                                                </Link>
+                                                        <span className='section_additem'>Add items...</span>
+                                                    </Link>
                                                 </div>
                                             </li>
                                         </ul>

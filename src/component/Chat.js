@@ -83,6 +83,7 @@ export default function SwipeableTemporaryDrawer() {
 
 
   const submitHandler = (e) => {
+    console.log("click")
     e.preventDefault();
     if (text === '') return;
     channel.sendMessage({
@@ -219,10 +220,10 @@ export default function SwipeableTemporaryDrawer() {
                   placeholder='Write Something..'
                   onChange={(e) => setText(e.target.value)}
                   value={text}
-                  className="chat_send_input"
-                />
+                  className="chat_send_input"/>
+               
+                  </form>
               <span> Send</span>
-              </form>
             </div>
 
             {/* </Box> */}

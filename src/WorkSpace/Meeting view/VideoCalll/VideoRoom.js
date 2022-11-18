@@ -4,7 +4,7 @@ import {VideoPlayer} from './VideoPlayer'
 
 const APP_ID = '0190e0516f5a47df8232522a5d9c4c6f';
 const TOKEN =
-  '007eJxTYBCW+7fcVD6MPbRodv8S36mPFaXin/8MYvhhmP05uIVriacCg4GhpUGqgamhWZppool5SpqFkbGRqZFRommKZbJJslnaofc5yQ2BjAwxi5hZGBkgEMTnYQgIUvDxDHNVcPZwDGFgAACc+h8L';
+  '007eJxTYGDovedosVUwpF9XVv0Nj6PSB14Nh0amvjqeLbtTNpxkd1RgMDC0NEg1MDU0SzNNNDFPSbMwMjYyNTJKNE2xTDZJNkuLYyxPbghkZNicy8nACIUgPg9DQJCCj2eYq4Kzh2MIAwMAthgb0w==';
   
 const CHANNEL = 'PR LIVE CHAT';
 

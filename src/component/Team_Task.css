@@ -133,6 +133,10 @@
     text-decoration: none;
     color: black;
   }
+  .team_drawer img{
+    width: 30px ;
+    height: 30px;
+  }
 
   @media (max-width:1500px){
 

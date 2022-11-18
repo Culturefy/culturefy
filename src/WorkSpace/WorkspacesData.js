@@ -7,6 +7,7 @@ import Filter from '../component/Filter'
 import Comment from '../component/Comment'
 import WorkspaceHeader from './WorkspaceHeader'
 import { Link } from 'react-router-dom'
+import user from '../assets/meet user.png'
 import user2 from '../assets/meet user2.png'
 import AdminImg from '../assets/admin-img.png'
 import Calender from '../assets/calendar-icon.png'
@@ -48,7 +49,6 @@ const WorkspacesData = () => {
     bottom: false,
     right: false,
   });
-  const [user, setuser] = useState(false)
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
