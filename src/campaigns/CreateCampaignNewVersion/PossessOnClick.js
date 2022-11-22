@@ -6,7 +6,7 @@ import './MediaQueryCreateCampaignNewVersion.css'
 import Carousel from 'react-bootstrap/Carousel';
 
 import { useState } from 'react';
-const Possess = () => {
+const PossessOnClick = () => {
   const [preview, setpreview] = useState(false)
 
   const handleGeneratepreview = () => {
@@ -19,7 +19,9 @@ const Possess = () => {
   }
 
   return (
-    <div className='__Crt_cmpgn_possess__'>
+    <div className='__Crt_cmpgn_possess__'
+    style={{ backgroundColor: "rgba(211, 211, 211, 0.5)",borderRadius:"25px"}}
+    > 
       <div className='crt_cmpgn_plan__'>
 
         <div className='_header_title_plan_pr'>
@@ -180,4 +182,4 @@ const Possess = () => {
   )
 }
 
-export default Possess
+export default PossessOnClick

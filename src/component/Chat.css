@@ -22,12 +22,11 @@
 .chatbox_body{
     width: 100%;
     height: 100%;
-    /* border: 2px solid red; */
-   
+    border-radius: 25px;
 }
 .chatbox_header{
     width: 100%;
-    height: 7%;
+    padding: 10px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;   
@@ -57,7 +56,6 @@
 .chatuser{
     width: 20%;
     height: 50px;
-    /* border: 1px solid black; */
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -70,19 +68,16 @@
 .chat_send_message{
     width: 80%;
     height: 100%;
-    /* border: 1px solid black; */
 }
 .chat_user_name{
     display: flex;
-    /* border: 1px solid yellow; */
 }
 .chat_user_name p{
     margin: 5px;
     font-size: 10px;
 }
 .chat_user_message{
-    width: 100%;
-    /* border: 1px solid green; */
+    width: 20vw;
 }
 .chat_user_message p{
     font-size: 14px;
@@ -110,12 +105,16 @@
     justify-content: flex-end;
 }
 .send_message_input{
-
     display: flex;
+    width: 100%;
 }
+
 .chat_send_input{
-    width: 85%;
-    font-size: 10px;
+    width: 20vw;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    outline: none;
     /* border: 1px solid red; */
 }
 
@@ -123,7 +122,11 @@
 .send_input_box{
     width: 100%;
     height: 35px;
-    /* border: 1px solid red; */
+    border: 1px solid red;
+}
+.send_input_box input{
+    width:100%;
+    padding: 10px;
 }
 
 

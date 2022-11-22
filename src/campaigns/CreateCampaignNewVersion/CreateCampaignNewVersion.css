@@ -2,11 +2,18 @@
     width: 77%;
     margin-left: 23%;
 }
-
+.line_div_cmpgn{
+    width: 1px;
+    height: 110vh;
+    background-color: lightgray;
+    position: absolute;
+    left: 25.2%;
+    z-index: 0;
+}
 .create_campaignNew_version_ch {
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 2;
     background-color: white;
     height: 11.25rem;
 }
@@ -26,11 +33,12 @@
     width: 100%;
     display: flex;
     margin: 3.125rem 0;
-
 }
 
 .crt_cmpgn_aside_left {
     width: 60%;
+    height:75vh;
+   
 }
 
 
@@ -74,6 +82,9 @@
     display: flex;
     justify-content: start;
 }
+.plan_drpdn:hover{
+    color:#2294ae;
+}
 
 .Drop_Dwn_cnten_position {
     width: 60%;
@@ -109,12 +120,14 @@
     justify-content: center;
     width: 10%;
     align-items: center;
+    z-index: 1;
 }
 
 ._header_title_plan_ch {
     width: 100%;
     display: flex;
     justify-content: center;
+    z-index: 1;
 }
 
 .cmgn_h3 {
@@ -135,6 +148,7 @@
     display: flex;
     justify-content: center;
     align-items: start;
+    z-index: 1;
 }
 
 .campaign_goal_check {
@@ -145,7 +159,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: white;
+    z-index: 1;
     /* margin-left: 0.5%;     */
+}
+.campaign_goal_check_alter{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: 0.187rem solid #be171f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #be171f;
+    z-index: 1;
+}
+.cmpgn_check_icon_alter {
+    color: white
 }
 
 .campaign_goal_check_possess {
@@ -258,6 +288,7 @@
     padding: 0.625rem 0;
     border: none;
     border-bottom: 0.0625rem solid grey;
+    outline: none;
 }
 
 .position_tabs_title ::-webkit-input-placeholder {
@@ -287,6 +318,7 @@
     padding: 0.625rem 0;
     border: none;
     border-bottom: 0.0625rem solid grey;
+    outline: none;
 }
 
 .position_tabs_fields ::-webkit-input-placeholder {
@@ -311,6 +343,7 @@
     padding: 0.312rem;
     border: none;
     border-bottom: 0.0625rem solid grey;
+    outline: none;
 }
 
 .position_tabs_drpdn_tr {
@@ -498,7 +531,9 @@
     /* margin-left: 8%; */
     display: flex;
     justify-content: space-between;
-
+}
+.Position_crt_cmgn_review h5{
+    color: black;
 }
 
 .Position_crt_cmgn_review p {

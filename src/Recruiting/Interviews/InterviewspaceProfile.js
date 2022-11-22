@@ -1,9 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './InterviewspaceProfile.css'
 import user_screen from '../../assets/meet user.png'
 import { Link, Outlet } from 'react-router-dom'
+import Profile from "./Profile"
+
 
 const InterviewspaceProfile = () => {
+
+  const{value,setvalue} = useState(1)
+
+  const handleclick = (e) =>{
+     setvalue(e)
+  }
   return (
     <div className='interviewspace_main_wrapper'>
       <div className="interviewer_question_section">
@@ -63,13 +71,16 @@ const InterviewspaceProfile = () => {
           </div>
           <div className="profile_tabs">
               <ul>
-                <li><Link to="/recruiting/interviewspaceprofile/profile">Profile</Link></li>
-                <li><Link to="/recruiting/interviewspaceprofile/resume">Resume</Link></li>
-                <li><Link to="/recruiting/interviewspaceprofile/interviewquestion">Interview Questions</Link></li>
+                <li><Link onClick={()=>handleclick(1)}>Profile</Link></li>
+                <li><Link to="/recruiting/interviewspaceprofile/resume" onClick={()=>handleclick(2)} >Resume</Link></li>
+                <li><Link to="/recruiting/interviewspaceprofile/interviewquestion" onClick={()=>handleclick(3)}>Interview Questions</Link></li>
               </ul>
             </div>
           <div className="profile_containt">
-            <Outlet/>
+            {
+              value !== 1 ? <Profile /> : <Outlet/>
+            }
+           
           </div>
 
 

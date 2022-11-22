@@ -14,7 +14,7 @@ import List from '@mui/material/List';
 import { v4 as uuid } from 'uuid'
 import AgoraRTM from 'agora-rtm-sdk'
 
-let APP_ID = '0190e0516f5a47df8232522a5d9c4c6f'
+let APP_ID = '864f3aa345f64a85a264321d9844edaa'
 let CHANNEL_NAME = 'dpp';
 
 let client = AgoraRTM.createInstance(APP_ID)
@@ -81,7 +81,6 @@ export default function SwipeableTemporaryDrawer() {
     setState({ ...state, [anchor]: open });
   };
 
-
   const submitHandler = (e) => {
     console.log("click")
     e.preventDefault();
@@ -100,8 +99,6 @@ export default function SwipeableTemporaryDrawer() {
     setText('');
   };
 
-
-
   const list = (anchor) => (
     <Box
       sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
@@ -109,7 +106,6 @@ export default function SwipeableTemporaryDrawer() {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-
     </Box>
   );
   return (
@@ -120,7 +116,6 @@ export default function SwipeableTemporaryDrawer() {
             <Button>Chat</Button>
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
-          {/* <div className="b"> */}
           <SwipeableDrawer
             anchor={anchor}
             open={state[anchor]}
@@ -142,8 +137,6 @@ export default function SwipeableTemporaryDrawer() {
               </div>
 
               <div className="chatbox_chat">
-
-
                 <ScrollableFeed>
                   {
                     messages.map((message, index) => (
@@ -196,14 +189,8 @@ export default function SwipeableTemporaryDrawer() {
                   }
                 </ScrollableFeed>
               </div>
-
-
-
-
             </div>
-
-
-            {/* <div className="send_message_input">
+            <div className="send_message_input">
                 <form action="" onSubmit={submitHandler}>
                   <input type="text"
                     placeholder='Write Something..'
@@ -211,20 +198,18 @@ export default function SwipeableTemporaryDrawer() {
                     value={text}
                     className="chat_send_input"
                   />
-                  <p>send</p>
                 </form>
-              </div> */}
-            <div className="send_input_box">
+              </div>
+            {/* <div className="send_input_box">
               <form action="" className="send_message_input" onSubmit={submitHandler}>
                 <input type="text"
                   placeholder='Write Something..'
                   onChange={(e) => setText(e.target.value)}
                   value={text}
                   className="chat_send_input"/>
-               
-                  </form>
-              <span> Send</span>
-            </div>
+                  </form> */}
+              {/* <span> Send</span> */}
+            {/* </div> */}
 
             {/* </Box> */}
 

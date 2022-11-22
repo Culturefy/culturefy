@@ -46,32 +46,12 @@ const events = [
 ];
 
 const Calander = () => {
-  // const [newEvent, setNewEvent] = useState({ title: "", start: "", end: "" });
   const [newEvent, setNewEvent] = useState({ title: "", start: "", end: "" });
   const [allEvents, setAllEvents] = useState(events);
   const [open, setOpen] = React.useState(false);
   console.log(allEvents)
 
   function handleAddEvent() {
-
-    // for (let i = 0; i < allEvents.length; i++) {
-
-    //   const d1 = new Date(allEvents[i].start);
-    //   const d2 = new Date(newEvent.start);
-    //   const d3 = new Date(allEvents[i].end);
-    //   const d4 = new Date(newEvent.end);
-
-
-    //   if (
-    //     ((d1 <= d2) && (d2 <= d3)) || ((d1 <= d4) &&
-    //       (d4 <= d3))
-    //   ) {
-    //     alert("CLASH");
-    //     break;
-    //   }
-
-    // }
-
 
     setAllEvents([...allEvents, newEvent]);
   }

@@ -15,7 +15,7 @@ import planImage from "../../assets/plan-circle.svg";
 
 // checkbox
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
-const Plan = () => {
+const PlanOnClick = () => {
   const [checkbox, setCheckBox] = useState(false); //Audience Targeting Check Box
   const [abc, setabc] = useState(); // Date Picker
 
@@ -88,7 +88,7 @@ const Plan = () => {
     setDateChange(true)
   }
   return (
-    <div className="crt_cmpgn_plan__">
+    <div className="crt_cmpgn_plan__" style={{ backgroundColor: "rgba(211, 211, 211, 0.5)",borderRadius:"25px"}}>
       <div className="_header_title_plan_pr">
         <div className="campaign_goal_check_pr">
           <img src={planImage} alt="" className="campaign_goal_check_pr_img" />
@@ -296,4 +296,4 @@ const Plan = () => {
   );
 };
 
-export default Plan;
+export default PlanOnClick;

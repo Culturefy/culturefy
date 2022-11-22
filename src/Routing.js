@@ -80,7 +80,7 @@ const Routing = () => {
             {/* Recruiting */}
             {/* <Route path="/recruiting/dashboard" element={<Recruiting />} /> */}
             <Route path="/recruiting" element={<Recruiting />}>
-                <Route path="dashboard" element={<RecruitingDashboard />} />
+                {/* <Route path="dashboard" element={<RecruitingDashboard />} /> */}
                 <Route path="jobs" element={<Jobs />} />
                 <Route path="addjobs" element={<Addjobs />} />
                 <Route path="application" element={<Application />} />
@@ -93,7 +93,7 @@ const Routing = () => {
                 <Route path="newofferletter" element={<NewOfferletter />} />
                 <Route path="interviews" element={<Interviews />} />
                 <Route path="interviewspaceprofile" element={<InterviewspaceProfile />} >
-                    <Route path="profile" element={<Profile />} />
+                    {/* <Route path="profile" element={<Profile />} /> */}
                     <Route path="resume" element={<Resume />} />
                     <Route path="interviewquestion" element={<InterviewQuestion />} />
                 </Route>

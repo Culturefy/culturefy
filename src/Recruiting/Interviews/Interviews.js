@@ -2,7 +2,7 @@ import React from 'react'
 import '../Jobs/Jobs.css'
 import './Interviews.css'
 import "react-big-calendar/lib/css/react-big-calendar.css";
-import Calander from './Calander';
+import Schedulera from './Schedulera';
 
 // Calendar
 
@@ -23,7 +23,8 @@ const Interviews = () => {
         <h2>Calendar</h2>
       </div>
       <div className="calendar_view">
-        <Calander/>
+        {/* <Calander/> */}
+        <Schedulera/>
       </div>
 
 

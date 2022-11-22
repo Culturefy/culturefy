@@ -1,6 +1,4 @@
-.campaign_wrapper{
-    border: 1px solid red;
-}
+
 .create-new-campaigns {
     width: 100%;
     margin-bottom: 3rem;
@@ -72,7 +70,6 @@
     color: white;
     right: -3%;
 }
-
 .heading_search_container .MuiIconButton-root :hover {
     position: relative !important;
     right: -3% !important;
@@ -80,14 +77,6 @@
     border-radius: 50%;
     background-color: rgb(35, 148, 174);
 }
-
-/* .nav-campaign-tabs{
-    width: 100%;
-    background-color: #f1f1f1;
-    border-radius: 30px;
-    margin-bottom: 60px; 
-} */
-
 .nav-campaign-tabs {
     padding: 6px;
     background: #f1f1f1;
@@ -338,13 +327,11 @@ ul.campaign-tabs li button.active {
 .react-tabs__tab.react-tabs__tab--selected {
     background-color: #2394ae;
     color: white;
-
+    border: none !important;
+    outline: none;
 }
 
-.react-tabs__tab-list :hover {
-    background-color: #2394ae;
-    color: white;
-}
+
 
 .rs-btn-icon {
     border: none;

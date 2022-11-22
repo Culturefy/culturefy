@@ -14,7 +14,7 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import CheckIcon from "@mui/icons-material/Check";
 
-const Position = () => {
+const PositionOnClick = () => {
   const uploader = Uploader({
     apiKey: "free",
   });
@@ -45,7 +45,7 @@ const Position = () => {
     setValue(newValue);
   };
   return (
-    <div className="crt_cmpgn_plan__">
+    <div className="crt_cmpgn_plan__" style={{ backgroundColor: "rgba(211, 211, 211, 0.5)",borderRadius:"25px",}}>
       <div className="_header_title_plan_pr">
         <div className="_header_title_plan">
           <div className="_header_title_plan_ch">
@@ -430,4 +430,4 @@ const Position = () => {
   );
 };
 
-export default Position;
+export default PositionOnClick;
