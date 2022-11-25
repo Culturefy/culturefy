@@ -76,7 +76,6 @@
 .wordpad_container h1 {
     padding: 0.625rem 0;
 }
-
 .buttons_1 {
     width: 50%;
     display: flex;
@@ -246,18 +245,18 @@
 /* ================================================================================ */
 
 .editor{
-    /* border: 1px solid red; */
     width: 100%;
     height: 73vh;
+}
+.editor .ck-content{
+    height: 94% !important;
 }
 
 @media (max-width:1440px) {
     .wordpad_view_header {
         height: 4.5rem;
         display: block;
-
     }
-
     .buttons_1 {
         width: 100%;
         display: flex;

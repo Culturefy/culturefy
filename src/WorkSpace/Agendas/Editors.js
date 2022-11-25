@@ -1,5 +1,4 @@
 import DecoupledEditor from '@ckeditor/ckeditor5-build-decoupled-document';
-
 import React, { Component } from 'react';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 
@@ -19,7 +18,6 @@ class App extends Component {
                             editor.ui.view.toolbar.element,
                             editor.ui.getEditableElement()
                         );
-
                         this.editor = editor;
                     } }
                     onError={ ( error, { willEditorRestart } ) => {

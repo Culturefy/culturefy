@@ -18,7 +18,6 @@ const WorkspaceAgendaView = () => {
     return (
         <>
             <Content />
-
             <div className="workspace_agenda_main_workspace_agendas_wrepper">
                 <div className="workspace_agendasviews_wrepper">
                     <div className='campaign_header_user_data'>
@@ -38,7 +37,7 @@ const WorkspaceAgendaView = () => {
                     <div className="workspace_agenda_header">
                         <WorkspaceHeader />
                     </div>
-                    {/* <DocumentEditorContainerComponent id="container" height={'590px'} serviceUrl="https://ej2services.syncfusion.com/production/web-services/api/documenteditor/" enableToolbar={true} />; */}
+
                     <div className="agendaview_inner_wrepper">
                         <div className="agendaview_section">
                             <div className="agendaview_header">
@@ -74,7 +73,6 @@ const WorkspaceAgendaView = () => {
                                 </div>
                             </Link>
                             <div className="agenda_chat">
-
                                 <Chat />
                             </div>
 

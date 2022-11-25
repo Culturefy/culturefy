@@ -18,6 +18,7 @@ const WorkspaceAgendas = () => {
                     <h3>Agendas</h3>
                     <div className="agendas">
                         <Link to="/workspaceagendasview">
+                        {/* <Link to="/linepage"> */}
                             <div className="agendas_view">
                                 <h6>Agenda</h6>
                                 <div className="agenda_date_time">

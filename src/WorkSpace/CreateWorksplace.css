@@ -77,17 +77,14 @@
     outline: none;
     
 }
-.create_workspaces_Form>.MuiTextField-root>.MuiInputBase-root ::-webkit-input-placeholder{
-    
+.create_workspaces_Form>.MuiTextField-root>.MuiInputBase-root ::-webkit-input-placeholder{   
     font-family: "Graphik_Light";
     font-size: 15px;
 }
-
-@media (max-width:1024px){
+@media (max-width:1374px){
 
     .create-workspaces-picture{
-        width:20%;
-        /* border: 1px solid black; */
+        width:40%;
     }
     .create_campaignNew_version_ch{
         position: sticky;
@@ -96,5 +93,20 @@
         background-color: white;
         height: 11.25rem;  
         margin-left: 20%;
+        width: 92vw;
+    }
+}
+@media (max-width:1024px){
+    .create-workspaces-picture{
+        width:20%;
+    }
+    .create_campaignNew_version_ch{
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        background-color: white;
+        height: 11.25rem;  
+        margin-left: 20%;
+        width: 92vw;
     }
 }

@@ -88,28 +88,30 @@ const Addjobs = () => {
                     <span>Job Description</span>
                 </div>
                 <div className="job_description_pad">
-                    <div className="description_pad_header">
-                        <div className="pad_buttons1">
-                            <i className="fa-solid fa-bold"></i>
-                            <i className="fa-solid fa-italic"></i>
-                            <i className="fa-solid fa-underline"></i>
-                            <i className="fa-solid fa-text-slash"></i>
-                        </div>
-                        <div className="pad_buttons2">
-                            <i className="fa-solid fa-list list_btn"></i>
-                            <i className="fa-solid fa-list-ol list_btn"></i>
-                        </div>
-                        <div className="pad_buttons3">
-                            <i className="fa-solid fa-align-left font_left list_btn"></i>
-                            <i className="fa-solid fa-align-center font_center list_btn"></i>
-                            <i className="fa-solid fa-align-right font_right list_btn"></i>
-                            <i className="fa-solid fa-align-justify justify list_btn"></i>
-                        </div>
-
-                    </div>
-
-
-                </div>
+            <div className="job_icons">
+            <div className="description_pad_header">
+              <div className="pad_buttons1">
+                <i className="fa-solid fa-bold"></i>
+                <i className="fa-solid fa-italic"></i>
+                <i className="fa-solid fa-underline"></i>
+                <i className="fa-solid fa-text-slash"></i>
+              </div>
+              <div className="pad_buttons2">
+                <i className="fa-solid fa-list list_btn"></i>
+                <i className="fa-solid fa-list-ol list_btn"></i>
+              </div>
+              <div className="pad_buttons3">
+                <i className="fa-solid fa-align-left font_left list_btn"></i>
+                <i className="fa-solid fa-align-center font_center list_btn"></i>
+                <i className="fa-solid fa-align-right font_right list_btn"></i>
+                <i className="fa-solid fa-align-justify justify list_btn"></i>
+              </div>
+            </div>
+            </div>
+            <div className="job_textarea">
+                <textarea name="" id="" cols="160" rows="10" resize="none" style={{ resize: "none",outline:"none",border:"none"}}></textarea>
+            </div>
+          </div>
 
             </div>
 

@@ -1,4 +1,3 @@
-
 import { TextField } from "@mui/material";
 import "./CreateWorksplace.css";
 import React from "react";
@@ -6,37 +5,31 @@ import Content from "../component/Content";
 import CreateWorksplaceimg from "../assets/createworksplace.jpg";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import Calender from '../assets/calendar-icon.png'
-import Notification from '../assets/Notifiction.svg'
-import AdminImg from '../assets/admin-img.png'
+import Calender from "../assets/calendar-icon.png";
+import Notification from "../assets/Notifiction.svg";
+import AdminImg from "../assets/admin-img.png";
 
 const CreateWorkspaces = () => {
-
   const [workspaceData, setworkspaceData] = useState({
     workspace_name: "",
     workspace_hosts: "",
     workspace_date: "",
     workspace_description: "",
     workspace_invite: "",
-  })
+  });
 
   const handleWorkspaceData = (e) => {
-    setworkspaceData({ ...workspaceData, [e.target.name]: e.target.value })
-  }
-  console.log(workspaceData)
-
-
-
+    setworkspaceData({ ...workspaceData, [e.target.name]: e.target.value });
+  };
 
   return (
     <>
       <Content />
 
       <div className="createWorkspaces-wepper">
-        <div className='create_campaignNew_version_ch'>
-
+        <div className="create_campaignNew_version_ch">
           {/* Users */}
-          <div className='campaign_header_user_data'>
+          <div className="campaign_header_user_data">
             <ul>
               <li>
                 <img src={Calender} />
@@ -75,27 +68,9 @@ const CreateWorkspaces = () => {
             />
             <label htmlFor="">Date and Time</label>
 
-            {/* <input type="datetime-local"
-              placeholder="Enter date"
-              className="input_date"
-              name="workspace_date"
-              onChange={handleWorkspaceData}
-              value={workspaceData.workspace_date}
-              
-            /> */}
-<div className="Date_n_time">
-            {/* <TextField
-              id="date"
-              type="date"
-              defaultValue="2017-05-24"
-              
-              sx={{ width: "100%", border: "none" }}
-              InputLabelProps={{
-                shrink: true,
-              }}
-            /> */}
-            <input type="Date" className="workspace_date" />
-</div>
+            <div className="Date_n_time">
+              <input type="Date" className="workspace_date" />
+            </div>
             <label htmlFor="">Description</label>
             <TextField
               name="workspace_description"
@@ -118,8 +93,12 @@ const CreateWorkspaces = () => {
             />
 
             <div className="buttons">
-              <Link to="/workspacesdata"><button className="Next-btn">Next</button></Link>
-              <Link to="/workspacesdata"><button className="Skip-btn">Skip For now</button></Link>
+              <Link to="/workspacesdata">
+                <button className="Next-btn">Next</button>
+              </Link>
+              <Link to="/workspacesdata">
+                <button className="Skip-btn">Skip For now</button>
+              </Link>
             </div>
           </div>
           <div className="create-workspaces-picture">

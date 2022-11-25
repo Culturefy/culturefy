@@ -1,0 +1,10 @@
+.scheduleinterview_main_wrapper{
+    width: 95%;
+    /* border: 2px solid red; */
+}
+.scheduleinterview_buttons{
+    height: 45vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+}

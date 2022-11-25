@@ -21,22 +21,56 @@
 .recruiting_header_tabs ul{
     display: flex;
     /* border: 1px solid green; */
-    justify-content: flex-start;
+    /* justify-content: space-between; */
     padding: 0;
     font-family: "Graphik_Bold"; 
     font-family: "Graphik_Light"; 
-    
-}
-.recruiting_header_tabs li{
-    padding: 5px;
-   
-    font-family: "Graphik_Bold"; 
-    cursor: pointer;
+    width: 85%;
 }
 .recruiting_header_tabs a{
+    width: 200px;
     text-decoration: none;
     color: gray;
 }
+
+.recruiting_header_tabs ul li{
+    font-family: "Graphik_Bold"; 
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    padding: 2px 0;
+    /* border-right: 1px solid gray; */
+}
+.recruiting_header_tabs ul :nth-child(2){
+    width: 150px !important;
+    border-right: 1px solid gray;
+    border-left: 1px solid gray;
+}
+.recruiting_header_tabs ul :nth-child(3){
+    width: 150px;
+    border-right: 1px solid gray;
+}
+.recruiting_header_tabs ul :nth-child(4){
+    width: 150px;
+    border-right: 1px solid gray;
+}
+.recruiting_header_tabs ul :nth-child(5){
+    width: 150px;
+    border-right: 1px solid gray;
+}
+.recruiting_header_tabs ul :nth-child(6){
+    width: 150px;
+    border-right: 1px solid gray;
+}
+.recruiting_header_tabs ul :nth-child(7){
+    width: 150px;
+}
+
+
+
+
+
+
 .recruiting_header_top{
     width: 100%;
     /* border: 1px solid black; */
@@ -73,6 +107,7 @@
 }
 .recruiting_header_title h1{
     font-family: "Graphik_Bold"; 
+    
 }
 .recruiting_header_tabs>.MuiTabs-root>.MuiTabs-scroller>.css-1aquho2-MuiTabs-indicator{
     background-color: white !important;

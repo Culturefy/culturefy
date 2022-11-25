@@ -16,11 +16,6 @@ let data_ = {
   screen: true
 }
 
-// if (isFirefox()) {
-//   streamSpec.mediaSource = 'window';
-// } else if (!isCompatibleChrome()) {
-//   streamSpec.extensionId = 'minllpmhdgpndnkomcoccfekfegnlikg';
-// }
 export default class Call extends Component {
   localStream = AgoraRTC.createStream({
     ...data_
@@ -48,7 +43,7 @@ export default class Call extends Component {
       this.joinChannel();
     }
   }
-
+  
   initLocalStream = () => {
     let me = this;
     me.localStream.init(

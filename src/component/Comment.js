@@ -5,30 +5,60 @@ import { useState } from 'react'
 import ScrollableFeed from 'react-scrollable-feed'
 
 const Comment = () => {
-  const [coomment, setComment] = useState();
+  const [coomment, setComment] = useState('');
+  const [time, settime] = useState('');
   const [saveData, setSaveData] = useState([])
 
+  console.log(saveData, "savedata")
+
+
+
+
+
+  const gettime = () => {
+    var currentdate = new Date();
+    var datetime = currentdate.getHours() + ":"
+      + currentdate.getMinutes()
+    settime(datetime)
+
+  }
   const changeHandler = (e) => {
     setComment(e.target.value)
+    gettime()
   }
   const submitHandler = (e) => {
     e.preventDefault()
-    setComment("")
-    if (!coomment) {
-      return ("")
-    } else {
-      setSaveData([...saveData, coomment])
+
+
+    const data = {
+      coomment: coomment,
+      time: time
     }
+
+
+
+    setComment("")
+
+    setSaveData([...saveData,data])
+
+
+    // if (!coomment) {
+    //   return ("")
+    // } else {
+    //   setSaveData()
+    // }
   }
   return (
     <>
       <div className="comment_wepper">
         <div className='comment_wepper_ch'>
           <ScrollableFeed>
+
             {
-              saveData.map((CurrValue, index) => {
+              saveData.map((e) => {
                 return (
                   <>
+                    {console.log(e)}
                     <div className="comment_div" >
                       <div className="comment_header">
                         <img src={user} alt="" />
@@ -36,12 +66,12 @@ const Comment = () => {
                           <h3>User</h3>
                         </div>
                         <div className="ptag">
-                          <p>just now</p>
+                          <p>{e.time}</p>
                         </div>
                       </div>
                       <div className="comment_text">
-                        <div className="comment" key={index}>
-                          <p>{CurrValue}</p>
+                        <div className="comment">
+                          <p>{e.coomment}</p>
                         </div>
                         <div className="task">
                           <p>Add to task +</p>
@@ -55,8 +85,11 @@ const Comment = () => {
                     </div>
                   </>
                 )
+
               })
             }
+
+
           </ScrollableFeed>
         </div>
 

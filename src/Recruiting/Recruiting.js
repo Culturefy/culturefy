@@ -6,7 +6,6 @@ import admin from '../assets/admin-img.png'
 import Content from '../component/Content';
 import { Link, Outlet } from 'react-router-dom';
 import RecruitingDashboard from './Dashboard/RecruitingDashboard'
-
 const RecruitingHeader = (props) => {
 
     const tabs = {
@@ -86,35 +85,47 @@ const RecruitingHeader = (props) => {
                     <div className="recruiting_header_tabs">
                         <ul>
                             {
-                                value === 1 ? <Link ><li onClick={() => handleClick(1)} style={{ color: "black" }}>Recruiting Dashboard</li></Link>:<li onClick={() => handleClick(1)} style={{color:"lightGrey"}}><Link >Recruiting Dashboard</Link></li>
+                                value === 1 ? <Link to="/recruiting">
+                                    <li onClick={() => handleClick(1)} style={{ color: "black" }}> Recruiting Dashboard</li>
+                                </Link>
+                                    :
+                                    <Link to="/recruiting">
+                                        <li onClick={() => handleClick(1)} >Recruiting Dashboard </li>
+                                    </Link>
                             }
                             {
-                                value === 2 ? <Link to="/recruiting/jobs"><li onClick={() => handleClick(2)} style={{ color: "black" }}>Jobs</li></Link>:<li onClick={() => handleClick(2)}><Link to="/recruiting/jobs">Jobs</Link></li>
+                                value === 2 ? <Link to="/recruiting/jobs">
+                                    <li onClick={() => handleClick(2)} style={{ color: "black" }}> Jobs </li>
+                                </Link> :
+                                    <Link to="/recruiting/jobs">
+                                        <li onClick={() => handleClick(2)}>Jobs</li>
+                                    </Link>
                             }
                             {
-                                value === 3 ? <Link to="/recruiting/application"><li onClick={() => handleClick(3)} style={{ color: "black" }}>Application</li></Link>:<li onClick={() => handleClick(3)}><Link to="/recruiting/application">Application</Link></li>
+                                value === 3 ? <Link to="/recruiting/application"><li onClick={() => handleClick(3)} style={{ color: "black" }}>Application </li></Link> : <Link to="/recruiting/application"> <li onClick={() => handleClick(3)}>Application </li></Link>
                             }
                             {
-                                value === 4 ? <Link to="/recruiting/skill"><li onClick={() => handleClick(4)} style={{ color: "black" }}>Skills</li></Link>:<li onClick={() => handleClick(4)}><Link to="/recruiting/skill">Skills</Link></li>
+                                value === 4 ? <Link to="/recruiting/skill"><li onClick={() => handleClick(4)} style={{ color: "black" }}>Skills </li></Link> : <Link to="/recruiting/skill"><li onClick={() => handleClick(4)}>Skills</li> </Link>
                             }
                             {
-                                value === 5 ? <Link to="/recruiting/candidates"><li onClick={() => handleClick(5)} style={{ color: "black" }}>Candidates</li></Link>:<li onClick={() => handleClick(5)}><Link to="/recruiting/candidates">Candidates</Link></li>
+                                value === 5 ? <Link to="/recruiting/candidates"><li onClick={() => handleClick(5)} style={{ color: "black" }}>Candidates </li></Link> : <Link to="/recruiting/candidates"><li onClick={() => handleClick(5)}>Candidates</li>
+                                </Link>
                             }
                             {
-                                value === 6 ? <Link to="/recruiting/offerletter"><li onClick={() => handleClick(6)} style={{ color: "black" }}>Offer Letters</li></Link>:<li onClick={() => handleClick(6)}><Link to="/recruiting/offerletter">Offer Letters</Link></li>
+                                value === 6 ? <Link to="/recruiting/offerletter"><li onClick={() => handleClick(6)} style={{ color: "black" }}>Offer Letters </li></Link> : <Link to="/recruiting/offerletter"> <li onClick={() => handleClick(6)}>Offer Letters</li></Link>
                             }
                             {
-                                value === 7 ? <Link to="/recruiting/interviews"><li onClick={() => handleClick(7)} style={{ color: "black" }}>Interviews</li></Link>:<li onClick={() => handleClick(7)}><Link to="/recruiting/interviews">Interviews</Link></li>
+                                value === 7 ? <Link to="/recruiting/interviews"><li onClick={() => handleClick(7)} style={{ color: "black" }}>Interviews</li></Link> : <Link to="/recruiting/interviews"> <li onClick={() => handleClick(7)}>Interviews</li></Link>
                             }
                         </ul>
                     </div>
                 </div >
 
                 {
-                    value !== 1 ? <Outlet />:<RecruitingDashboard/>
+                    value !== 1 ? <Outlet /> : <RecruitingDashboard />
                 }
-                
-                
+
+
             </div>
         </>
     )

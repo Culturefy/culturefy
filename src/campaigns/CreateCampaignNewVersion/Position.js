@@ -45,6 +45,9 @@ const Position = () => {
     setValue(newValue);
   };
   return (
+
+    <>
+    <div style={{height:"50px"}}></div>
     <div className="crt_cmpgn_plan__">
       <div className="_header_title_plan_pr">
         <div className="_header_title_plan">
@@ -61,12 +64,12 @@ const Position = () => {
         <div className="campaign_goal_check_pr">
           <div className="campaign_goal_check_possess_ch">
           { data ? (
-              <div className="campaign_goal_check_alter">
+              <div className="campaign_goal_check_alter" style={{marginTop:"25px"}}>
                 <CheckIcon className="cmpgn_check_icon_alter" />
               </div>
 
             ) : (
-              <div className="campaign_goal_check">
+              <div className="campaign_goal_check"  style={{marginTop:"25px"}}>
                 <CheckIcon className="cmpgn_check_icon" />
               </div>
            
@@ -76,6 +79,7 @@ const Position = () => {
 
         
         <div className="position_h3_pr">
+          <div style={{height:"30px"}}></div>
           <div className="cmgn_h3">
             <h4>Design campaign</h4>
           </div>
@@ -427,6 +431,7 @@ const Position = () => {
         </div>
       ) : null}
     </div>
+    </>
   );
 };
 

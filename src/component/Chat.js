@@ -21,14 +21,20 @@ let client = AgoraRTM.createInstance(APP_ID)
 let uid = uuid();
 
 
+
 export default function SwipeableTemporaryDrawer() {
 
 
   const [text, setText] = useState('');
   const [channel, setChannel] = useState('');
   const [messages, setMessages] = useState([]);
+
+  console.log(messages,"message")
+  const [like, setLike] = useState(false)
+  const [ time,settime] = useState('')
   const messagesRef = useRef(null)
 
+  console.log(text,"date")
 
 
   useEffect(() => {
@@ -44,12 +50,20 @@ export default function SwipeableTemporaryDrawer() {
           {
             uid: memberID,
             text: message.text,
+            time:message.time
           },
         ]);
+       
       });
       setChannel(channel);
       return channel;
     };
+
+
+  
+
+
+
     const connection = connect();
     return () => {
       const logout = async () => {
@@ -81,12 +95,32 @@ export default function SwipeableTemporaryDrawer() {
     setState({ ...state, [anchor]: open });
   };
 
+  const getdata = () =>{
+    var currentdate = new Date();
+    var datetime =  currentdate.getHours() + ":"
+      + currentdate.getMinutes() 
+
+      settime(datetime)
+  }
+
+  const changehandler = (e) =>{
+    setText(e.target.value)
+    getdata()
+  }
+
   const submitHandler = (e) => {
     console.log("click")
+   
+   
+     
+
+    
     e.preventDefault();
     if (text === '') return;
     channel.sendMessage({
+
       text,
+      time,
       type: 'text',
     });
     setMessages((currentMessages) => [
@@ -94,6 +128,7 @@ export default function SwipeableTemporaryDrawer() {
       {
         uid,
         text,
+        time,
       },
     ]);
     setText('');
@@ -132,15 +167,24 @@ export default function SwipeableTemporaryDrawer() {
                 onClick={toggleDrawer(anchor, false)}
                 onKeyDown={toggleDrawer(anchor, false)}
               >
-                <h3>Chat</h3>
+                <div className='chatsec_active'>
+                  <h3 >Chat</h3>
+                  <div className="chat_user_active">
+
+                  </div>
+                </div>
                 <i class="fa-solid fa-magnifying-glass"></i>
               </div>
 
               <div className="chatbox_chat">
                 <ScrollableFeed>
+
+
                   {
                     messages.map((message, index) => (
+                   
                       <div key={index} className='message'>
+                        {console.log(message.uid ,"zdD")}
                         {message.uid === uid && (
                           <div className="send_message">
                             <div className="chatuser">
@@ -149,14 +193,14 @@ export default function SwipeableTemporaryDrawer() {
                             <div className="chat_send_message">
                               <div className="chat_user_name">
                                 <h6>User</h6>
-                                <p>just Now</p>
+                                <p>{message.time}</p>
                               </div>
                               <div className="chat_user_message">
                                 <p><span>You :</span>{message.text}</p>
                               </div>
                               <div className="chat_replay">
                                 <p>Replay</p>
-                                <i class="fa-solid fa-thumbs-up"></i>
+                                <i class="fa-solid fa-thumbs-up" color='red'></i>
                               </div>
                             </div>
                           </div>
@@ -171,7 +215,7 @@ export default function SwipeableTemporaryDrawer() {
                               <div className="chat_send_message">
                                 <div className="chat_user_name">
                                   <h6>Others</h6>
-                                  <p>just Now</p>
+                                  <p>{message.time}</p>
                                 </div>
                                 <div className="chat_user_message">
                                   <p><span>Other :</span> {message.text} </p>
@@ -191,29 +235,15 @@ export default function SwipeableTemporaryDrawer() {
               </div>
             </div>
             <div className="send_message_input">
-                <form action="" onSubmit={submitHandler}>
-                  <input type="text"
-                    placeholder='Write Something..'
-                    onChange={(e) => setText(e.target.value)}
-                    value={text}
-                    className="chat_send_input"
-                  />
-                </form>
-              </div>
-            {/* <div className="send_input_box">
-              <form action="" className="send_message_input" onSubmit={submitHandler}>
+              <form action="" onSubmit={submitHandler}>
                 <input type="text"
                   placeholder='Write Something..'
-                  onChange={(e) => setText(e.target.value)}
+                  onChange={changehandler}
                   value={text}
-                  className="chat_send_input"/>
-                  </form> */}
-              {/* <span> Send</span> */}
-            {/* </div> */}
-
-            {/* </Box> */}
-
-
+                  className="chat_send_input"
+                />
+              </form>
+            </div>
           </SwipeableDrawer>
         </React.Fragment>
 

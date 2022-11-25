@@ -13,7 +13,6 @@ const Addskills = () => {
     }
     return (
         <div className='Addskills_wrapper'>
-
             <div className="addskills_header">
                 <h2>Add Skills</h2>
             </div>
@@ -28,7 +27,6 @@ const Addskills = () => {
                             {addrow ? <i className="fa-solid fa-xmark cross que_cancle_btn" onClick={cancleHandle}></i> : null}
                         </div>
                     </div>
-
                 </div>
                 {
                     addrow ?
@@ -42,8 +40,8 @@ const Addskills = () => {
                                     {addrow ? <i className="fa-solid fa-xmark cross que_cancle_btn" onClick={cancleHandle}></i> : null}
                                 </div>
                             </div>
-
-                        </div> : null
+                        </div>
+                         : null
                 }
                 <h6 className='addrow' onClick={addrowHandle}>Add Row +</h6>
                 <div className="jobs_submit_buttons">

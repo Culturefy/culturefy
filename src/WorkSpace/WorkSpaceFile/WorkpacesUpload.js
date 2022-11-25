@@ -38,7 +38,9 @@ const WorkpacesUpload = () => {
                             <Link to="/workspacesdata"><button >Back</button></Link>
                             <h2>Add Files to Folder</h2>
                         </div>
+                      
                         <Task/>
+                       
 
                     </div>
                     <div className="upload_files_Section">

@@ -1,230 +1,186 @@
-import React, { useState } from 'react'
-import Drawer from '@mui/material/Drawer';
-import Button from '@mui/material/Button';
-import drawer_user1 from '../assets/p-1.png'
-// Mui Dialog
-// import Button from '@mui/material/Button';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-// import MuiAvtar from "./MuiAvtar";
-import MuiAvtar from "../WorkSpace/MuiAvtar";
-
-// paper
-import Paper from '@mui/material/Paper';
-import InputBase from '@mui/material/InputBase';
-import Divider from '@mui/material/Divider';
-import IconButton from '@mui/material/IconButton';
-import SearchIcon from '@mui/icons-material/Search';
-// Radio Button
-import Radio from '@mui/material/Radio';
-import RadioGroup from '@mui/material/RadioGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import FormControl from '@mui/material/FormControl';
-import FormLabel from '@mui/material/FormLabel';
-import { Link } from 'react-router-dom';
-import left_arrow from '../assets/left_arrow.svg'
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import React, { useState } from "react";
+import Button from "@mui/material/Button";
+import { Link } from "react-router-dom";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 const Task = () => {
-    const [arrow,setarrow] = useState(false)
-    const [state, setState] = React.useState({
-        top: false,
-        left: false,
-        bottom: false,
-        right: false,
-    });
-    const [user, setuser] = useState(false)
-
-    const [anchorEl, setAnchorEl] = React.useState(null);
-    const open = Boolean(anchorEl);
-    const handleClick = (event) => {
-        setAnchorEl(event.currentTarget);
-    };
-    const handleClose = () => {
-        setAnchorEl(null);
-    };
-
-
-    const toggleDrawer = (anchor, open) => (event) => {
-        if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-            return;
-        }
-
-        setState({ ...state, [anchor]: open });
-         
-        if(arrow === false){
-            setarrow(true)
-        }else if(arrow === true){
-            setarrow(false)
-        }
-    };
-
-    const handleUsers = () => {
-        if (user === false) {
-            setuser(true)
-        }
-        else if (user === true) {
-            setuser(false)
-        }
+  const [arrow, setarrow] = useState(false);
+  const [state, setState] = React.useState({
+    top: false,
+    left: false,
+    bottom: false,
+    right: false,
+  });
+  const [user, setuser] = useState(false);
+  const toggleDrawer = (anchor, open) => (event) => {
+    if (
+      event.type === "keydown" &&
+      (event.key === "Tab" || event.key === "Shift")
+    ) {
+      return;
     }
-    return (
-        <>
-            {['right'].map((anchor) => (
-                <React.Fragment key={anchor}>
-                    <div className="team_drawer">
-                        <Button onClick={toggleDrawer(anchor, true)}
-                        >
-                            
-                            {!arrow ?<ArrowBackIosIcon style={{ color: "black" }} /> :null}
-                            Task
-                            {arrow ?<ArrowForwardIosIcon style={{ color: "black" }} /> :null}
-                        </Button>
-                    </div>
+    setState({ ...state, [anchor]: open });
+    if (arrow === false) {
+      setarrow(true);
+    } else if (arrow === true) {
+      setarrow(false);
+    }
+  };
+  return (
+    <>
+      {["right"].map((anchor) => (
+        <React.Fragment key={anchor}>
+          <div className="team_drawer">
+            <Button onClick={toggleDrawer(anchor, true)} >
+              {!arrow ? <ArrowBackIosIcon style={{ color: "black",fontSize:"16px" }} /> : null}
+              Task
+              {arrow ? (
+                <ArrowForwardIosIcon style={{ color: "black",fontSize:"16px" }} />
+              ) : null}
+            </Button>
+          </div>
 
+          {arrow ? (
+            <div
+              anchor={anchor}
+              open={state[anchor]}
+              onClose={toggleDrawer(anchor, false)}
+            >
+              <div className="drawer_inner_conntainer">
+                <div className="section">
+                  <ul>
+                    <li>
+                      <div className="section_li">
+                        <input type="checkbox" name="" id="" />
+                        <span>Section A</span>
+                      </div>
+                      <ul>
+                        <li>
+                          <div className="section_inner_li">
+                            <i class="fa-solid fa-align-justify section_plus "></i>
+                            <input type="checkbox" name="" id="" />
+                            <span>Task one</span>
+                          </div>
+                        </li>
+                        <li>
+                          <div className="section_inner_li">
+                            <i class="fa-solid fa-align-justify section_plus"></i>
+                            <input type="checkbox" name="" id="" />
+                            <span>Task one</span>
+                          </div>
+                        </li>
+                        <li>
+                          <div className="section_inner_li">
+                            <i class="fa-solid fa-align-justify section_plus"></i>
+                            <input type="checkbox" name="" id="" />
+                            <span>Task one</span>
+                          </div>
+                        </li>
+                        <li>
+                          <div className="section_inner_li">
+                            <i class="fa-solid fa-align-justify section_plus"></i>
+                            <input type="checkbox" name="" id="" />
+                            <span>Task one</span>
+                          </div>
+                        </li>
+                        <li>
+                          <div className="section_inner_li">
+                            <i class="fa-solid fa-align-justify section_plus"></i>
+                            <input type="checkbox" name="" id="" />
+                            <span>Task one</span>
+                          </div>
+                        </li>
+                        <li>
+                          <div className="section_inner_li">
+                            <i class="fa-solid fa-align-justify section_plus"></i>
+                            <input type="checkbox" name="" id="" />
+                            <span>Task one</span>
+                          </div>
+                        </li>
+                        <li>
+                          <div className="section_inner_li">
+                            <i class="fa-solid fa-plus section_plus"></i>
 
+                            <span className="section_additem">
+                              Add items...
+                            </span>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <div className="section_li">
+                        <input type="checkbox" name="" id="" />
+                        <span>Section B</span>
+                      </div>
+                      <ul>
+                        <li>
+                          <div className="section_inner_li">
+                            <i class="fa-solid fa-align-justify section_plus "></i>
+                            <input type="checkbox" name="" id="" />
+                            <span>Task one</span>
+                          </div>
+                        </li>
+                        <li>
+                          <div className="section_inner_li">
+                            <i class="fa-solid fa-align-justify section_plus"></i>
+                            <input type="checkbox" name="" id="" />
+                            <span>Task one</span>
+                          </div>
+                        </li>
+                        <li>
+                          <div className="section_inner_li">
+                            <i class="fa-solid fa-align-justify section_plus"></i>
+                            <input type="checkbox" name="" id="" />
+                            <span>Task one</span>
+                          </div>
+                        </li>
+                        <li>
+                          <div className="section_inner_li">
+                            <i class="fa-solid fa-align-justify section_plus"></i>
+                            <input type="checkbox" name="" id="" />
+                            <span>Task one</span>
+                          </div>
+                        </li>
+                        <li>
+                          <div className="section_inner_li">
+                            <i class="fa-solid fa-align-justify section_plus"></i>
+                            <input type="checkbox" name="" id="" />
+                            <span>Task one</span>
+                          </div>
+                        </li>
+                        <li>
+                          <div className="section_inner_li">
+                            <i class="fa-solid fa-align-justify section_plus"></i>
+                            <input type="checkbox" name="" id="" />
+                            <span>Task one</span>
+                          </div>
+                        </li>
+                        <li>
+                          <div className="section_inner_li">
+                            <Link to="/workspace/meetingview">
+                              <i class="fa-solid fa-plus section_plus"></i>
 
-                    <Drawer
-                        anchor={anchor}
-                        open={state[anchor]}
-                        onClose={toggleDrawer(anchor, false)}
-                    >
-                        <div className="drawer_inner_conntainer">
-                            <div className="section">
-                                <ul>
-                                    <li>
-                                        <div className="section_li">
-                                            <input type="checkbox" name="" id="" />
-                                            <span>Section A</span>
-                                        </div>
-                                        <ul>
+                              <span className="section_additem">
+                                Add items...
+                              </span>
+                            </Link>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          ) : (
+            ""
+          )}
+        </React.Fragment>
+      ))}
+    </>
+  );
+};
 
-                                            <li>
-                                                <div className="section_inner_li">
-                                                    <i class="fa-solid fa-align-justify section_plus "></i>
-                                                    <input type="checkbox" name="" id="" />
-                                                    <span>Task one</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div className="section_inner_li">
-                                                    <i class="fa-solid fa-align-justify section_plus"></i>
-                                                    <input type="checkbox" name="" id="" />
-                                                    <span>Task one</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div className="section_inner_li">
-                                                    <i class="fa-solid fa-align-justify section_plus"></i>
-                                                    <input type="checkbox" name="" id="" />
-                                                    <span>Task one</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div className="section_inner_li">
-                                                    <i class="fa-solid fa-align-justify section_plus"></i>
-                                                    <input type="checkbox" name="" id="" />
-                                                    <span>Task one</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div className="section_inner_li">
-                                                    <i class="fa-solid fa-align-justify section_plus"></i>
-                                                    <input type="checkbox" name="" id="" />
-                                                    <span>Task one</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div className="section_inner_li">
-                                                    <i class="fa-solid fa-align-justify section_plus"></i>
-                                                    <input type="checkbox" name="" id="" />
-                                                    <span>Task one</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div className="section_inner_li">
-                                                    <i class="fa-solid fa-plus section_plus"></i>
-
-                                                    <span className='section_additem'>Add items...</span>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <div className="section_li">
-                                            <input type="checkbox" name="" id="" />
-                                            <span>Section B</span>
-                                        </div>
-                                        <ul>
-
-                                            <li>
-                                                <div className="section_inner_li">
-                                                    <i class="fa-solid fa-align-justify section_plus "></i>
-                                                    <input type="checkbox" name="" id="" />
-                                                    <span>Task one</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div className="section_inner_li">
-                                                    <i class="fa-solid fa-align-justify section_plus"></i>
-                                                    <input type="checkbox" name="" id="" />
-                                                    <span>Task one</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div className="section_inner_li">
-                                                    <i class="fa-solid fa-align-justify section_plus"></i>
-                                                    <input type="checkbox" name="" id="" />
-                                                    <span>Task one</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div className="section_inner_li">
-                                                    <i class="fa-solid fa-align-justify section_plus"></i>
-                                                    <input type="checkbox" name="" id="" />
-                                                    <span>Task one</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div className="section_inner_li">
-                                                    <i class="fa-solid fa-align-justify section_plus"></i>
-                                                    <input type="checkbox" name="" id="" />
-                                                    <span>Task one</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div className="section_inner_li">
-                                                    <i class="fa-solid fa-align-justify section_plus"></i>
-                                                    <input type="checkbox" name="" id="" />
-                                                    <span>Task one</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div className="section_inner_li">
-                                                    <Link to="/workspace/meetingview">
-                                                        <i class="fa-solid fa-plus section_plus"></i>
-
-                                                        <span className='section_additem'>Add items...</span>
-                                                    </Link>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-
-
-                            </div>
-
-
-                        </div>
-
-                    </Drawer>
-
-
-                </React.Fragment>
-            ))}
-        </>
-    )
-}
-
-export default Task
+export default Task;

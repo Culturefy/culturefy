@@ -12,17 +12,34 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 // images
 import planImage from "../../assets/plan-circle.svg";
+import { useSearch } from "rsuite/esm/Picker";
 
 // checkbox
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
 const Plan = () => {
   const [checkbox, setCheckBox] = useState(false); //Audience Targeting Check Box
   const [abc, setabc] = useState(); // Date Picker
+  console.log(abc)
 
   // CheckBox For Complete Data Filling
   const [test, setTest] = useState(false); //Campaign Goal
   const [audience, setAudience] = useState(false); //Audience Targeting
   const[dateChange,setDateChange] = useState(false)
+  const [endDate, setEndDate] = useState(); 
+
+
+  const [planData,setplanData] = useState({
+    campaign_goal:"",
+    Audience_targeting:{
+      Use_AI_Audience_targeting:"",
+      gender:"",
+      age:"",
+      startdate:abc,
+      endDate:endDate
+    },
+  })
+
+  console.log(planData)
 
   const checkboxhandler = () => {
     if (checkbox === false) {
@@ -32,6 +49,7 @@ const Plan = () => {
     }
   };
   const onDateChange = useCallback((date) => {
+    console.log(date,"date")
     let abc = date;
     if (!abc) {
     } else {
@@ -43,7 +61,7 @@ const Plan = () => {
       setabc(abc);
     }
   }, []);
-  const [endDate, setEndDate] = useState(); // Date Picker
+ // Date Picker
 
 
   const onEndDateChange = useCallback((date) => {
@@ -67,15 +85,15 @@ const Plan = () => {
     setAnchorEl(null);
   };
 
-  const CheckProgress = (e) => {
-    const value = e.target.value;
-    if (value !== " ") {
-      setTest(true);
-    }
-    if (test === true && value === "") {
-      setTest(false);
-    }
-  };
+  // const CheckProgress = (e) => {
+  //   const value = e.target.value;
+  //   if (value !== " ") {
+  //     setTest(true);
+  //   }
+  //   if (test === true && value === "") {
+  //     setTest(false);
+  //   }
+  // };
 
   const audienceChanger = (e) => {
     if(audience===false){
@@ -87,7 +105,17 @@ const Plan = () => {
   const dateChangeHandler=()=>{
     setDateChange(true)
   }
+
+  const handleChangedata = (e) => {
+    setplanData({ ...planData, [e.target.name]: e.target.value });
+  }
+
+
+
+
   return (
+    <>
+    <div style={{height:"50px"}}></div>
     <div className="crt_cmpgn_plan__">
       <div className="_header_title_plan_pr">
         <div className="campaign_goal_check_pr">
@@ -103,17 +131,18 @@ const Plan = () => {
         <div className="campaign_goal_check_pr">
           <div className="campaign_goal_check_possess_ch">
             {test === true ? (
-              <div className="campaign_goal_check_alter">
+              <div className="campaign_goal_check_alter" style={{marginTop:"30px"}}>
                 <CheckIcon className="cmpgn_check_icon_alter" />
               </div>
             ) : (
-              <div className="campaign_goal_check">
-                <CheckIcon className="cmpgn_check_icon" />
+              <div className="campaign_goal_check" style={{marginTop:"30px"}}>
+                <CheckIcon className="cmpgn_check_icon"  />
               </div>
             )}
           </div>
         </div>
         <div className="position_h3_pr">
+        <div style={{height:"30px"}}></div>
           <div className="position_h3_des">
             <h3>Campaign Goal</h3>
           </div>
@@ -122,16 +151,17 @@ const Plan = () => {
               <NativeSelect
                 defaultValue={30}
                 inputProps={{
-                  name: "age",
+                  name: "campaign_goal",
                   id: "uncontrolled-native",
                 }}
-                onChange={CheckProgress}
+                onChange={handleChangedata}
+                value={planData.campaign_goal}
               >
                 <option value="">select</option>
-                <option value={"Recruit More Employee"}>
+                <option value="Recruit More Employee">
                   Recruit More Employee
                 </option>
-                <option value={"Attract more Customer"}>
+                <option value="Attract more Customer">
                   Attract more Customer
                 </option>
               </NativeSelect>
@@ -144,25 +174,27 @@ const Plan = () => {
         <div className="campaign_goal_check_pr">
           <div className="campaign_goal_check_possess_ch">
             {audience === true ? (
-              <div className="campaign_goal_check_alter">
+              <div className="campaign_goal_check_alter" style={{marginTop:"30px"}}>
                 <CheckIcon className="cmpgn_check_icon_alter" />
               </div>
             ) : (
-              <div className="campaign_goal_check">
-                <CheckIcon className="cmpgn_check_icon" />
+              <div className="campaign_goal_check" style={{marginTop:"30px"}}>
+                <CheckIcon className="cmpgn_check_icon"   />
               </div>
             )}
           </div>
         </div>
         <div className="position_h3_pr">
+        <div style={{height:"30px"}}></div>
           <div className="cmgn_h3">
             <h3>Audience targeting</h3>
           </div>
           <div className="creat_cmpgn_check_box">
             <input
               type="checkbox"
-              onChange={audienceChanger}
-              value={audience}
+              name="Use_AI_Audience_targeting"
+              onChange={handleChangedata}
+              value="Use AI Audience targeting"
             />
             <span className="auience_targeting_para">
               Use AI Audience targeting
@@ -184,13 +216,14 @@ const Plan = () => {
                     <NativeSelect
                       defaultValue={30}
                       inputProps={{
-                        name: "age",
+                        name: "gender",
                         id: "uncontrolled-native",
                       }}
+                      value={planData.gender}
+                      onChange={handleChangedata}
                     >
-                      <option value={"Recruit More Employee"}>
-                        All Gender
-                      </option>
+                      <option value="male">male</option>
+                      <option value="female">female</option>
                       {/* <option value={"Attract more Customer"}>Attract more Customer</option> */}
                     </NativeSelect>
                   </FormControl>
@@ -202,8 +235,11 @@ const Plan = () => {
                         name: "age",
                         id: "uncontrolled-native",
                       }}
+                      value={planData.age}
+                      onChange={handleChangedata}
                     >
-                      <option value={"Recruit More Employee"}>All Ages</option>
+                      <option value="10">10</option>
+                      <option value="20">20</option>
                       {/* <option value={"Attract more Customer"}>Attract more Customer</option> */}
                     </NativeSelect>
                   </FormControl>
@@ -293,6 +329,7 @@ const Plan = () => {
         <div></div>
       </div>
     </div>
+    </>
   );
 };
 

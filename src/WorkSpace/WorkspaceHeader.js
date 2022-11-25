@@ -96,6 +96,7 @@ const Workspace = () => {
                                 anchorEl={anchorEl}
                                 open={open}
                                 onClose={handleClose}
+                                centered
                             >
                                 <div className="header_dialg_bx">
                                     <div className="invite_frnds">

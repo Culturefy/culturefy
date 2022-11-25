@@ -211,7 +211,6 @@
     font-family: "Graphik_Regular"; 
     font-size: 13px;
 }
-
 /* ================================================================================= */
 .addapplication_wrapper{
     width: 95%;
@@ -234,4 +233,61 @@
     background-color: #bf161f;
     color: white;
     border-radius: 30px;
+}
+/* ======Application details */
+/* =============Application=========== */
+.employee_avtar{
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.jobemployeedetails_app{
+    width: 95%;
+}
+.jobemployeedetails_ch_app{
+    display: flex;
+    align-items: center;
+    width: 40%;
+}
+.offerletter_select{
+    width: auto;
+    height: 35px;
+    border-radius: 30px;
+    padding: 0 10px;
+}
+.app_btns{
+    width: 150px;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    padding: 10px;
+}
+.app_btns_con{
+    width: 420px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.app_btns_cover{
+    width: 200px;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    padding: 10px;
+    background-color: #bf161f;
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+}
+.app_btns_res{
+    width: 200px;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    padding: 10px;
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    background-color: rgb(35, 148, 175);
 }

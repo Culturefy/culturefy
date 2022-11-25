@@ -203,12 +203,12 @@ const CreateCampaignNewVersion = () => {
                   {plan ? (
                     <>
                       <h4 style={{ color: "grey" }}>Plan</h4>
-                      <NavigateNextIcon style={{ color: "black" }} />
+                      <NavigateNextIcon style={{ color: "#2394AE",fontSize:"32px"}} />
                     </>
                   ) : (
                     <>
                       <h4>Plan</h4>
-                      <KeyboardArrowDownIcon style={{ color: "black" }} />
+                      <KeyboardArrowDownIcon style={{ color: "#2394AE",fontSize:"32px"}} />
                     </>
                   )}
                 </div>
@@ -219,12 +219,12 @@ const CreateCampaignNewVersion = () => {
                   {position ? (
                     <>
                       <h4 style={{ color: "grey" }}>Position</h4>
-                      <NavigateNextIcon style={{ color: "black" }} />
+                      <NavigateNextIcon style={{ color: "#2394AE",fontSize:"32px" }} />
                     </>
                   ) : (
                     <>
                       <h4>Position</h4>
-                      <KeyboardArrowDownIcon style={{ color: "black" }} />
+                      <KeyboardArrowDownIcon style={{ color: "#2394AE",fontSize:"32px" }} />
                     </>
                   )}
                 </div>
@@ -232,12 +232,12 @@ const CreateCampaignNewVersion = () => {
                   {possess ? (
                     <>
                       <h4 style={{ color: "grey" }}>Possess</h4>
-                      <NavigateNextIcon style={{ color: "black" }} />
+                      <NavigateNextIcon style={{ color: "#2394AE",fontSize:"32px" }} />
                     </>
                   ) : (
                     <>
                       <h4>Possess</h4>
-                      <KeyboardArrowDownIcon style={{ color: "black" }} />
+                      <KeyboardArrowDownIcon style={{ color: "#2394AE",fontSize:"32px" }} />
                     </>
                   )}
                 </div>
@@ -251,7 +251,6 @@ const CreateCampaignNewVersion = () => {
                   >
                     <p>
                       <i className="plan_drpdn">
-                        {" "}
                         Campaign Goal | Audience targeting | Schedule{" "}
                       </i>
                     </p>

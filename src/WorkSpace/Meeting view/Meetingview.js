@@ -1,144 +1,251 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import Content from '../../component/Content'
-import './Meetingview.css'
-import host from '../../assets/meet user.png'
-import Card from '@mui/material/Card'; // mui card
-import CardContent from '@mui/material/CardContent';
-import google from '../../assets/google.png'
-import WorkspaceHeader from '../WorkspaceHeader'
-import WorkspaceSidebar from '../../component/WorkspaceSidebar'
-import Comment from '../../component/Comment'
-import Chat from '../../component/Chat'
-import { useEffect, useState } from 'react';
-import { VideoRoom } from './VideoCalll/VideoRoom'
-import LiveVideoStreaming from './VideoCalll/App'
+import React from "react";
+import { Link } from "react-router-dom";
+import AgoraRTC from "agora-rtc-sdk";
+import Content from "../../component/Content";
+import "./Meetingview.css";
+import Card from "@mui/material/Card"; // mui card
+import CardContent from "@mui/material/CardContent";
+import google from "../../assets/google.png";
+import WorkspaceHeader from "../WorkspaceHeader";
+import WorkspaceSidebar from "../../component/WorkspaceSidebar";
+import Comment from "../../component/Comment";
+import Chat from "../../component/Chat";
+import { useEffect, useState } from "react";
+import { VideoRoom } from "./VideoCalll/VideoRoom";
+import LiveVideoStreaming from "./VideoCalll/App";
 
 const Meetingview = () => {
-    const [image, setImage] = useState()
-    const [joined, setJoined] = useState(false);
+  const [image, setImage] = useState();
+  const [joined, setJoined] = useState(false);
 
+  const googleScreen = () => {
+    console.log("clicked");
+  };
 
-    const googleScreen = () => {
-        console.log("clicked")
-    }
+  useEffect(() => {
+    googleScreen();
+  }, []);
 
+  var rtc = {
+    client: null,
+    joined: false,
+    published: false,
+    localStream: null,
+    remoteStreams: [],
+    params: {},
+  };
 
-    useEffect(() => {
-        googleScreen();
-    }, [])
-    return (
-        <>
-            <Content />
-            <div className="gapanalysis">
-                <div className="gapanalysis_main_wrepper">
-                    <div className="gapanalysis_header">
-                        <WorkspaceHeader />
-                    </div>
-                    <div className="gapanalysis_inner_wrepper">
-                        <div className='meeting_view_pr'>
-                            <div className='meeting_view_ch'>
-                                {/* aside left */}
-                                <div className='meet_as_lef'>
-                                    <div className='mting_iframe'>
-                                        {/* 
-                                        <Link to='/workspace/meetingshareview'>
-                                            <img src={google} className='view_frame' alt="" />
-                                        </Link> */}
+  // Options for joining a channel
+  var option = {
+    appID: "0190e0516f5a47df8232522a5d9c4c6f",
+    channel: "PR LIVE CHAT",
+    uid: null,
+    token:
+      "007eJxTYAhYPPlEjDf/tRdZO7LvRuhz3TnmuiIjepflOrX+c5XegbMVGAwMLQ1SDUwNzdJME03MU9IsjIyNTI2MEk1TLJNNks3S9FbWJjcEMjKE181iYWSAQBCfhyEgSMHHM8xVwdnDMYSBAQBERiCR",
+    key: "",
+    secret: "",
+  };
 
-                                        <Link to='/workspace/meetingshareview'>
-                                            <div className='scrn_shr_viw_ch'>
-                                                <iframe src="https://www.google.com/webhp?igu=1" className="view_frame" ></iframe>
-                                            </div>
-                                        </Link>
-                                    </div>
+  function joinChannel(role) {
+    // Create a client
+    rtc.client = AgoraRTC.createClient({ mode: "live", codec: "h264" });
+    // Initialize the client
+    rtc.client.init(
+      option.appID,
+      function () {
+        console.log("init success");
 
+        // Join a channel
+        rtc.client.join(
+          option.token ? option.token : null,
+          option.channel,
+          option.uid ? +option.uid : null,
+          function (uid) {
+            console.log(
+              "join channel: " + option.channel + " success, uid: " + uid
+            );
+            rtc.params.uid = uid;
+            if (role === "host") {
+              rtc.client.setClientRole("host");
+              // Create a local stream
+              rtc.localStream = AgoraRTC.createStream({
+                streamID: rtc.params.uid,
+                audio: true,
+                video: true,
+                screen: false,
+              });
 
-                                    {/* <div className='mting_host'>
-                                        <img src={host} alt="" />
-                                    </div> */}
-                                    <div className='mting_host'>
-                                        <div className="mting_host_ch">
+              // Initialize the local stream
+              rtc.localStream.init(
+                function () {
+                  console.log("init local stream success");
+                  rtc.localStream.play("local_stream");
+                  rtc.client.publish(rtc.localStream, function (err) {
+                    console.log("publish failed");
+                    console.error(err);
+                  });
+                },
+                function (err) {
+                  console.error("init local stream failed ", err);
+                }
+              );
 
-                                            {/* {!joined && (
-                                                <>
-                                                 <h5> Create Video Call </h5>
-                                                <button onClick={() => setJoined(true)}>
-                                                    Make a Video Call
-                                                </button>
-                                                </>
-                                            )}
-                                            {joined && <VideoRoom />} */}
+              rtc.client.on("connection-state-change", function (evt) {
+                console.log("audience", evt);
+              });
+            }
+            if (role === "audience") {
+              rtc.client.on("connection-state-change", function (evt) {
+                console.log("audience", evt);
+              });
 
-                                            <LiveVideoStreaming />
-                                        </div>
-                                    </div>
+              rtc.client.on("stream-added", function (evt) {
+                var remoteStream = evt.stream;
+                var id = remoteStream.getId();
+                if (id !== rtc.params.uid) {
+                  rtc.client.subscribe(remoteStream, function (err) {
+                    console.log("stream subscribe failed", err);
+                  });
+                }
+                console.log("stream-added remote-uid: ", id);
+              });
 
+              rtc.client.on("stream-removed", function (evt) {
+                var remoteStream = evt.stream;
+                var id = remoteStream.getId();
+                console.log("stream-removed remote-uid: ", id);
+              });
 
+              rtc.client.on("stream-subscribed", function (evt) {
+                var remoteStream = evt.stream;
+                var id = remoteStream.getId();
+                remoteStream.play("remote_video_");
+                console.log("stream-subscribed remote-uid: ", id);
+              });
 
+              rtc.client.on("stream-unsubscribed", function (evt) {
+                var remoteStream = evt.stream;
+                var id = remoteStream.getId();
+                remoteStream.pause("remote_video_");
+                console.log("stream-unsubscribed remote-uid: ", id);
+              });
+            }
+          },
+          function (err) {
+            console.error("client join failed", err);
+          }
+        );
+      },
+      (err) => {
+        console.error(err);
+      }
+    );
+  }
 
+  function leaveEventHost(params) {
+    rtc.client.unpublish(rtc.localStream, function (err) {
+      console.log("publish failed");
+      console.error(err);
+    });
+    rtc.client.leave(function (ev) {
+      console.log(ev);
+    });
+  }
 
-                                </div>
-                                {/* aside right */}
-                                <div className='meet_as_rig'>
-
-                                    <Card className="__meet_card">
-                                        <CardContent>
-                                            <div className='meet_user_cont'>
-                                                <img src="https://www.logolynx.com/images/logolynx/s_e1/e100b3fc2a67a1e91b72f50277746b97.jpeg" alt="" className='meet_user_img' />
-                                            </div>
-                                        </CardContent>
-                                    </Card>
-                                    <Card className="__meet_card1">
-                                        <CardContent>
-                                            <div className='meet_user_cont'>
-                                                <img src="https://www.logolynx.com/images/logolynx/s_e1/e100b3fc2a67a1e91b72f50277746b97.jpeg" alt="" className='meet_user_img1' />
-                                            </div>
-                                        </CardContent>
-                                    </Card>
-                                    <Card className="__meet_card">
-                                        <CardContent>
-                                            <div className='meet_user_cont'>
-                                                <img src="https://www.logolynx.com/images/logolynx/s_e1/e100b3fc2a67a1e91b72f50277746b97.jpeg" alt="" className='meet_user_img' />
-                                            </div>
-                                        </CardContent>
-                                    </Card>
-                                    <Card className="__meet_card">
-                                        <CardContent>
-                                            <div className='meet_user_cont'>
-                                                <img src="https://www.logolynx.com/images/logolynx/s_e1/e100b3fc2a67a1e91b72f50277746b97.jpeg" alt="" className='meet_user_img' />
-                                            </div>
-                                        </CardContent>
-                                    </Card>
-                                    <Card className="__meet_card">
-                                        <CardContent>
-                                            <div className='meet_user_cont'>
-                                                <img src="https://www.logolynx.com/images/logolynx/s_e1/e100b3fc2a67a1e91b72f50277746b97.jpeg" alt="" className='meet_user_img' />
-                                            </div>
-                                        </CardContent>
-                                    </Card>
-                                    <Card className="__meet_card">
-                                        <CardContent>
-                                            <div className='meet_user_cont'>
-                                                <img src="https://www.logolynx.com/images/logolynx/s_e1/e100b3fc2a67a1e91b72f50277746b97.jpeg" alt="" className='meet_user_img' />
-                                            </div>
-                                        </CardContent>
-                                    </Card>
-                                </div>
-                            </div>
-
+  function leaveEventAudience(params) {
+    rtc.client.leave(
+      function () {
+        console.log("client leaves channel");
+        //……
+      },
+      function (err) {
+        console.log("client leave failed ", err);
+        //error handling
+      }
+    );
+  }
+  return (
+    <>
+      <Content />
+      <div className="gapanalysis">
+        <div className="gapanalysis_main_wrepper">
+          <div className="gapanalysis_header">
+            <WorkspaceHeader />
+          </div>
+          <div className="gapanalysis_inner_wrepper">
+            <div className="meeting_view_pr">
+              <div className="meeting_view_ch">
+                {/* aside left */}
+                <div className="meet_as_lef">
+                  <div className="mting_iframe">
+                    <Link to="/workspace/meetingshareview">
+                      <div className="scrn_shr_viw_ch">
+                        <iframe
+                          src="https://www.google.com/webhp?igu=1"
+                          className="view_frame"
+                        ></iframe>
+                      </div>
+                    </Link>
+                  </div>
+                  <div className="mting_host">
+                    <div className="mting_host_ch">
+                      <div className="live_video_stream">
+                        <div className="live_video_stream_header">
+                          <button onClick={() => joinChannel("host")}>
+                            Join Channel as Host
+                          </button>
+                          <button onClick={() => joinChannel("audience")}>
+                            Join Channel as Audience
+                          </button>
                         </div>
-                        {/* <div className="gapanalysis_comment">
-                            <Comment />
-                            <Chat />
-                        </div> */}
+                        <div className="live_video_stream_header">
+                          <button onClick={() => leaveEventHost("host")}>
+                            Leave Event Host
+                          </button>
+                          <button
+                            onClick={() => leaveEventAudience("audience")}
+                          >
+                            Leave Event Audience
+                          </button>
+                        </div>
+                       
+                        <div 
+                          id="local_stream"
+                          className="local_stream"
+                          style={{ width: "100%", height: "80%" }}>
+                        </div>
+                        
+                      
+                      </div>
+
+                      {/* <LiveVideoStreaming /> */}
                     </div>
+                  </div>
                 </div>
-                <WorkspaceSidebar />
+                {/* aside right */}
+                <div className="meet_as_rig">
+                  <Card className="__meet_card">
+                    <CardContent>
+                      <div className="meet_user_cont">
+                      <div
+                          id="remote_video_"
+                          style={{ width: "400px", height: "400px" }}
+                        />
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+
+
+
+              </div>
             </div>
+          </div>
+        </div>
+        <WorkspaceSidebar />
+      </div>
+    </>
+  );
+};
 
-        </>
-    )
-}
-
-export default Meetingview
+export default Meetingview;

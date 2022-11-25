@@ -7,11 +7,14 @@ import Profile from "./Profile"
 
 const InterviewspaceProfile = () => {
 
-  const{value,setvalue} = useState(1)
-
+  const[value,setvalue] = useState(1)
+  console.log(value)
+  
   const handleclick = (e) =>{
-     setvalue(e)
+    setvalue(e)
+    console.log(e)
   }
+  
   return (
     <div className='interviewspace_main_wrapper'>
       <div className="interviewer_question_section">
@@ -71,15 +74,19 @@ const InterviewspaceProfile = () => {
           </div>
           <div className="profile_tabs">
               <ul>
-                <li><Link onClick={()=>handleclick(1)}>Profile</Link></li>
-                <li><Link to="/recruiting/interviewspaceprofile/resume" onClick={()=>handleclick(2)} >Resume</Link></li>
-                <li><Link to="/recruiting/interviewspaceprofile/interviewquestion" onClick={()=>handleclick(3)}>Interview Questions</Link></li>
+                <li onClick={() => handleclick(1)}><Link>Profile</Link></li>
+                <li onClick={() => handleclick(2)}><Link to="/recruiting/interviewspaceprofile/resume">Resume</Link></li>
+                <li onClick={() => handleclick(3)}><Link to="/recruiting/interviewspaceprofile/interviewquestion">Interview Questions</Link></li>
               </ul>
             </div>
           <div className="profile_containt">
-            {
-              value !== 1 ? <Profile /> : <Outlet/>
-            }
+         {
+
+          value !== 1 ? <Outlet/>  : <Profile/>
+
+         }
+          
+        
            
           </div>
 

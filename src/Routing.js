@@ -41,8 +41,11 @@ import InterviewspaceProfile from "./Recruiting/Interviews/InterviewspaceProfile
 import Profile from "./Recruiting/Interviews/Profile"
 import Resume from "./Recruiting/Interviews/Resume"
 import InterviewQuestion from "./Recruiting/Interviews/InterviewQuestion"
-import Anofferletter from "./Recruiting/Offerletter/Anofferletter"
 import MyCalendar from "./Calendarclone/MyCalendar"
+import LinePage1st from "./WorkSpace/Agendas/LinePage1st"
+import ScheduleInterview from "./Recruiting/Interviews/ScheduleInterview"
+import Anofferletter from "./Recruiting/Offerletter/Anofferletter"
+import JobEmployeeDetails from './Recruiting/Jobs/JobEmployeeDetails'
 
 const Routing = () => {
     return (
@@ -73,7 +76,7 @@ const Routing = () => {
             <Route path="/workspaceagendas" element={<WorkspaceAgendas />} />
             <Route path="/workspaceagendatemplates" element={<WorkspaceAgendaTemplates />} />
             <Route path="/workspaceagendasview" element={<WorkspaceAgendaView />} />
-           
+
 
 
             <Route path="/cal" element={<MyCalendar />} />
@@ -89,7 +92,6 @@ const Routing = () => {
                 <Route path="addskill" element={<Addskills />} />
                 <Route path="candidates" element={<Candidates />} />
                 <Route path="offerletter" element={<Offerletter />} />
-                <Route path="anofferletter" element={<Anofferletter />} />
                 <Route path="newofferletter" element={<NewOfferletter />} />
                 <Route path="interviews" element={<Interviews />} />
                 <Route path="interviewspaceprofile" element={<InterviewspaceProfile />} >
@@ -97,6 +99,9 @@ const Routing = () => {
                     <Route path="resume" element={<Resume />} />
                     <Route path="interviewquestion" element={<InterviewQuestion />} />
                 </Route>
+                <Route path="scheduleinterview" element={<ScheduleInterview />} />
+                <Route path="anofferletter" element={<Anofferletter />} />
+                <Route path="employeedetails" element={<JobEmployeeDetails />} />
 
             </Route>
 

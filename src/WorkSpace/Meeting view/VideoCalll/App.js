@@ -18,7 +18,7 @@ var option = {
     appID: "0190e0516f5a47df8232522a5d9c4c6f",
     channel: "PR LIVE CHAT",
     uid: null,
-    token: "007eJxTYAiR/1M2LffK01Xtta6/dv3ZJKJ6NbBQpfxIsF0h39VpxQ8UGAwMLQ1SDUwNzdJME03MU9IsjIyNTI2MEk1TLJNNks3SrnCVJzcEMjKcfbmYlZEBAkF8HoaAIAUfzzBXBWcPxxAGBgDFTyKN",
+    token: "007eJxTYAhYPPlEjDf/tRdZO7LvRuhz3TnmuiIjepflOrX+c5XegbMVGAwMLQ1SDUwNzdJME03MU9IsjIyNTI2MEk1TLJNNks3S9FbWJjcEMjKE181iYWSAQBCfhyEgSMHHM8xVwdnDMYSBAQBERiCR",
     key: '',
     secret: ''
 }

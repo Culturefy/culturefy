@@ -16,6 +16,12 @@ class Audio extends Component {
     const audioMotion = new AudioMotionAnalyzer(analyzer);
     audioMotion.connectAudio(this.audio);
   }
+
+
+
+
+
+
   render() {
     return (
       <audio
@@ -33,7 +39,7 @@ class MusicList extends Component {
   initialTracks = {
     tracks: [
       { source: track1, title: "Zimt" },
-      
+
     ]
   };
   audioMotion = undefined;
@@ -46,7 +52,7 @@ class MusicList extends Component {
       playing: false,
       tracks: [
         { source: track1, title: "Zimt" },
-       
+
       ],
       track: this.initialTracks.tracks[0]
     };
@@ -63,9 +69,16 @@ class MusicList extends Component {
   componentDidMount() {
     console.log("DM");
     console.log(this.audioRef.current);
+    console.log(this.state.playing, "ABCD");
     console.log(document.getElementById("player2"));
   }
-  componentDidUpdate() {}
+  componentDidUpdate() { }
+
+  click(){
+    console.log("clck")
+  }
+
+
 
   render() {
     return (
@@ -87,32 +100,36 @@ class MusicList extends Component {
           Click me to trigger play: {!this.state.playing ? "▶" : "■"}
         </div> */}
         {/* <div id="analyzer"></div> */}
-        <div style={{ width: "50vw", height: "60vh",position: "absolute" }}>
+        <div style={{ width: "50vw", height: "60vh", position: "absolute" }}>
+
+          <ReactWaves
+            audioFile={this.state.track.source}
+            mediaElt={this.audioRef.current} // maps the audio to the element
+            className="react-waves _mp3_music_waves"
+
+            options={{
+              backend: "MediaElement", // maps the waveform to an audio element
+              normalize: true,
+              cursorWidth: 0,
+              mediaType: "audio",
+              hideScrollbar: true,
+              responsive: true,
+            }}
   
-        <ReactWaves
-          audioFile={this.state.track.source}
-          mediaElt={this.audioRef.current} // maps the audio to the element
-          className="react-waves _mp3_music_waves"
-          options={{
-            backend: "MediaElement", // maps the waveform to an audio element
-            normalize: true,
-            cursorWidth: 0,
-            mediaType: "audio",
-            hideScrollbar: true,
-            responsive: true,
-          }}
-          zoom={1}
-          playing={this.state.playing}
-        />
-              <audio
-          crossOrigin="anonymous"
-          id="player2"
-          controls
-          ref={this.audioRef}
-          src={this.state.track.source}
-          type="audio"
-          className="_mp3_music_player"
-        />
+            zoom={1}
+            playing={this.state.playing}
+            ClickHandler={this.click}
+
+          />
+          <audio
+            crossOrigin="anonymous"
+            id="player2"
+            controls
+            ref={this.audioRef}
+            src={this.state.track.source}
+            type="audio"
+            className="_mp3_music_player"
+          />
         </div>
       </>
     );

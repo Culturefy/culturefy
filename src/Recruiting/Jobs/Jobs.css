@@ -181,6 +181,7 @@
 .description_pad_header{
     width: 100%;
     height: 15%;
+    padding: 10px 0;
     border-bottom:1px solid lightgray;
     display: flex;
 }
@@ -306,4 +307,55 @@
     background-color: #2394ae;
     color: white;
     border-radius: 30px;
+}
+
+/* ==============Job Employee Details================ */
+.jobemployeedetails{
+    width: 95%;
+}
+.jobemployeedetails_ch{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px ;
+}
+.employee_details{
+    width: 50%;
+}
+.employee_description{
+    width: 10%;
+    color: #bbbbbb;
+    font-size: 18px;
+    padding: 10px;
+    font-family: "Graphik_Light"; 
+}
+.__employee__{
+    width: 20%;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: 400;
+    font-family: "Graphik_Regular";
+}
+.employee_description_tr{
+    border-bottom: 1px solid #bbbbbb4a ;
+}
+.job_job_decription_cont{
+    display: flex;
+}
+.job_job_decription{
+    width: 18%;
+    color: #bbbbbb;
+    font-size: 18px;
+    padding: 10px; 
+    font-family: "Graphik_Light"; 
+ 
+}
+.__employee__det{
+    width: 70%;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: 400;
+    overflow-x: visible;
+    font-family: "Graphik_Regular";
 }

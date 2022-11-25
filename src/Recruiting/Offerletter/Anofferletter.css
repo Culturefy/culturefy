@@ -1,0 +1,20 @@
+.status_div{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #2394ae;
+}
+.offerletter_select{
+    width: 150px;
+    height: 35px;
+    border-radius: 30px;
+    padding: 0 10px;
+}
+.employee_description button{
+    padding: 5px 13px;
+    border-radius: 30px;
+    border: none;
+    background-color: #bf161f;
+    color: white;
+    font-family: "Graphik_Regular";
+}
