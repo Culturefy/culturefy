@@ -81,7 +81,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /* border: 1px solid blue; */
+    border: 1px solid blue;
 
 }
 
@@ -91,6 +91,7 @@
     border-radius: 50%;
     background-color: red;
     border: 2px solid white;
+    position: fixed;
 
 }
 .red_dot>title{

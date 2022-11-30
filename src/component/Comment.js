@@ -9,7 +9,7 @@ const Comment = () => {
   const [time, settime] = useState('');
   const [saveData, setSaveData] = useState([])
 
-  console.log(saveData, "savedata")
+  // console.log(saveData, "savedata")
 
 
 

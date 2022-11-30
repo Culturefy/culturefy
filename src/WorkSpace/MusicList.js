@@ -5,7 +5,17 @@ import track1 from '../assets/track1.ogg';
 import AudioMotionAnalyzer from "audiomotion-analyzer";
 import Spectrum from "react-audio-spectrum";
 import './MusicList.css'
+import { useState } from "react";
+import Draggable from 'react-draggable';
+import { Tooltip } from '@mui/material'
+import { tooltipClasses } from '@mui/material/Tooltip';
+import { styled } from '@mui/material/styles';
+
+
+
+
 class Audio extends Component {
+
   audio = undefined;
   componentDidMount() {
     console.log("ADM");
@@ -16,11 +26,6 @@ class Audio extends Component {
     const audioMotion = new AudioMotionAnalyzer(analyzer);
     audioMotion.connectAudio(this.audio);
   }
-
-
-
-
-
 
   render() {
     return (
@@ -35,104 +40,193 @@ class Audio extends Component {
   }
 }
 
-class MusicList extends Component {
-  initialTracks = {
+// class MusicList extends Component {
+function MusicList() {
+
+  const [show, setshow] = useState(false)
+  const [playing, setplaying] = useState(false)
+  const [second, setSecond] = useState('')
+  const [anootation, setanootation] = useState('')
+  const [data, setdata] = useState([]);
+  console.log(data)
+
+
+
+  const initialTracks = {
     tracks: [
       { source: track1, title: "Zimt" },
 
     ]
   };
-  audioMotion = undefined;
+  // audioMotion = undefined;
 
-  constructor(props) {
-    super(props);
-    this.audioRef = createRef();
-    this.state = {
-      mediaElt: null,
-      playing: false,
-      tracks: [
-        { source: track1, title: "Zimt" },
+  // constructor(props) {
+  //   super(props);
+  const audioRef = createRef();
 
-      ],
-      track: this.initialTracks.tracks[0]
-    };
-  }
+  const [state, setState] = useState({
+    show: false,
+    mediaElt: null,
+    playing: false,
 
-  changeTrack() {
-    if (this.state.track === this.state.tracks[0]) {
+    tracks: [
+      { source: track1, title: "Zimt" },
+
+    ],
+    track: initialTracks.tracks[0]
+  })
+
+
+  // }
+
+
+
+
+
+  const changeTrack = () => {
+    if (state.track === state.tracks[0]) {
       this.setState({ track: this.state.tracks[1] });
     } else {
       this.setState({ track: this.state.tracks[0] });
     }
   }
 
-  componentDidMount() {
-    console.log("DM");
-    console.log(this.audioRef.current);
-    console.log(this.state.playing, "ABCD");
-    console.log(document.getElementById("player2"));
+  // const componentDidMount = () => {
+  //   console.log("DM");
+  //   console.log(this.audioRef.current);
+  //   console.log(this.state.playing, "ABCD");
+
+  // }
+  const componentDidUpdate = () => {
+
   }
-  componentDidUpdate() { }
+  const annotationHandle = (e) => {
+    setanootation(e.target.value)
+  }
+  const handleSubmit = () => {
+    const submitdata = `${second} : ${anootation}`
+    setdata([...data, submitdata])
 
-  click(){
-    console.log("clck")
+    setshow(false)
   }
 
 
 
-  render() {
-    return (
-      <>
-        {/* <button
-          onClick={() => {
-            this.changeTrack();
+  const clickd = () => {
+
+
+    let a = (document.getElementById("player2"));
+    const milisecond = a.currentTime
+    if (show === false) {
+      setshow(true)
+    }
+    if (show === true) {
+      setshow(false)
+    }
+    if (milisecond >= 60.6242) {
+      const second = ((milisecond / 60)).toFixed(2)
+      setSecond(second)
+    } else {
+      const second = (milisecond / 100).toFixed(2)
+      setSecond(second)
+    }
+  }
+  const LightTooltip = styled(({ className, ...props }) => (
+    <Tooltip {...props} classes={{ popper: className }} />
+  ))(({ theme }) => ({
+    [`& .${tooltipClasses.tooltip}`]: {
+      maxWidth: 500,
+      backgroundColor: theme.palette.common.white,
+      color: 'white',
+      backgroundColor: "black",
+      boxShadow: theme.shadows[1],
+      fontSize: 11,
+
+    },
+  }));
+
+
+
+
+  // render() {
+  return (
+    <>
+
+      <div style={{ width: "50vw", height: "60vh", position: "relative" }}>
+
+        <ReactWaves
+          audioFile={track1}
+          mediaElt={audioRef.current} // maps the audio to the element
+          className="react-waves _mp3_music_waves"
+
+          options={{
+            backend: "MediaElement", // maps the waveform to an audio element
+            normalize: true,
+            cursorWidth: 0,
+            mediaType: "audio",
+            hideScrollbar: true,
+            responsive: true,
+
           }}
+
+          zoom={1}
+        />
+
+
+        <audio
+          crossOrigin="anonymous"
+          id="player2"
+          controls
+          ref={audioRef}
+          src={track1}
+          type="audio"
+          className="_mp3_music_player"
+          onCanPlayThrough={clickd}
         >
-          Click to alter track
-        </button> */}
-        {/* <Audio track={this.state.track} /> */}
-        {/* <div
-          style={{ color: "red" }}
-          onClick={() => {
-            this.setState({ playing: !this.state.playing });
-          }}
-        >
-          Click me to trigger play: {!this.state.playing ? "▶" : "■"}
-        </div> */}
-        {/* <div id="analyzer"></div> */}
-        <div style={{ width: "50vw", height: "60vh", position: "absolute" }}>
 
-          <ReactWaves
-            audioFile={this.state.track.source}
-            mediaElt={this.audioRef.current} // maps the audio to the element
-            className="react-waves _mp3_music_waves"
+        </audio>
+        <div className="annotation_drag_div">
+        {
+           
+          data.map((e) => {
+            return (
+             
+                <Draggable>
+                  <LightTooltip title={e}><div className="annotation_tooltip"></div></LightTooltip >
+                </Draggable>
+            
 
-            options={{
-              backend: "MediaElement", // maps the waveform to an audio element
-              normalize: true,
-              cursorWidth: 0,
-              mediaType: "audio",
-              hideScrollbar: true,
-              responsive: true,
-            }}
-  
-            zoom={1}
-            playing={this.state.playing}
-            ClickHandler={this.click}
-
-          />
-          <audio
-            crossOrigin="anonymous"
-            id="player2"
-            controls
-            ref={this.audioRef}
-            src={this.state.track.source}
-            type="audio"
-            className="_mp3_music_player"
-          />
+            )
+          })
+            
+        }
         </div>
-      </>
-    );
-  }
+
+
+
+        {show ?
+
+          <Draggable>
+            <div className="audio_annotation">
+              <div className="annotation">
+                <p>{second} :</p>
+                <form onSubmit={handleSubmit}>
+                  <input type="text" onChange={annotationHandle} />
+                </form>
+              </div>
+            </div>
+          </Draggable> : null
+
+        }
+
+
+
+      </div>
+
+
+
+    </>
+  );
+  // }
 }
 export default MusicList;

@@ -21,7 +21,8 @@ const WorkspacefileMp4 = () => {
     const [data, setdata] = useState('')
     const [time, settime] = useState('')
     const [description, setdescription] = useState([])
-
+  
+    
 
     const handleMouseMove = (event) => {
         // 👇 Get mouse position relative to element
@@ -66,7 +67,7 @@ const WorkspacefileMp4 = () => {
         setLocalMousePos({ x: null, y: null });
     }
     const handleClick = () => {
-        console.log("click", localMousePos.x, localMousePos.y)
+        // console.log("click", localMousePos.x, localMousePos.y)
         var vid = document.getElementById("myVideo");
         const milisecond = vid.currentTime
         const second = ((milisecond / 1000) * 10).toFixed(2);
@@ -98,7 +99,7 @@ const WorkspacefileMp4 = () => {
         }
         setdescription([...description, notedata])
     }
-console.log(localMousePos.x, localMousePos.y)
+// console.log(localMousePos.x, localMousePos.y)
     return (
         <>
             <Content />
@@ -119,7 +120,7 @@ console.log(localMousePos.x, localMousePos.y)
 
                                 </video>
                                 {
-                                    notch ? <Draggable><div className="drag_circle"></div></Draggable> : null
+                                    notch ?<div className="drag_circle"></div>: null
                                 }
                                 {
                                     show ?

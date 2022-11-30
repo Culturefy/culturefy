@@ -29,12 +29,12 @@ export default function SwipeableTemporaryDrawer() {
   const [channel, setChannel] = useState('');
   const [messages, setMessages] = useState([]);
 
-  console.log(messages,"message")
+  // console.log(messages,"message")
   const [like, setLike] = useState(false)
   const [ time,settime] = useState('')
   const messagesRef = useRef(null)
 
-  console.log(text,"date")
+  // console.log(text,"date")
 
 
   useEffect(() => {
@@ -109,12 +109,7 @@ export default function SwipeableTemporaryDrawer() {
   }
 
   const submitHandler = (e) => {
-    console.log("click")
-   
-   
-     
-
-    
+    // console.log("click")
     e.preventDefault();
     if (text === '') return;
     channel.sendMessage({
