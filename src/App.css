@@ -1,190 +1,320 @@
-
-  @font-face {
-    font-family: "Graphik_Black";   /*Can be any text*/
-    src: local("Graphik"),
-      url("./Fonts/GRAPHIK-BLACK.TTF") format("truetype");
-  }
-  @font-face {
-    font-family: "Graphik_Italic";   /*Can be any text*/
-    src: local("Graphik"),
-      url("./Fonts/GRAPHIK-BLACKITALIC.TTF") format("truetype");
-  }
-  @font-face {
-    font-family: "Graphik_Bold";   /*Can be any text*/
-    src: local("Graphik"),
-      url("./Fonts/GRAPHIK-BOLD.TTF") format("truetype");
-  }
-  @font-face {
-    font-family: "Graphik_Extralight";   /*Can be any text*/
-    src: local("Graphik"),
-      url("./Fonts/GRAPHIK-EXTRALIGHT.TTF") format("truetype");
-  }
-  @font-face {
-    font-family: "Graphik_Extralightitalic";   /*Can be any text*/
-    src: local("Graphik_Extralightitalic"),
-      url("./Fonts/GRAPHIK-EXTRALIGHTITALIC.TTF") format("truetype");
-  }
-  @font-face {
-    font-family: "Graphik_Light";   /*Can be any text*/
-    src: local("Graphik"),
-      url("./Fonts/GRAPHIK-LIGHT.TTF") format("truetype");
-  }
-  @font-face {
-    font-family: "Graphik_Lightitalic";   /*Can be any text*/
-    src: local("Graphik"),
-      url("./Fonts/GRAPHIK-LIGHTITALIC.TTF") format("truetype");
-  }
-  @font-face {
-    font-family: "Graphik_Medium";   /*Can be any text*/
-    src: local("Graphik"),
-      url("./Fonts/GRAPHIK-MEDIUM.TTF") format("truetype");
-  }
-  @font-face {
-    font-family: "Graphik_Mediumitalic";   /*Can be any text*/
-    src: local("Graphik"),
-      url("./Fonts/GRAPHIK-MEDIUMITALIC.TTF") format("truetype");
-  }
-  @font-face {
-    font-family: "Graphik_Regular";   /*Can be any text*/
-    src: local("Regular"),
-      url("./Fonts/GRAPHIK-REGULAR.TTF") format("truetype");
-  }
-  @font-face {
-    font-family: "Graphik_Regularitalic";   /*Can be any text*/
-    src: local("Graphik"),
-      url("./Fonts/GRAPHIK-BLACK.TTF") format("truetype");
-  }
-  @font-face {
-    font-family: "Graphik_Semibold";   /*Can be any text*/
-    src: local("Graphik"),
-      url("./Fonts/GRAPHIK-SEMIBOLD.TTF") format("truetype");
-  }
-  @font-face {
-    font-family: "Graphik_Semibolditalic";   /*Can be any text*/
-    src: local("Graphik"),
-      url("./Fonts/GRAPHIK-SEMIBOLDITALIC.TTF") format("truetype");
-  }
-  @font-face {
-    font-family: "Graphik_Super";   /*Can be any text*/
-    src: local("Graphik"),
-      url("./Fonts/GRAPHIK-SUPER.TTF") format("truetype");
-  }
-  @font-face {
-    font-family: "Graphik_Superitalic";   /*Can be any text*/
-    src: local("Graphik"),
-      url("./Fonts/GRAPHIK-SUPERITALIC.TTF") format("truetype");
-  }
-  @font-face {
-    font-family: "Graphik_Thin";   /*Can be any text*/
-    src: local("Graphik"),
-      url("./Fonts/GRAPHIK-THIN.TTF") format("truetype");
-  }
-  @font-face {
-    font-family: "Graphik_Thinitalic";   /*Can be any text*/
-    src: local("Graphik"),
-      url("./Fonts/GRAPHIK-THINITALIC.TTF") format("truetype");
-  }
- 
-  
-
-
-.App {
-  text-align: center;
+@font-face {
+  font-family: "Grpahik Medium";
+  src: url("./assets/fonts/GRAPHIK-MEDIUM.TTF");
+}
+@font-face {
+  font-family: "Grpahik Bold";
+  src: url("./assets/fonts/GRAPHIK-BOLD.TTF");
+}
+@font-face {
+  font-family: "Grpahik Regular";
+  src: url("./assets/fonts/GRAPHIK-REGULAR.TTF");
+}
+@font-face {
+  font-family: "Grpahik Light";
+  src: url("./assets/fonts/GRAPHIK-LIGHT.TTF");
+}
+@font-face {
+  font-family: "Grpahik Semibold";
+  src: url("./assets/fonts/GRAPHIK-SEMIBOLD.TTF");
+}
+@font-face {
+  font-family: "Grpahik RegularItalic";
+  src: url("./assets/fonts/GRAPHIK-REGULARITALIC.TTF");
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+:root {
+  --f45: 45px;
+  --f40: 40px;
+  --f32: 32px;
+  --f30: 30px;
+  --f29: 29px;
+  --f28: 28px;
+  --f26: 26px;
+  --f24: 24px;
+  --f22: 22px;
+  --f20: 20px;
+  --f18: 18px;
+  --f17: 17px;
+  --f16: 16px;
+  --f15: 15px;
+  --f14: 14px;
+  --f13: 13px;
+  --f12: 12px;
+  --f10: 10px;
+  --f8: 8px;
+
+  --primary: #2394ae;
+  --secondary: #bf161f;
+  --yellow: #f5a41d;
+  --green: #3cc473;
+  --light-green: #38cb89;
+  --light-gray: #b0b0b0;
+  --gray: #929292;
+  --gray2: #656565;
+  --gray45: #454545;
+  --gray30: #303030;
+  --grayHsl: hsl(0deg 0% 72%);
+  --dark-gray: #4e5d78;
+  --xdark-gray: #3f414d;
+  --off-white: #d2d4d652;
+  --light-white: #f1f1f1;
+  --white: #fff;
+  --white-ef: #efefef;
+  --white-ae: #e8eaee;
+  --dull-white: #f6f6f6;
+  --color-c9: #c9c9c9;
+  --black: #000;
+  --eirie-black: #191919;
+  --black2: #00000078;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+
+
+body {
+  font-family: 'Grpahik Medium';
+  font-size: var(--f16);
+  color: var(--black);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-link {
-  color: #61dafb;
+#root {
+  max-width: 100%;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* FONTS CLASSES  */
+.graphik-reg-i {
+  font-family: "Grpahik RegularItalic";
+}
+
+.graphik-semibold {
+  font-family: "Grpahik Semibold";
+}
+
+.graphik-reg {
+  font-family: "Grpahik Regular";
+}
+.f24{
+  font-size: var(--f24);
+}
+.f22 {
+  font-size: var(--f22);
+}
+.f20 {
+  font-size: var(--f20);
+}
+.f18 {
+  font-size: var(--f18);
+}
+.f16 {
+  font-size: var(--f16);
+}
+.f14 {
+  font-size: var(--f14);
+}
+.f12 {
+  font-size: var(--f12);
+}
+.f10 {
+  font-size: var(--f8);
+}
+.f8 {
+  font-size: var(--f8);
+}
+.text-left{
+  text-align: left;
+}
+
+
+.c-black{
+  color: var(--black);
+}
+.c-gray{
+  color: var(--gray);
+}
+.c-offWhite{
+  color: var(--off-white);
+}
+.c-primary{
+  color: var(--primary);
+}
+.c-secondary{
+  color: var(--secondary);
+}
+
+button{
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+  color: var(--white);
+  background-color: var(--primary) !important;
+}
+
+.rewardsTabsqa.nav-tabs .nav-item .nav-link {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  font-family: 'Grpahik Semibold';
+}
+
+.rewardsTabsqa.nav-tabs .nav-item .nav-link.active {
+  border-bottom: 2px solid var(--secondary);
+  color: var(--black);
+}
+
+p {
+  margin: 0;
+}
+
+
+@keyframes spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
-.campaign-table table tbody td h4 {
-  font-size: 20px;
-  color: #000;
-  font-family: "Grpahik Regular";
-  margin-bottom: 0;
-  max-width: 265px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+
+.loader_spinner {
+  display: inline-block;
+  margin-left: 10px;
+  animation: spin infinite linear 1500ms;
 }
 
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-  line-height: 1.2;
-}
-.lists{
-  padding-left: 5px;
-  font-size: var(--f-16);
-    color: #2394ae;
-    justify-content: end;
-    padding-right: 30px;
-    text-align: right;
+
+
+.mainAside-tabs {
+  margin-top: 20px;
 }
 
-.right-nav.campaigns img :focus{
-  background-color: #2394ae;
+.mainAside-tabs .nav-tabs .nav-link {
+  color: var(--gray);
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  margin-right: 30px;
+  font-size: var(--f20);
+  border-radius: 0;
+  font-family: "Grpahik Semibold";
 }
 
-.users :hover{  
-  background-color: #2394ae;
-}
-.users  {
-  filter: invert(10%) sepia(82%) saturate(6586%) hue-rotate(353deg) brightness(92%) contrast(88%);
+.mainAside-tabs .nav-tabs .nav-link.active {
+  color: var(--black);
+  border-bottom: 2px solid var(--secondary);
 }
 
-/* .nav-campaign-tabs li  :focus{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.mainAside-tabs .nav-tabs {
+  border-bottom: none;
+}
+.pl-75{
+  padding-left: 75px;
+}
+.pl-100{
+  padding-left: 100px;
+}
+
+
+.dc-div-w100 > div{
+  max-width: 100%;
   width: 100%;
-  background-color:#2394ae;
-  padding: 5px;
-  border-radius: 30px;  
-} */
+}
 
-:root {
-  --rightNav-height: 35vh;
-  --aside-topBtn-height: 250px;
-  --maintop-nav-height: 200px;
-  --aside-width: 380px;
-  --asideLeftOnly-width: 120px;
-  --f-16: 16px;
-  --f-20: 20px;
-  --f-14: 14px;
-  --f-28: 28px;
-  --f-12: 12px;
-  --f-36: 36px;
-  --f-18: 18px;
-  --f-40: 40px;
+/* MODAL CSS STARTS */
+@media (min-width: 992px){
+  .modal-1000px.modal-lg, 
+  .modal-1000px.modal-xl{
+    max-width: 1000px;
+  }
+
+}
+
+.modal-header{
+  border-bottom: 0;
+}
+.modal-footer{
+  border-top: 0;
+}
+.modal-content{
+  padding: 30px;
+}
+
+.modal-tabs .nav-link{
+  padding: 0;
+}
+.modal-tabs .nav-tabs .nav-link{
+  margin: 0;
+  border: none;
+  color: var(--gray);
+  position: relative;
+  padding-bottom: 4px;
+  font-family: 'Grpahik Semibold';
+}
+.modal-tabs .nav-tabs .nav-link.active{
+  color: var(--black);
+}
+.modal-tabs .nav-tabs .nav-link::before{
+  content: '';
+  width: 0;
+  height: 2px;
+  background-color: var(--secondary);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.modal-tabs .nav-tabs .nav-link.active::before{
+  width: 100%;
+}
+
+.modal-tabs .nav-tabs{
+  display: flex;
+  justify-content: space-between;
+  border: none;
+}
+
+/* MODAL CSS ENDS */
+
+
+.gap-20{
+  gap: 20px;
+}
+
+.opacity-1{
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+.opacity-0{
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.bg-none{
+  background-color: transparent !important;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.dflexCenter{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }

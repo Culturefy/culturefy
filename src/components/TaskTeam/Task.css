@@ -1,0 +1,134 @@
+ .team_drawer {
+    position:fixed;
+    top: 215px;
+    width: 21%;
+    height: 50px;
+  
+  } 
+  
+  .team_drawer .MuiButton-text {
+    position: absolute;
+    right: 0;
+    color: black;
+    font-size: 25px;
+    text-transform: capitalize;
+    font-family: "Grpahik Regular";
+    z-index:99;
+  }
+  .drawer_inner_conntainer {
+    width: 14vw;
+    height: 70vh;
+    padding: 10px;
+    overflow: scroll;
+    box-shadow: 1px 1px 10px grey;
+    border-radius: 10px;
+    background-color: white;
+
+  }
+  .drawer_host {
+    margin-top: 20px;
+  }
+  .drawer_host h6 {
+    margin-left: 20px;
+    font-family: "Grpahik Medium";
+  }
+  .host_container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .host_user {
+    width: 30%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+  }
+  .host_user_image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+  .host_user_image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+  .host_name {
+    width: 70%;
+    height: 100%;
+  }
+  .host_name span {
+    font-family: "Grpahik Medium";
+  }
+  .team_drawer_invite {
+    margin-left: 20px;
+    color: #2394ae;
+    font-family: "Grpahik Regular";
+  }
+  .section {
+    width: 100%;
+  }
+  .section_li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  .section_li input {
+    width: 20px;
+    height: 20px;
+  }
+  .section_li span {
+    font-size: 20px;
+  font-family: "Grpahik Medium";
+  }
+  .section_inner_li {
+    height: 30px;
+    display: flex;
+    align-items: center;
+  }
+  .section_inner_li input {
+    width: 17px;
+    height: 17px;
+    margin: 0 10px;
+  }
+  .section_inner_li span {
+    font-size: 17px;
+    font-family: "Grpahik Regular";
+
+  }
+  .section_plus {
+    margin-right: 10px;
+  }
+  .section_additem {
+    color: gray;
+  }
+  .section_inner_li a {
+    text-decoration: none;
+    color: black;
+  }
+  .team_drawer img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  @media (max-width: 1500px) {
+    .team_drawer .MuiButton-text {
+      position: absolute;
+      right: 0;
+      color: black;
+      font-size: 15px;
+      text-transform: capitalize;
+      font-family: "Grpahik Regular";
+
+    }
+  }
+  
+
+   .drawer{
+    position: fixed;
+    top:260px;
+    right:100px;
+   }

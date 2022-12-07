@@ -1,0 +1,374 @@
+.workspacesfile_wapper {
+    width: 100% !important;
+}
+.workspace_file_main_wrapper {
+    display: flex;
+}
+
+.workspace_file_header {
+    width: 100%;
+}
+
+.inner_wepper {
+    width: 100%;
+    display: flex;
+}
+.workspacesfilepng_section {
+    width: 70%;
+}
+.workspacesfilepng_header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.workspacesfilepng_header p {
+    margin: 0;
+    font-family: "Grpahik Light";
+}
+
+.workspacesfilepng_image {
+    height: 60vh;
+    margin-bottom: 0.937rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.workspacesfilepng_image img {
+    height: 60vh;
+    width: 50vw;
+    position: absolute;
+}
+
+.grid_main_div {
+    height: 60vh;
+    width: 50vw;
+    display: grid;
+}
+
+.grid_main_div form {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto;
+    /* border: 2px solid red; */
+    position: relative;
+}
+
+.grid_div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid blue;
+
+}
+
+.red_dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+    border: 2px solid white;
+    position: fixed;
+
+}
+.red_dot>title{
+    width: 100px;
+    background-color: violet;
+}
+
+.tag_input {
+    width: 150px;
+    height: 25px;
+    padding: 0;
+    background-color: white;
+    border-radius: 5px;
+    color: gray;
+    outline: none;
+    border: none;
+
+}
+.workspacesfilepng_footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.workspacesfilepng_viewer {
+    width: 13%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.workspacesfilepng_viewer .css-1ytufz-MuiAvatarGroup-root{
+    display: flex;
+    justify-content: start;
+}
+.workspacesfilepng_viewer .css-1ytufz-MuiAvatarGroup-root .css-sxh3gq-MuiAvatar-root-MuiAvatarGroup-avatar{
+    width: 25px !important;
+    height: 25px !important;
+    font-size: 15px;
+}
+.workspacesfilepng_viewer .css-1ytufz-MuiAvatarGroup-root .css-2s90m6-MuiAvatar-root{
+
+    width: 25px !important;
+    height: 25px !important;
+    font-size: 15px;
+}
+
+.viewer1 {
+    height: 1.875rem;
+    width: 1.875rem;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.viewer2 {
+    height: 1.875rem;
+    width: 1.875rem;
+    border-radius: 50%;
+    margin-right: -10px;
+    position: relative;
+}
+
+.viewer2 img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.viewer3 {
+    height: 1.875rem;
+    width: 1.875rem;
+    border-radius: 50%;
+    margin-right: -0.625rem;
+    position: relative;
+}
+
+.viewer3 img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.viewer4 {
+    height: 1.875rem;
+    width: 1.875rem;
+    border-radius: 50%;
+    margin-right: -0.625rem;
+    position: relative;
+}
+
+.viewer4 img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.viewer5 {
+    height: 1.875rem;
+    width: 1.875rem;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+.viewer5 p {
+    color: white;
+}
+
+.add_contribution {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    font-family: "Graphik_Light";
+
+}
+.add_contribution p{
+    font-family: "Grpahik Regular";
+}
+
+.workspacesfilepng_like {
+    width: 17%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: #f5a41d;
+}
+
+.workspacesfilepng_likeStar {
+    font-size: 1.25rem;
+}
+
+.comment_section {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.comment_section a{
+    width: 95%;
+}
+.chat_Section{
+    margin-top: 20px;
+    width: 100%;
+}
+.calling_Section {
+    width: 300px;
+    height: 80px;
+    margin-top: 30px;
+    display: flex;
+    z-index: 0;
+  }
+  
+  .call_img1 {
+    width: 50%;
+    height: 100%;
+  }
+  
+  .call_img1 img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .call_img2 {
+    width: 50%;
+    height: 100%;
+  }
+  
+  .call_img2 img {
+    width: 100%;
+    height: 100%;
+  }
+  .annotation_tooltip{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: red;
+  }
+  .drag_div {
+    padding: 10px;
+    background-color: black;
+    color: white;
+    position: absolute;
+    margin-top: 140px;
+    margin-left: 460px;
+    border-radius: 5px;
+}
+
+.note {
+    width: 250px;
+    height: 130px;
+    position: absolute;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.note_description {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    /* border: 1px solid green; */
+}
+
+.note_add {
+    width: 97%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.note_add button {
+    width: 50px;
+    height: 30px;
+    background-color: #80d6f7;
+    border: none;
+    color: white;
+    border-radius: 3px;
+}
+
+.note_user {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid blue; */
+}
+
+.note_user_name {
+    height: 45px;
+    width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 50%;
+    background-color: #ec407a;
+}
+
+.note_desc {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid blue; */
+}
+
+.a {
+    width: 90%;
+    height: 25px;
+    background-color: #3b3b3b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.note_desc input {
+    width: 65%;
+    height: 20px;
+    background-color: #3b3b3b;
+    color: white;
+    outline: none;
+    border: none;
+}
+
+.note_desc p {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35%;
+    height: 20px;
+    color: #3a5161;
+}
+
+.div {
+    background-color: aqua;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.drag_circle {
+    width: 20px;
+    height: 20px;
+    background-color: #00adef;
+    border-radius: 50%;
+    position: fixed;
+}
+

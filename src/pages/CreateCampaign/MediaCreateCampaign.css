@@ -1,0 +1,449 @@
+
+@media (max-width:1880px){
+    .line_div_cmpgn{
+        width: 1px;
+        height: 145vh;
+        background-color: lightgray;
+        position: absolute;
+        left: 460px;
+        z-index: 0;
+        top: 53vh;
+    }
+}
+
+@media (max-width:1748px){
+    /* ========Plan====== */
+    /* images plan */
+    .line_div_cmpgn{
+        width: 1px;
+        height: 145vh;
+        background-color: lightgray;
+        position: absolute;
+        left: 459px;
+        z-index: 0;
+        top: 53vh;
+    }
+    .campaign_goal_check_pr_img{
+        width: 45px;
+        height: 45px;
+    }
+    /* h1 */
+    .position_h3_pr h1{
+        font-size: 32px;
+    }
+    /* checked image */
+    .campaign_goal_check {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: 0.187rem solid #be171f;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* margin-left: 0.5%;     */
+    }
+    
+    .campaign_goal_check_possess {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: 0.187rem solid #2294ae;
+        background-color: #2294ae;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+    .position_h3_des h3{
+        font-size: 20px;
+    }
+    .cmgn_h3 h3{
+        font-size: 20px;
+    }
+    /* ======Possess========= */
+    .Position_crt_cmgn_review p {
+        margin: 0;
+        font-size: 15px;
+        font-weight:500;
+    }
+    ._posses_title_ch h3{
+        font-size: 24px;
+    }
+    ._posses_title_ch p {
+        margin: 0;
+        font-size: 15px;
+        font-weight: 500;
+    }
+    /* Recommandation */
+    .crt_cmpgn_aside_recommandation h3{
+        font-size: 20px;
+    }
+
+    .__recomandation_input select {
+        padding: 0px;
+        width: 80%;
+        border-radius: 1.562rem;
+    }
+    .recommandation_cards_p {
+        margin: 0;
+        color: #2294ae;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .Drop_Dwn_cnten_possess {
+        width: 100%;
+        height: 1.562rem;
+        display: flex;
+        justify-content: end;
+    }
+}
+
+@media (max-width:1650px){
+    .Drop_Dwn_cnten_possess {
+        width: 100%;
+        height: 1.562rem;
+        display: flex;
+        justify-content: end;
+    }
+    .line_div_cmpgn{
+        width: 1px;
+        height: 145vh;
+        background-color: lightgray;
+        position: absolute;
+        left: 455px;
+        z-index: 0;
+        top: 53vh;
+    }
+}
+@media (max-width:1544px){
+    .Drop_Dwn_cnten_possess {
+        width: 100%;
+        height: 1.562rem;
+        display: flex;
+        justify-content: end;
+    }
+    .line_div_cmpgn{
+        width: 1px;
+        height: 145vh;
+        background-color: lightgray;
+        position: absolute;
+        left: 453px;
+        z-index: 0;
+        top: 53vh;
+    }
+}
+@media (max-width:1440px){
+    .Drop_Dwn_cnten_plan{
+        width: 100%;
+        height: 25px;
+        display: flex;
+        justify-content: start;
+        font-size: 12px;
+    }
+    .Drop_Dwn_cnten_position > p{
+        width: 100%;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        padding-right: 25px;
+        font-size: 12px;
+    }
+    .Drop_Dwn_cnten_position p i{
+        margin-left: 40px;
+    }
+    .Drop_Dwn_cnten_possess{
+        width: 100%;
+        height: 25px;
+        display: flex;
+        justify-content: end;
+        /* padding-right: 30px; */
+        font-size: 15px;
+    }
+    ._header_title_plan{
+        display: flex;
+        width: 16%;
+    }
+    .cmgn_h3{
+    align-items: center;
+    display: flex;
+    }
+
+    .line_div_cmpgn{
+        width: 1px;
+        height: 145vh;
+        background-color: lightgray;
+        position: absolute;
+        left: 460px;
+        z-index: 0;
+        top: 53vh;
+    }
+
+.campaign_goal_check_pr{
+    width: 16%;
+}
+    .crt_cmpgn_inpt{
+        /* margin-left: 4.687rem !important; */
+        width: 20vw;
+    }
+
+    .position_tabs_info{
+        width: 85%;     
+        margin-left: 15%;
+
+        
+    }
+    .campaign_goal_check_possess_pr{
+        width: 20%;
+    }
+    /* .campaign_goal_check_possess_ch{
+        width: 100%;
+    } */
+    .campaign_goal_check_possess{
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        background-color: #2294ae;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* margin-right:50px ;     */
+    }
+}
+@media(max-width:1340px){
+    .crt_cmgn_drp_plan h4{
+          font-size: 20px;
+    }
+    .crt_cmgn_drp_position h4{
+        font-size: 20px;
+    }
+    .crt_cmgn_drp_possess h4{
+        font-size: 20px;
+    }
+    .line_div_cmpgn{
+        width: 1px;
+        height: 145vh;
+        background-color: lightgray;
+        position: absolute;
+        left: 457px;
+        z-index: 0;
+        top: 53vh;
+    }
+}
+
+@media(max-width:1297px){
+    .crt_cmgn_drp_plan h4{
+        font-size: 17px;
+  }
+  .crt_cmgn_drp_position h4{
+      font-size: 17px;
+  }
+  .crt_cmgn_drp_possess h4{
+      font-size: 17px;
+  }
+    .position_h3_pr{
+        width: 80% ;
+    }
+    .crt_cmgn_drp_dn_ch {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-left: 9%;
+    }
+    .Drop_Dwn_cnten_possess {
+        width:100%;
+        height: 1.562rem;
+        display: flex;
+        justify-content: end;
+        font-size: 14px;
+    }
+}
+@media (max-width:1253px){
+    .Drop_Dwn_cnten_possess {
+        width:100%;
+        height: 1.562rem;
+        display: flex;
+        justify-content: end;
+        font-size: 14px;
+    }
+}
+
+
+
+@media(max-width:1151px){
+    .crt_cmgn_drp_dn_ch {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-left: 9%;
+    }
+    .crt_cmgn_drp_plan h4{
+        font-size: 13px;
+        margin: 0 5px;
+  }
+  .crt_cmgn_drp_position h4{
+      font-size: 13px;
+      margin: 0 5px;
+  }
+  .crt_cmgn_drp_possess h4{
+      font-size: 13px;
+      margin: 0 5px;
+  }
+  .Drop_Dwn_cnten_possess {
+    width:100%;
+    height: 1.562rem;
+    display: flex;
+    justify-content: end;
+    font-size: 13px;
+}
+.line_div_cmpgn{
+    width: 1px;
+    height: 145vh;
+    background-color: lightgray;
+    position: absolute;
+    left: 452px;
+    z-index: 0;
+    top: 53vh;
+}
+}
+@media(max-width:1074px){
+    .crt_cmgn_drp_dn_ch {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-left: 9%;
+    }
+    .Drop_Dwn_cnten_possess {
+        width:100%;
+        height: 1.562rem;
+        display: flex;
+        justify-content: end;
+        font-size: 13px;
+    }
+    .line_div_cmpgn{
+        width: 1px;
+        height: 145vh;
+        background-color: lightgray;
+        position: absolute;
+        left: 450px;
+        z-index: 0;
+        top: 53vh;
+    }
+}
+/* ========1024PX======== */
+@media (max-width:1024px){
+    .line_div_cmpgn{
+        width: 1px;
+        height: 145vh;
+        background-color: lightgray;
+        position: absolute;
+        left: 448px;
+        z-index: 0;
+        top: 53vh;
+    }
+    .crt_cmgn_drp_plan h4{
+        font-size: 12px;
+        margin: 0 5px;
+  }
+  .crt_cmgn_drp_position h4{
+      font-size: 12px;
+      margin: 0 5px;
+  }
+  .crt_cmgn_drp_possess h4{
+      font-size: 12px;
+      margin: 0 5px;
+  }
+    .crt_cmgn_drp_dn_ch{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-left:9%;
+    }
+    .Drop_Dwn_cnten_position {
+        width: 100%;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        padding-right: 25px;
+    }
+    .Drop_Dwn_cnten_possess{
+        width: 100%;
+        height: 25px;
+        display: flex;
+        justify-content: end;
+        /* padding-right: 30px; */
+        font-size: 12px;
+    }
+    .cmgn_h3{
+        /* margin-left:2.5rem ; */
+        align-items: center;
+        display: flex;
+    }
+    .crt_cmpgn_inpt{
+        /* margin-left: 42px !important; */
+        width: 35vw;
+    }
+    .creat_cmpgn_check_box{
+        /* margin-left: 2.5rem;F */
+        width: 100%;
+    }
+    .date_input_fields_campign_schedule{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        /* margin-left: 2.5rem; */
+    }
+    .Position_crt_cmgn{
+        width: 100%;
+        display: flex;
+        margin: 1.25rem 0;
+
+    }
+
+    .cmpg_position_tabs_header .MuiButtonBase-root{
+        color: grey !important;
+        font-size: 12px !important;
+        font-weight: 700;
+        min-width: none !important;
+        width: 5%;
+        padding: 0 !important; ;
+    }
+ 
+    .campaign_goal_check_possess_ch{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .position_h3{
+        /* margin-left: 30px; */
+        align-items: center;
+        display: flex;
+        align-items: center;
+    }
+   
+    .position_h3_des{
+        align-items: center;
+        display: flex;
+        align-items: center; 
+        /* margin-left: 38px; */
+    }
+
+    .campaign_goal_check_possess_pr{
+        width: 17%;
+    }
+    .campaign_goal_check_possess{
+        min-width: 40px;
+        min-height: 40px;
+        border-radius: 50%;
+        background-color: #2294ae;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .position_h3_pr{
+        width: 84% ;
+    }
+  
+}

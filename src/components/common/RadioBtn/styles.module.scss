@@ -1,0 +1,13 @@
+.RadioBtn{
+    display: inline-flex;
+    align-items: center;
+    label{
+        padding-left: 5px;
+        text-transform: capitalize;
+    }
+    input[type="radio"]{
+        accent-color: var(--secondary);
+        width: 15px;
+        height: 15px;
+    }
+}
