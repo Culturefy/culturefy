@@ -1,7 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './WorkspacePoll.css'
-
+import user from "../../../assets/campaign/meet user.png";
+import user2 from "../../../assets/campaign/meet user2.png";
+import Chat from '../../../components/Chat'
+import Comment from '../../../components/Comment'
 const index = () => {
   return (
     <>
@@ -36,6 +39,31 @@ const index = () => {
           </div>
         </div>
       </div>
+
+      <div className="agendacall_section">
+              <div className="agendacall_section_cmnt">
+
+              <Comment/>
+
+              </div>
+              <div className="agendacall_section_vc">
+                <Link to="/workspace/meetingview">
+                  <div className="calling_Section">
+                    <div className="call_img1">
+                      <img src={user2} alt="" />
+                    </div>
+                    <div className="call_img2">
+                      <img src={user} alt="" />
+                    </div>
+                  </div>
+                </Link>
+              </div>
+              <div className="agendacall_section_chat">
+              <Chat/>
+              </div>
+            </div>
+
+
     </div>
   </>
   )

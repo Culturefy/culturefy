@@ -6,6 +6,7 @@ import UserLayout from "src/Layout/UserLayout";
 import SettingLayout from "src/Layout/SettingLayout";
 import WorkspaceLayout from "src/Layout/WorkspaceLayout";
 import WorkspaceFileLayout from "src/Layout/WorkspaceFileLayout";
+import RecruitingLayout from "src/Layout/RecruitingLayout";
 import BusinessInfoMain from "src/components/BusinessInfoMain";
 import { MdCampaign } from "react-icons/md";
 
@@ -20,8 +21,6 @@ const Learning = lazy(() => import("src/pages/Learning"));
 const CreateNewModule = lazy(() => import("src/pages/createNewModule"));
 const CreateNewCourse = lazy(() => import("src/pages/createNewCourse"));
 const CreateAiVideo = lazy(() => import("src/pages/CreateAiVideo"));
-
-
 
 const CreateModuleLearning = lazy(
   () => import("src/pages/CreateModuleLearning")
@@ -74,27 +73,50 @@ const ProfileTabs = lazy(() => import("src/pages/ProfileTabs"));
 
 const BCSShare = lazy(() => import("src/pages/BCSShare"));
 
-
-
 const Campaign = lazy(() => import("src/pages/Campaign"));
 const CreateCampaign = lazy(() => import("src/pages/CreateCampaign"));
 const WorkspaceList = lazy(() => import("src/pages/WorkspaceList"));
 const CreateWorkspace = lazy(() => import("src/pages/CreateWorkspace"));
 const WorkspaceFiles = lazy(() => import("src/pages/WorkspaceFiles"));
-const WorkSpaceUpload = lazy(()=>import('src/pages/WorkSpaceUpload'))
-const WorkspaceFilepng = lazy(()=>import('src/pages/WorkspaceFilepng'))
-const WorkspaceFileMp3 = lazy(()=>import('src/pages/WorkspaceFileMp3'))
-const WorkspaceFileDoc = lazy(()=>import('src/pages/WorkspaceFileDoc'))
-const WorkspaceFileMp4 = lazy(()=>import('src/pages/WorkspacefileMp4'))
-const WorkspaceAgendas = lazy(()=>import('src/pages/Agenda'))
-const  CreateNewTemplate = lazy(()=>import('src/pages/Agenda/CreateNewTemplate'))
-const  WorkspaceAgendasTemplates = lazy(()=>import('src/pages/Agenda/WorkspaceAgendasTemplates'))
-const  CreatePoll = lazy(()=>import('src/pages/CreatePoll'))
-const  WorkspacePoll = lazy(()=>import('src/pages/CreatePoll/WorkspacePoll'))
-
-
-
-
+const WorkSpaceUpload = lazy(() => import("src/pages/WorkSpaceUpload"));
+const WorkspaceFilepng = lazy(() => import("src/pages/WorkspaceFilepng"));
+const WorkspaceFileMp3 = lazy(() => import("src/pages/WorkspaceFileMp3"));
+const WorkspaceFileDoc = lazy(() => import("src/pages/WorkspaceFileDoc"));
+const WorkspaceFileMp4 = lazy(() => import("src/pages/WorkspacefileMp4"));
+const WorkspaceAgendas = lazy(() => import("src/pages/Agenda"));
+const CreateNewTemplate = lazy(
+  () => import("src/pages/Agenda/CreateNewTemplate")
+);
+const WorkspaceAgendasTemplates = lazy(
+  () => import("src/pages/Agenda/WorkspaceAgendasTemplates")
+);
+const CreatePoll = lazy(() => import("src/pages/CreatePoll"));
+const WorkspacePoll = lazy(() => import("src/pages/CreatePoll/WorkspacePoll"));
+// ============Recruiting============
+const Jobs = lazy(() => import("src/pages/Recruiting/Jobs"));
+const AddJobs = lazy(() => import("src/pages/Recruiting/AddJobs"));
+const EmployeeDetailsJobs = lazy(
+  () => import("src/pages/Recruiting/JobEmployeeDetails")
+);
+const Application = lazy(
+  () => import("src/pages/Recruiting/Application")
+);
+const AddApplication = lazy(
+  () => import("src/pages/Recruiting/AddApplication")
+);
+const ApplicationDetails = lazy(
+  () => import("src/pages/Recruiting/ApplicationDetails")
+);
+const Skill = lazy(
+  () => import("src/pages/Recruiting/Skill")
+);
+const SkillAdd = lazy(
+  () => import("src/pages/Recruiting/SkillAdd")
+);
+const TeslaCampaign = lazy(() => import('src/pages/TeslaCampaign'))
+const Dashboard = lazy(() => import('src/pages/Recruiting/Dashboard'))
+const Interviews = lazy(() => import('src/pages/Recruiting/Interviews'))
+const SchedulerInterview = lazy(() => import('src/pages/Recruiting/SchedulerInterview'))
 
 export const router = createBrowserRouter([
   {
@@ -212,19 +234,70 @@ export const router = createBrowserRouter([
         element: <UserProfile />,
       },
       {
-        path:"campaign",
-        element:<Campaign/>
+        path: "campaign",
+        element: <Campaign />,
       },
       {
-        path:"create-campaigns",
-        element:<CreateCampaign/>
+        path: "create-campaigns",
+        element: <CreateCampaign />,
       },
       {
-        path:"workspace-list",
-        element:<WorkspaceList/>
-      }
+        path: "workspace-list",
+        element: <WorkspaceList />,
+      },
     ],
   },
+  {
+    path: "/recruiting",
+    element: <RecruitingLayout />,
+    children: [
+      {
+        path: "jobs",
+        element: <Jobs />,
+      },
+      {
+        path: "addjobs",
+        element: <AddJobs />,
+      },
+      {
+        path: "employeedetailsjobs",
+        element: <EmployeeDetailsJobs />,
+      },
+      {
+        path: "application",
+        element: <Application />,
+      },
+      {
+        path: "addapplication",
+        element: <AddApplication />,
+      },
+      {
+        path: "applicationDetails",
+        element: <ApplicationDetails />,
+      },
+      {
+        path: "skills",
+        element: <Skill />,
+      },
+      {
+        path: "skillsadd",
+        element: <SkillAdd />,
+      },
+      {
+        path: "dashboard",
+        element: <Dashboard />,
+      },
+      {
+        path: "interview",
+        element: <Interviews />,
+      },
+      {
+        path: "schedulerinterview",
+        element: <SchedulerInterview />,
+      },
+    ],
+  },
+
   {
     path: "/workspaces",
     element: <WorkspaceLayout />,
@@ -233,7 +306,6 @@ export const router = createBrowserRouter([
         path: "createworkspaces",
         element: <CreateWorkspace />,
       },
-     
     ],
   },
   {
@@ -285,11 +357,10 @@ export const router = createBrowserRouter([
         element: <WorkspacePoll />,
       },
       {
-        path: "",
-        element: <WorkspacePoll />,
+        path: "teslacampaign",
+        element: <TeslaCampaign />,
       },
-      
-    ]
+    ],
   },
   {
     path: "/setting",
@@ -357,6 +428,6 @@ export const router = createBrowserRouter([
   },
   {
     path: "/shared/survey",
-    element: <BCSShare />
-  }
+    element: <BCSShare />,
+  },
 ]);

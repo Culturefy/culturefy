@@ -8,6 +8,7 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import user from "../../../assets/campaign/meet user.png";
 import user2 from "../../../assets/campaign/meet user2.png";
+import Chat from '../../../components/Chat'
 const index = () => {
   const navigate = useNavigate();
   const [change, setChange] = useState(false);
@@ -384,7 +385,9 @@ const index = () => {
                   </div>
                 </Link>
               </div>
-              <div className="agendacall_section_chat"></div>
+              <div className="agendacall_section_chat">
+              <Chat/>
+              </div>
             </div>
           </div>
         </div>

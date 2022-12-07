@@ -1,0 +1,280 @@
+.addjob_wrapper{
+    /* border: 1px solid red; */
+    width: 95%;
+}
+.addjobs_hader{
+    width: 100%;
+    height: 80px;
+    /* border: 2px solid green; */
+    display: flex;
+    align-items: center;
+    font-family: "Grpahik Medium";
+}
+.jobs_input_container{
+    width: 100%;
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content:space-between;
+}
+.inner_input_container{
+    width: 30%;
+    height: 100px;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.select_plus{
+    width: 100%;
+}
+
+.select_plus button{
+    width: 8%;
+    padding: 2px 0;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom:1px solid lightgray;
+    border-top:1px solid lightgray;
+    border-right:1px solid lightgray;
+    margin: 0;
+}
+.select_plus select{
+    width: 89%;
+    margin-top: 5px;
+    padding: 5px 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border:1px solid lightgray;
+    outline: none;
+}
+
+.inner_input_container input{
+    width: 100%;
+    margin-top: 5px;
+    padding: 5px 5px;
+    border-radius: 5px;
+    border:1px solid lightgray;
+    outline: none;
+}
+.inner_input_container label{
+    font-family: "Grpahik Semibold";
+}
+.inner_input_container ::-webkit-input-placeholder{
+    font-size: 15px;
+    font-family: "Grpahik Light";
+}
+.inner_input_container select{
+    width: 90%;
+    margin-top: 5px;
+    padding: 5px 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border:1px solid lightgray;
+    outline: none;
+}
+.jobs_description{
+    width: 100%;
+    height: 400px;
+    /* border: 1px solid red; */
+}
+.jobs_description_title{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.jobs_description_title span{
+    font-family: "Grpahik Semibold";
+}
+
+.job_description_pad{
+    width: 100%;
+    height: 80%;
+    border:1px solid lightgray;
+    border-radius: 8px;
+}
+.description_pad_header{
+    width: 100%;
+    height: 15%;
+    padding: 10px 0;
+    border-bottom:1px solid lightgray;
+    display: flex;
+}
+.pad_buttons1{
+    height: 100%;
+    width: 10%;
+    /* border: 1px solid green; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.pad_buttons2{
+    height: 100%;
+    width: 10%;
+    /* border: 1px solid green; */
+    display: flex;
+    align-items: center;
+    justify-content:  center;
+}
+.pad_buttons3{
+    height: 100%;
+    width: 10%;
+    /* border: 1px solid green; */
+    display: flex;
+    align-items: center;
+    justify-content:  space-around;
+}
+.job_interview_question{
+    margin-top: 40px;
+    width: 100%;
+}
+.job_interview_question span{
+    font-family: "Grpahik Semibold";
+}
+.list_btn{
+    margin: 0 5px;
+    font-size: 16px;
+}
+.job_interview_header{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+.interview_question1{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    /* border: 1px solid red; */
+}
+.que_no{
+    width: 10%;
+    /* border: 1px solid blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.que{
+    width: 85%;
+    /* border: 1px solid blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.que ::-webkit-input-placeholder{
+    font-size: 15px;
+    color: lightgray;
+    font-family: "Grpahik Light";
+}
+.que input {
+    width: 100%;
+    padding-left:8px ;
+    border: 1px solid lightgray;
+    outline: none;
+    font-family: "Grpahik Light";
+    border-radius: 5px;
+}
+.que_cancle{
+    width: 5%;
+    /* border: 1px solid blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.que_cancle_btn{
+    color: lightgray;
+}
+.add_question{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.add_question p {
+    margin: 0;
+    padding: 0;
+    color: #2394ae;
+    font-family: "Grpahik Semibold";
+}
+
+.jobs_submit_buttons{
+    width: 100%;
+    /* border: 1px solid black; */
+    height: 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.job_cancle{
+    width: 100px;
+    height: 40px;
+    margin: 5px;
+    border: none;
+    background-color: white;
+    color: gray;
+}
+.job_save{
+    width: 100px;
+    height: 40px;
+    margin: 5px;
+    border: none;
+    background-color: #2394ae;
+    color: white;
+    border-radius: 30px;
+}
+
+
+
+/* ==============Job Employee Details================ */
+.jobemployeedetails{
+    width: 95%;
+}
+.jobemployeedetails_ch{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px ;
+}
+.employee_details{
+    width: 50%;
+}
+.employee_description{
+    width: 10%;
+    color: #bbbbbb;
+    font-size: 18px;
+    padding: 10px;
+    font-family: "Grpahik Light";
+}
+.__employee__{
+    width: 20%;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: 400;
+    font-family: "Grpahik Regular";
+}
+.employee_description_tr{
+    border-bottom: 1px solid #bbbbbb4a ;
+}
+.job_job_decription_cont{
+    display: flex;
+}
+.job_job_decription{
+    width: 18%;
+    color: #bbbbbb;
+    font-size: 18px;
+    padding: 10px; 
+    font-family: "Grpahik Light";
+ 
+}
+.__employee__det{
+    width: 70%;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: 400;
+    overflow-x: visible;
+    font-family: "Grpahik Regular";
+}

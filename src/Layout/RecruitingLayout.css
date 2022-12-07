@@ -1,0 +1,158 @@
+.recruiting_main_container{
+    width: 79.8%; 
+    display: flex;
+    justify-content: center;
+    
+}
+.Recruitingmain{
+    width: 100%;
+}
+.recruitingdashboard_main_wrapper {
+    width: 79.8%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+}
+
+.recruiting_header{
+    width: 95%;
+    position: sticky;
+    background-color: white;
+    top: 0;
+    z-index: 1;    
+    margin-bottom:20px ;
+   
+}
+.recruiting_header_tabs{
+    width: 90%;
+}
+.recruiting_header_tabs ul{
+    display: flex;
+    padding: 0;
+    font-family: "Graphik_Bold"; 
+    font-family: "Graphik_Light"; 
+    width: 100%;
+}
+
+
+.recruiting_header_tabs ul li{
+    padding: 0 20px;
+    font-family: "Grpahik Bold";
+    cursor: pointer;
+    display: flex;
+    justify-content: center;  
+}
+.recruiting_header_tabs ul :nth-child(2){
+    border-right: 1px solid gray;
+    border-left: 1px solid gray;
+}
+.recruiting_header_tabs ul :nth-child(3){
+    border-right: 1px solid gray;
+}
+.recruiting_header_tabs ul :nth-child(4){
+    border-right: 1px solid gray;
+}
+.recruiting_header_tabs ul :nth-child(5){
+    border-right: 1px solid gray;
+}
+.recruiting_header_tabs ul :nth-child(6){
+    border-right: 1px solid gray;
+}
+
+.recruiting_header_tabs ul li a{
+    color: gray;
+}
+.recruiting_header_top{
+    width: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: flex-end;
+}
+.recruiting_header_inner{
+    width: 20%;
+    /* border: 2px solid green; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.recruiting_header_inner ul{
+    /* border: 1px solid red; */
+    display: flex;  
+}
+.recruiting_header_inner li{
+    /* border: 1px solid black; */
+    padding: 5px 15px;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.recruiting_header_title{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* border: 2px solid green; */
+}
+.recruiting_header_title h1{
+    font-family: "Grpahik Semibold";
+    
+}
+.recruiting_header_tabs>.MuiTabs-root>.MuiTabs-scroller>.css-1aquho2-MuiTabs-indicator{
+    background-color: white !important;
+}
+.recruiting_header_tabs>.MuiTabs-root>.MuiTabs-scroller>.MuiTabs-flexContainer>.Mui-selected{
+    color: black;
+}
+.recruiting_header_tabs>.MuiTabs-root>.MuiTabs-scroller>.MuiTabs-flexContainer>a{
+    text-decoration: none;
+    color: black;
+}
+.recruiting_inner{
+    width: 100%;
+    height: 73vh;
+    display: flex;
+    justify-content: center;
+    overflow: scroll;
+}
+.recruiting_inner::-webkit-scrollbar{
+    display: none;
+}
+
+@media (max-width:1348px){
+    .recruiting_header_tabs ul li{
+        padding: 0 10px;
+        font-family: "Grpahik Bold";
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+    
+    }
+}
+@media (max-width:1200px){
+    .Recruitingmain{
+        width: 95%;
+    }
+}
+@media (max-width:1100px){
+    .Recruitingmain{
+        width: 90%;
+    }
+}
+@media (max-width:1143px){
+    .recruiting_header_tabs ul li{
+        padding: 0 10px;
+        font-family: "Grpahik Bold";
+        cursor: pointer;
+        display: flex;
+        justify-content: center; 
+        font-size: 12px; 
+    }
+}
+
+
+

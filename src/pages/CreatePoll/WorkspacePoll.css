@@ -1,6 +1,7 @@
 .workspace_poll_main{
     /* border: 2px solid #2394ae; */
     display: flex;
+    
 }
 .workspace_poll_header{
     margin-bottom: 50px;
@@ -277,4 +278,46 @@
   .createpoll_comment_section{
     width: 30%;
     /* border: 1px solid green; */
+  }
+  .agendacall_section {
+    width: 30%;
+}
+.agendacall_section_cmnt{
+    height: 60vh;
+}
+.agendacall_section_vc{
+    height: 15vh;
+    display: flex;
+    align-items: center;
+}
+.agendacall_section_chat{
+    height: 10vh;
+}
+/* ========== */
+.calling_Section {
+    width: 300px;
+    height: 80px;
+    margin-top: 30px;
+    display: flex;
+    z-index: 0;
+  }
+  
+  .call_img1 {
+    width: 50%;
+    height: 100%;
+  }
+  
+  .call_img1 img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .call_img2 {
+    width: 50%;
+    height: 100%;
+  }
+  
+  .call_img2 img {
+    width: 100%;
+    height: 100%;
   }

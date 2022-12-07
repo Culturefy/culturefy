@@ -7,17 +7,13 @@ import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 import Button from '@mui/material/Button';
 import './Chat.css'
 import chatuser from '../../assets/campaign/user2.jpg'
-import SendIcon from '@mui/icons-material/Send';
 import ScrollableFeed from 'react-scrollable-feed'
-import List from '@mui/material/List';
-
 //Live Chat
 import { v4 as uuid } from 'uuid'
 import AgoraRTM from 'agora-rtm-sdk'
 
 let APP_ID = '864f3aa345f64a85a264321d9844edaa'
 let CHANNEL_NAME = 'dpp';
-
 let client = AgoraRTM.createInstance(APP_ID)
 let uid = uuid();
 
@@ -29,13 +25,11 @@ export default function SwipeableTemporaryDrawer() {
   const [text, setText] = useState('');
   const [channel, setChannel] = useState('');
   const [messages, setMessages] = useState([]);
-
-  // console.log(messages,"message")
   const [like, setLike] = useState(false)
   const [ time,settime] = useState('')
   const messagesRef = useRef(null)
 
-  // console.log(text,"date")
+
 
 
   useEffect(() => {

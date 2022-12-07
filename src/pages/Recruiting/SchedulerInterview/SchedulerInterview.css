@@ -1,0 +1,79 @@
+.scheduleinterview_main_wrapper{
+    width: 95%;
+}
+.scheduleinterview_buttons{
+    height: 45vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+}
+.addjobs_hader{
+    width: 100%;
+    height: 80px;
+    /* border: 2px solid green; */
+    display: flex;
+    align-items: center;
+    font-family: "Graphik_Medium";
+}
+.jobs_input_container{
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+}
+.inner_input_container{
+    width: 30%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.select_plus{
+    width: 100%;
+}
+
+.select_plus button{
+    width: 10%;
+    padding: 2px 0;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom:1px solid lightgray;
+    border-top:1px solid lightgray;
+    border-right:1px solid lightgray;
+    margin: 0;
+}
+.select_plus select{
+    width: 90%;
+    margin-top: 5px;
+    padding: 5px 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border:1px solid lightgray;
+    outline: none;
+}
+.inner_input_container input{
+    width: 100%;
+    margin-top: 5px;
+    padding: 5px 5px;
+    border-radius: 5px;
+    border:1px solid lightgray;
+    outline: none;
+}
+.inner_input_container label{
+    font-family: "Graphik_Semibold"; 
+}
+.inner_input_container ::-webkit-input-placeholder{
+    font-size: 15px;
+    font-family: "Graphik_Light"; 
+}
+@media (max-width:1101px){
+    .scheduleinterview_main_wrapper{
+        width: 90%;
+    }
+}
+
+
+
+
+
+

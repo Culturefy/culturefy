@@ -1,0 +1,70 @@
+.jobemployeedetails_app{
+    width: 100%;
+}
+.jobemployeedetails_ch_app{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.employee_avtar{
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.employee_details{
+    width: 50%;
+}
+.employee_description_tr{
+    border-bottom: 1px solid #bbbbbb4a ;
+}
+.employee_description{
+    width: 10%;
+    color: #bbbbbb;
+    font-size: 18px;
+    padding: 10px;
+    font-family: "Grpahik Light";
+}
+.__employee__{
+    width: 20%;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: 400;
+    font-family: "Grpahik Regular";
+}
+.offerletter_select{
+    width: auto;
+    height: 35px;
+    border-radius: 30px;
+    padding: 0 10px;
+}
+.app_btns_con{
+    width: 420px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.app_btns_cover{
+    width: 200px;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    padding: 10px;
+    background-color: #bf161f;
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+}
+.app_btns_res{
+    width: 200px;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    padding: 10px;
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    background-color: rgb(35, 148, 175);
+}
+
+

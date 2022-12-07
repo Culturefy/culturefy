@@ -1,0 +1,149 @@
+.jobs_main_wrapper{
+    width: 95%;   
+}
+.addjobs_hader_pr{
+    width: 95%;
+}
+.addjob_button{
+    width: 100%;
+}
+.addjob_button button{
+    width: 180px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: #2394ae;
+    color: white;
+    border: none;
+    font-family: "Grpahik Regular";
+}
+.jobs_header{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    font-family: "Grpahik Medium";
+    padding-left: 10px;
+}
+.calendar_view{
+    width: 100%;
+}
+.title{
+    width: 90%;
+    height: 50%;
+    
+}
+.title h2{
+    font-family: "Graphik_Medium"; 
+    font-size: 20px;
+}
+.link_buttons{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.link_buttons button{
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 30px;
+    color: white;
+}
+.link_buttons a{
+    width: 100px;
+    height: 40px;
+    margin: 10px;
+    border: none;
+    border-radius: 30px;
+    color: white;
+}
+.cal_btn_1{
+    background-color: #2394ae;
+    
+}
+.cal_btn_2{
+    background-color: #bf161f;
+}
+.css-1t1j96h-MuiPaper-root-MuiDialog-paper{
+ height: 15% !important;
+ width: 22% !important;
+}
+
+/* =========================================================== */
+.interview_calander {
+    height: 60vh;
+    overflow: scroll;
+}
+.interview_calander::-webkit-scrollbar{
+    display: none;
+}
+
+.rs__event__item .MuiPaper-elevation{
+    background-color: #fff9e9 !important;
+    border-left: 2px solid #f5a413;
+}
+.MuiTypography-subtitle2{
+color: black;
+}
+.MuiTypography-body1{
+    color: black;
+}
+.rs__cell {
+    /* background-color: aqua; */
+    text-align: center;
+}
+.MuiModal-root .MuiPopover-paper{
+    width: 23vw !important;
+    background-color: #fff9e9 !important;
+    border-left: 2px solid #f5a413 !important;
+    z-index: 0;
+}
+.css-u9arwz div{
+    background-color: #fff9e9 !important; ;
+}
+.MuiIconButton-sizeSmall svg{
+    color: black !important;
+
+}
+.rs__multi_day .MuiPaper-rounded{
+    background-color: #fff9e9 !important;
+    border-left: 2px solid #f5a413;
+}
+.css-1e6y48t-MuiButtonBase-root-MuiButton-root{
+    color: #2394ae !important;
+}
+
+.rs__cell div .css-vkc4v8-MuiTypography-root{
+    color: #2394ae !important;
+}
+.rs__cell .MuiAvatar-circular {
+    background-color:white !important;
+}
+.redirect_div{
+    padding: 6px 10px;
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: space-between;
+}
+.redirect_div span{
+    font-family: "Graphik_Medium"; 
+    margin-right:8px ;
+}
+
+.redirect_div a button{
+    width: 60px;
+    height: 28px;
+    border-radius: 30px;
+    border: none;
+    color: white;
+}
+.redirect_div :nth-child(2) button{
+    background-color: #2394ae; 
+}
+.redirect_div :nth-child(3) button{
+    background-color: #bf161f; 
+}
+.css-s22wio div{
+    background-color: #fff9e9 !important;
+}

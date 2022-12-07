@@ -1,0 +1,213 @@
+.dashboard_main{
+    width: 100%;
+}
+.recruitingdashboard_main_wrapper {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+}
+
+.recruiting_dashboard_header {
+    width: 95%;
+    position: sticky;
+    background-color: white;
+    top: 0;
+    z-index: 1;
+}
+
+.recruiting_dashboard_tabs {
+    width: 95%;
+}
+
+.inner_dashboard_tabs {
+    width: 100%;
+    height: 11.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.dashboard_tabs {
+    width: 27%;
+    height: 8.125rem;
+    border-radius: 0.5rem;
+    box-shadow: -0.125rem 0.312rem 0.937rem 0.312rem #edededb5
+}
+
+.dashboard_tabs_name {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboard_tabs_name h2 {
+    font-family: "Grpahik Medium";
+    font-size: 30px;
+}
+
+.dashboard_tabs_count {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboard_tabs_count h1 {
+    font-family: "Grpahik Medium";
+    color: #2394ae;
+}
+
+.recruiting_dashboard_charts {
+    width: 95%;
+    height: 25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.recruiting_inner_charts {
+    width: 45%;
+    height: 300px;
+    box-shadow: -2px 5px 15px 5px #edededb5;
+   
+}
+.chat_header{
+    width: 100%;
+    height: 20%;
+}
+.chat_header h2{
+    font-family: "Grpahik Medium";
+}
+.chat_section{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.chart_list{
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.chart_list ul{
+    width: 100%;
+    
+}
+.chart_list li{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 8px;
+
+}
+.chart_color1{
+    width: 15px;
+    height: 15px;
+    background-color: #f5a41d;
+    margin: 5px;
+    border-radius: 50%;
+}
+.chart_color2{
+    width: 15px;
+    height: 15px;
+    background-color: #2394ae;
+    margin: 5px;
+    border-radius: 50%;
+}
+.chart_color3{
+    width: 15px;
+    height: 15px;
+    background-color: #bf161f;
+    margin: 5px;
+    border-radius: 50%;
+}
+.chart_color4{
+    width: 15px;
+    height: 15px;
+    margin: 5px;
+    border-radius: 50%;
+    background-color:black;
+}
+.Chart_name{
+    font-family: "Grpahik Regular";
+    width: 80%;
+}
+
+
+.recharts-wrapper{
+    height: 250px !important;
+}
+
+.recruiting_dashboard_tables {
+    width: 95%;
+    height: 400px;
+    /* border: 2px solid blue; */
+    display: flex;
+    justify-content: space-around;
+}
+
+.inner_dashboard_tables {
+    width: 45%;
+}
+
+.dashboard_open_jobs {
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+}
+
+.dashboard_open_jobs h2 {
+    font-family: "Grpahik Medium";
+}
+
+.open_jobs_tables {
+    width: 100%;
+    height: 80%;
+
+}
+
+table {
+    width: 100%;
+}
+
+.open_jobs_tables tr {
+    width: 100%;
+    height: 50px;
+    box-shadow: -2px 5px 15px 5px #edededb5
+        /* border: 1px solid black; */
+}
+
+.td1 {
+    font-family: "Grpahik Bold";
+}
+
+.td4 {
+    font-family: "Grpahik Bold";
+    color: #2394ae;
+}
+
+/* ===================================media Query====================================================== */
+
+@media(max-width:1440px){
+    .dashboard_tabs_name h2 {
+        font-family: "Grpahik Medium";
+        font-size: 25px;
+    }
+}
+@media(max-width:1024px){
+    .dashboard_tabs_name h2 {
+        font-family: "Grpahik Medium";
+        font-size: 20px;
+    }
+}

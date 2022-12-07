@@ -1,8 +1,10 @@
 .workspace_agenda_main_workspace_agendas_wrepper{
     display: flex;
+    width: 100%;
+    height: 100vh;
 }
 .workspace_agendas_wrepper {
-    width: 100%;
+    width: 70%;
 }
 .workspace_agendas_wrepper h3{
     font-family: "Graphik_Bold";
@@ -57,3 +59,45 @@
     font-size: 4.687rem;
     color: #2394ae;
 }
+.agendacall_section {
+    width: 30%;
+}
+.agendacall_section_cmnt{
+    height: 60vh;
+}
+.agendacall_section_vc{
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.agendacall_section_chat{
+    height: 10vh;
+}
+.calling_Section {
+    width: 300px;
+    height: 80px;
+    margin-top: 30px;
+    display: flex;
+    z-index: 0;
+  }
+  
+  .call_img1 {
+    width: 50%;
+    height: 100%;
+  }
+  
+  .call_img1 img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .call_img2 {
+    width: 50%;
+    height: 100%;
+  }
+  
+  .call_img2 img {
+    width: 100%;
+    height: 100%;
+  }
