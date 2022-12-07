@@ -1,0 +1,205 @@
+.workspaceupload_main_header{
+    display: flex;
+}
+.workspacesdata_upload{
+    width: 100%;
+    /* border: 1px solid green; */
+}
+.workspaceuplod_header{
+    width: 100%;
+    /* border: 1px solid blue; */
+}
+.Upload_wepper {
+    width: 100%;
+
+}
+.workpace_upload_header{
+    display: flex;
+    /* border: 1px solid red; */
+}
+.upload_inner_header{
+    width: 50%;
+    /* border: 1px solid green; */
+}
+
+.workpace_upload_header button {
+    padding: 8px 30px;
+    border-radius: 30px;
+    background-color: #cf212f;
+    color: white;
+    border: none;
+    margin-bottom: 10px;
+    font-family: "Graphik_Regular";
+}
+
+.workpace_upload_header h2 {
+    font-weight: bold;
+    font-family: "Graphik_Medium"; 
+}
+
+.upload_files_Section {
+    width: 95%;
+    height: 300px;
+    border-style: dashed;
+    border-color: #2394ae;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+.upload_files_Section p{
+    color: gray;
+    font-family: "Graphik_Light"; 
+}
+.filter_component{
+    width: 95%;
+    margin-top: 15px;
+}
+.upload_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.562rem 3.75rem;
+    height: 1.875rem;
+    font-size: 1.25rem;
+    border-radius: 1.875rem;
+    background-color:#2394ae;
+    color: white;
+    border: none;
+    font-family: "Graphik_Regular";
+}
+.uoload_search{
+    width: 70%;
+    display: flex;
+    position: absolute;
+    border-radius: 30px;
+    /* padding: 5px; */
+    background-color:#f6f6f6;
+    margin-top: 15px;
+}
+.uoload_search input{
+    width:100%;
+    border: none;
+    border-radius: 30px;
+    background-color: #f6f6f6;
+    padding: 10px 0;
+    margin-left: 30px;
+    font-size: 20px;
+}
+
+.upload_search_button{
+    width: 42px;
+    height: 42px;
+    background-color: #2394ae;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 50%;
+    position: relative;
+    right: 0;
+    position: absolute;
+}
+
+/* Media Query */
+@media (max-width:1849px){
+    .uoload_search{
+        width: 68%;
+        display: flex;
+        position: absolute;
+        border-radius: 30px;
+        /* padding: 5px; */
+        background-color:#f6f6f6;
+        margin-top: 15px;
+    }
+}
+@media (max-width:1740px){
+    .uoload_search{
+        width: 66%;
+        display: flex;
+        position: absolute;
+        border-radius: 30px;
+        /* padding: 5px; */
+        background-color:#f6f6f6;
+        margin-top: 15px;
+    }
+}
+@media (max-width:1644px){
+    .uoload_search{
+        width: 64%;
+        display: flex;
+        position: absolute;
+        border-radius: 30px;
+        /* padding: 5px; */
+        background-color:#f6f6f6;
+        margin-top: 15px;
+    }
+}
+@media (max-width:1494px){
+    .uoload_search{
+        width: 62%;
+        display: flex;
+        position: absolute;
+        border-radius: 30px;
+        /* padding: 5px; */
+        background-color:#f6f6f6;
+        margin-top: 15px;
+    }
+}
+@media (max-width:1422px){
+    .uoload_search{
+        width: 60%;
+        display: flex;
+        position: absolute;
+        border-radius: 30px;
+        /* padding: 5px; */
+        background-color:#f6f6f6;
+        margin-top: 15px;
+    }
+}
+@media (max-width:1334px){
+    .uoload_search{
+        width: 58%;
+        display: flex;
+        position: absolute;
+        border-radius: 30px;
+        /* padding: 5px; */
+        background-color:#f6f6f6;
+        margin-top: 15px;
+    }
+}
+@media (max-width:1226px){
+    .uoload_search{
+        width: 56%;
+        display: flex;
+        position: absolute;
+        border-radius: 30px;
+        /* padding: 5px; */
+        background-color:#f6f6f6;
+        margin-top: 15px;
+    }
+}
+@media (max-width:1164px){
+    .uoload_search{
+        width: 54%;
+        display: flex;
+        position: absolute;
+        border-radius: 30px;
+        /* padding: 5px; */
+        background-color:#f6f6f6;
+        margin-top: 15px;
+    }
+}
+@media (max-width:1082px){
+    .uoload_search{
+        width: 52%;
+        display: flex;
+        position: absolute;
+        border-radius: 30px;
+        /* padding: 5px; */
+        background-color:#f6f6f6;
+        margin-top: 15px;
+    }
+}

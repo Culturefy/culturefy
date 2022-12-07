@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.comment_wepper{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 1rem;
+}
+.comment_div{
+    width: 100%;
+}
+._cmnt_btn{
+    border: none;
+    outline: none;
+}
+.comment_wepper_ch{
+    height: 50vh;
+    margin-top: 60px;
+}
+.comment_wepper_ch ::-webkit-scrollbar {
+    display: none;
+}
+.comment_header{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: flex-start;
+}
+.comment_header >img{
+    height: 1.875rem;
+    width: 1.875rem;
+    border-radius: 50%;
+    margin-right: 0.625rem;
+}
+.h3tag{
+    margin-right: 0.312rem;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-family: "Grpahik Medium";
+}
+.ptag{
+    font-size: 0.812rem;
+    display: flex;
+    align-items: center;
+    color: gray;
+    font-family: "Grpahik Light";
+}
+.ptag >p{
+    margin: 0 !important;
+}
+.comment_text{
+    width: 100%;
+    height: 75%;
+    display: flex;
+    margin-bottom: 0.437rem;
+}
+.comment{
+    margin-right: 0.5rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.06rem;
+    width: 80%;
+    font-family: "Grpahik Regular";
+    
+}
+.task{
+    font-size: 0.687rem;
+    display: flex;
+    align-items: center;
+    color: #4ca8bd;
+}
+.task p{
+    margin: 0;
+}
+.comment_reply{
+    width: 100%;
+    height: 5%;
+    display: flex;
+    align-items:center;
+    color: gray;
+}
+.comment_reply > p{
+    margin: 0 !important;
+    margin: 0 10px !important;
+    font-family: "Grpahik Light";
+}
+.comment_hr{
+    padding: 0;
+    margin-bottom: 0.625rem;
+}
+.write{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    /* border-bottom: 1px solid gray; */
+    
+}
+.write input{
+    border: none;
+    width: 95%;
+}
+.write ::-webkit-input-placeholder{
+    font-size: 13px;
+}
+.write input:focus{
+    border: none;
+    outline: none;
+}
+.send{
+    position: relative;
+    right: 0;
+    color: red;
+  
+}
+@media (max-width:1440px){
+    .comment_wepper{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 1rem;
+    }
+    .comment_div{
+        width:100%;
+        padding: 0 10px;
+    }
+    .task{
+        font-size: 0.687rem;
+        display: flex;
+        align-items: center;
+        color: #4ca8bd;
+        width: 150px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .write{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px;
+        /* border-bottom: 1px solid gray; */
+        
+    }
+}

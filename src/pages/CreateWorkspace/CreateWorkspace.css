@@ -1,0 +1,133 @@
+
+.createworkspaces{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.create_workspaces_Form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 40%;
+    height: 100%;
+}
+.createworkspace_title{
+    padding-bottom:25px;
+    font-family: "Grpahik Semibold";
+}
+.create_workspaces_Form label{
+    padding-bottom: 7px;
+    font-size: 20px;
+    font-family: "Grpahik Medium";
+}
+.workspace_date{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid grey;
+    padding: 10px 0;
+    margin: 10px 0 ;
+    outline: none;
+}
+.Date_n_time ::-webkit-input-placeholder{
+    color: grey;
+}
+.Date_n_time .MuiFormControl-root .MuiOutlinedInput-root{
+    border: none !important;
+    outline: none;
+}
+
+.create-workspaces-picture{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.create-workspaces-picture img{
+  width: 100%;
+  height: 100%;
+}
+
+.buttons{
+    width: 100%; 
+}
+.Next-btn{
+    padding: 15px 40px;
+    border-radius: 30px;
+    border: none;
+    background-color: #bf161f;
+    color: aliceblue;
+    margin-right: 15px;
+    font-size: 17px;
+    font-family: "Grpahik Regular";
+}
+.Skip-btn{
+    font-size: 17px;
+    color: gray;
+    border: none;
+    background-color: white;
+    font-family: "Grpahik Regular";
+}
+.input_date{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid gray;
+    margin-bottom: 15px;
+}
+.input_date :focus{
+    border: none;
+    outline: none;
+    
+}
+.create_workspaces_Form>.MuiTextField-root>.MuiInputBase-root ::-webkit-input-placeholder{   
+    font-family: "Grpahik Light";
+    font-size: 15px;
+}
+@media (max-width:1670px){
+    .create-workspaces-picture img{
+        width: 80%;
+        height: 80%;
+      }
+}
+@media (max-width:1513px){
+    .createworkspace_title{
+        font-size: 2rem !important;
+    }
+    .create_workspaces_Form label{
+        padding-bottom: 7px;
+        font-size: 15px;
+        font-family: "Grpahik Medium";
+    }
+    .create-workspaces-picture img{
+        width: 70%;
+        height: 70%;
+      }
+}
+@media (max-width:1374px){
+
+    
+    .create_campaignNew_version_ch{
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        background-color: white;
+        height: 11.25rem;  
+        margin-left: 20%;
+        width: 92vw;
+    }
+}
+@media (max-width:1024px){
+   
+    .create_campaignNew_version_ch{
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        background-color: white;
+        height: 11.25rem;  
+        margin-left: 20%;
+        width: 92vw;
+    }
+}

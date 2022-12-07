@@ -1,0 +1,96 @@
+.postshead{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+.userImg{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.FullImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.postOwner{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    h4{
+        font-size: var(--f20);
+    }
+    p{
+        font-size: var(--f15);
+        color: var(--light-gray);
+    }
+}
+.postImg{
+    display: block;
+    width: 100%;
+    height: 350px;
+}
+.LessonDetails{
+    padding: 15px 0;
+    h2{
+        color: var(--primary);
+        font-size: var(--f20);
+        line-height: normal;
+        padding: 5px 0;
+    }
+    h3{
+        color: var(--black);
+        font-size: var(--f15);
+        line-height: normal;
+    }
+    p{
+        font-size: var(--f15);
+        line-height: normal;
+    }
+}
+.reacteduserImgs{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.dflexSpaceBt{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+.reactedUsers{
+    span{
+        font-size: var(--f12);
+        color: var(--light-gray);
+    }
+    .shareText{
+        margin-left: 5px;
+    }
+}
+.postActionBtns{
+    padding: 10px 0;
+    border-top: 2px solid #eef0f2;
+    border-bottom: 2px solid #eef0f2;
+}
+.commentUserImg{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.commentInp{
+    display: inline-block;
+    width: 85%;
+}
+.postText{
+    font-size: var(--f13);
+    margin-bottom: 0px;
+    padding: 15px 0px;
+}
+.allreacteduserImgs{
+    display: flex;
+    gap: 5px;
+}

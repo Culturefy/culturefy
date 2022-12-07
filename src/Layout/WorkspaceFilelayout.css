@@ -1,0 +1,37 @@
+.mainWrapper{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+.sidebar{
+    width: 20%;
+    height: 100%;
+    display: flex;
+   
+}
+.wcmainContent{
+    width: 72.5%;
+    margin-left: 45px;
+}
+.wctoolsidebar{
+    width: 5%;
+}
+.wcmainheader{
+    padding-right: 70px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+.wcfileheader{
+    height: 130px;
+    display: flex;
+    align-items: center;
+}
+.wcfileinner{
+    height: 76vh;
+    overflow: scroll;
+}
+.wcfileinner::-webkit-scrollbar{
+    display: none;
+}

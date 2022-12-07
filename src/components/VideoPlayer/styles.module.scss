@@ -1,0 +1,39 @@
+.vBMain {
+  .closeV {
+    color: red;
+    font-size: 28px;
+    cursor: pointer;
+    position: absolute;
+    right: 0px;
+    top: 10px;
+  }
+  .videoBox {
+    position: relative;
+    margin: 15px;
+    max-width: 100%;
+    height: 100%;
+
+    video {
+      height: 600px;
+      width: 100%;
+    }
+
+    img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+      z-index: 1;
+    }
+
+    span {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+      z-index: 1;
+    }
+  }
+}

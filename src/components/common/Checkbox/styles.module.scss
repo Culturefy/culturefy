@@ -1,0 +1,10 @@
+.checkboxMain{
+    gap: 20px;
+    input[type="checkbox"]{
+        accent-color: var(--primary);
+        padding: 4px;
+        width: 15px;
+        height: 15px;
+    }
+    color: var(--black);
+}
