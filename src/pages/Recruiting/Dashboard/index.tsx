@@ -116,8 +116,8 @@ const index = () => {
                     </div>
 
                     <div className="chat_section">
-                        <ResponsiveContainer width="40%" >
-                            <PieChart width={500} height={250} >
+                        <ResponsiveContainer className="resp_cont" >
+                            <PieChart   className='pie' >
                                 {/* <Pie data={data01} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={50} fill="#8884d8" /> */}
                                 <Pie
                                     data={data02}
@@ -126,8 +126,8 @@ const index = () => {
                                     innerRadius={60}
                                     outerRadius={90}
                                     fill="#8884d8"
-                                    paddingAngle={5}
                                     dataKey="value"
+                                    className='pie'
 
                                 >
                                     {
@@ -182,9 +182,9 @@ const index = () => {
                     </div>
 
                     <div className="chat_section">
-                        <ResponsiveContainer width="40%" >
-                            <PieChart width={500} height={250}>
-                                {/* <Pie data={data01} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={50} fill="#8884d8" /> */}
+                        <ResponsiveContainer className="resp_cont"  >
+                            <PieChart className='pie'>
+                              
                                 <Pie
                                     data={data02}
                                     cx="50%"
@@ -250,8 +250,8 @@ const index = () => {
                                         <>
                                             <tr>
                                                 <td className='td1'>{e.name}</td>
-                                                <td>{e.date}</td>
-                                                <td>{e.app}</td>
+                                                <td className='td1'>{e.date}</td>
+                                                <td className='td1'>{e.app}</td>
                                                 <td className='td4'>{e.view}</td>
                                             </tr>
                                         </>
@@ -273,8 +273,8 @@ const index = () => {
                                         <>
                                             <tr>
                                                 <td className='td1'>{e.name}</td>
-                                                <td>{e.time}</td>
-                                                <td>{e.status}</td>
+                                                <td className='td1'>{e.time}</td>
+                                                <td className='td1'>{e.status}</td>
                                                 <td className='td4'>{e.view}</td>
                                             </tr>
                                         </>

@@ -1,0 +1,46 @@
+.Profile_main {
+    width: 100%;
+    height: 500px;
+
+}
+
+.profile_inner {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    border-bottom: 1px solid lightgray;
+    font-family: "Grpahik Semibold";
+}
+
+.profile_lable {
+    width: 40%;
+    display: flex;
+    align-items: center;
+}
+
+.profile_lable span {
+    margin-left: 20px;
+    color: rgb(178, 175, 175);
+}
+
+.profile_description {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    font-family: "Grpahik Semibold";
+}
+.profile_description span{
+  
+    margin-left: 10px;
+}
+@media(max-width:1290px){
+    .profile_lable span {
+        margin-left: 10px;
+        color: rgb(178, 175, 175);
+        font-size: 13px;
+    }
+    .profile_description span{
+        font-size: 13px;
+        margin-left: 5px;
+    }
+}

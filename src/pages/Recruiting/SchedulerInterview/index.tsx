@@ -14,7 +14,7 @@ const index = () => {
                     <div className="inner_input_container">
                         <label htmlFor="">Job</label>
                         <div className="select_plus">
-                            <select name="">
+                            <select name="" className='sect_select'>
                                 <option value="Annual" id='option'>--</option>
                             </select>
                             <button>+</button>
@@ -25,7 +25,7 @@ const index = () => {
                     <div className="inner_input_container">
                         <label htmlFor="">Jobs Applicant</label>
                         <div className="select_plus">
-                            <select name="">
+                            <select name="" className='sect_select'>
                                 <option value="Annual" id='option'>--</option>
                             </select>
                             <button>+</button>

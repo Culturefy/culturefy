@@ -51,6 +51,19 @@
     border:1px solid lightgray;
     outline: none;
 }
+.select_plus .sect_select{
+    height: 100%;;
+}
+.select_plus button{
+    width: 8%;
+    height: 100%;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom:1px solid lightgray;
+    border-top:1px solid lightgray;
+    border-right:1px solid lightgray;
+    margin: 0;
+}
 .inner_input_container input{
     width: 100%;
     margin-top: 5px;

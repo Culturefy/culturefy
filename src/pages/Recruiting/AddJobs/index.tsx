@@ -16,7 +16,7 @@ const index = () => {
                 <div className="inner_input_container">
                     <label htmlFor="">Department</label>
                     <div className="select_plus">
-                        <select name="">
+                        <select name="" className='sect_select'>
                         </select>
                         <button>+</button>
                     </div>
@@ -24,7 +24,7 @@ const index = () => {
                 <div className="inner_input_container">
                     <label htmlFor="">Skills</label>
                     <div className="select_plus">
-                        <select name="">
+                        <select name=" " className='sect_select'>
                         </select>
                         <button>+</button>
                     </div>
@@ -43,7 +43,7 @@ const index = () => {
                 <div className="inner_input_container">
                     <label htmlFor="">Job Type</label>
                     <div className="select_plus">
-                        <select name="">
+                        <select name="" className='sect_select'>
 
                         </select>
                         <button>+</button>
@@ -61,7 +61,7 @@ const index = () => {
                 <div className="inner_input_container">
                     <label htmlFor="">Salary Rate</label>
                     <div className="select_plus">
-                        <select name="">
+                        <select name="" className='sect_select'>
 
                         </select>
                         <button>+</button>

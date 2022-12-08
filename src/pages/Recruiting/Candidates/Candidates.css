@@ -1,0 +1,215 @@
+.application_main_wrapper {
+    /* border: 1px solid red; */
+    width: 95%;
+}
+.application_inner_wrapper {
+    width: 100%;
+    /* border: 2px solid green; */
+    display: flex;
+}
+.job_Applications {
+    width: 70%;
+    border-right: 1px solid lightgray;
+}
+.application_header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+.application_header h2 {
+    font-family: "Grpahik Medium";
+}
+.add_application_btn select{
+    border-radius: 25px;
+    width: 10vw;
+    padding: 5px;
+    border: none;
+    outline: none;
+    border: 1px solid grey;
+    display: flex;
+    justify-content: space-between;
+}
+.add_application_btn {
+    width: 100%;
+}
+
+.add_application_btn button {
+    height: 40px;
+    width: 200px;
+    border-radius: 30px;
+    border: none;
+    background-color: #2394ae;
+    color: white;
+    font-family: "Grpahik Regular";
+}
+.jobs_table table{
+    width: 95%;
+}
+.jobs_table table tr{
+    height: 50px;
+    border-bottom: 1px solid gray;
+}
+.jobs_table table tr th{
+    font-family: "Grpahik RegularItalic";
+    color: gray;
+}
+.Application_div {
+    height: 40px;
+    width: 40px;
+    background-color: #2394ae;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.job_title{
+    font-family: "Grpahik Bold";
+}   
+.job_title a{
+    color: black;
+    text-decoration: none;
+    font-family: "Grpahik Bold";
+}
+
+.application_status {
+    width: 80%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: "Grpahik Regular";
+}
+
+.app_status_div {
+    width: 13px;
+    height: 13px;
+    margin-right:10px ;
+    border-radius: 50%;
+}
+.recommended_candidates {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    right: 0;
+}
+.recommended_inner_wrapper{
+    width: 90%;
+}
+.recommended_header{
+    width: 100%;
+    background-color: white;
+    z-index: 1;
+}
+.recommrnded_search{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.recommrnded_search .MuiPaper-elevation {
+    border-radius: 25px;
+}
+
+.recommrnded_search .MuiIconButton-root {
+    background-color: rgb(35, 148, 174);
+    position: relative;
+    color: white;
+    right: -3%;
+}
+
+.recommrnded_search .MuiIconButton-root :hover {
+    position: relative !important;
+    right: -3% !important;
+    color: black;
+    border-radius: 50%;
+    background-color: rgb(35, 148, 174);
+}
+.recommended_title{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+.filter_sort{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.filter_sort select{
+    width: 80px;
+    height: 30px;
+    border-radius: 30px;
+    margin-right: 10px;
+    outline: none;
+    padding: 0 5px;
+}
+.recommended_card_container{
+    height:48vh;
+    overflow: scroll;
+}
+.recommended_card{
+    width: 100%;
+    height: 150px;
+    box-shadow: -2px 5px 15px 5px #edededb5;
+    border-radius: 10px;
+}
+.r_card_header{
+    width: 100%;
+    height: 20%; 
+}
+.r_card_header p{
+    color: #2394ae;
+    font-family: "Grpahik Medium";
+    text-transform: uppercase;
+}
+.recommended_user{
+    width: 100%;
+    height: 70%;
+    display: flex;
+}
+.devloper_image{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.devloper_image img{
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+}
+.devloper_name{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+}
+.devloper_name h4{
+    font-family: "Grpahik Semibold";
+    margin: 0;
+}
+.devloper_name span{
+    font-family: "Grpahik Semibold";
+    color: #2394ae;
+    font-size: 15px;
+}
+.devloper_apply{
+    width: 35%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.devloper_apply button{
+    width: 95%;
+    height: 30px;
+    border-radius: 30px;
+    margin-top: 20px;
+    border: none;
+    background-color: #2394ae;
+    color: white;
+    font-family: "Grpahik Regular";
+    font-size: 13px;
+}

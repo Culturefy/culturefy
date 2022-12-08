@@ -49,6 +49,7 @@ const Tabs = lazy(() => import("src/components/common/Tabs"));
 
 const Certifications = lazy(() => import("src/pages/Certifications"));
 
+
 // const Learning = lazy(() => import('src/pages/Learning'))
 // const CreateNewModule = lazy(() => import('src/pages/createNewModule'))
 // const CreateNewCourse = lazy(() => import('src/pages/createNewCourse'))
@@ -95,28 +96,24 @@ const WorkspacePoll = lazy(() => import("src/pages/CreatePoll/WorkspacePoll"));
 // ============Recruiting============
 const Jobs = lazy(() => import("src/pages/Recruiting/Jobs"));
 const AddJobs = lazy(() => import("src/pages/Recruiting/AddJobs"));
-const EmployeeDetailsJobs = lazy(
-  () => import("src/pages/Recruiting/JobEmployeeDetails")
-);
-const Application = lazy(
-  () => import("src/pages/Recruiting/Application")
-);
-const AddApplication = lazy(
-  () => import("src/pages/Recruiting/AddApplication")
-);
-const ApplicationDetails = lazy(
-  () => import("src/pages/Recruiting/ApplicationDetails")
-);
-const Skill = lazy(
-  () => import("src/pages/Recruiting/Skill")
-);
-const SkillAdd = lazy(
-  () => import("src/pages/Recruiting/SkillAdd")
-);
+const EmployeeDetailsJobs = lazy(() => import("src/pages/Recruiting/JobEmployeeDetails"));
+const Application = lazy(() => import("src/pages/Recruiting/Application"));
+const AddApplication = lazy(() => import("src/pages/Recruiting/AddApplication"));
+const ApplicationDetails = lazy(() => import("src/pages/Recruiting/ApplicationDetails"));
+const Skill = lazy(() => import("src/pages/Recruiting/Skill"));
+const SkillAdd = lazy(() => import("src/pages/Recruiting/SkillAdd"));
 const TeslaCampaign = lazy(() => import('src/pages/TeslaCampaign'))
 const Dashboard = lazy(() => import('src/pages/Recruiting/Dashboard'))
 const Interviews = lazy(() => import('src/pages/Recruiting/Interviews'))
 const SchedulerInterview = lazy(() => import('src/pages/Recruiting/SchedulerInterview'))
+const InterviewSpace = lazy(() => import('src/pages/Recruiting/InterviewSpace'))
+const Profiles = lazy(() => import('src/pages/Recruiting/InterviewSpace/Profile'))
+const Resume = lazy(() => import('src/pages/Recruiting/InterviewSpace/Resume'))
+const InterviewQuestion = lazy(() => import('src/pages/Recruiting/InterviewSpace/InterviewQuestion'))
+const Candidates = lazy(() => import('src/pages/Recruiting/Candidates'))
+const OfferLetter = lazy(() => import('src/pages/Recruiting/OfferLetter'))
+const OfferLetterDetails = lazy(() => import('src/pages/Recruiting/OfferletterDetails'))
+const OfferLetterNew = lazy(() => import('src/pages/Recruiting/OfferletterNew'))
 
 export const router = createBrowserRouter([
   {
@@ -295,6 +292,43 @@ export const router = createBrowserRouter([
         path: "schedulerinterview",
         element: <SchedulerInterview />,
       },
+      {
+        path: "interviewspace",
+        element: <InterviewSpace />,
+        children: [
+          {
+            path: "profile",
+            element: <Profiles />,
+          },
+          {
+            path: "resume",
+            element: <Resume />,
+          },
+          {
+            path: "interviewquestion",
+            element: <InterviewQuestion />,
+          },
+        ]
+      },
+
+      {
+        path: "candidates",
+        element: <Candidates />,
+      },
+      {
+        path: "offerletter",
+        element: <OfferLetter />,
+      },
+      {
+        path: "offerletterdetails",
+        element: <OfferLetterDetails />,
+      },
+      {
+        path: "offerletternew",
+        element: <OfferLetterNew />,
+      },
+
+
     ],
   },
 

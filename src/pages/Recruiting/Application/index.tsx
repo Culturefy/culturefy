@@ -125,9 +125,7 @@ const index = () => {
                   <tr>
                     <td>
                       <div className="Application_div">
-                      
                         {e.sort_name}
-
                         </div>
                     </td>
                     <td className="job_title">
@@ -135,8 +133,8 @@ const index = () => {
                         {e.name}
                         </Link>
                         </td>
-                    <td>{e.job_title}</td>
-                    <td>{e.date_submited}</td>
+                    <td className="j_ob">{e.job_title}</td>
+                    <td className="j_ob">{e.date_submited}</td>
                     {e.Status == "Interviewed" ? (
                       <td className="application_status">
                         <div

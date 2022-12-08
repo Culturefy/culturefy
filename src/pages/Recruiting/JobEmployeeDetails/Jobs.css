@@ -47,3 +47,87 @@
     overflow-x: visible;
     font-family: "Grpahik Regular";
 }
+@media (max-width:1896px){
+    .jobemployeedetails_ch{
+        width: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px ;
+    }
+    .jobemployeedetails_ch h1{
+        font-size: 34px;
+    }
+}
+@media (max-width:1422px){
+    .jobemployeedetails_ch{
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px ;
+    }
+    .jobemployeedetails_ch h1{
+        font-size: 32px;
+    }
+}
+@media (max-width:1100px){
+    .jobemployeedetails_ch{
+        width: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px ;
+    }
+    .jobemployeedetails_ch h1{
+        font-size: 30px;
+    }
+}
+@media(max-width:1606px){
+    .employee_description{
+        width: 10%;
+        color: #bbbbbb;
+        font-size: 18px;
+        padding: 10px;
+        font-family: "Grpahik Light";
+    }
+    .__employee__{
+        width: 20%;
+        font-size: 18px;
+        padding: 10px;
+        font-weight: 400;
+        font-family: "Grpahik Regular";
+    }
+    .__employee__det{
+        width: 70%;
+        font-size: 18px;
+        padding: 10px;
+        font-weight: 400;
+        overflow-x: visible;
+        font-family: "Grpahik Regular";
+    }
+}
+@media(max-width:1440px){
+    .employee_description{
+        width: 10%;
+        color: #bbbbbb;
+        font-size: 16px;
+        padding: 10px;
+        font-family: "Grpahik Light";
+    }
+    .__employee__{
+        width: 20%;
+        font-size: 16px;
+        padding: 10px;
+        font-weight: 400;
+        font-family: "Grpahik Regular";
+    }
+    .__employee__det{
+        width: 70%;
+        font-size: 16px;
+        padding: 10px;
+        font-weight: 400;
+        overflow-x: visible;
+        font-family: "Grpahik Regular";
+    }
+}

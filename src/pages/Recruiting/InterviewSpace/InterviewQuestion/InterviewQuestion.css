@@ -1,0 +1,136 @@
+.interview_que_main {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: scroll;
+}
+.interview_que_main::-webkit-scrollbar{
+    display: none;
+ }
+
+.question_inputbox {
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    display: flex;
+}
+
+.question_inputbox input {
+    width: 75%;
+    height: 35px;
+    padding-left: 5px;
+}
+
+.question_inputbox button {
+    margin: 0px 0px 0 10px;
+    height: 35px;
+    width: 20%;
+    border: none;
+    border-radius: 30px;
+    background-color: #bf161f;
+    color: white;
+}
+
+.question_inputbox input::-webkit-input-placeholder {
+    font-size: 15px;
+}
+
+.question_wrapper {
+    width: 90%;
+    display: flex;
+    border-bottom: 1px solid lightgray;
+}
+
+.chackbox_div {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    /* border: 1px solid green; */
+}
+
+.chackbox_div input {
+    height: 20px;
+    width: 20px;
+    margin-top: 5px;
+}
+
+.question_div {
+    width: 95%;
+    padding: 5px 0;
+    /* border: 1px solid green; */
+}
+
+.question_div span {
+    font-size: 19px;
+    font-family: "Grpahik Regular";
+}
+@media(max-width:1520px) {
+    .question_div span {
+        font-size: 15px;
+        font-family: "Grpahik Regular";
+    }
+    .question_inputbox {
+        width: 100%;
+        height: 50px;
+        margin-top: 20px;
+        display: flex;
+    }
+    
+    .question_inputbox input {
+        width: 75%;
+        height: 30px;
+        padding-left: 5px;
+    }
+    
+    .question_inputbox button {
+        margin: 0px 0px 0 10px;
+        height: 30px;
+        width: 20%;
+        border: none;
+        border-radius: 30px;
+        background-color: #bf161f;
+        color: white;
+        font-size: 13px;
+    }
+    
+    .question_inputbox input::-webkit-input-placeholder {
+        font-size: 12px;
+    }
+}
+@media(max-width:1150px) {
+    .question_div span {
+        font-size: 13px;
+        font-family: "Grpahik Regular";
+    }
+    .question_inputbox {
+        width: 100%;
+        height: 50px;
+        margin-top: 20px;
+        display: flex;
+    }
+    
+    .question_inputbox input {
+        width: 75%;
+        height: 25px;
+        padding-left: 5px;
+    }
+    
+    .question_inputbox button {
+        margin: 0px 0px 0 10px;
+        height: 25px;
+        width: 17%;
+        border: none;
+        border-radius: 30px;
+        background-color: #bf161f;
+        color: white;
+        font-size: 11px;
+    }
+    
+    .question_inputbox input::-webkit-input-placeholder {
+        font-size: 10px;
+    }
+}

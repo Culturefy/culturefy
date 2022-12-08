@@ -111,8 +111,9 @@ export const navigation: INavigations[] = [
           },
           {
             title: "Recruting",
-            link: "/recruiting",
+            link: "/recruiting/dashboard",
           },
+
         ],
       },
 ]

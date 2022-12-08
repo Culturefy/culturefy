@@ -47,7 +47,7 @@
 
 .dashboard_tabs_name h2 {
     font-family: "Grpahik Medium";
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .dashboard_tabs_count {
@@ -83,10 +83,12 @@
 }
 .chat_header h2{
     font-family: "Grpahik Medium";
+    font-size: 25px;
+    margin: 10px;
 }
 .chat_section{
     width: 100%;
-    height: 80%;
+    height: 60%;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -169,12 +171,12 @@
 
 .dashboard_open_jobs h2 {
     font-family: "Grpahik Medium";
+    font-size: 25px;
 }
 
 .open_jobs_tables {
     width: 100%;
     height: 80%;
-
 }
 
 table {
@@ -185,7 +187,6 @@ table {
     width: 100%;
     height: 50px;
     box-shadow: -2px 5px 15px 5px #edededb5
-        /* border: 1px solid black; */
 }
 
 .td1 {
@@ -196,13 +197,146 @@ table {
     font-family: "Grpahik Bold";
     color: #2394ae;
 }
-
+.pie{
+    width: 500px;
+    height: 250px;
+}
+.resp_cont{
+    width: 40% !important;
+}
 /* ===================================media Query====================================================== */
 
-@media(max-width:1440px){
+
+@media(max-width:1614px){
+    .td1 {
+        font-family: "Grpahik Bold";
+        font-size: 15px;
+    }
+    .td4 {
+        font-family: "Grpahik Bold";
+        color: #2394ae;
+        font-size: 15px;
+    }
+
+}
+@media(max-width:1172px){
+    .td1 {
+        font-family: "Grpahik Bold";
+        font-size: 13px;
+    }
+    .td4 {
+        font-family: "Grpahik Bold";
+        color: #2394ae;
+        font-size: 13px;
+    }
+
+}
+@media(max-width:1572px){
     .dashboard_tabs_name h2 {
         font-family: "Grpahik Medium";
         font-size: 25px;
+    }
+    
+
+}
+
+@media(max-width:1572px){
+    .dashboard_tabs_name h2 {
+        font-family: "Grpahik Medium";
+        font-size: 25px;
+    }
+
+}
+@media(max-width:1451px){
+    .dashboard_tabs_name h2 {
+        font-family: "Grpahik Medium";
+        font-size: 23px;
+    }
+
+}
+@media(max-width:1440px){
+    .dashboard_tabs_name h2 {
+        font-family: "Grpahik Medium";
+        font-size: 23px;
+    }
+    .dashboard_open_jobs h2 {
+        font-family: "Grpahik Medium";
+        font-size: 23px;
+    }
+    .chat_header h2{
+        font-family: "Grpahik Medium";
+        font-size: 23px;
+        margin: 10px;
+    }
+}
+@media (max-width:1482px){
+    .open_jobs_tables {
+        width: 35vw;
+        height: 80%;
+    }
+}
+@media (max-width:1308px){
+    .open_jobs_tables {
+        width: 36vw;
+        height: 80%;
+    }
+}
+
+@media (max-width:1290px){
+    .open_jobs_tables {
+        width: 36vw;
+        height: 80%;
+    }
+}
+@media (max-width:1235px){
+    .open_jobs_tables {
+        width: 36.5vw;
+        height: 80%;
+    }
+}
+@media(max-width:1208px){
+    .dashboard_tabs_name h2 {
+        font-family: "Grpahik Medium";
+        font-size: 21px;
+    }
+    .dashboard_open_jobs h2 {
+        font-family: "Grpahik Medium";
+        font-size: 21px;
+    }
+    .chat_header h2{
+        font-family: "Grpahik Medium";
+        font-size: 21px;
+        margin: 10px;
+    }
+}
+@media(max-width:1111px){
+    .dashboard_tabs_name h2 {
+        font-family: "Grpahik Medium";
+        font-size: 20px;
+    }
+    .dashboard_open_jobs h2 {
+        font-family: "Grpahik Medium";
+        font-size: 20px;
+    }
+    .chat_header h2{
+        font-family: "Grpahik Medium";
+        font-size: 20px;
+        margin: 10px;
+    }
+}
+@media(max-width:1060px){
+    .dashboard_tabs_name h2 {
+        font-family: "Grpahik Medium";
+        font-size: 20px;
+    }
+    .dashboard_open_jobs h2 {
+        font-family: "Grpahik Medium";
+        font-size: 20px;
+    }
+    .chat_header h2{
+        font-family: "Grpahik Medium";
+        font-size: 20px;
+        margin: 10px;
     }
 }
 @media(max-width:1024px){
@@ -210,4 +344,35 @@ table {
         font-family: "Grpahik Medium";
         font-size: 20px;
     }
+    .dashboard_open_jobs h2 {
+        font-family: "Grpahik Medium";
+        font-size: 20px;
+    }
+    .chat_header h2{
+        font-family: "Grpahik Medium";
+        font-size: 20px;
+        margin: 10px;
+    }
+
+}
+@media(max-width:1314px){
+ 
+    .resp_cont{
+        width: 45% !important;
+    }
+   
+}
+@media(max-width:1169px){
+ 
+    .resp_cont{
+        width: 48% !important;
+    }
+   
+}
+@media(max-width:1089px){
+ 
+    .resp_cont{
+        width: 52% !important;
+    }
+ 
 }

@@ -20,7 +20,7 @@ const index = () => {
         <div className="inner_input_container">
           <label htmlFor="">Job</label>
           <div className="select_plus">
-            <select name=""></select>
+            <select name="" className='sect_select'></select>
             <button>+</button>
           </div>
         </div>
@@ -38,7 +38,7 @@ const index = () => {
         <div className="inner_input_container">
           <label htmlFor="">Application Source</label>
           <div className="select_plus">
-            <select name=""></select>
+            <select name="" className='sect_select'></select>
             <button>+</button>
           </div>
         </div>

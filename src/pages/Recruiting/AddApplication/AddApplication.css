@@ -255,13 +255,16 @@
   border:1px solid lightgray;
   outline: none;
 }
+
 .select_plus{
   width: 100%;
 }
-
+.select_plus .sect_select{
+  height: 100%;;
+}
 .select_plus button{
   width: 8%;
-  padding: 1.5px 0;
+  height: 100%;
   border-bottom-right-radius: 5px;
   border-top-right-radius: 5px;
   border-bottom:1px solid lightgray;
@@ -269,16 +272,6 @@
   border-right:1px solid lightgray;
   margin: 0;
 }
-.select_plus select{
-  width: 89%;
-  margin-top: 5px;
-  padding: 5px 5px;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  border:1px solid lightgray;
-  outline: none;
-}
-
 .jobs_description_title {
   width: 100%;
   height: 20%;

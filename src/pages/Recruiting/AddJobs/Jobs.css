@@ -29,25 +29,19 @@
 .select_plus{
     width: 100%;
 }
-
+.select_plus .sect_select{
+    width: 92%;
+    height: 100%;
+}
 .select_plus button{
     width: 8%;
-    padding: 2px 0;
+    height: 100%;
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
     border-bottom:1px solid lightgray;
     border-top:1px solid lightgray;
     border-right:1px solid lightgray;
     margin: 0;
-}
-.select_plus select{
-    width: 89%;
-    margin-top: 5px;
-    padding: 5px 5px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    border:1px solid lightgray;
-    outline: none;
 }
 
 .inner_input_container input{

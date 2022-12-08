@@ -94,7 +94,7 @@ const Schedulera = () => {
                         <>
                             <div className="redirect_div">
                                 <span>Redirect to Interview profile?</span>
-                                <Link to="/recruiting/interviewspaceprofile"><button>Yes</button></Link>
+                                <Link to="/recruiting/interviewspace/profile"><button>Yes</button></Link>
                             </div>
                         </>
                     )

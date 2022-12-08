@@ -1,0 +1,56 @@
+.status_div{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #2394ae;
+}
+.offerletter_select{
+    width: 150px;
+    height: 35px;
+    border-radius: 30px;
+    padding: 0 10px;
+}
+.employee_description button{
+    padding: 5px 13px;
+    border-radius: 30px;
+    border: none;
+    background-color: #bf161f;
+    color: white;
+    font-family: "Grpahik Regular";
+}
+.employee_details{
+    width: 50%;
+}
+.employee_description_tr{
+    border-bottom: 1px solid #bbbbbb4a ;
+}
+.employee_description{
+    width: 10%;
+    color: #bbbbbb;
+    font-size: 18px;
+    padding: 10px;
+    font-family: "Grpahik Light";
+}
+.__employee__{
+    width: 20%;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: 400;
+    font-family: "Grpahik Regular";
+}
+.offerletter_select{
+    width: auto;
+    height: 35px;
+    border-radius: 30px;
+    padding: 0 10px;
+}
+.jobemployeedetails{
+    width: 95%;
+}
+.jobemployeedetails_ch{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px ;
+}

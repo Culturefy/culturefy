@@ -38,9 +38,9 @@ const index = () => {
     <div className="jobemployeedetails_app">
     <div className="jobemployeedetails_ch_app">
       <div className="employee_avtar">
-        <Avatar {...stringAvatar('Kent Doddas')} style={{width:"80px",height:"80px"}}/>
+        <Avatar {...stringAvatar('Kent Doddas')} />
       </div>
-      <h1>Software Developer</h1>
+      <h3>Software Developer</h3>
       <ModeEditOutlinedIcon style={{ color: "#2394AE" }} />
     </div>
     <div style={{display:"flex"}}>

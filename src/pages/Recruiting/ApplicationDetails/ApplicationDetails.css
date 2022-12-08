@@ -7,10 +7,14 @@
     width: 100%;
 }
 .employee_avtar{
-    width: 150px;
+    width: 120px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.employee_avtar .MuiAvatar-root{
+    width: 80px;
+    height: 80px;
 }
 .employee_details{
     width: 50%;
@@ -27,7 +31,7 @@
 }
 .__employee__{
     width: 20%;
-    font-size: 20px;
+    font-size: 18px;
     padding: 10px;
     font-weight: 400;
     font-family: "Grpahik Regular";
@@ -66,5 +70,52 @@
     font-size: 18px;
     background-color: rgb(35, 148, 175);
 }
-
+@media (max-width:1870px) {
+    .__employee__{
+        width: 20%;
+        font-size: 18px;
+        padding: 10px;
+        font-weight: 400;
+        font-family: "Grpahik Regular";
+    }
+    .employee_description{
+        width: 10%;
+        color: #bbbbbb;
+        font-size: 18px;
+        padding: 10px;
+        font-family: "Grpahik Light";
+    }
+    .employee_avtar .MuiAvatar-root{
+        width: 70px;
+        height: 70px;
+    }
+}
+@media (max-width:1440px){
+    .app_btns_cover{
+        width: 180px;
+        border: none;
+        outline: none;
+        border-radius: 25px;
+        padding: 5px;
+        background-color: #bf161f;
+        color: white;
+        font-weight: 700;
+        font-size: 18px;
+    }
+    .app_btns_res{
+        width: 180px;
+        border: none;
+        outline: none;
+        border-radius: 25px;
+        padding: 5px;
+        color: white;
+        font-weight: 700;
+        font-size: 18px;
+        background-color: rgb(35, 148, 175);
+    }
+    .employee_avtar .MuiAvatar-root{
+        width: 60px;
+        height: 60px;
+    }
+}
 
