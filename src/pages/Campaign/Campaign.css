@@ -1,10 +1,11 @@
-
-.create-new-campaigns {
-    width: 100%;
-    margin-bottom: 3rem;
-
+.wrapper{
+    margin-top: 250px;
+    width: 95% !important;
 }
-
+.create-new-campaigns {
+    width: 80%;
+    height: 130px;
+}
 .create-new-campaigns button {
     border-radius: 30px;
     background-color: #2394ae;
@@ -15,79 +16,13 @@
     width: 20%;
     padding: 12px 0;
 }
-
-.Campaign_header_pr {
-    width: 77%;
-    
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-}
-
-.campaign_header_user_data {
-    width: 95%;
-    height: 100px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin: 10px 0;
-    /* border: 1px solid red; */
-}
-
-.campaign_header_user_data ul {
-    display: flex;
-    align-items: center;
-    width: 12%;
-    justify-content: space-between;
-    margin: 0 !important;
-}
-
-.campaign_header_user_data ul li img {
-    width: 30px;
-    height: 30px;
-    /* margin-right: 15px; */
-}
-
-.heading_search_container {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-
-
-.heading_search_container .MuiPaper-elevation {
-    border-radius: 25px;
-
-}
-
-
-.heading_search_container .MuiIconButton-root {
-    background-color: rgb(35, 148, 174);
-    position: relative;
-    color: white;
-    right: -3%;
-}
-.heading_search_container .MuiIconButton-root :hover {
-    position: relative !important;
-    right: -3% !important;
-    color: black;
-    border-radius: 50%;
-    background-color: rgb(35, 148, 174);
-}
 .nav-campaign-tabs {
     padding: 6px;
     background: #f1f1f1;
     border-radius: 100px;
     justify-content: space-between;
-    margin: 50px 0;
+    margin-bottom: 70px;
 }
-
-.heading_main_container {
-    font-weight: 500;
-}
-
 .nav-campaign-tabs ul {
     width: 100%;
     display: flex;
@@ -105,6 +40,7 @@
     justify-content: center;
     font-size: 1.60rem;
     border-radius: 30px;
+    
 }
 
 .nav-campaign-tabs li button {
@@ -119,8 +55,6 @@
     border-radius: 30px;
     border-radius: 30px;
     background: none;
-
-
 }
 
 .nav-campaign-tabs li :focus {
@@ -140,67 +74,26 @@
 
 ul.campaign-tabs li button.active {
     background-color: #2394ae;
-   
+
 }
-.Pagination{
+.campaign-wraper {
     width: 100%;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 0px 7px 0px #cfb9b9cc;   
+}
+.campaign-top {
+    padding: 0px 40px;
+}
+.campaign-top .header {
+    height: 100px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    
 }
-.paginationBttns{
+.campaign-table {
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-   border: 1px solid black;
-   margin-right: 100px;
-}
-.paginationBttns li{
-    margin-right:20px;
-}
 
-.paginationActive {
-    border: 1px solid #2394ae;
-    background: #fff;
-    color: #2394ae;
-    box-shadow: 0 0 1px #2394ae;
-    border-radius: 6px;
-    padding: 5px 12px;
-}
-
-.pagine li:last-child .page-link {
-    color: #000;
-}
-.campaign-table{
-    width: 100%;
-}
-.campaign-table table thead{
-    width: 100%;
-}
-.campaign-table table  tr{
-   width: 100%;
-}
-
-.campaign-table table tbody td h4.Pending {
-    color: #f5a41d;
-    text-decoration: underline;
-}
-
-.campaign-table table tbody td h4.Active {
-    color: #2394ae;
-    text-decoration: underline;
-}
-
-.campaign-table table tbody td h4.Completed {
-    color: #649084;
-    text-decoration: underline;
-}
-
-.campaign-table table .progress {
-    height: 20px;
-    border-radius: 16px;
 }
 
 .campaign-table table .progress .Active {
@@ -232,7 +125,7 @@ ul.campaign-tabs li button.active {
 }
 
 /* Media Query */
-@media (max-width:1644px){
+@media (max-width:1644px) {
     .create-new-campaigns button {
         border-radius: 30px;
         background-color: #2394ae;
@@ -242,49 +135,78 @@ ul.campaign-tabs li button.active {
         width: 18%;
         padding: 15px 0;
     }
+
 }
-@media (max-width:1547px){
+
+@media (max-width:1547px) {
+    .create-new-campaigns button {
+        border-radius: 30px;
+        background-color: #2394ae;
+        border: 1px solid #2394ae;
+        color: white;
+        font-size: 13px;
+        width: 19%;
+        padding: 13px 0;
+    }
+}
+
+@media (max-width:1441px) {
     .create-new-campaigns button {
         border-radius: 30px;
         background-color: #2394ae;
         border: 1px solid #2394ae;
         color: white;
         font-size: 12px;
-        width: 18%;
-        padding: 15px 0;
+        width: 20%;
+        padding: 12px 0;
     }
 }
-@media (max-width:1441px){
+
+@media (max-width:1322px) {
     .create-new-campaigns button {
         border-radius: 30px;
         background-color: #2394ae;
         border: 1px solid #2394ae;
         color: white;
-        font-size: 10px;
-        width: 18%;
-        padding: 15px 0;
-    }
-}
-@media (max-width:1322px){
-    .create-new-campaigns button {
-        border-radius: 30px;
-        background-color: #2394ae;
-        border: 1px solid #2394ae;
-        color: white;
-        font-size: 10px;
+        font-size: 11px;
         width: 22%;
-        padding: 15px 0;
+        padding: 11px 0;
     }
 }
-@media (max-width:1140px){
+
+@media (max-width:1200px) {
     .create-new-campaigns button {
         border-radius: 30px;
         background-color: #2394ae;
         border: 1px solid #2394ae;
         color: white;
-        font-size: 10px;
-        width: 22%;
-        padding: 15px 0;
+        font-size: 11px;
+        width: 24%;
+        padding: 10px 0;
+    }
+}
+
+@media (max-width:1140px) {
+    .create-new-campaigns button {
+        border-radius: 30px;
+        background-color: #2394ae;
+        border: 1px solid #2394ae;
+        color: white;
+        font-size: 11px;
+        width: 25%;
+        padding: 10px 0;
+    }
+}
+
+@media (max-width:1090px) {
+    .create-new-campaigns button {
+        border-radius: 30px;
+        background-color: #2394ae;
+        border: 1px solid #2394ae;
+        color: white;
+        font-size: 11px;
+        width: 30%;
+        padding: 9px 0;
     }
 }
 
@@ -296,7 +218,7 @@ ul.campaign-tabs li button.active {
         margin: 0 !important;
     }
 
-  
+
 
     .heading_search_container .MuiPaper-elevation {
         border-radius: 25px;
@@ -379,47 +301,46 @@ ul.campaign-tabs li button.active {
         height: 35px;
         width: 35px;
     }
-
-    .create-new-campaigns button {
-        border-radius: 30px;
-        background-color: #2394ae;
-        border: 1px solid #2394ae;
-        color: white;
-        font-size: 10px;
-        width: 25%;
-        padding: 15px 0;
-    }
-    
 }
 
 /* ==============================Contant.css=========================================== */
 /* main Component */
-.main_container{
+.main_container {
     width: 20%;
 }
-.abc{
+
+.abc {
     border: 5px solid blue;
 }
-.content{
+
+.content {
     height: 100%;
     color: black;
-    width:75%;
+    width: 75%;
     margin-left: 23%;
 }
 
-.date_comp{
+.date_comp {
     width: 50%;
     display: flex;
     align-items: center;
-    
 }
-.date_filter_main_menu{
+
+.date_comp h4 {
+    font-size: 17px;
+    color: gray;
+    font-family: "Grpahik Regular";
+}
+
+.date_filter_main_menu {
     width: 27rem !important;
 }
-.datpick{
+
+.datpick {
     width: 23rem;
 }
-.date_input_fields{
+
+.date_input_fields {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -427,55 +348,64 @@ ul.campaign-tabs li button.active {
     border: 1px solid #dbd2d2;
     border-radius: 5px;
 }
-.date_input_fields>::-webkit-input-placeholder{
+
+.date_input_fields>::-webkit-input-placeholder {
     font-size: 15px !important;
 }
-.dasshed__{
+
+.dasshed__ {
     font-size: 25px;
 }
-.cal_icon{
+
+.cal_icon {
     color: #f5a41d;
     text-align: center;
     align-items: center;
     margin: 5px !important;
 }
-.date_input{
-    /* width: 22.5rem; */
+
+.date_input {
     width: 170px;
     border: none !important;
     border-radius: 5px;
     height: 50px;
     padding: 5px;
     outline: none;
-
     text-align: center;
 }
 
-.rsd__select-container-month > label{
+.rsd__select-container-month>label {
     display: none;
 }
-.rsd__select-container-day > label{
+
+.rsd__select-container-day>label {
     display: none;
 }
-.rsd__select-container-year > label{
+
+.rsd__select-container-year>label {
     display: none;
 }
-.start_end_date{
+
+.start_end_date {
     font-weight: 600;
     margin: 10px 0;
     padding: 5px;
     color: black;
 }
-.rsd__select-month{
+
+.rsd__select-month {
     font-size: 15px !important;
 }
-.rsd__select-day{
+
+.rsd__select-day {
     font-size: 15px !important;
 }
-.rsd__select-year{
+
+.rsd__select-year {
     font-size: 15px !important;
 }
-.rsd__select-month{
+
+.rsd__select-month {
     border: none !important;
     border-bottom: 1px solid grey !important;
     margin: 0 10px;
@@ -483,7 +413,8 @@ ul.campaign-tabs li button.active {
     color: grey;
     outline: none !important;
 }
-.rsd__select-day{
+
+.rsd__select-day {
     border: none !important;
     border-bottom: 1px solid grey !important;
     margin: 0 10px;
@@ -491,97 +422,41 @@ ul.campaign-tabs li button.active {
     color: grey;
 }
 
-.rsd__select-year{
+.rsd__select-year {
     border: none !important;
     border-bottom: 1px solid grey !important;
     margin: 0 10px;
     font-size: 18px;
-    color: grey; 
+    color: grey;
 }
-.bio-box{
+
+.bio-box {
     display: flex;
     justify-content: space-between;
     margin-top: 40px;
     /* display: flex; */
     position: relative;
-    
-}
-
-.search{
-    width: 55%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    position: relative;
-   
 
 }
-.search .MuiPaper-elevation {
-    border-radius: 25px;
-    width: 10%;
-    height: 20px;
-}
-.search input{
-    width: 50%;
-    border-radius:30px;
-    background-color: #f6f6f6;
-    border: 1px solid #f6f6f6;
-    height: 45px;
-    box-shadow: 2px 2px 5px grey ;
-    padding: 10px;
-}
-.search  ::-webkit-input-placeholder{
-    font-size: 18px;
-    font-family: "Grpahik Light";
-}
-.search-button{
-    right: 0.5%;
-    width: 35px;
-    height: 35px;
-    background-color: #2394ae;
-    border-radius: 50%;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.search-buttons{
-    /* background-color: #2394ae; */
-    padding: 13px;
-    border-radius: 50%;
-    position: absolute;
-    right: 0;
-}
-
-.search-button:hover{
-    background-color: #bf161f;
-    transition-duration: 1s;
-}
-::placeholder{
-    font-size: 1.25rem;
-    font-weight: 600;
-}
-.calander{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.list-user li{
+.list-user li {
     list-style: none;
     /* padding: 10px; */
 }
+
 .main-top-nav ul {
     list-style: none;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    justify-content: flex-end!important;
+    justify-content: flex-end !important;
 }
+
 .align-items-center {
-    align-items: center!important;
+    align-items: center !important;
 }
-.filter-date{
+
+.filter-date {
     padding: 12px 18px;
     border: 1px solid #dbdbdb;
     border-radius: 8px;
@@ -589,24 +464,18 @@ ul.campaign-tabs li button.active {
     width: 100%;
     position: relative;
 }
-/* .campaign-wraper{
-    border-radius: 160px;
-    box-shadow: 0 0 4px rgb(0 0 0 / 16%);
-    padding-bottom: 10px
-} */
+
 .wraper-filter {
     display: flex;
     align-items: center;
     margin-top: 40px;
-    /* display: flex;
-    position: relative; */
-
-
 }
+
 .campaign-table {
     padding-top: 10px;
 }
-.table {
+
+/* .table {
     --bs-table-bg: transparent;
     --bs-table-accent-bg: transparent;
     --bs-table-striped-color: #212529;
@@ -620,10 +489,11 @@ ul.campaign-tabs li button.active {
     color: #212529;
     vertical-align: top;
     border-color: #dee2e6;
-        caption-side: bottom;
-        border-collapse: collapse;
-    
-}
+    caption-side: bottom;
+    border-collapse: collapse;
+
+} */
+
 .campaign-table table thead th {
     font-size: 20px;
     color: #000;
@@ -635,144 +505,134 @@ ul.campaign-tabs li button.active {
     vertical-align: middle;
     border: none;
     padding: 20px;
-    
+
 }
-.campaign-table table thead th span{
-  float: right;
+
+.campaign-table table thead th span {
+    float: right;
 }
-.campaign-table table thead th span :hover{
-    transform: scale(1.1,1.1);
+
+.campaign-table table thead th span :hover {
+    transform: scale(1.1, 1.1);
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-.campaign-top .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.campaign-top .search-wraper {
-    max-width: 360px;
-    background: #f6f6f6;
-    width: 100%;
-    height: 55px;
-    border-radius: 100px;
-    overflow: hidden;
-    position: relative;
-    transition: all 0.25s ease-in;
-}
-.campaign-top .search-wraper input {
-    width: 100%;
-    height: 100%;
-    padding-left: 32px;
-    border: none;
-    background: transparent;
-    outline: none;
-    font-size: 16px;
-    font-family: "Grpahik Regular";
-}
-.campaign-top .search-wraper .btn-search {
-    position: absolute;
-    width: 48px;
-    height: 48px;
-    background: #2394ae;
-    top: 3px;
-    right: 3px;
-    border-radius: 50%;
-}
-.campaign-top .search-wraper .btn-search, .campaign-top .search-wraper .btn-del {
-    position: absolute;
-    border: none;
-    outline: none;
-}
-.campaign-wraper .campaign-top {
-    padding: 40px 40px 0px;
-}
-.campaign-wraper {
-    border-radius: 16px;
-    box-shadow: 0 0 4px rgb(0 0 0 / 16%);
-    padding-bottom: 10px;
-}
+
+
+
+
 .tab-content>.active {
     display: block;
 }
-.campaign-table {
+
+/* .campaign-table {
     padding-top: 10px;
-}
+} */
+
 .table>tbody {
     vertical-align: inherit;
 }
-tbody, td, tfoot, th, thead, tr {
+
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
     border-color: inherit;
     border-style: solid;
     border-width: 0;
 }
+
 .campaign-table table tbody tr {
     border-bottom: 1px solid #dbdbdb;
 }
+
 .campaign-table table tbody td:first-child {
 
     padding-left: 40px;
     max-width: 270px;
 }
+
 .campaign-table table tbody td {
     vertical-align: middle;
     padding-top: 25px;
     padding-bottom: 25px;
 }
+
 .table>:not(caption)>*>* {
     padding: 0.5rem 0.5rem;
     background-color: var(--bs-table-bg);
     border-bottom-width: 1px;
     box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
 }
-tbody, td, tfoot, th, thead, tr {
+
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
     border-color: inherit;
     border-style: solid;
     border-width: 0;
 }
+
 .campaign-table table tbody td:first-child p {
     font-family: "Grpahik Light";
 }
+
 .campaign-table table tbody td p {
     font-size: 12px;
     font-family: "Grpahik Regular";
     color: #929292;
 }
+
 p {
     margin: 0;
     padding: 0;
 }
+
 .campaign-table table tbody td:nth-child(3) {
     width: 360px;
     padding-right: 40px;
 }
-.campaign-table table tbody td h4{
+
+.campaign-table table tbody td h4 {
     font-size: 1rem !important;
 }
+
 .campaign-table table tbody td h4.status.pending {
     color: #f5a41d;
 }
+
 .campaign-table table tbody td h4.status {
     text-decoration: underline;
 }
+
 .campaign-table table tbody td h4.status.active {
     color: #2394ae;
 }
+
 .campaign-table table tbody td h4.status {
     text-decoration: underline;
 }
+
 .campaign-table table tbody td h4.status.completed {
     color: #649084;
 }
+
 .campaign-table table tbody td h4.status {
     text-decoration: underline;
 }
+
 .campaign-table table .progress {
     height: 20px;
     border-radius: 16px;
 }
+
 .campaign-table table .progress.active .progress-bar {
     background-color: #b17aa3;
-    width:40%
+    width: 40%
 }
 
 
@@ -784,195 +644,170 @@ p {
     background-color: #e9ecef;
     border-radius: 0.25rem;
 }
+
 .campaign-table table .progress.completed .progress-bar {
     background-color: #649084;
 }
-.select{
-        display: flex;
-        position: relative;
+
+.select {
+    display: flex;
+    position: relative;
 }
-.Pagination{
-        justify-content: flex-end!important;
-        display: flex;
+
+.Pagination {
+    justify-content: flex-end !important;
+    display: flex;
     padding-left: 0;
     list-style: none;
-    margin-top: 3rem!important;
-    }
-    .paginationBttns {
-        list-style: none;
-        font-family: Poppins;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 1.3rem;
-        display: flex;
-        align-items: center;
-        grid-gap: 0.5rem;
-        gap: 0.5rem;
-        color: #929292;
-    }
+    margin-top: 3rem !important;
+}
 
-    .previousBttn {
-        color: #929292;
-    }
-    .nextBttn {
-        color: #000;
-    }
-    .paginationBttns{
-        border: none;
-        background: none;
-        color: #929292;
-        box-shadow: none;
-    }
+.paginationBttns {
+    list-style: none;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    grid-gap: 0.5rem;
+    gap: 0.5rem;
+    color: #929292;
+}
 
+.previousBttn {
+    color: #929292;
+}
 
+.nextBttn {
+    color: #000;
+}
 
-    /* Ujj */
-    .campaign-top .wraper-filter h4 {
-        font-size: 20px;
-        color: #929292;
-        margin-right: 20px;
-        font-family: "Grpahik Light";
-        margin-bottom: 0;
-    }
+.paginationBttns {
+    border: none;
+    background: none;
+    color: #929292;
+    box-shadow: none;
+}
 
-    .campaign-top .filter-date {
-        padding: 12px 18px;
-        border: 1px solid #dbdbdb;
-        border-radius: 8px;
-        max-width: 380px;
-        width: 100%;
-        position: relative;
-    }
-    .campaign-top .filter-date button {
-        border: none;
-        outline: none;
-        background: none;
-        font-size: 20px;
-        font-family: "Grpahik Light";
-        color: #929292;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-    }
-    
-    .campaign-table table thead th:first-child {
-        padding-left: 40px;
-        position: relative;
-    }
-    /* .main-top-nav > ul li {
-        margin-left: 30px;
-        position: relative;
-    } */
-    .main-top-nav > ul li {
-        margin-left: 30px;
-    }
-    img, svg {
-        vertical-align: middle;
-    }
-    body {
-        font-size: var(--f-16);
-        font-family: "Grpahik Medium";
-        color: #000000;
-    }
-    .notification-icon {
-        position: relative;
-    }
-    .notification-count {
-        position: absolute;
-        top: 5px;
-        left: 15px;
-        background-color: #bf161f;
-        width: 25px;
-        height: 25px;
-        text-align: center;
-        color: #fff;
-        line-height: 25px;
-        border-radius: 30px;
-        font-size: var(--f-12);
-    }
-   /* Media Query */
-   @media (max-width:1755px){
-    .search input{
-        width: 45%;
-        border-radius:30px;
-        background-color: #f6f6f6;
-        border: 1px solid #f6f6f6;
-        height: 45px;
-        box-shadow: 2px 2px 5px grey ;
-        padding: 10px;
-    }
-    .search  ::-webkit-input-placeholder{
-        font-size: 15px;
-    }
-   }
-   @media (max-width:1700px){
-    .search input{
-        width: 40%;
-        border-radius:30px;
-        background-color: #f6f6f6;
-        border: 1px solid #f6f6f6;
-        height: 45px;
-        box-shadow: 2px 2px 5px grey ;
-        padding: 10px;
-    }
-    .search  ::-webkit-input-placeholder{
-        font-size: 12px;
-    }
-   }
-   @media (max-width:1632px){
-    .search input{
-        width: 40%;
-        border-radius:30px;
-        background-color: #f6f6f6;
-        border: 1px solid #f6f6f6;
-        height: 45px;
-        box-shadow: 2px 2px 5px grey ;
-        padding: 10px;
-    }
-    .search  ::-webkit-input-placeholder{
-        font-size: 12px;
-    }
-    .date_comp h4{
+.campaign-top .wraper-filter h4 {
+    font-size: 20px;
+    color: #929292;
+    margin-right: 20px;
+    font-family: "Grpahik Light";
+    margin-bottom: 0;
+}
+
+.campaign-top .filter-date {
+    padding: 12px 18px;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+    max-width: 380px;
+    width: 100%;
+    position: relative;
+}
+
+.campaign-top .filter-date button {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 20px;
+    font-family: "Grpahik Light";
+    color: #929292;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.campaign-table table thead th:first-child {
+    padding-left: 40px;
+    position: relative;
+}
+
+.main-top-nav>ul li {
+    margin-left: 30px;
+}
+
+img,
+svg {
+    vertical-align: middle;
+}
+
+body {
+    font-size: var(--f-16);
+    font-family: "Grpahik Medium";
+    color: #000000;
+}
+
+.notification-icon {
+    position: relative;
+}
+
+.notification-count {
+    position: absolute;
+    top: 5px;
+    left: 15px;
+    background-color: #bf161f;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    color: #fff;
+    line-height: 25px;
+    border-radius: 30px;
+    font-size: var(--f-12);
+}
+
+.campaign_footer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    border: 1ox solid red !important;
+}
+
+.rpb-item--active {
+    background-color: #fff !important;
+    border: 1px solid rgb(35, 148, 174) !important;
+    color: rgb(35, 148, 174) !important;
+}
+
+/* Media Query */
+
+@media (max-width:1632px) {
+    .date_comp h4 {
         font-size: 17px;
     }
 
-   }
-   @media (max-width:1610px){
-    .search input{
-        width: 44%;
-        border-radius:30px;
-        background-color: #f6f6f6;
-        border: 1px solid #f6f6f6;
+    .date_input {
+        width: 150px;
+        border: none !important;
+        border-radius: 5px;
         height: 45px;
-        box-shadow: 2px 2px 5px grey ;
-        padding: 10px;
+        padding: 5px;
+        outline: none;
+        text-align: center;
     }
-    .search  ::-webkit-input-placeholder{
-        font-size: 12px;
-    }
-   }
+}
 
-   @media (max-width:1452px){
-    .search input{
-        width: 50%;
-        border-radius:30px;
-        background-color: #f6f6f6;
-        border: 1px solid #f6f6f6;
-        height: 45px;
-        box-shadow: 2px 2px 5px grey ;
-        padding: 10px;
+@media (max-width:1452px) {
+    .date_input {
+        width: 130px;
+        border: none !important;
+        border-radius: 5px;
+        height: 35px;
+        padding: 5px;
+        outline: none;
+        text-align: center;
     }
-    .search  ::-webkit-input-placeholder{
-        font-size: 12px;
-    }
-   }
-   @media (max-width:1170px){
-    .date_comp{
+}
+
+@media (max-width:1170px) {
+    .date_comp {
         width: 100%;
     }
-   }
-   @media (max-width:1195px) {
+}
+
+@media (max-width:1195px) {
     .campaign-table table thead th {
         font-size: 15px;
         color: #000;
@@ -984,29 +819,15 @@ p {
         vertical-align: middle;
         border: none;
         padding: 20px;
-        
-    }
-    .campaign-table table tbody td h4{
-        font-size: 0.9rem !important;
-    }
-    
-    
-   }
 
-   @media (max-width:1100px){
-    .search input{
-        width: 100%;
-        border-radius:30px;
-        background-color: #f6f6f6;
-        border: 1px solid #f6f6f6;
-        height: 45px;
-        box-shadow: 2px 2px 5px grey ;
-        padding: 10px;
-        
     }
-    .search  ::-webkit-input-placeholder{
-        font-size: 10px;
+
+    .campaign-table table tbody td h4 {
+        font-size: 0.75rem !important;
     }
+}
+
+@media (max-width:1080px) {
     .campaign-table table thead th {
         font-size: 13px;
         color: #000;
@@ -1018,81 +839,68 @@ p {
         vertical-align: middle;
         border: none;
         padding: 20px;
-        
-    }
-    .campaign-table table tbody td h4{
-        font-size: 0.75rem !important;
-    }
-   }
-   @media (max-width:1440px){
-    .search input{
-        width: 60%;
-        border-radius:30px;
-        background-color: #f6f6f6;
-        border: 1px solid #f6f6f6;
-        height: 45px;
-        box-shadow: 2px 2px 5px grey ;
-        padding: 10px;
+
     }
 
-    .date_comp h4{
-        font-size: 12px; 
+    .campaign-table table tbody td h4 {
+        font-size: 0.75rem !important;
     }
-    .date_input_fields{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        border: 1px solid #dbd2d2;
-        border-radius: 15px;
+}
+
+@media (max-width:1042px) {
+    .campaign-table table thead th {
+        font-size: 11px;
+        color: #000;
+        line-height: 30px;
+        font-family: "Grpahik Semibold";
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: #f1f1f1;
+        vertical-align: middle;
+        border: none;
+        padding: 20px;
+
     }
-    .date_input{
-        /* width: 22.5rem; */
-        width: 150px;
-        border: none !important;
-        border-radius: 5px;
-        height: 30px;
-        outline: none;
-        margin: 0 5px !important;
-        text-align: center;
+
+    .campaign-table table tbody td h4 {
+        font-size: 0.75rem !important;
     }
-    .date_input_fields >::-webkit-input-placeholder{
-        font-size: 15px !important ;
+}
+
+@media (max-width:1440px) {
+    .date_comp h4 {
+        font-size: 12px;
     }
-    .cal_icon{
+
+    .date_input_fields>::-webkit-input-placeholder {
+        font-size: 15px !important;
+    }
+
+    .cal_icon {
         color: #f5a41d;
         text-align: center;
         align-items: center;
         margin: 5px !important;
         font-size: 18px !important;
     }
-   }
-   @media (max-width:1024px){
-    .search input{
-        width: 60%;
-        border-radius:30px;
-        background-color: #f6f6f6;
-        border: 1px solid #f6f6f6;
-        height: 45px;
-        box-shadow: 2px 2px 5px grey ;
-        padding: 10px;
-    }
-    .search >::-webkit-input-placeholder{
-        font-size: 10px ;
-    }
-    .cal_icon{
+}
+
+@media (max-width:1024px) {
+    .cal_icon {
         color: #f5a41d;
         text-align: center;
         align-items: center;
         margin: 5px !important;
         font-size: 18px !important;
     }
-    .date_comp{
+
+    .date_comp {
         width: 100%;
         display: flex;
         align-items: center;
     }
-    .date_comp h4{
-        font-size: 14px; 
+
+    .date_comp h4 {
+        font-size: 14px;
     }
-   }
+}

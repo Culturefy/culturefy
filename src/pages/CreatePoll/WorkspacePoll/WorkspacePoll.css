@@ -278,3 +278,33 @@
     width: 30%;
     /* border: 1px solid green; */
   }
+  @media(max-width:1342px){
+    .poll_cr_btn{
+        width: 25%;
+        color: white;
+        background-color: black;
+        border-radius: 50px;
+        padding: 10px;
+        font-family: "Graphik_Regular"; 
+      }
+  }
+  @media(max-width:1085px){
+    .poll_cr_btn{
+        width: 26%;
+        color: white;
+        background-color: black;
+        border-radius: 50px;
+        padding: 10px;
+        font-family: "Graphik_Regular"; 
+      }
+  }
+  @media(max-width:1045px){
+    .poll_cr_btn{
+        width: 27%;
+        color: white;
+        background-color: black;
+        border-radius: 50px;
+        padding: 10px;
+        font-family: "Graphik_Regular"; 
+      }
+  }

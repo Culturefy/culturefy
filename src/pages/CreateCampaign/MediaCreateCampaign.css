@@ -2,12 +2,11 @@
 @media (max-width:1880px){
     .line_div_cmpgn{
         width: 1px;
-        height: 145vh;
-        background-color: lightgray;
+        height: 152vh;
+        background-color: red;
         position: absolute;
-        left: 460px;
         z-index: 0;
-        top: 53vh;
+        top: 55vh;
     }
 }
 
@@ -17,11 +16,10 @@
     .line_div_cmpgn{
         width: 1px;
         height: 145vh;
-        background-color: lightgray;
+        background-color: red;
         position: absolute;
-        left: 459px;
         z-index: 0;
-        top: 53vh;
+        top: 41vh;
     }
     .campaign_goal_check_pr_img{
         width: 45px;
@@ -108,11 +106,10 @@
     .line_div_cmpgn{
         width: 1px;
         height: 145vh;
-        background-color: lightgray;
+        background-color: red;
         position: absolute;
-        left: 455px;
         z-index: 0;
-        top: 53vh;
+        top: 40vh;
     }
 }
 @media (max-width:1544px){
@@ -125,11 +122,10 @@
     .line_div_cmpgn{
         width: 1px;
         height: 145vh;
-        background-color: lightgray;
+        background-color: red;
         position: absolute;
-        left: 453px;
         z-index: 0;
-        top: 53vh;
+        top: 40vh;
     }
 }
 @media (max-width:1440px){
@@ -171,11 +167,11 @@
     .line_div_cmpgn{
         width: 1px;
         height: 145vh;
-        background-color: lightgray;
+        background-color: red;
         position: absolute;
-        left: 460px;
+        left: 4px;
         z-index: 0;
-        top: 53vh;
+        top: 40vh;
     }
 
 .campaign_goal_check_pr{
@@ -222,11 +218,22 @@
     .line_div_cmpgn{
         width: 1px;
         height: 145vh;
-        background-color: lightgray;
+        background-color: red;
         position: absolute;
-        left: 457px;
+        left: 416px;
         z-index: 0;
-        top: 53vh;
+        top: 40vh;
+    }
+}
+@media(max-width:1180px){
+    .line_div_cmpgn{
+        width: 1px;
+        height: 145vh;
+        background-color: red;
+        position: absolute;
+        left: 410px;
+        z-index: 0;
+        top: 40vh;
     }
 }
 
@@ -298,11 +305,11 @@
 .line_div_cmpgn{
     width: 1px;
     height: 145vh;
-    background-color: lightgray;
+    background-color: red;
     position: absolute;
-    left: 452px;
+    left: 410px;
     z-index: 0;
-    top: 53vh;
+    top: 40vh;
 }
 }
 @media(max-width:1074px){
@@ -322,24 +329,16 @@
     .line_div_cmpgn{
         width: 1px;
         height: 145vh;
-        background-color: lightgray;
+        background-color: red;
         position: absolute;
-        left: 450px;
+        left: 405px;
         z-index: 0;
-        top: 53vh;
+        top: 40vh;
     }
 }
 /* ========1024PX======== */
 @media (max-width:1024px){
-    .line_div_cmpgn{
-        width: 1px;
-        height: 145vh;
-        background-color: lightgray;
-        position: absolute;
-        left: 448px;
-        z-index: 0;
-        top: 53vh;
-    }
+
     .crt_cmgn_drp_plan h4{
         font-size: 12px;
         margin: 0 5px;

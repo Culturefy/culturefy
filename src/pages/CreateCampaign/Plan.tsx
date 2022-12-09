@@ -122,11 +122,14 @@ const Plan = () => {
           <img src={planImage} alt="" className="campaign_goal_check_pr_img" />
         </div>
         {/* Line Div */}
-        <div className="line_div_cmpgn"></div>
+        <div className="line_div_cmpgn">
+          
+        </div>
         <div className="position_h3_pr">
           <h2>Plan</h2>
         </div>
       </div>
+
       <div className="Position_crt_cmgn">
         <div className="campaign_goal_check_pr">
           <div className="campaign_goal_check_possess_ch">

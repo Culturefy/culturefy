@@ -9,6 +9,7 @@ import WorkspaceFileLayout from "src/Layout/WorkspaceFileLayout";
 import RecruitingLayout from "src/Layout/RecruitingLayout";
 import BusinessInfoMain from "src/components/BusinessInfoMain";
 import { MdCampaign } from "react-icons/md";
+import CampaignLayout from "src/Layout/CampaignLayout";
 
 const HomeAdmin = lazy(() => import("src/pages/HomeAdmin"));
 
@@ -230,20 +231,32 @@ export const router = createBrowserRouter([
         path: "user-profile",
         element: <UserProfile />,
       },
-      {
-        path: "campaign",
-        element: <Campaign />,
-      },
-      {
-        path: "create-campaigns",
-        element: <CreateCampaign />,
-      },
-      {
-        path: "workspace-list",
-        element: <WorkspaceList />,
-      },
+
+      
+      
     ],
   },
+  {
+    path:"/campaign",
+    element:<CampaignLayout/>,
+    children: [
+    
+        {
+          path: "campaign",
+          element: <Campaign />,
+        },
+        {
+          path: "create-campaigns",
+          element: <CreateCampaign />,
+        },
+        {
+          path: "workspace-list",
+          element: <WorkspaceList />,
+        },
+
+    ]
+  },
+
   {
     path: "/recruiting",
     element: <RecruitingLayout />,

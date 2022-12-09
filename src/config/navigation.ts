@@ -98,12 +98,12 @@ export const navigation: INavigations[] = [
       {
         id: "campaign",
         title: "Campaign",
-        link: "/user/campaign",
+        link: "/campaign/campaign",
         icon: campaignIcon,
         children: [
           {
             title: "Workspaces",
-            link: "/user/workspace-list",
+            link: "/campaign/workspace-list",
           },
           {
             title: "Tasks",

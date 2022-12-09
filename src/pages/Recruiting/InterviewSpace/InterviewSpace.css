@@ -36,22 +36,22 @@
 .interviewer1 {
     height: 50px;
     width: 50px;
-    margin-left:5px ;
+    margin-left: 5px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.interviewer2{
+
+.interviewer2 {
     height: 50px;
     width: 50px;
-    margin-left:5px ;
+    margin-left: 5px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: lightgrey;
-    
 }
 
 .interview_end_btn {
@@ -69,7 +69,7 @@
     background-color: #bf161f;
     color: white;
     border: none;
-    font-family: "Grpahik Regular"; 
+    font-family: "Grpahik Regular";
 }
 
 .interview_question {
@@ -78,66 +78,79 @@
     display: flex;
     align-items: center;
 }
+
 .interview_question span {
     margin: 5px;
-    font-family: "Grpahik Regular"; 
+    font-family: "Grpahik Regular";
 }
-.interview_screen{
+
+.interview_screen {
     width: 95%;
     height: 50vh;
 }
-.interview_screen img{
+
+.interview_screen img {
     width: 100%;
     height: 100%;
 }
-.interview_footer{
+
+.interview_footer {
     width: 95%;
     display: flex;
 }
-.notes{
+
+.notes {
     width: 50%;
-    height: 200px;   
+    height: 200px;
 }
-.notes_header{
+
+.notes_header {
     width: 100%;
     height: 25%;
     display: flex;
     align-items: center;
-   
+
 }
-.notes_header h3{
+
+.notes_header h3 {
     font-family: "Grpahik Medium";
 }
 
-.notes_input{
+.notes_input {
     width: 90%;
     height: 75%;
 }
-.notes_input textarea{
+
+.notes_input textarea {
     width: 100%;
     height: 100%;
     padding: 10px;
 }
-.notes_input textarea::-webkit-input-placeholder{
+
+.notes_input textarea::-webkit-input-placeholder {
     font-size: 15px;
-    font-family: "Grpahik Regular"; 
+    font-family: "Grpahik Regular";
     color: gray;
 }
-.candidate_rating{
+
+.candidate_rating {
     width: 50%;
-    height: 200px;    
+    height: 200px;
 }
-.candidate_header{
+
+.candidate_header {
     width: 100%;
     height: 25%;
     display: flex;
     align-items: center;
-   
+
 }
-.candidate_header h3{
+
+.candidate_header h3 {
     font-family: "Grpahik Medium";
 }
-.candidate_stars{
+
+.candidate_stars {
     color: #f5ab30;
     margin: 0;
     padding: 0;
@@ -148,25 +161,29 @@
     display: flex;
     justify-content: center;
 }
-.inner_interview{
+
+.inner_interview {
     width: 95%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.profile_header{
+
+.profile_header {
     width: 100%;
     height: 110px;
     display: flex;
 }
-.profile_user_image{
+
+.profile_user_image {
     width: 30%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.user_image_div{
+
+.user_image_div {
     width: 70px;
     height: 70px;
     background-color: #2394ae;
@@ -176,24 +193,29 @@
     align-items: center;
     justify-content: center;
 }
-.profile_user{
+
+.profile_user {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+
 }
-.profile_user h3{
+
+.profile_user h3 {
     margin: 0;
 }
-.profile_tabs{
+
+.profile_tabs {
     width: 100%;
 }
-.profile_tabs ul{
+
+.profile_tabs ul {
     width: 100%;
     display: flex;
     padding: 0;
 }
-.profile_tabs ul li{
+
+.profile_tabs ul li {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -205,24 +227,27 @@
     border-right: 1px solid gray;
 }
 
-.profile_tabs ul li a{
+.profile_tabs ul li a {
     text-decoration: none;
     color: gray;
 }
 
-.profile_containt{
+.profile_containt {
     width: 100%;
 }
-.profile_user_image .css-1u578xr-MuiAvatar-root{
+
+.profile_user_image .css-1u578xr-MuiAvatar-root {
     width: 60px !important;
     height: 60px !important;
 }
-.interviewer1 .MuiAvatar-root{
+
+.interviewer1 .MuiAvatar-root {
     width: 100% !important;
     height: 100% !important;
 }
-@media(max-width:1416px){
-    .profile_tabs ul li{
+
+@media(max-width:1416px) {
+    .profile_tabs ul li {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -230,26 +255,64 @@
         padding: 0 10px;
     }
 }
-@media(max-width:1470px){
+
+@media(max-width:1470px) {
     .interview_name h2 {
         font-size: 25px !important;
         font-family: "Grpahik Medium";
     }
-    .notes_header h3{
+
+    .notes_header h3 {
         font-size: 22px !important;
         font-family: "Grpahik Medium";
     }
-    .candidate_header h3{
+
+    .candidate_header h3 {
         font-size: 22px !important;
         font-family: "Grpahik Medium";
     }
-    .profile_user h3{
+
+    .profile_user h3 {
         margin: 0;
         font-size: 22px !important;
     }
 }
-@media(max-width:1297px){
-    .profile_tabs ul li{
+
+@media(max-width:1350px) {
+    .interviewer1 {
+        height: 40px;
+        width: 40px;
+        margin-left: 5px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .interviewer2 {
+        height: 40px;
+        width: 40px;
+        margin-left: 5px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: lightgrey;
+    }
+    .interview_end_btn button {
+        width: 140px;
+        height: 35px;
+        border-radius: 30px;
+        background-color: #bf161f;
+        color: white;
+        border: none;
+        font-size: 15px;
+        font-family: "Grpahik Regular";
+    }
+}
+
+@media(max-width:1297px) {
+    .profile_tabs ul li {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -257,26 +320,31 @@
         padding: 0 5px;
     }
 }
-@media(max-width:1120px){
+
+@media(max-width:1120px) {
     .interview_name h2 {
         font-size: 20px !important;
         font-family: "Grpahik Medium";
     }
-    .notes_header h3{
+
+    .notes_header h3 {
         font-size: 20px !important;
         font-family: "Grpahik Medium";
     }
-    .candidate_header h3{
+
+    .candidate_header h3 {
         font-size: 20px !important;
         font-family: "Grpahik Medium";
     }
-    .profile_user h3{
+
+    .profile_user h3 {
         margin: 0;
         font-size: 18px !important;
     }
 }
-@media(max-width:1178px){
-    .profile_tabs ul li{
+
+@media(max-width:1178px) {
+    .profile_tabs ul li {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -284,12 +352,43 @@
         font-size: 14px;
     }
 }
-@media(max-width:1097px){
-    .profile_tabs ul li{
+
+@media(max-width:1097px) {
+    .profile_tabs ul li {
         display: flex;
         align-items: center;
         justify-content: center;
         font-family: "Grpahik Regular";
         font-size: 12px;
     }
+    .interviewer1 {
+        height: 35px;
+        width: 35px;
+        margin-left: 5px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .interviewer2 {
+        height: 35px;
+        width: 35px;
+        margin-left: 5px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: lightgrey;
+    }
+    .interview_end_btn button {
+        width: 130px;
+        height: 30px;
+        border-radius: 30px;
+        background-color: #bf161f;
+        color: white;
+        border: none;
+        font-size: 13px;
+        font-family: "Grpahik Regular";
+    }
+
 }

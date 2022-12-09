@@ -1,27 +1,15 @@
 //@ts-nocheck
 import React, { useState, useCallback } from 'react'
 import { Link } from 'react-router-dom'
-import './Campaign.css'
-import ReactPaginate from 'react-paginate';
-// import '../component/Content.css';
-// import 'react-dates/initialize';
-// import 'react-dates/lib/css/_datepicker.css';
-// import Content from "../component/Content"
+import './Campaign.css';
 import DateFilter from '../../components/DateFilter';
-// Search bar Mui
-import Paper from '@mui/material/Paper';
-import InputBase from '@mui/material/InputBase';
-import Divider from '@mui/material/Divider';
-import IconButton from '@mui/material/IconButton';
-import SearchIcon from '@mui/icons-material/Search';
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs"
+import { Tab, Tabs, TabList } from "react-tabs"
 import Search from "../../components/common/Search";
+import { Pagination } from "react-pagination-bar"
+import 'react-pagination-bar/dist/index.css'
 
 
 const index = () => {
-  const minDays = 5;
-  const maxDays = 10;
-  const [index, setIndex] = useState()
   const [data, setData] = useState([
     {
       heading: "Open a Coke, Open Happi...",
@@ -32,8 +20,7 @@ const index = () => {
       Impression: "-- imp",
       Reach: "-- users",
       Click: "-- clicks"
-    }
-    ,
+    },
     {
       heading: "Beat the heat with Coca-Cola",
       Paragraph: "2022 Jul 22 - 2022 Aug 21",
@@ -118,93 +105,245 @@ const index = () => {
       Impression: "4,004 imp ",
       Reach: "5,890 users",
       Click: "6,238 clicks"
-    }
+    },
+
+
+
+    {
+      heading: "Open a Coke, Open Happi...",
+      Paragraph: "2022 Jul 22 - 2022 Aug 21",
+      status: "Pending",
+      progresstext: "$ 0 out of $ 1,000 Budget",
+      progresstext1: "-- days left",
+      Impression: "-- imp",
+      Reach: "-- users",
+      Click: "-- clicks"
+    },
+    {
+      heading: "Open a Coke, Open Happi...",
+      Paragraph: "2022 Jul 22 - 2022 Aug 21",
+      status: "Pending",
+      progresstext: "$ 0 out of $ 1,000 Budget",
+      progresstext1: "-- days left",
+      Impression: "-- imp",
+      Reach: "-- users",
+      Click: "-- clicks"
+    },
+    {
+      heading: "Open a Coke, Open Happi...",
+      Paragraph: "2022 Jul 22 - 2022 Aug 21",
+      status: "Pending",
+      progresstext: "$ 0 out of $ 1,000 Budget",
+      progresstext1: "-- days left",
+      Impression: "-- imp",
+      Reach: "-- users",
+      Click: "-- clicks"
+    },
+    {
+      heading: "Open a Coke, Open Happi...",
+      Paragraph: "2022 Jul 22 - 2022 Aug 21",
+      status: "Pending",
+      progresstext: "$ 0 out of $ 1,000 Budget",
+      progresstext1: "-- days left",
+      Impression: "-- imp",
+      Reach: "-- users",
+      Click: "-- clicks"
+    },
+    {
+      heading: "Open a Coke, Open Happi...",
+      Paragraph: "2022 Jul 22 - 2022 Aug 21",
+      status: "Pending",
+      progresstext: "$ 0 out of $ 1,000 Budget",
+      progresstext1: "-- days left",
+      Impression: "-- imp",
+      Reach: "-- users",
+      Click: "-- clicks"
+    },
+    {
+      heading: "Open a Coke, Open Happi...",
+      Paragraph: "2022 Jul 22 - 2022 Aug 21",
+      status: "Pending",
+      progresstext: "$ 0 out of $ 1,000 Budget",
+      progresstext1: "-- days left",
+      Impression: "-- imp",
+      Reach: "-- users",
+      Click: "-- clicks"
+    },
+
+    {
+      heading: "Open a Coke, Open Happi...",
+      Paragraph: "2022 Jul 22 - 2022 Aug 21",
+      status: "Pending",
+      progresstext: "$ 0 out of $ 1,000 Budget",
+      progresstext1: "-- days left",
+      Impression: "-- imp",
+      Reach: "-- users",
+      Click: "-- clicks"
+    },
+    {
+      heading: "Beat the heat with Coca-Cola",
+      Paragraph: "2022 Jul 22 - 2022 Aug 21",
+      status: "Pending",
+      progresstext: "$ 0 out of $ 1,000 Budget",
+      progresstext1: "-- days left",
+      Impression: "-- imp",
+      Reach: "-- users",
+      Click: "-- clicks"
+    },
+
+    {
+      heading: "Can't Beat The Real Thing...",
+      Paragraph: "2022 Jul 22 - 2022 Aug 21",
+      status: "Active",
+      progresstext: "$ 400 out of $ 1,000 Budget",
+      progresstext1: "18 days left",
+      Impression: "4,004 imp ",
+      Reach: "5,890 users",
+      Click: "6,238 clicks"
+    },
+
+    {
+      heading: "They don't make 'em like th...",
+      Paragraph: "2022 Jul 22 - 2022 Aug 21",
+      status: "Active",
+      progresstext: "$ 400 out of $ 1,000 Budget",
+      progresstext1: "18 days left",
+      Impression: "4,004 imp ",
+      Reach: "5,890 users",
+      Click: "6,238 clicks"
+    },
+
+    {
+      heading: "Taste the Feeling. Coca-Cola",
+      Paragraph: "2022 Jul 22 - 2022 Aug 21",
+      status: "Active",
+      progresstext: "$ 400 out of $ 1,000 Budget",
+      progresstext1: "18 days left",
+      Impression: "4,004 imp ",
+      Reach: "5,890 users",
+      Click: "6,238 clicks"
+    },
+
+    {
+      heading: "This is how we celebrate wi...",
+      Paragraph: "2022 Jul 22 - 2022 Aug 21",
+      status: "Active",
+      progresstext: "$ 400 out of $ 1,000 Budget",
+      progresstext1: "18 days left",
+      Impression: "4,004 imp ",
+      Reach: "5,890 users",
+      Click: "6,238 clicks"
+    },
+    {
+      heading: "#ChooseHappiness #Coca-...",
+      Paragraph: "2022 Jul 22 - 2022 Aug 21",
+      status: "Completed",
+      progresstext: "$ 400 out of $ 1,000 Budget",
+      progresstext1: "18 days left",
+      Impression: "4,004 imp ",
+      Reach: "5,890 users",
+      Click: "6,238 clicks"
+    },
+    {
+      heading: "Things go better with Coca...",
+      Paragraph: "2022 Jul 22 - 2022 Aug 21",
+      status: "Completed",
+      progresstext: "$ 400 out of $ 1,000 Budget",
+      progresstext1: "18 days left",
+      Impression: "4,004 imp ",
+      Reach: "5,890 users",
+      Click: "6,238 clicks"
+    },
+    {
+      heading: "#EnjoyCoca-Cola",
+      Paragraph: "2022 Jul 22 - 2022 Aug 21",
+      status: "Completed",
+      progresstext: "$ 400 out of $ 1,000 Budget",
+      progresstext1: "18 days left",
+      Impression: "4,004 imp ",
+      Reach: "5,890 users",
+      Click: "6,238 clicks"
+    },
+    {
+      heading: "Open a Coke, Open Happi...",
+      Paragraph: "2022 Jul 22 - 2022 Aug 21",
+      status: "Pending",
+      progresstext: "$ 0 out of $ 1,000 Budget",
+      progresstext1: "-- days left",
+      Impression: "-- imp",
+      Reach: "-- users",
+      Click: "-- clicks"
+    },
+    {
+      heading: "Open a Coke, Open Happi...",
+      Paragraph: "2022 Jul 22 - 2022 Aug 21",
+      status: "Pending",
+      progresstext: "$ 0 out of $ 1,000 Budget",
+      progresstext1: "-- days left",
+      Impression: "-- imp",
+      Reach: "-- users",
+      Click: "-- clicks"
+    },
+    {
+      heading: "Open a Coke, Open Happi...",
+      Paragraph: "2022 Jul 22 - 2022 Aug 21",
+      status: "Pending",
+      progresstext: "$ 0 out of $ 1,000 Budget",
+      progresstext1: "-- days left",
+      Impression: "-- imp",
+      Reach: "-- users",
+      Click: "-- clicks"
+    },
+    {
+      heading: "Open a Coke, Open Happi...",
+      Paragraph: "2022 Jul 22 - 2022 Aug 21",
+      status: "Pending",
+      progresstext: "$ 0 out of $ 1,000 Budget",
+      progresstext1: "-- days left",
+      Impression: "-- imp",
+      Reach: "-- users",
+      Click: "-- clicks"
+    },
+    {
+      heading: "Open a Coke, Open Happi...",
+      Paragraph: "2022 Jul 22 - 2022 Aug 21",
+      status: "Pending",
+      progresstext: "$ 0 out of $ 1,000 Budget",
+      progresstext1: "-- days left",
+      Impression: "-- imp",
+      Reach: "-- users",
+      Click: "-- clicks"
+    },
+    {
+      heading: "Open a Coke, Open Happi...",
+      Paragraph: "2022 Jul 22 - 2022 Aug 21",
+      status: "Pending",
+      progresstext: "$ 0 out of $ 1,000 Budget",
+      progresstext1: "-- days left",
+      Impression: "-- imp",
+      Reach: "-- users",
+      Click: "-- clicks"
+    },
 
   ]
-
-
   )
-
-  const perPageUser = 4;
-  const totalPages = data.length / perPageUser;
-  console.log(totalPages)
-
-  let nextContentFrom = 0;
-  const handlePageChange = (currentPage:any) => {
-    nextContentFrom = currentPage.selected * perPageUser;
-    const nextContentTo = currentPage.selected * perPageUser + 9;
-    setData(data.slice(nextContentFrom, nextContentTo))
-    setIndex(currentPage.selected * perPageUser + 1);
-  };
-
-  const handleSearch = () => {
-    console.log(data)
-    return (data.filter((item) => item.heading.toLowerCase().includes(search)))
-
-  }
-
+  const [currentPage, setCurrentPage] = useState(1);
+  const pagePostsLimit = 9;
   const [statusSearch, setStatussearch] = useState(data)
-  const [search, setSearch] = useState(data)
 
   const handleStatus = (items) => {
     const updateStatus = data.filter((currElem) => {
       return currElem.status === items
     })
     setStatussearch(updateStatus);
-    setActive(!active);
-    setActives(!actives);
-    setActivess(!activess);
-    setActivesss(!activesss);
-
   }
-  console.log(data)
-
-  const [startDate, setStartDate] = useState(null);
-  const [endDate, setEndDate] = useState(null);
-  const [focusedInput, setFocusedInput] = useState(null);
-
-  const [active, setActive] = useState(false);
-  // const handleClick = () => {
-  //   setActive(!active);
-  // };
-  const [actives, setActives] = useState(true);
-
-  const handleChanges = () => {
-
-  }
-  const [activess, setActivess] = useState(true);
-  const [activesss, setActivesss] = useState(true);
-
-  // const btn = document.getElementById('btn');
-
-  // btn.addEventListener('click', function onClick() {
-  //   btn.style.backgroundColor = 'salmon';
-  //   btn.style.color = 'white';
-  // });
-  const [btnClass, setBtnClass] = useState(false);
-  const [btnColor, setBtnColor] = useState("black");
-  const [act, setAct] = useState(false);
-  const handleClick = () => {
-    setAct(!act);
-  };
-
-  const [color, setColor] = useState('red');
-  const [textColor, setTextColor] = useState('white');
-
 
   return (
-    <div>
-      {/* <Content /> */}
-      <div className='campaign_wrapper'>
-
-
-        {/* Tabs From Here */}
-
-
+    
+      
         <div className='wrapper'>
-
           <div className="create-new-campaigns">
-            <Link to="/user/create-campaigns"><button >+<span> Create New Campaigns</span></button></Link>
+            <Link to="/campaign/create-campaigns"><button >+<span> Create New Campaigns</span></button></Link>
           </div>
           <div className="nav-campaign-tabs" >
             <Tabs>
@@ -230,8 +369,6 @@ const index = () => {
               </div>
               <DateFilter />
             </div>
-            {/* <div className="tab-content campaign"> */}
-            {/* <div className="tab-pane fade show active" id="All" role="tabpanel"> */}
             <div className="campaign-table">
               <table className="table">
                 <thead>
@@ -269,77 +406,63 @@ const index = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {statusSearch &&
-                    // statusSearch.filter((item) => item.heading.toLowerCase().includes(search))
-                    statusSearch.map((result) => {
-                      console.log(result)
-                      return (
-                        <tr>
-                          <td>
-                            <h4>{result.heading}</h4>
-                            <p>{result.Paragraph}</p>
-                          </td>
-                          <td>
-                            <h4 className={result.status} setQuery={result.status}>{result.status}</h4>
-                          </td><td>
-                            <div className="progress-text">
-                              <p>{result.progresstext}</p>
-                              <p>{result.progresstext1}</p>
-                            </div>
-                            <div className="progress">
-                              <div
-                                className={result.status}
-                                role="progressbar"
-                                aria-valuenow="75"
-                                aria-valuemin="0"
-                                aria-valuemax="100"
-                              ></div>
-                            </div>
-                          </td><td>
-                            <h4>{result.Impression}</h4>
-                          </td><td>
-                            <h4>{result.Reach}</h4>
-                          </td><td>
-                            <h4>{result.Click}</h4>
-                          </td>
-                        </tr>
 
-                      )
-                    })}
+                  {statusSearch &&
+                    statusSearch
+                      .slice((currentPage - 1) * pagePostsLimit, currentPage * pagePostsLimit)
+                      .map((result) => {
+                        return (
+                          <tr>
+                            <td>
+                              <h4>{result.heading}</h4>
+                              <p>{result.Paragraph}</p>
+                            </td>
+                            <td>
+                              <h4 className={result.status} setQuery={result.status}>{result.status}</h4>
+                            </td><td>
+                              <div className="progress-text">
+                                <p>{result.progresstext}</p>
+                                <p>{result.progresstext1}</p>
+                              </div>
+                              <div className="progress">
+                                <div
+                                  className={result.status}
+                                  role="progressbar"
+                                  aria-valuenow="75"
+                                  aria-valuemin="0"
+                                  aria-valuemax="100"
+                                ></div>
+                              </div>
+                            </td><td>
+                              <h4>{result.Impression}</h4>
+                            </td><td>
+                              <h4>{result.Reach}</h4>
+                            </td><td>
+                              <h4>{result.Click}</h4>
+                            </td>
+                          </tr>
+
+                        )
+                      })}
+
                 </tbody>
               </table>
             </div>
-            {/* </div> */}
-            {/* </div> */}
           </div>
-          {data &&
-            data.length > 4 &&
-            (
-              <div className="Pagination">
-                <ReactPaginate
-                  nextClassName={''} //clientList.data.result.length < rowsPerPage && "nextClassName"
-                  previousLabel={'< Previous'}
-                  nextLabel={'next >'}
-                  pageCount={totalPages}
-                  onPageChange={handlePageChange}
-                  marginPagesDisplayed={1}
-                  pageRangeDisplayed={5}
-                  containerClassName={'paginationBttns'}
-                  previousLinkClassName={'previousBttn'}
-                  nextLinkClassName={'nextBttn'}
-                  disabledClassName={'paginationDisabled'}
-                  activeClassName={'paginationActive'}
-                />
-              </div>
-            )
-          }
+          <div className="campaign_footer">
+            <Pagination
+            currentPage={currentPage}
+            itemsPerPage={pagePostsLimit}
+            onPageChange={(pageNumber) => setCurrentPage(pageNumber)}
+            totalItems={statusSearch.length}
+            pageNeighbours={2}
+            prevLabel='Prev'
+            nextLabel='Next'
+          />
+          </div>
+
         </div>
 
-      </div>
-
-
-
-    </div>
   )
 }
 

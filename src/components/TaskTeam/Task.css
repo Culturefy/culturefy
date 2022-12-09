@@ -15,9 +15,21 @@
     font-family: "Grpahik Regular";
     z-index:99;
   }
-  .drawer_inner_conntainer {
+  .drawer_task_inner_conntainer{
     width: 14vw;
-    height: 70vh;
+    height: 65vh;
+    padding: 10px;
+    overflow: scroll;
+    box-shadow: 1px 1px 10px grey;
+    border-radius: 10px;
+    background-color: white;
+  }
+  .drawer_inner_conntainer {
+    position: absolute;
+    top: 270px;
+    right: 120px;
+    width: 14vw;
+    height: 65vh;
     padding: 10px;
     overflow: scroll;
     box-shadow: 1px 1px 10px grey;
@@ -81,8 +93,9 @@
     height: 20px;
   }
   .section_li span {
+    margin-left: 10px;
     font-size: 20px;
-  font-family: "Grpahik Medium";
+   font-family: "Grpahik Medium";
   }
   .section_inner_li {
     height: 30px;
@@ -114,6 +127,7 @@
     height: 30px;
   }
   
+
   @media (max-width: 1500px) {
     .team_drawer .MuiButton-text {
       position: absolute;
@@ -123,6 +137,41 @@
       text-transform: capitalize;
       font-family: "Grpahik Regular";
 
+    }
+  }
+  @media (max-width: 1200px) {
+    .section_li input {
+      width: 15px;
+      height: 15px;
+    }
+    .section_li span {
+      margin-left: 10px;
+      font-size: 15px;
+     font-family: "Grpahik Medium";
+    }
+    .section_inner_li input {
+      width: 13px;
+      height: 13px;
+      margin: 0 10px;
+    }
+    .section_inner_li span {
+      font-size: 13px;
+      font-family: "Grpahik Regular";
+  
+    }
+    .section_plus {
+      font-size: 15px;
+      margin-right: 10px;
+    }
+    .drawer_inner_conntainer {
+      width: 14vw;
+      height: 60vh;
+      padding: 10px;
+      overflow: scroll;
+      box-shadow: 1px 1px 10px grey;
+      border-radius: 10px;
+      background-color: white;
+  
     }
   }
   

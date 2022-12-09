@@ -213,3 +213,181 @@
     font-family: "Grpahik Regular";
     font-size: 13px;
 }
+
+@media(max-width:1515px){
+    .recommended_title h4{
+        font-size: 22px;
+    }
+}
+@media(max-width:1389px){
+    .recommended_title h4{
+        font-size: 20px;
+    }
+}
+@media(max-width:1262px){
+    .recommended_title h4{
+        font-size: 18px;
+    }
+}
+@media(max-width:1136px){
+    .recommended_title h4{
+        font-size: 16px;
+    }
+}
+@media(max-width:1218px){
+    .filter_sort select{
+        width: 90px;
+        height: 30px;
+        border-radius: 25px;
+        margin-right: 20px;
+        border: none;
+        outline: none;
+        padding: 0 5px;
+        border: 1px solid rgba(0, 0, 0, 0.336);
+    }
+}
+@media(max-width:1218px){
+    .filter_sort select{
+        width: 80px;
+        height: 30px;
+        border-radius: 25px;
+        margin-right: 15px;
+        border: none;
+        outline: none;
+        padding: 0 5px;
+        border: 1px solid rgba(0, 0, 0, 0.336);
+    }
+}
+
+
+/* ============ */
+@media(max-width:1430px){
+    .devloper_name h4{
+        font-family: "Grpahik Semibold";
+        margin: 0;
+        font-size: 18px;
+    }
+}
+@media(max-width:1287px){
+    .devloper_name h4{
+        font-family: "Grpahik Semibold";
+        margin: 0;
+        font-size: 16px;
+    }
+}
+@media(max-width:1144px){
+    .devloper_name h4{
+        font-family: "Grpahik Semibold";
+        margin: 0;
+        font-size: 14px;
+    }
+
+}
+@media(max-width:1488px)
+{
+    .devloper_apply button{
+        width: 100%;
+        height: 30px;
+        border-radius: 30px;
+        margin-top: 20px;
+        border: none;
+        background-color: #2394ae;
+        color: white;
+        font-family: "Grpahik Regular";
+        font-size: 12px;
+    }
+}
+@media(max-width:1383px)
+{
+    .devloper_apply{
+        width: 40%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .devloper_apply button{
+        width: 100%;
+        height: 30px;
+        border-radius: 30px;
+        margin-top: 20px;
+        border: none;
+        background-color: #2394ae;
+        color: white;
+        font-family: "Grpahik Regular";
+        font-size: 11px;
+    }
+}
+@media(max-width:1060px)
+{
+    .devloper_apply{
+        width: 45%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .devloper_apply button{
+        width: 100%;
+        height: 30px;
+        border-radius: 30px;
+        margin-top: 20px;
+        border: none;
+        background-color: #2394ae;
+        color: white;
+        font-family: "Grpahik Regular";
+        font-size: 11px;
+    }
+}
+@media(max-width:1314px){
+    .job_title{
+        font-family: "Grpahik Bold";
+        font-size: 14px;
+    } 
+    .j_ob{
+        font-size: 14px;
+    }
+    .application_status {
+        width: 80%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-family: "Grpahik Regular";
+        font-size: 14px;
+    }
+}
+@media(max-width:1264px){
+    .job_title{
+        font-family: "Grpahik Bold";
+        font-size: 13px;
+    } 
+    .j_ob{
+        font-size: 13px;
+    }
+    .application_status {
+        width: 80%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-family: "Grpahik Regular";
+        font-size: 13px;
+    }
+}
+@media(max-width:1111px){
+    .job_title{
+        font-family: "Grpahik Bold";
+        font-size: 12px;
+    } 
+    .j_ob{
+        font-size: 12px;
+    }
+    .application_status {
+        width: 80%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-family: "Grpahik Regular";
+        font-size: 12px;
+    }
+}

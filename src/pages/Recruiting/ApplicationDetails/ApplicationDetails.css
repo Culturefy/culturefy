@@ -70,6 +70,7 @@
     font-size: 18px;
     background-color: rgb(35, 148, 175);
 }
+
 @media (max-width:1870px) {
     .__employee__{
         width: 20%;

@@ -1,6 +1,10 @@
 .wrapper-workpaces{
     padding-right: 3.25rem;
-    width: 100%;
+    width: 95%;
+    margin-top: 190px;
+}
+.list_card{
+    width: 45%;
 }
 .create-new-Workspace{
     width: 100%;
@@ -43,6 +47,10 @@
     padding: 0 0.625rem;
     list-style: none;
 }
+.li_clr{
+    color: red;
+    font-weight: 700;
+}
 .delete{
     width: 50%;
     display: flex;
@@ -63,21 +71,15 @@
     width: 100%;    
     flex-wrap:wrap;
     justify-content: center;
-    /* border: 1px solid red; */
 }
 .wrkspc_nm_ch{
-   
-     display: flex;
-    justify-content: center;
-    /* border: 2px solid green; */
-
-    /* align-items: center;  */
-    flex-wrap: wrap;
+     display: grid;
+     grid-template-columns: auto auto;
+     row-gap: 25px;
+     width: 100%;
 }
 
 .workspace_container {
-    width:45%;
-    height: 130px;
     box-shadow: 0px 2px 6px grey !important;
     margin:  0.5rem;
     border-radius: 0.625rem;
@@ -85,12 +87,12 @@
     justify-content: center;
     align-items: center;
     padding: 0 1rem;
+    height: 100%;
 }
 .workpaces-card{
     width:100%;
-    height: 70%;
-    padding: 5px;
    display: flex;
+   flex-direction: column;
 }
 .workspace_container > a{
     text-decoration: none;
@@ -98,6 +100,8 @@
 .avtar_containt{
     width: 100%;
     height: 30%;
+    display: flex;
+    align-items: center;
 }
 .avtar_containt .css-1ytufz-MuiAvatarGroup-root{
     display: flex;
@@ -115,7 +119,9 @@
     font-size: 15px;
 }
 .workpaces-details{
-    width: 50%;   
+    width: 100%;  
+    display: flex;
+    justify-content: space-between;
     
 }
 .workpaces-details > h1{
@@ -126,11 +132,14 @@
     font-family: "Grpahik Bold";
     
 }
-.workpaces-details > p{
+.list_para > p{
+    width: 100%;
+    height: 50px;
     font-size: 15px;
     color: grey;
     margin: 0;
     font-family: "Grpahik Light";
+    overflow: hidden;
 }
 .workpaces-date{
     height: 100%;
@@ -146,18 +155,13 @@
     padding: 0;
     font-size: 15px;
 }
-
-    
-
 .filter{
     width: 15%;
     padding: 0.625rem;
-    /* border: 1px solid red; */
 }
 .filter h2{
     font-family: "Grpahik Bold";
     margin: 0;
-
 }
 .workspace_filter_hr{
     padding: 0;
@@ -169,7 +173,7 @@
     font-family: "Grpahik Medium";
     margin: 0;
 }
-workspace_filter_ul{
+.workspace_filter_ul{
     padding: 0;
 }
 li input{
@@ -198,7 +202,7 @@ li input{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 7px;
+    margin: 7px 0;
 }
 .filter_dropdown{
     width: 250px;
@@ -211,27 +215,36 @@ li input{
 }
 
 /* ===============Media Query============== */
-@media (max-width:1819px){
+
+
+
+@media (max-width:1288px){
     .workspace_container {
-        width:45%;
-        height: 160px;
+        height: 200px;
         box-shadow: 0px 2px 6px grey !important;
-        /* border: 1px solid black; */
         margin:  0.5rem;
         border-radius: 0.625rem;
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
         padding: 0 1rem;
+    }
+    .filter{
+        width: 20%;
+        padding: 0.625rem;
+        /* border: 1px solid red; */
+    }
+}
+@media (max-width:1134px){
+
+    .filter{
+        width: 25%;
+        padding: 0.625rem;
+        /* border: 1px solid red; */
     }
 }
 @media (max-width:1440px){
-    .workspace_container {
-        width:45%;
-        height: 170px;
-        box-shadow: 0px 2px 6px grey !important;
-        /* border: 1px solid black; */
-        margin:  0.5rem;
-        border-radius: 0.625rem;
-        padding: 0 1rem;
-    }
+
     .workspace_filter_ul label{
         font-size: 10px;
     }
@@ -357,15 +370,7 @@ li input{
 
 }
 @media (max-width:1363px){
-    .workspace_container {
-        width:45%;
-        height: 220px;
-        box-shadow: 0px 2px 6px grey !important;
-        /* border: 1px solid black; */
-        margin:  0.5rem;
-        border-radius: 0.625rem;
-        padding: 0 1rem;
-    }
+
     .workspace_filter_ul label{
         font-size: 10px;
     }
@@ -410,15 +415,7 @@ li input{
 
 }
 @media (max-width:1024px){
-    .workspace_container {
-        width:45%;
-        height: 250px;
-        box-shadow: 0px 2px 6px grey !important;
-        /* border: 1px solid black; */
-        margin:  0.5rem;
-        border-radius: 0.625rem;
-        padding: 0 1rem;
-    }
+
     .workpaces-details h1{
         font-size: 15px;
     }
