@@ -2,14 +2,21 @@
     margin-top: 250px;
     width: 95%;
 }
+
 .line_div_cmpgn{
-    width: 1px;
+    position: relative;
+    z-index: 1;
+
+}
+
+.line_div_cmpgn::before{
+    content: "";
+    width: 2px;
+    height: 51%;
     background-color: red;
     position: absolute;
-    margin-left: 2.75%;
-    top: 60vh;
-    z-index: 0;
-    height: 125vh;
+    top: 50px;
+    left: 50px;
 }
 .create_campaignNew_version_ch {
     position: sticky;
@@ -114,6 +121,8 @@
 
 .crt_cmpgn_plan__ {
     width: 100%;   
+    
+
 }
 
 

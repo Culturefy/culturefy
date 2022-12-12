@@ -22,6 +22,7 @@ const Learning = lazy(() => import("src/pages/Learning"));
 const CreateNewModule = lazy(() => import("src/pages/createNewModule"));
 const CreateNewCourse = lazy(() => import("src/pages/createNewCourse"));
 const CreateAiVideo = lazy(() => import("src/pages/CreateAiVideo"));
+const GapAnalysis = lazy(() => import("src/pages/GapAnalysis"));
 
 const CreateModuleLearning = lazy(
   () => import("src/pages/CreateModuleLearning")
@@ -74,9 +75,10 @@ const UserProfile = lazy(() => import("src/pages/UserProfile"));
 const ProfileTabs = lazy(() => import("src/pages/ProfileTabs"));
 
 const BCSShare = lazy(() => import("src/pages/BCSShare"));
-
+// ========Campaign===========
 const Campaign = lazy(() => import("src/pages/Campaign"));
 const CreateCampaign = lazy(() => import("src/pages/CreateCampaign"));
+// ============Workspace============
 const WorkspaceList = lazy(() => import("src/pages/WorkspaceList"));
 const CreateWorkspace = lazy(() => import("src/pages/CreateWorkspace"));
 const WorkspaceFiles = lazy(() => import("src/pages/WorkspaceFiles"));
@@ -94,6 +96,7 @@ const WorkspaceAgendasTemplates = lazy(
 );
 const CreatePoll = lazy(() => import("src/pages/CreatePoll"));
 const WorkspacePoll = lazy(() => import("src/pages/CreatePoll/WorkspacePoll"));
+const Videocall = lazy(() => import("src/pages/VideoCall"));
 // ============Recruiting============
 const Jobs = lazy(() => import("src/pages/Recruiting/Jobs"));
 const AddJobs = lazy(() => import("src/pages/Recruiting/AddJobs"));
@@ -406,6 +409,14 @@ export const router = createBrowserRouter([
       {
         path: "teslacampaign",
         element: <TeslaCampaign />,
+      },
+      {
+        path: "gapanalysis",
+        element: <GapAnalysis />,
+      },
+      {
+        path: "videocall",
+        element: <Videocall />,
       },
     ],
   },

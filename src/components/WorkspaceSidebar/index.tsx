@@ -73,7 +73,7 @@ const index = () => {
     </Tooltip>
 
     <Tooltip title="Meeting" placement="left">
-        <Link to="/workspace/meetingview">
+        <Link to="/workspacesfile/videocall">
             <i className="fa-solid fa-laptop sidebar_icon"></i>
         </Link>
     </Tooltip>

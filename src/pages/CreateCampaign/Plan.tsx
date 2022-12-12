@@ -116,15 +116,15 @@ const Plan = () => {
   return (
     <>
     <div style={{height:"50px"}}></div>
-    <div className="crt_cmpgn_plan__">
+    <div className="crt_cmpgn_plan__ ">
       <div className="_header_title_plan_pr">
         <div className="campaign_goal_check_pr">
           <img src={planImage} alt="" className="campaign_goal_check_pr_img" />
         </div>
         {/* Line Div */}
-        <div className="line_div_cmpgn">
+        {/* <div className="line_div_cmpgn">
           
-        </div>
+        </div> */}
         <div className="position_h3_pr">
           <h2>Plan</h2>
         </div>

@@ -1,63 +1,48 @@
 //@ts-nocheck
-import * as React from 'react';
-import { useEffect, useState } from 'react'
-import { useRef } from 'react';
-import Box from '@mui/material/Box';
-import SwipeableDrawer from '@mui/material/SwipeableDrawer';
-import Button from '@mui/material/Button';
-import './Chat.css'
-import chatuser from '../../assets/campaign/user2.jpg'
-import ScrollableFeed from 'react-scrollable-feed'
+import * as React from "react";
+import { useEffect, useState } from "react";
+import { useRef } from "react";
+import Box from "@mui/material/Box";
+import SwipeableDrawer from "@mui/material/SwipeableDrawer";
+import Button from "@mui/material/Button";
+import "./Chat.css";
+import chatuser from "../../assets/campaign/user2.jpg";
+import ScrollableFeed from "react-scrollable-feed";
 //Live Chat
-import { v4 as uuid } from 'uuid'
-import AgoraRTM from 'agora-rtm-sdk'
+import { v4 as uuid } from "uuid";
+import AgoraRTM from "agora-rtm-sdk";
 
-let APP_ID = '864f3aa345f64a85a264321d9844edaa'
-let CHANNEL_NAME = 'dpp';
-let client = AgoraRTM.createInstance(APP_ID)
+let APP_ID = "864f3aa345f64a85a264321d9844edaa";
+let CHANNEL_NAME = "dpp";
+let client = AgoraRTM.createInstance(APP_ID);
 let uid = uuid();
 
-
-
 export default function SwipeableTemporaryDrawer() {
-
-
-  const [text, setText] = useState('');
-  const [channel, setChannel] = useState('');
+  const [text, setText] = useState("");
+  const [channel, setChannel] = useState("");
   const [messages, setMessages] = useState([]);
-  const [like, setLike] = useState(false)
-  const [ time,settime] = useState('')
-  const messagesRef = useRef(null)
-
-
-
+  const [like, setLike] = useState(false);
+  const [time, settime] = useState("");
+  const messagesRef = useRef(null);
 
   useEffect(() => {
     const connect = async () => {
       await client.login({ uid, token: null });
-      const channel = await client.createChannel(
-        CHANNEL_NAME
-      );
+      const channel = await client.createChannel(CHANNEL_NAME);
       await channel.join();
-      channel.on('ChannelMessage', (message, memberID) => {
+      channel.on("ChannelMessage", (message, memberID) => {
         setMessages((currentMessages) => [
           ...currentMessages,
           {
             uid: memberID,
             text: message.text,
-            time:message.time
+            time: message.time,
           },
         ]);
-       
       });
       setChannel(channel);
       return channel;
     };
-
-
-  
-
-
 
     const connection = connect();
     return () => {
@@ -65,10 +50,9 @@ export default function SwipeableTemporaryDrawer() {
         const channel = await connection;
         await channel.leave();
         await client.logout();
-      }
+      };
       logout();
-    }
-
+    };
   }, []);
 
   const [state, setState] = React.useState({
@@ -81,8 +65,8 @@ export default function SwipeableTemporaryDrawer() {
   const toggleDrawer = (anchor, open) => (event) => {
     if (
       event &&
-      event.type === 'keydown' &&
-      (event.key === 'Tab' || event.key === 'Shift')
+      event.type === "keydown" &&
+      (event.key === "Tab" || event.key === "Shift")
     ) {
       return;
     }
@@ -90,28 +74,26 @@ export default function SwipeableTemporaryDrawer() {
     setState({ ...state, [anchor]: open });
   };
 
-  const getdata = () =>{
+  const getdata = () => {
     var currentdate = new Date();
-    var datetime =  currentdate.getHours() + ":"
-      + currentdate.getMinutes() 
+    var datetime = currentdate.getHours() + ":" + currentdate.getMinutes();
 
-      settime(datetime)
-  }
+    settime(datetime);
+  };
 
-  const changehandler = (e) =>{
-    setText(e.target.value)
-    getdata()
-  }
+  const changehandler = (e) => {
+    setText(e.target.value);
+    getdata();
+  };
 
   const submitHandler = (e) => {
     // console.log("click")
     e.preventDefault();
-    if (text === '') return;
+    if (text === "") return;
     channel.sendMessage({
-
       text,
       time,
-      type: 'text',
+      type: "text",
     });
     setMessages((currentMessages) => [
       ...currentMessages,
@@ -121,24 +103,29 @@ export default function SwipeableTemporaryDrawer() {
         time,
       },
     ]);
-    setText('');
+    setText("");
   };
 
   const list = (anchor) => (
     <Box
-      sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
+      sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 250 }}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
-    >
-    </Box>
+    ></Box>
   );
   return (
-    <div className='chat_main'>
-      {['bottom'].map((anchor) => (
+    <div className="chat_main">
+      {["bottom"].map((anchor) => (
         <React.Fragment key={anchor}>
-          <div className='chat_box' onClick={toggleDrawer(anchor, true)} onClose={toggleDrawer(anchor, false)}>
-            <Button>Chat</Button>
+          <div
+            className="chat_box"
+            onClick={toggleDrawer(anchor, true)}
+            onClose={toggleDrawer(anchor, false)}
+          >
+            <Button>
+              Chat <div className="chat_user_active"></div>{" "}
+            </Button>
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
           <SwipeableDrawer
@@ -149,96 +136,93 @@ export default function SwipeableTemporaryDrawer() {
           >
             {/* {list(anchor)} */}
 
-
             {/* <Box role="presentation"> */}
             <div className="chatbox_body">
-              <div className="chatbox_header"
+              <div
+                className="chatbox_header"
                 onClose={toggleDrawer(anchor, false)}
                 onClick={toggleDrawer(anchor, false)}
                 onKeyDown={toggleDrawer(anchor, false)}
               >
-                <div className='chatsec_active'>
-                  <h3 >Chat</h3>
-                  <div className="chat_user_active">
-
-                  </div>
+                <div className="chatsec_active">
+                  <h3>Chat</h3>
+                  <div className="chat_user_active"></div>
                 </div>
                 <i class="fa-solid fa-magnifying-glass"></i>
               </div>
 
               <div className="chatbox_chat">
                 <ScrollableFeed>
-
-
-                  {
-                    messages.map((message, index) => (
-                   
-                      <div key={index} className='message'>
-                        {console.log(message.uid ,"zdD")}
-                        {message.uid === uid && (
-                          <div className="send_message">
+                  {messages.map((message, index) => (
+                    <div key={index} className="message">
+                      {console.log(message.uid, "zdD")}
+                      {message.uid === uid && (
+                        <div className="send_message">
+                          <div className="chatuser">
+                            <img src={chatuser} alt="" />
+                          </div>
+                          <div className="chat_send_message">
+                            <div className="chat_user_name">
+                              <h6>User</h6>
+                              <p>{message.time}</p>
+                            </div>
+                            <div className="chat_user_message">
+                              <p>
+                                <span>You :</span>
+                                {message.text}
+                              </p>
+                            </div>
+                            <div className="chat_replay">
+                              <p>Replay</p>
+                              <i class="fa-solid fa-thumbs-up" color="red"></i>
+                            </div>
+                          </div>
+                        </div>
+                      )}
+                      {message.uid !== uid && (
+                        <div className="receive_message">
+                          <div className="receive_message_ch">
                             <div className="chatuser">
                               <img src={chatuser} alt="" />
                             </div>
                             <div className="chat_send_message">
                               <div className="chat_user_name">
-                                <h6>User</h6>
+                                <h6>Others</h6>
                                 <p>{message.time}</p>
                               </div>
                               <div className="chat_user_message">
-                                <p><span>You :</span>{message.text}</p>
+                                <p>
+                                  <span>Other :</span> {message.text}{" "}
+                                </p>
                               </div>
                               <div className="chat_replay">
                                 <p>Replay</p>
-                                <i class="fa-solid fa-thumbs-up" color='red'></i>
+                                <i class="fa-solid fa-thumbs-up"></i>
                               </div>
                             </div>
                           </div>
-                        )}
-                        {message.uid !== uid && (
-
-                          <div className="receive_message">
-                            <div className='receive_message_ch'>
-                              <div className="chatuser">
-                                <img src={chatuser} alt="" />
-                              </div>
-                              <div className="chat_send_message">
-                                <div className="chat_user_name">
-                                  <h6>Others</h6>
-                                  <p>{message.time}</p>
-                                </div>
-                                <div className="chat_user_message">
-                                  <p><span>Other :</span> {message.text} </p>
-                                </div>
-                                <div className="chat_replay">
-                                  <p>Replay</p>
-                                  <i class="fa-solid fa-thumbs-up"></i>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        )}
-                      </div>
-                    ))
-                  }
+                        </div>
+                      )}
+                    </div>
+                  ))}
                 </ScrollableFeed>
               </div>
             </div>
             <div className="send_message_input">
               <form action="" onSubmit={submitHandler}>
-                <input type="text"
-                  placeholder='Write Something..'
+                <input
+                  type="text"
+                  placeholder="Write Something.."
                   onChange={changehandler}
                   value={text}
                   className="chat_send_input"
                 />
               </form>
+              <button onClick={submitHandler}>Send</button>
             </div>
           </SwipeableDrawer>
         </React.Fragment>
-
       ))}
     </div>
   );
 }
-

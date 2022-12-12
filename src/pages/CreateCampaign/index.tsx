@@ -232,11 +232,11 @@ const index = () => {
                 )}
               </div>
             </div>
-
+    <div className="line_div_cmpgn">
             <Plan />
             <Position />
             <Possess />
-        
+            </div>   
            
           </div>
 

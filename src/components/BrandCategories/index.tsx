@@ -32,7 +32,7 @@ function BrandCategories() {
               >
                 <span>{category.title}</span>
                 <span className={Styles.iconDown}>
-                  <MdOutlineArrowForwardIos />
+                  {/* <MdOutlineArrowForwardIos /> */}
                 </span>
               </li>
             );
